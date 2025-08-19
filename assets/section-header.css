@@ -652,6 +652,16 @@ header .button-secondary.icon::after {
     color: var(--color-text);
 }
 
+/* Header Nav Menü */
+
+.mobile-nav-footer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+/* Header Background*/
+
 .header-background-decor {
     position: absolute;
     bottom: -12px;
