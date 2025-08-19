@@ -1,0 +1,197 @@
+/* Global CSS Custom Properties */
+
+:root {
+    /* Baseline */
+    --baseline: 8px;
+
+    /* Breakpoints */
+    --breakpoint-mobile-horizontal: 512px;
+    --breakpoint-tablet: 768px;
+    --breakpoint-tablet-horizontal: 1024px;
+    --breakpoint-desktop: 1280px;
+    --breakpoint-desktop-wide: 1440px;
+
+    /* Max widths */
+    --content-max-width: 800px;
+    --container-max-width: 1280px;
+    --document-max-width: 2560px;
+
+    /* Container padding */
+    --container-padding-mobile: 16px;
+    --container-padding-tablet: 24px;
+    --container-padding-desktop: 32px;
+
+    /* Component spacing */
+    --component-spacing-mobile: 64px;
+    --component-spacing-tablet: 80px;
+    --component-spacing-desktop: 120px;
+
+    /* Grid */
+    --grid-gap-mobile: 16px;
+    --grid-gap-tablet: 24px;
+    --grid-gap-desktop: 32px;
+
+    /* Border radius */
+    --border-radius: 8px;
+    --border-radius-button: var(--border-radius);
+    --border-radius-image: var(--border-radius);
+    --border-radius-input: 4px;
+
+    /* Brand Colors */
+    --color-primary: #3F593F;
+    --color-secondary: #F4F2E4;
+
+    /* Background Colors */
+    --color-background: #DFECDF;
+    --color-background-one: #DFECDF;
+    --color-background-two: #B1CFB0;
+    --color-background-three: #95BB93;
+    --color-background-alt: var(--color-grey-light);
+
+    /* Text Colors */
+    --color-text: #2F4027;
+    --color-text-secondary: var(--color-grey-dark);
+    --color-headline: var(--color-text);
+
+    /* Greyscale Colors */
+    --color-black: #000000;
+    --color-black-light: #333;
+    --color-grey-dark: #A4A4A4;
+    --color-grey: #D8D8D8;
+    --color-grey-light: #F0F0F0;
+    --color-white: #FFFFFF;
+
+    /* State Colors */
+    --color-error: #E80606;
+    --color-success: #7DB30C;
+
+    /* Functional Colors */
+    --color-border: var(--color-grey);
+    --color-link: var(--color-primary);
+    --color-link-hover: var(--color-secondary);
+
+    /* Typography */
+    --font-weight-light: 100;
+    --font-weight-normal: 400;
+    --font-weight-medium: 600;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-family-default: 'Arlen', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+    --font-family-display: 'Camera Obscura', 'Arlen', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+    --font-global-size: 16px;
+    --font-global-line-height: 1.5;
+    --font-paragraph-spacing: 24px;
+
+    /* Headlines Typography Variables */
+    --font-family-headlines: 'Camera Obscura';
+    --font-family-paragraph: 'Arlen';
+
+    /* H1 */
+    --font-size-h1: 32px;
+    --line-height-h1: 40px;
+
+    /* H2 */
+    --font-size-h2: 28px;
+    --line-height-h2: 32px;
+
+    /* H3 */
+    --font-size-h3: 24px;
+    --line-height-h3: 30px;
+
+    /* H4 */
+    --font-size-h4: 20px;
+    --line-height-h4: 28px;
+
+    /* H5 */
+    --font-size-h5: 18px;
+    --line-height-h5: 26px;
+
+    /* H6 */
+    --font-size-h6: 16px;
+    --line-height-h6: 24px;
+
+    /* Body Typography */
+    --font-size-lead: 24px;
+    --line-height-lead: 32px;
+    --font-size-paragraph: 20px;
+    --line-height-paragraph: 30px;
+    --font-size-meta: 16px;
+    --line-height-meta: 18px;
+    --font-size-link: 20px;
+    --line-height-link: 30px;
+
+    /* Buttons */
+    --button-background-color: var(--color-primary);
+    --button-background-color-hover: var(--color-text);
+    --button-border-color: var(--button-background-color);
+    --button-border-radius: var(--border-radius-button);
+    --button-border-width: 1px;
+    --button-font-color: var(--color-white);
+    --button-font-size: var(--font-size-link);
+    --button-padding-vertical: 12px;
+    --button-padding-horizontal: 24px;
+    --button-min-size: 44px;
+    --button-spacing: 12px;
+    --button-gap: 8px;
+    --button-padding-primary: 14px 24px;
+    --button-padding-icon-right: 14px 20px 14px 24px;
+    --button-padding-icon-left: 14px 24px 14px 20px;
+    --button-icon-size: 48px;
+    --button-icon-padding: 8px;
+
+    /* Forms */
+    --input-background-color: var(--color-white);
+    --input-border-color: var(--color-grey);
+    --input-border-color-active: var(--color-primary);
+    --input-border-radius: var(--border-radius-input);
+    --input-border-width: 1px;
+    --input-font-color: var(--color-text);
+    --input-font-color-placeholder: var(--color-grey-dark);
+    --input-padding-vertical: 16px;
+    --input-padding-horizontal: 16px;
+    --input-min-height: 44px;
+    --input-spacing: 16px;
+
+    /* Transitions */
+    --transition-duration: 0.25s;
+
+    /* Responsive Custom Properties */
+    --grid-gap-column: var(--grid-gap-mobile);
+    --grid-gap-row: var(--grid-gap-mobile);
+    --component-spacing-y: var(--component-spacing-mobile);
+    --container-padding-x: var(--container-padding-mobile);
+    --grid-size: 100vw;
+}
+
+@media (min-width: 768px) {
+    :root {
+        --grid-gap-column: var(--grid-gap-tablet);
+        --grid-gap-row: var(--grid-gap-tablet);
+        --component-spacing-y: var(--component-spacing-tablet);
+        --container-padding-x: var(--container-padding-tablet);
+
+        /* Desktop Typography */
+        --font-size-h1: 64px;
+        --line-height-h1: 72px;
+        --font-size-h2: 40px;
+        --line-height-h2: 52px;
+        --font-size-h3: 32px;
+        --line-height-h3: 40px;
+        --font-size-h4: 28px;
+        --line-height-h4: 36px;
+        --font-size-h5: 20px;
+        --line-height-h5: 28px;
+        --font-size-h6: 18px;
+        --line-height-h6: 26px;
+    }
+}
+
+@media (min-width: 1280px) {
+    :root {
+        --grid-gap-column: var(--grid-gap-desktop);
+        --grid-gap-row: var(--grid-gap-desktop);
+        --component-spacing-y: var(--component-spacing-desktop);
+        --container-padding-x: var(--container-padding-desktop);
+        --grid-size: var(--container-max-width);
+    }
+}

@@ -1,11 +1,11 @@
-/* Generic Theme Styles */
-:root {
-  --black: #1D1D1D;
-  --main-font: Helvetica, Arial, sans-serif;
-}
+/* Base CSS - Main import file for Minimal Shopify Theme */
+/* Imports all modular CSS files */
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --black: #ececec;
-  }
-}
+@import url('_variables.css');
+@import url('_motion.css');
+@import url('_base.css');
+@import url('_typography.css');
+@import url('_buttons.css');
+@import url('_forms.css');
+@import url('_layout.css');
+@import url('_utilities.css');

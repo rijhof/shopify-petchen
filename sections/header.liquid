@@ -1,4 +1,4 @@
-{% liquid 
+{% liquid
   if section.settings.menu.links == blank
     assign main_menu_linklist = linklists[section.settings.menu].links
   else
@@ -6,25 +6,232 @@
   endif
 %}
 
-<header id="header" class="header">
-  <nav role="navigation">
-    {% for link in main_menu_linklist %}
-      {% if link.links != blank %}
-        {% assign link_handle = link.handle | replace: '-', '_' %}
-        {% for childlink in link.links %}
-          <a href="{{ childlink.url }}">{{ childlink.title }}</a>
-        {% endfor %}     
-      {% else %}
-        <a href="{{ link.url }}">{{ link.title }}</a>
-      {% endif %}
-    {% endfor %}
-    <form action="{{ routes.search_url }}" method="get">
-      <input type="search" name="q" placeholder="Search">
-      <button type="submit">Search</button>
-    </form>
-  </nav>     
-</header>
-        
+<div class="header-wrapper">
+  {% if section.blocks.size > 0 %}
+    <div class="header-usp-bar" role="complementary" aria-label="Shop benefits">
+      <div class="container">
+        <ul class="header-usp-list">
+          {% for block in section.blocks %}
+            {% if block.type == 'usp' %}
+              <li class="header-usp-item">
+                {% if block.settings.icon != blank %}
+                  <img src="{{ block.settings.icon | img_url: '24x24' }}"
+                       alt=""
+                       width="24"
+                       height="24"
+                       class="header-usp-icon"
+                       aria-hidden="true">
+                {% endif %}
+                <span class="header-usp-text">{{ block.settings.text }}</span>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  {% endif %}
+
+  <header id="header" class="header" role="banner">
+    <div class="container">
+      <div class="header-inner">
+        <button class="header-mobile-menu-toggle hide-desktop"
+                type="button"
+                aria-expanded="false"
+                aria-controls="mobile-navigation"
+                aria-label="Open navigation menu">
+          <span class="header-mobile-menu-icon" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+
+        <nav class="header-nav hide-mobile" role="navigation" aria-label="Main navigation">
+          <ul class="header-nav-list">
+            {% for link in main_menu_linklist %}
+              <li class="header-nav-item{% if link.links != blank %} has-dropdown{% endif %}">
+                {% if link.links != blank %}
+                  <button class="header-nav-link header-nav-dropdown-toggle"
+                          type="button"
+                          aria-expanded="false"
+                          aria-controls="dropdown-{{ link.handle }}"
+                          aria-haspopup="true">
+                    {{ link.title }}
+                    <svg class="header-dropdown-icon" width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true">
+                      <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                  </button>
+                  <ul class="header-dropdown" id="dropdown-{{ link.handle }}" aria-label="Submenu for {{ link.title }}">
+                    {% for childlink in link.links %}
+                      <li class="header-dropdown-item">
+                        <a href="{{ childlink.url }}" class="header-dropdown-link">{{ childlink.title }}</a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                {% else %}
+                  <a href="{{ link.url }}" class="header-nav-link">{{ link.title }}</a>
+                {% endif %}
+              </li>
+            {% endfor %}
+          </ul>
+        </nav>
+
+        <a href="{{ routes.root_url }}" class="header-logo" aria-label="{{ shop.name }} - Home">
+          {% if section.settings.logo %}
+            <img src="{{ section.settings.logo | img_url: '200x' }}"
+                 alt="{{ shop.name }}"
+                 width="{{ section.settings.logo_width }}"
+                 height="{{ section.settings.logo_width | divided_by: section.settings.logo.aspect_ratio | round }}"
+                 loading="eager">
+          {% else %}
+            <span class="header-logo-text">{{ shop.name }}</span>
+          {% endif %}
+        </a>
+
+        <div class="header-actions">
+          <button class="header-search-toggle hide-mobile button-secondary icon"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="header-search"
+                  aria-label="Open search">
+            {% comment %}<svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">{% endcomment %}
+              {% comment %}<circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/>{% endcomment %}
+              {% comment %}<path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>{% endcomment %}
+            {% comment %}</svg>{% endcomment %}
+
+
+          </button>
+
+          <a href="{{ routes.account_url }}"
+             class="header-action-link hide-mobile button-secondary icon"
+             aria-label="Wishlist{% if customer %}{% else %} - Login required{% endif %}">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="visually-hidden">Wishlist</span>
+          </a>
+
+          <a href="{% if customer %}{{ routes.account_url }}{% else %}{{ routes.account_login_url }}{% endif %}"
+             class="header-action-link button-secondary icon"
+             aria-label="{% if customer %}My account{% else %}Login or register{% endif %}">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="visually-hidden">{% if customer %}My account{% else %}Login{% endif %}</span>
+          </a>
+
+          <a href="{{ routes.cart_url }}"
+             class="header-action-link header-cart "
+             aria-label="Shopping cart with {{ cart.item_count }} {% if cart.item_count == 1 %}item{% else %}items{% endif %}">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M9 2L6 9V20C6 20.5304 6.21071 21.0391 6.58579 21.4142C6.96086 21.7893 7.46957 22 8 22H16C16.5304 22 17.0391 21.7893 17.4142 21.4142C17.7893 21.0391 18 20.5304 18 20V9L15 2H9Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M6 9H18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M10 13C10 13.5304 10.2107 14.0391 10.5858 14.4142C10.9609 14.7893 11.4696 15 12 15C12.5304 15 13.0391 14.7893 13.4142 14.4142C13.7893 14.0391 14 13.5304 14 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            {% if cart.item_count > 0 %}
+              <span class="header-cart-count" aria-hidden="true">{{ cart.item_count }}</span>
+            {% endif %}
+            <span class="visually-hidden">Shopping cart</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="header-search" id="header-search" aria-hidden="true">
+        <form action="{{ routes.search_url }}" method="get" role="search" class="header-search-form">
+          <label for="header-search-input" class="visually-hidden">Search products</label>
+          <input type="search"
+                 name="q"
+                 id="header-search-input"
+                 class="header-search-input"
+                 placeholder="Search for products..."
+                 autocomplete="off"
+                 aria-label="Search products">
+          <button type="submit" class="header-search-submit" aria-label="Submit search">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="2"/>
+              <path d="M19 19L14.65 14.65" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <nav class="mobile-navigation" id="mobile-navigation" aria-label="Mobile navigation" aria-hidden="true">
+      <div class="mobile-navigation-inner">
+        <button class="mobile-navigation-close"
+                type="button"
+                aria-label="Close navigation menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+
+        <form action="{{ routes.search_url }}" method="get" role="search" class="mobile-search-form">
+          <label for="mobile-search-input" class="visually-hidden">Search products</label>
+          <input type="search"
+                 name="q"
+                 id="mobile-search-input"
+                 class="mobile-search-input"
+                 placeholder="Search..."
+                 autocomplete="off">
+          <button type="submit" class="mobile-search-submit" aria-label="Submit search">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="2"/>
+              <path d="M19 19L14.65 14.65" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </form>
+
+        <ul class="mobile-nav-list">
+          {% for link in main_menu_linklist %}
+            <li class="mobile-nav-item{% if link.links != blank %} has-submenu{% endif %}">
+              {% if link.links != blank %}
+                <button class="mobile-nav-link mobile-submenu-toggle"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="mobile-submenu-{{ link.handle }}">
+                  {{ link.title }}
+                  <svg class="mobile-submenu-icon" width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true">
+                    <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                </button>
+                <ul class="mobile-submenu" id="mobile-submenu-{{ link.handle }}" aria-hidden="true">
+                  {% for childlink in link.links %}
+                    <li class="mobile-submenu-item">
+                      <a href="{{ childlink.url }}" class="mobile-submenu-link">{{ childlink.title }}</a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              {% else %}
+                <a href="{{ link.url }}" class="mobile-nav-link">{{ link.title }}</a>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+
+        <div class="mobile-nav-footer">
+          <a href="{% if customer %}{{ routes.account_url }}{% else %}{{ routes.account_login_url }}{% endif %}"
+             class="mobile-nav-footer-link">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M17 18V16C17 14.9391 16.5786 13.9217 15.8284 13.1716C15.0783 12.4214 14.0609 12 13 12H7C5.93913 12 4.92172 12.4214 4.17157 13.1716C3.42143 13.9217 3 14.9391 3 16V18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="10" cy="5" r="3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            {% if customer %}My Account{% else %}Login{% endif %}
+          </a>
+          <a href="{{ routes.account_url }}" class="mobile-nav-footer-link">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M17.612 3.04174a4.5 4.5 0 0 0-6.364 0L10 4.29L8.752 3.04174a4.5 4.5 0 0 0-6.364 6.364L3.636 10.652 10 17.016l6.364-6.364 1.248-1.248a4.5 4.5 0 0 0 0-6.364z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Wishlist
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+</div>
+
+<script src="{{ 'js-section-header.js' | asset_url }}" defer></script>
 
 {% schema %}
 {
@@ -34,7 +241,73 @@
       "type": "link_list",
       "id": "menu",
       "default": "main-menu",
-      "label": "Heading Navigation Menu"
+      "label": "Main Navigation Menu"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo Image"
+    },
+    {
+      "type": "range",
+      "id": "logo_width",
+      "label": "Logo Width",
+      "min": 50,
+      "max": 300,
+      "step": 10,
+      "default": 150,
+      "unit": "px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "usp",
+      "name": "USP Item",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "USP Icon"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "USP Text",
+          "default": "Free shipping from $50"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Header",
+      "blocks": [
+        {
+          "type": "usp",
+          "settings": {
+            "text": "Free shipping from $50"
+          }
+        },
+        {
+          "type": "usp",
+          "settings": {
+            "text": "30 days return policy"
+          }
+        },
+        {
+          "type": "usp",
+          "settings": {
+            "text": "Secure payment"
+          }
+        },
+        {
+          "type": "usp",
+          "settings": {
+            "text": "Customer service"
+          }
+        }
+      ]
     }
   ]
 }

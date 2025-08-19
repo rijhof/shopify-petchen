@@ -1,0 +1,457 @@
+/* Button styles */
+
+button {
+    margin-bottom: 32px;
+}
+
+/* Button Primary Styles */
+.button-primary {
+    display: flex;
+    align-items: center;
+    padding: var(--button-padding-primary);
+    background-image: url('icon-btn-bg.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 99%;
+    background-color: transparent;
+    color: var(--button-font-color);
+    border: none;
+    border-radius: var(--button-border-radius);
+    cursor: pointer;
+    font-family: inherit;
+    font-size: var(--button-font-size);
+    font-weight: var(--font-weight-medium);
+    transition: all var(--transition-duration) ease;
+    appearance: none;
+    position: relative;
+}
+
+.button-primary:not(.icon--left):not(.icon--right):not(.icon) {
+    /* Der Text bekommt einen höheren z-index */
+    position: relative;
+    z-index: 1;
+}
+
+.button-primary:not(.icon--left):not(.icon--right):not(.icon)::before {
+    content: '';
+    width: 30px;
+    height: 28px;
+    gap: 0;
+    background-image: url('icon-paw.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    flex-shrink: 0;
+    pointer-events: none;
+    position: absolute;
+    left: 8px;
+    top: 48%;
+    transform: translateY(-50%);
+    z-index: -1; /* Hinter dem Text-Container */
+}
+
+.button-primary:hover {
+    background-image: url('icon-btn-bg--hover.svg');
+}
+
+.button-primary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.button-primary:focus {
+    background-image: url('icon-btn-bg--focused.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 99%;
+    color: var(--button-font-color);
+    outline: none;
+}
+
+.button-primary.icon--right {
+    gap: var(--button-gap);
+    padding: var(--button-padding-icon-right);
+}
+
+.button-primary.icon--right::after {
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-image: url('icon-chevron-right.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    flex-shrink: 0;
+}
+
+.button-primary.icon--left {
+    gap: var(--button-gap);
+    padding: var(--button-padding-icon-left);
+}
+
+.button-primary.icon--left::before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-image: url('icon-chevron-right.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    flex-shrink: 0;
+    transform: rotate(180deg);
+}
+
+.button-primary.icon {
+    width: var(--button-icon-size);
+    height: var(--button-icon-size);
+    padding: var(--button-icon-padding);
+    justify-content: center;
+}
+
+.button-primary.icon::after {
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-image: url('icon-chevron-right.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    flex-shrink: 0;
+}
+
+/* Button Secondary Styles */
+.button-secondary {
+    display: flex;
+    align-items: center;
+    gap: var(--button-gap);
+    padding: var(--button-padding-primary);
+    background-image: url('icon-btn-scndry-bg.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 99%;
+    background-color: transparent;
+    color: var(--button-background-color);
+    border: none;
+    border-radius: var(--button-border-radius);
+    cursor: pointer;
+    font-family: inherit;
+    font-size: var(--button-font-size);
+    font-weight: var(--font-weight-medium);
+    transition: all var(--transition-duration) ease;
+    appearance: none;
+}
+
+.button-secondary:hover {
+    background-image: url('icon-btn-scndry-bg--hover.svg');
+    color: var(--button-font-color);
+}
+
+.button-secondary:focus {
+    background-image: url('icon-btn-scndry-bg--focused.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 99%;
+    color: var(--button-font-color);
+    outline: none;
+}
+
+.button-secondary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.button-secondary.icon--right {
+    padding: var(--button-padding-icon-right);
+}
+
+.button-secondary.icon--right::after {
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-image: url('icon-chevron-right--bg.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    flex-shrink: 0;
+}
+
+.button-secondary.icon--right:hover::after,
+.button-secondary.icon--right:focus::after {
+    background-image: url('icon-chevron-right.svg');
+}
+
+.button-secondary.icon--left {
+    padding: var(--button-padding-icon-left);
+}
+
+.button-secondary.icon--left::before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-image: url('icon-chevron-right--bg.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    flex-shrink: 0;
+    transform: rotate(180deg);
+}
+
+.button-secondary.icon--left:hover::before,
+.button-secondary.icon--left:focus::before {
+    background-image: url('icon-chevron-right.svg');
+}
+
+.button-secondary.icon {
+    width: var(--button-icon-size);
+    height: var(--button-icon-size);
+    padding: var(--button-icon-padding);
+    justify-content: center;
+    background-image: url('icon-btn-scndry-bg--icon-only.svg');
+}
+
+.button-secondary.icon:hover {
+    background-image: url('icon-btn-scndry-bg--icon-only-hover.svg');
+}
+
+.button-secondary.icon:focus {
+    background-image: url('icon-btn-scndry-bg--icon-only-focused.svg');
+}
+
+.button-secondary.icon::after {
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-image: url('icon-chevron-right--bg.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    flex-shrink: 0;
+}
+
+/* Button Tertiary Styles */
+.button-tertiary {
+    display: flex;
+    align-items: center;
+    gap: var(--button-gap);
+    padding: 0;
+    background-color: transparent;
+    background-image: none;
+    border: none;
+    color: var(--color-link);
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: var(--font-size-link);
+    font-weight: var(--font-weight-medium);
+    transition: all var(--transition-duration) ease;
+    appearance: none;
+}
+
+.button-tertiary:not(.icon--left):not(.icon--right):hover {
+    color: var(--color-text);
+}
+
+.button-tertiary.icon--left:hover {
+    gap: calc(var(--baseline) * 2)
+}
+
+.button-tertiary.icon--right {
+    gap: var(--button-gap);
+}
+
+.button-tertiary.icon--right::after {
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-image: url('icon-contrast-chevron-right.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    flex-shrink: 0;
+    transition: transform var(--transition-duration) ease;
+}
+
+.button-tertiary.icon--right:hover::after {
+    transform: translateX(8px);
+}
+
+.button-tertiary.icon--left {
+    gap: var(--button-gap);
+}
+
+.button-tertiary.icon--left::before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-image: url('icon-contrast-chevron-right.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    flex-shrink: 0;
+    transform: rotate(0);
+}
+
+.button-tertiary.icon {
+    width: var(--button-icon-size);
+    height: var(--button-icon-size);
+    padding: 0;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.button-tertiary.icon::after {
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-image: url('icon-contrast-chevron-right.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    flex-shrink: 0;
+}
+
+/* Default button styles */
+button:not([class]) {
+    appearance: none;
+    border: none;
+    border-radius: var(--button-border-radius);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: inherit;
+    font-size: var(--button-font-size);
+    font-weight: var(--font-weight-medium);
+    min-height: var(--button-min-size);
+    padding: var(--button-padding-vertical) var(--button-padding-horizontal);
+    background-image: url('icon-btn-bg.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 99%;
+    background-color: transparent;
+    color: var(--button-font-color);
+    transition: all var(--transition-duration) ease;
+}
+
+button:not([class]):hover {
+    background-image: url('icon-btn-bg--hover.svg');
+}
+
+/* Contrast Background Styles */
+.background-contrast .button-primary {
+    background-image: url('icon-contrast-btn-bg.svg');
+    color: var(--color-text);
+}
+
+.background-contrast .button-primary:not(.icon--left):not(.icon--right):not(.icon)::before {
+    background-image: url('icon-contrast-paw.svg');
+}
+
+.background-contrast .button-primary:hover {
+    background-image: url('icon-contrast-btn-bg--hover.svg');
+    color: var(--color-text);
+}
+
+.background-contrast .button-primary:focus {
+    background-image: url('icon-contrast-btn-bg--focused.svg');
+    color: var(--color-text);
+}
+
+.background-contrast .button-primary.icon--right::after {
+    background-image: url('icon-contrast-chevron-right.svg');
+}
+
+.background-contrast .button-primary.icon--left::before {
+    background-image: url('icon-contrast-chevron-right.svg');
+}
+
+.background-contrast .button-primary.icon::after {
+    background-image: url('icon-contrast-chevron-right.svg');
+}
+
+.background-contrast .button-secondary {
+    background-image: url('icon-contrast-btn-scndry-bg.svg');
+    color: var(--button-font-color);
+}
+
+.background-contrast .button-secondary:hover {
+    background-image: url('icon-contrast-btn-scndry-bg--hover.svg');
+    color: var(--color-text);
+}
+
+.background-contrast .button-secondary:focus {
+    background-image: url('icon-contrast-btn-scndry-bg--focused.svg');
+    color: var(--color-text);
+}
+
+.background-contrast .button-secondary.icon--right::after {
+    background-image: url('icon-chevron-right.svg');
+}
+
+.background-contrast .button-secondary.icon--right:hover::after,
+.background-contrast .button-secondary.icon--right:focus::after {
+    background-image: url('icon-contrast-chevron-right.svg');
+}
+
+.background-contrast .button-secondary.icon--left::before {
+    background-image: url('icon-chevron-right.svg');
+}
+
+.background-contrast .button-secondary.icon--left:hover::before,
+.background-contrast .button-secondary.icon--left:focus::before {
+    background-image: url('icon-contrast-chevron-right.svg');
+}
+
+.background-contrast .button-secondary.icon {
+    background-image: url('icon-contrast-btn-scndry-bg--icon-only.svg');
+}
+
+.background-contrast .button-secondary.icon:hover {
+    background-image: url('icon-contrast-btn-scndry-bg--icon-only-hover.svg');
+}
+
+.background-contrast .button-secondary.icon:focus {
+    background-image: url('icon-contrast-btn-scndry-bg--icon-only-focused.svg');
+}
+
+.background-contrast .button-secondary.icon::after {
+    background-image: url('icon-chevron-right.svg');
+}
+
+.background-contrast .button-secondary.icon:hover::after,
+.background-contrast .button-secondary.icon:focus::after {
+    background-image: url('icon-contrast-chevron-right.svg');
+}
+
+.background-contrast .button-tertiary {
+    color: var(--button-font-color);
+}
+
+.background-contrast .button-tertiary:not(.icon--left):not(.icon--right):hover {
+    color: var(--color-background-two);
+}
+
+.background-contrast .button-tertiary.icon--right::after {
+    background-image: url('icon-chevron-right.svg');
+}
+
+.background-contrast .button-tertiary.icon--left::before {
+    background-image: url('icon-chevron-right.svg');
+}
+
+.background-contrast button:not([class]) {
+    background-image: url('icon-contrast-btn-bg.svg');
+    color: var(--color-text);
+}
+
+.background-contrast button:not([class]):hover {
+    background-image: url('icon-contrast-btn-bg--hover.svg');
+    color: var(--color-text);
+}

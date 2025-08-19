@@ -1,0 +1,176 @@
+/* Motion and accessibility */
+
+:root {
+    --animation-duration: 1s;
+    --transition-duration: 0.25s;
+}
+
+/* Respect user's motion preferences */
+@media screen and (prefers-reduced-motion: reduce), (update: slow) {
+    :root {
+        --animation-duration: 0.001ms !important;
+        --transition-duration: 0.001ms !important;
+    }
+
+    * {
+        animation-duration: var(--animation-duration) !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: var(--transition-duration) !important;
+    }
+}
+
+/* Animation classes */
+.animate {
+    animation-duration: var(--animation-duration);
+    animation-fill-mode: both;
+}
+
+.animate--fade-in {
+    animation-name: fadeIn;
+}
+
+.animate--fade-in-up {
+    animation-name: fadeInUp;
+}
+
+.animate--fade-in-down {
+    animation-name: fadeInDown;
+}
+
+.animate--slide-in-left {
+    animation-name: slideInLeft;
+}
+
+.animate--slide-in-right {
+    animation-name: slideInRight;
+}
+
+.animate--zoom-in {
+    animation-name: zoomIn;
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Transition utilities */
+.transition {
+    transition: all var(--transition-duration) ease;
+}
+
+.transition--fast {
+    transition: all 0.15s ease;
+}
+
+.transition--slow {
+    transition: all 0.5s ease;
+}
+
+.transition--transform {
+    transition: transform var(--transition-duration) ease;
+}
+
+.transition--opacity {
+    transition: opacity var(--transition-duration) ease;
+}
+
+.transition--colors {
+    transition: background-color var(--transition-duration) ease,
+    border-color var(--transition-duration) ease,
+    color var(--transition-duration) ease;
+}
+
+/* Hover effects */
+.hover-lift {
+    transition: transform var(--transition-duration) ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-2px);
+}
+
+.hover-scale {
+    transition: transform var(--transition-duration) ease;
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+.hover-fade {
+    transition: opacity var(--transition-duration) ease;
+}
+
+.hover-fade:hover {
+    opacity: 0.8;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}

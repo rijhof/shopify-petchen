@@ -1,0 +1,163 @@
+/* Typography and text styles */
+
+/* Font Face Declarations */
+@font-face {
+    font-family: 'Arlen';
+    src: url('font-arlen--light.woff2') format('woff2');
+    font-weight: 100 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Arlen';
+    src: url('font-arlen--regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Arlen';
+    src: url('font-arlen--semi-bold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Camera Obscura';
+    src: url('font-camera-obscura.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    color: var(--color-primary);
+    font-family: var(--font-family-headlines);
+    font-style: normal;
+    font-weight: 400;
+    font-feature-settings: 'liga' off, 'clig' off;
+    margin: 0 0 calc(var(--baseline) * 3);
+}
+
+h1, .h1 {
+    font-size: var(--font-size-h1);
+    line-height: var(--line-height-h1);
+}
+
+h2, .h2 {
+    font-size: var(--font-size-h2);
+    line-height: var(--line-height-h2);
+}
+
+h3, .h3 {
+    font-size: var(--font-size-h3);
+    line-height: var(--line-height-h3);
+}
+
+h4, .h4 {
+    font-size: var(--font-size-h4);
+    line-height: var(--line-height-h4);
+}
+
+h5, .h5 {
+    font-size: var(--font-size-h5);
+    line-height: var(--line-height-h5);
+}
+
+h6, .h6 {
+    font-size: var(--font-size-h6);
+    line-height: var(--line-height-h6);
+}
+
+p {
+    color: var(--color-text);
+    font-family: var(--font-family-paragraph);
+    font-size: var(--font-size-paragraph);
+    font-style: normal;
+    font-weight: var(--font-weight-light);
+    line-height: var(--line-height-paragraph);
+    font-feature-settings: 'liga' off, 'clig' off;
+    margin: 0 0 var(--font-paragraph-spacing);
+}
+
+.lead {
+    color: var(--color-text);
+    font-family: var(--font-family-paragraph);
+    font-size: var(--font-size-lead);
+    font-style: normal;
+    font-weight: var(--font-weight-light);
+    line-height: var(--line-height-lead);
+    font-feature-settings: 'liga' off, 'clig' off;
+}
+
+.meta {
+    color: var(--color-grey-dark);
+    font-family: var(--font-family-paragraph);
+    font-size: var(--font-size-meta);
+    font-style: normal;
+    font-weight: var(--font-weight-light);
+    line-height: var(--line-height-meta);
+    font-feature-settings: 'liga' off, 'clig' off;
+}
+
+a {
+    color: var(--color-primary);
+    font-family: var(--font-family-paragraph);
+    font-size: var(--font-size-link);
+    font-style: normal;
+    font-weight: var(--font-weight-normal);
+    line-height: var(--line-height-link);
+    font-feature-settings: 'liga' off, 'clig' off;
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+    transition: color var(--transition-duration) ease;
+}
+
+a:hover {
+    color: var(--color-text);
+}
+
+ul, ol {
+    margin: 0 0 var(--font-paragraph-spacing);
+    padding-left: calc(var(--baseline) * 3);
+}
+
+ul ul, ul ol, ol ul, ol ol {
+    margin-bottom: 0;
+}
+
+li {
+    color: var(--color-text);
+    font-family: var(--font-family-paragraph);
+    font-size: var(--font-size-paragraph);
+    font-style: normal;
+    font-weight: var(--font-weight-light);
+    line-height: var(--line-height-paragraph);
+    font-feature-settings: 'liga' off, 'clig' off;
+    margin: 0 0 16px;
+    padding-left: 16px;
+}
+
+li:last-child {
+    margin-bottom: 0;
+}
+
+blockquote {
+    border: none;
+    font-size: 22px;
+    font-style: normal;
+    line-height: 1.4;
+    margin: calc(var(--baseline) * 4) 0;
+    padding: 0;
+}
+
+figcaption {
+    color: var(--color-text-secondary);
+    font-size: 14px;
+    line-height: 1.4;
+    margin-top: calc(var(--baseline) * 1);
+}

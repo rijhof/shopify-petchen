@@ -32,8 +32,9 @@
     
     {{ content_for_header }}
 
-    {{ 'reset.css' | asset_url | stylesheet_tag }}
+    {% comment %}{{ 'reset.css' | asset_url | stylesheet_tag }}{% endcomment %}
     {{ 'theme.css' | asset_url | stylesheet_tag }}
+    {{ 'section-header.css' | asset_url | stylesheet_tag }}
   </head>
   <body>
     {% section 'header' %}
