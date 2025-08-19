@@ -13,13 +13,13 @@
 
     /* Max widths */
     --content-max-width: 800px;
-    --container-max-width: 1280px;
+    --container-max-width: 1440px;
     --document-max-width: 2560px;
 
     /* Container padding */
     --container-padding-mobile: 16px;
     --container-padding-tablet: 24px;
-    --container-padding-desktop: 32px;
+    --container-padding-desktop: 64px;
 
     /* Component spacing */
     --component-spacing-mobile: 64px;

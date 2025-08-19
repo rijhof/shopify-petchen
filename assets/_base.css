@@ -10,7 +10,7 @@ html {
 }
 
 body {
-    background-color: var(--color-white);
+    background-color: var(--color-secondary);
     color: var(--color-text);
     font-family: var(--font-family-paragraph);
     font-weight: var(--font-weight-light);

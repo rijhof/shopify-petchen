@@ -1,0 +1,16 @@
+<div class="mobile-nav-footer">
+    <a href="{% if customer %}{{ routes.account_url }}{% else %}{{ routes.account_login_url }}{% endif %}"
+       class="mobile-nav-footer-link">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M17 18V16C17 14.9391 16.5786 13.9217 15.8284 13.1716C15.0783 12.4214 14.0609 12 13 12H7C5.93913 12 4.92172 12.4214 4.17157 13.1716C3.42143 13.9217 3 14.9391 3 16V18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="10" cy="5" r="3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        {% if customer %}My Account{% else %}Login{% endif %}
+    </a>
+    <a href="{{ routes.account_url }}" class="mobile-nav-footer-link">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M17.612 3.04174a4.5 4.5 0 0 0-6.364 0L10 4.29L8.752 3.04174a4.5 4.5 0 0 0-6.364 6.364L3.636 10.652 10 17.016l6.364-6.364 1.248-1.248a4.5 4.5 0 0 0 0-6.364z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Wishlist
+    </a>
+</div>
