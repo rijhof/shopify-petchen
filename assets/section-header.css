@@ -655,8 +655,11 @@ header .button-secondary.icon::after {
 /* Header Nav Menü */
 
 .mobile-nav-footer {
-    display: flex;
-    justify-content: space-evenly;
+    padding-inline: 20px;
+}
+
+.mobile-nav-footer a:first-child {
+    padding-bottom: 24px;
 }
 
 
