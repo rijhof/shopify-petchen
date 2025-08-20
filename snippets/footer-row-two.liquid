@@ -1,0 +1,30 @@
+<div class="footer-row-two">
+    <div class="footer-menu">
+        {% if section.settings.footer_menu != blank %}
+            <nav aria-label="Footer Navigation">
+                <ul class="footer-menu-list">
+                    {% for link in linklists[section.settings.footer_menu].links %}
+                        <li class="footer-menu-item">
+                            <a href="{{ link.url }}" class="footer-menu-link">{{ link.title }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </nav>
+        {% endif %}
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="footer-payment">
+        <div class="payment-icons">
+            {{ 'icon-payment-paypal.svg' | asset_url | img_tag: alt: 'PayPal', class: 'payment-icon' }}
+            {{ 'icon-payment-mastercard.svg' | asset_url | img_tag: alt: 'Mastercard', class: 'payment-icon' }}
+            {{ 'icon-payment-visa.svg' | asset_url | img_tag: alt: 'Visa', class: 'payment-icon' }}
+            {{ 'icon-payment-applepay.svg' | asset_url | img_tag: alt: 'Apple Pay', class: 'payment-icon' }}
+            {{ 'icon-payment-giropay.svg' | asset_url | img_tag: alt: 'Giropay', class: 'payment-icon' }}
+            {{ 'icon-payment-lastschrift.svg' | asset_url | img_tag: alt: 'Lastschrift', class: 'payment-icon' }}
+            {{ 'icon-payment-kreditkarte.svg' | asset_url | img_tag: alt: 'Kreditkarte', class: 'payment-icon' }}
+            {{ 'icon-payment-debitkarte.svg' | asset_url | img_tag: alt: 'Debitkarte', class: 'payment-icon' }}
+        </div>
+    </div>
+</div>

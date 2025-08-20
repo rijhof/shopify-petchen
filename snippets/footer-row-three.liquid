@@ -1,0 +1,32 @@
+<div class="footer-row-three">
+    <div class="footer-copyright">
+        <p class="copyright-text meta">
+            &copy; {{ 'now' | date: '%Y' }}
+            {% if section.settings.copyright_text != blank %}
+                {{ section.settings.copyright_text }}
+            {% else %}
+                Petchen GmbH
+            {% endif %}
+        </p>
+    </div>
+
+    <div class="footer-bottom-menu">
+        {% if section.settings.footer_bottom_menu != blank %}
+            <nav aria-label="Footer Bottom Navigation">
+                <ul class="footer-bottom-menu-list">
+                    {% for link in linklists[section.settings.footer_bottom_menu].links %}
+                        <li class="footer-bottom-menu-item">
+                            <a href="{{ link.url }}" class="footer-bottom-menu-link meta">{{ link.title }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </nav>
+        {% endif %}
+    </div>
+
+    <div class="footer-friendventure">
+        <a href="https://friendventure.de" target="_blank" rel="noopener" aria-label="Friendventure">
+            {{ 'logo-friendventure.svg' | asset_url | img_tag: alt: 'Friendventure', class: 'friendventure-logo' }}
+        </a>
+    </div>
+</div>

@@ -1,3 +1,77 @@
-<footer id="footer" class="footer">
-  Footer
+{{ 'section-footer.css' | asset_url | stylesheet_tag }}
+
+<footer class="site-footer section">
+  <div class="container">
+    {% render 'footer-row-one' %}
+    <div class="divider padding"></div>
+    {% render 'footer-row-two' %}
+    <div class="divider padding"></div>
+    {% render 'footer-row-three' %}
+  </div>
+
+  <div class="footer-background-decor">
+    <img src="{{ 'decor-footer-background.svg' | asset_url }}" alt="" aria-hidden="true">
+  </div>
 </footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Social Media"
+    },
+    {
+      "type": "url",
+      "id": "facebook_url",
+      "label": "Facebook URL"
+    },
+    {
+      "type": "url",
+      "id": "instagram_url",
+      "label": "Instagram URL"
+    },
+    {
+      "type": "url",
+      "id": "twitter_url",
+      "label": "Twitter URL"
+    },
+    {
+      "type": "url",
+      "id": "linkedin_url",
+      "label": "LinkedIn URL"
+    },
+    {
+      "type": "url",
+      "id": "youtube_url",
+      "label": "YouTube URL"
+    },
+    {
+      "type": "header",
+      "content": "Navigation"
+    },
+    {
+      "type": "link_list",
+      "id": "footer_menu",
+      "label": "Footer Menü",
+      "default": "footer"
+    },
+    {
+      "type": "link_list",
+      "id": "footer_bottom_menu",
+      "label": "Footer Bottom Menü"
+    },
+    {
+      "type": "header",
+      "content": "Copyright"
+    },
+    {
+      "type": "text",
+      "id": "copyright_text",
+      "label": "Copyright Text",
+      "default": "Petchen GmbH"
+    }
+  ]
+}
+{% endschema %}
