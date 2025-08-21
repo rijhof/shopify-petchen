@@ -183,3 +183,33 @@ figcaption {
 .background-contrast figcaption {
     color: var(--color-white);
 }
+
+.background-reset h1,
+.background-reset h2,
+.background-reset h3,
+.background-reset h4,
+.background-reset h5,
+.background-reset h6,
+.background-reset .h1,
+.background-reset .h2,
+.background-reset .h3,
+.background-reset .h4,
+.background-reset .h5,
+.background-reset .h6,
+.background-reset a {
+    color: var(--color-primary);
+}
+
+.background-reset p,
+.background-reset .lead,
+.background-reset li {
+    color: var(--color-text);
+}
+
+.background-reset .meta {
+    color: var(--color-text);
+}
+
+.background-reset figcaption {
+    color: var(--color-text-secondary);
+}

@@ -1,0 +1,33 @@
+<div class="hero-breadcrumbs background-reset">
+    <div class="container">
+        <nav aria-label="Breadcrumb" class="breadcrumbs-nav">
+            <a href="{{ routes.root_url }}" class="meta breadcrumb-link">Home</a>
+            <img src="{{ 'icon-chevron-right--bg.svg' | asset_url }}" alt="" aria-hidden="true" class="breadcrumb-chevron">
+            {% if collection %}
+                <a href="{{ collection.url }}" class="meta breadcrumb-link">{{ collection.title }}</a>
+                <img src="{{ 'icon-chevron-right--bg.svg' | asset_url }}" alt="" aria-hidden="true" class="breadcrumb-chevron">
+            {% elsif template contains 'product' and product.collections.size > 0 %}
+                {% assign main_collection = product.collections.first %}
+                <a href="{{ main_collection.url }}" class="meta breadcrumb-link">{{ main_collection.title }}</a>
+                <img src="{{ 'icon-chevron-right--bg.svg' | asset_url }}" alt="" aria-hidden="true" class="breadcrumb-chevron">
+            {% endif %}
+            <span class="meta breadcrumb-current" aria-current="page">
+                {% if breadcrumb_text != blank %}
+                    {{ breadcrumb_text }}
+                {% elsif product %}
+                    {{ product.title }}
+                {% elsif collection %}
+                    {{ collection.title }}
+                {% elsif page %}
+                    {{ page.title }}
+                {% elsif blog %}
+                    {{ blog.title }}
+                {% elsif article %}
+                    {{ article.title }}
+                {% else %}
+                    Aktuelle Seite
+                {% endif %}
+            </span>
+        </nav>
+    </div>
+</div>

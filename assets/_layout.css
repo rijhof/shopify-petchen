@@ -36,6 +36,11 @@
     grid-column: 2 / -2;
 }
 
+.component-padding-y {
+    padding-top: var(--component-spacing-y);
+    padding-bottom: var(--component-spacing-y);
+}
+
 /* Grid layout classes */
 .grid {
     display: grid;
