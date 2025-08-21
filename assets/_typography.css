@@ -161,3 +161,25 @@ figcaption {
     line-height: 1.4;
     margin-top: calc(var(--baseline) * 1);
 }
+
+.background-contrast h1,
+.background-contrast h2,
+.background-contrast h3,
+.background-contrast h4,
+.background-contrast h5,
+.background-contrast h6,
+.background-contrast .h1,
+.background-contrast .h2,
+.background-contrast .h3,
+.background-contrast .h4,
+.background-contrast .h5,
+.background-contrast .h6,
+.background-contrast p,
+.background-contrast .lead,
+.background-contrast .meta,
+.background-contrast a,
+.background-contrast li,
+.background-contrast blockquote,
+.background-contrast figcaption {
+    color: var(--color-white);
+}
