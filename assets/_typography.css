@@ -117,6 +117,7 @@ a:not(.button-primary):not(.button-secondary):not(.button-tertiary) {
     transition: color var(--transition-duration) ease;
 }
 
+
 a:hover {
     color: var(--color-text);
 }
