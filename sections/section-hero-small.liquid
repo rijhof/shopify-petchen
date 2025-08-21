@@ -38,10 +38,13 @@
                 <h2 class="hero-subtitle">{{ section.settings.heading_h2 }}</h2>
             {% endif %}
 
-            {% if section.settings.button_text != blank and section.settings.button_link != blank %}
-                <button href="{{ section.settings.button_link }}" class="button-primary icon--right">
-                    {{ section.settings.button_text }}
-                </button>
+            {% if section.settings.button_text != blank %}
+                {% render 'button',
+                        button_text: section.settings.button_text,
+                        button_url: section.settings.button_link,
+                        button_type: section.settings.button_type,
+                        icon_position: section.settings.icon_position
+                %}
             {% endif %}
         </div>
 
@@ -99,6 +102,50 @@
       "type": "url",
       "id": "button_link",
       "label": "Button Link"
+    },
+    {
+      "type": "select",
+      "id": "button_type",
+      "label": "Button Type",
+      "options": [
+        {
+          "value": "primary",
+          "label": "Primary"
+        },
+        {
+          "value": "secondary",
+          "label": "Secondary"
+        },
+        {
+          "value": "tertiary",
+          "label": "Tertiary"
+        }
+      ],
+      "default": "primary"
+    },
+    {
+      "type": "select",
+      "id": "icon_position",
+      "label": "Icon Position",
+      "options": [
+        {
+          "value": "none",
+          "label": "No Icon"
+        },
+        {
+          "value": "left",
+          "label": "Icon Left"
+        },
+        {
+          "value": "right",
+          "label": "Icon Right"
+        },
+        {
+          "value": "only",
+          "label": "Icon Only"
+        }
+      ],
+      "default": "right"
     }
   ],
   "presets": [

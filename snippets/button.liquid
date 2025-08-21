@@ -1,0 +1,22 @@
+{%- assign button_type = button_type | default: 'primary' -%}
+{%- assign icon_position = icon_position | default: 'none' -%}
+
+{%- assign button_classes = 'button-' | append: button_type -%}
+
+{%- if icon_position == 'left' -%}
+    {%- assign button_classes = button_classes | append: ' icon--left' -%}
+{%- elsif icon_position == 'right' -%}
+    {%- assign button_classes = button_classes | append: ' icon--right' -%}
+{%- elsif icon_position == 'only' -%}
+    {%- assign button_classes = button_classes | append: ' icon' -%}
+{%- endif -%}
+
+{%- if button_url != blank -%}
+    <a href="{{ button_url }}" class="{{ button_classes }}">
+        {%- unless icon_position == 'only' -%}{{ button_text }}{%- endunless -%}
+    </a>
+{%- else -%}
+    <button class="{{ button_classes }}">
+        {%- unless icon_position == 'only' -%}{{ button_text }}{%- endunless -%}
+    </button>
+{%- endif -%}
