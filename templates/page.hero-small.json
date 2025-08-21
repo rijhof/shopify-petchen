@@ -24,7 +24,9 @@
         "heading_h1": "Petchen x Adoptieren statt Produzieren",
         "heading_h2": "Mit jedem Kauf Gutes tun!",
         "button_text": "",
-        "button_link": ""
+        "button_link": "",
+        "button_type": "primary",
+        "icon_position": "right"
       }
     },
     "section_hero_small_tUJ7X7": {
@@ -38,7 +40,9 @@
         "heading_h1": "Unser Rudel",
         "heading_h2": "Lorem ipsum dolor sit amet",
         "button_text": "Produkte entdecken",
-        "button_link": "#"
+        "button_link": "https://google.de",
+        "button_type": "primary",
+        "icon_position": "right"
       }
     },
     "section_hero_small_irYgdq": {
@@ -52,7 +56,9 @@
         "heading_h1": "Lorem ipsum dolor sit amet",
         "heading_h2": "Lorem ipsum dolor sit amet",
         "button_text": "Produkte entdecken",
-        "button_link": "#"
+        "button_link": "#",
+        "button_type": "primary",
+        "icon_position": "right"
       }
     }
   },
