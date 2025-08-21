@@ -100,7 +100,7 @@ p {
     font-feature-settings: 'liga' off, 'clig' off;
 }
 
-a {
+a:not(.button-primary):not(.button-secondary):not(.button-tertiary) {
     color: var(--color-primary);
     font-family: var(--font-family-paragraph);
     font-size: var(--font-size-link);
