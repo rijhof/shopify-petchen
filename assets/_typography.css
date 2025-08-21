@@ -123,7 +123,7 @@ a.button-tertiary {
     text-decoration: none;
 }
 
-a:hover {
+a:not(.button-primary, .button-secondary, .button-tertiary):hover {
     color: var(--color-text);
 }
 

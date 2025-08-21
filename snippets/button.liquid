@@ -1,22 +1,20 @@
-{%- assign button_type = button_type | default: 'primary' -%}
-{%- assign icon_position = icon_position | default: 'none' -%}
+{%- liquid
+    assign button_type = button_type | default: 'primary'
+    assign icon_position = icon_position | default: 'right'
+    assign button_classes = 'button-' | append: button_type
 
-{%- assign button_classes = 'button-' | append: button_type -%}
+    case icon_position
+        when 'left'
+            assign button_classes = button_classes | append: ' icon--left'
+        when 'right'
+            assign button_classes = button_classes | append: ' icon--right'
+        when 'only'
+            assign button_classes = button_classes | append: ' icon'
+    endcase
+-%}
 
-{%- if icon_position == 'left' -%}
-    {%- assign button_classes = button_classes | append: ' icon--left' -%}
-{%- elsif icon_position == 'right' -%}
-    {%- assign button_classes = button_classes | append: ' icon--right' -%}
-{%- elsif icon_position == 'only' -%}
-    {%- assign button_classes = button_classes | append: ' icon' -%}
-{%- endif -%}
-
-{%- if button_url != blank -%}
-    <a href="{{ button_url }}" class="{{ button_classes }}">
+{%- if button_url != blank and button_text != blank -%}
+    <a href="{{ button_url }}" class="{{ button_classes }}"{% if button_disabled %} aria-disabled="true"{% endif %}>
         {%- unless icon_position == 'only' -%}{{ button_text }}{%- endunless -%}
     </a>
-{%- else -%}
-    <button class="{{ button_classes }}">
-        {%- unless icon_position == 'only' -%}{{ button_text }}{%- endunless -%}
-    </button>
 {%- endif -%}

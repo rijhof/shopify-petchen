@@ -24,6 +24,7 @@ button {
     transition: all var(--transition-duration) ease;
     appearance: none;
     position: relative;
+    width: fit-content;
 }
 
 .button-primary:not(.icon--left):not(.icon--right):not(.icon) {
