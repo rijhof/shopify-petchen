@@ -29,11 +29,25 @@
       "settings": {
         "title": "Featured Collection"
       }
+    },
+    "section_hero_Nti7CL": {
+      "type": "section-hero",
+      "name": "Hero",
+      "settings": {
+        "image_desktop": "shopify://shop_images/Hero__Bild_oder_Vi_deo.png",
+        "image_mobile": "shopify://shop_images/Hero__Bild_oder_Vi_deo_14517e2b-daf6-4ae9-8c25-6ad1790946d1.png",
+        "image_alt": "",
+        "heading_h1": "Wasser marsch... nasses Fell, trockene Nase, wackelnde Ohren...",
+        "heading_h2": "Pflege, was du liebst",
+        "button_text": "Produkte entdecken",
+        "button_link": ""
+      }
     }
   },
   "order": [
     "store-name",
     "featured-collection",
-    "base_style_CzEDEe"
+    "base_style_CzEDEe",
+    "section_hero_Nti7CL"
   ]
 }
