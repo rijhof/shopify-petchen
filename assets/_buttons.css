@@ -141,6 +141,7 @@ button {
     font-weight: var(--font-weight-medium);
     transition: all var(--transition-duration) ease;
     appearance: none;
+    width: fit-content;
 }
 
 .button-secondary:hover {
@@ -253,6 +254,7 @@ button {
     font-weight: var(--font-weight-medium);
     transition: all var(--transition-duration) ease;
     appearance: none;
+    width: fit-content;
 }
 
 .button-tertiary:not(.icon--left):not(.icon--right):hover {

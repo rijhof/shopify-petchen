@@ -195,6 +195,10 @@ figcaption {
     color: var(--color-white);
 }
 
+.background-contrast a:hover {
+    color: var(--color-background-two);
+}
+
 .background-reset h1,
 .background-reset h2,
 .background-reset h3,
@@ -210,6 +214,10 @@ figcaption {
 .background-reset a,
 .background-reset span {
     color: var(--color-primary);
+}
+
+.background-reset a:hover {
+    color: var(--color-text);
 }
 
 .background-reset p,
