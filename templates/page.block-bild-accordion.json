@@ -137,7 +137,7 @@
       "settings": {
         "image": "shopify://shop_images/doggo.png",
         "image_alt": "",
-        "decoration_type": "flower-grass-bottom-right",
+        "decoration_type": "heart-bottom-right-edge",
         "image_position": "left",
         "heading": "Lorem ipsum dolor sit amet",
         "background_color": "green"
@@ -180,7 +180,7 @@
       "settings": {
         "image": "shopify://shop_images/martin-ruther-mit-hund.png",
         "image_alt": "",
-        "decoration_type": "flower-grass-bottom-left",
+        "decoration_type": "heart-bottom-right-inside",
         "image_position": "right",
         "heading": "Lorem ipsum dolor sit amet",
         "background_color": "green"
