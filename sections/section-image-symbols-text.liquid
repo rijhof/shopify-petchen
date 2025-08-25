@@ -72,6 +72,17 @@
                     </div>
                 {% endif %}
 
+                {% if section.settings.button_text != blank %}
+                  <div class="section-image-text__action">
+                    {% render 'button',
+                            button_text: section.settings.button_text,
+                            button_url: section.settings.button_link,
+                            button_type: section.settings.button_type,
+                            icon_position: section.settings.icon_position
+                    %}
+                  </div>
+                {% endif %}
+
             </div>
 
         </div>
@@ -124,6 +135,40 @@
       "id": "heading",
       "label": "Überschrift",
       "default": "Überschrift"
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "select",
+      "id": "button_type",
+      "label": "Button Type",
+      "options": [
+        {
+          "value": "primary",
+          "label": "Primary"
+        },
+        {
+          "value": "secondary",
+          "label": "Secondary"
+        },
+        {
+          "value": "tertiary",
+          "label": "Tertiary"
+        }
+      ],
+      "default": "primary"
     },
     {
       "type": "header",
