@@ -110,7 +110,7 @@ button {
     justify-content: center;
 }
 
-.button-primary.icon::after {
+.button-primary.icon:not(.icon-empty)::after {
     content: '';
     width: 24px;
     height: 24px;
@@ -220,7 +220,7 @@ button {
     background-image: url('icon-btn-scndry-bg--icon-only-focused.svg');
 }
 
-.button-secondary.icon::after {
+.button-secondary.icon:not(.icon-empty)::after {
     content: '';
     width: 24px;
     height: 24px;

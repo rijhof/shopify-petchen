@@ -1,0 +1,312 @@
+<div class="product-box-info">
+    {% form 'product', product, id: 'product-form', novalidate: 'novalidate' %}
+        <input type="hidden" name="id" value="{{ selected_variant.id }}">
+
+        {% unless product.has_only_default_variant %}
+            <variant-selector data-url="{{ product.url }}" data-section="{{ section.id }}">
+                {% for option in product.options_with_values %}
+                    <div class="product-variant-group">
+                        <label for="option-{{ section.id }}-{{ forloop.index0 }}">{{ option.name }}</label>
+                        <div class="form-group">
+                            <select name="options[{{ option.name | escape }}]" id="option-{{ section.id }}-{{ forloop.index0 }}">
+                                {% for value in option.values %}
+                                    <option value="{{ value | escape }}" {% if option.selected_value == value %} selected="selected" {% endif %}>
+                                        {{ value }}
+                                    </option>
+                                {% endfor %}
+                            </select>
+                            <label for="option-{{ section.id }}-{{ forloop.index0 }}">{{ option.name }}</label>
+                        </div>
+                    </div>
+                {% endfor %}
+                <script type="application/json">
+          {{ product.variants | json }}
+        </script>
+            </variant-selector>
+        {% endunless %}
+
+        <div class="product-price" id="price-{{ section.id }}">
+            {% if selected_variant.compare_at_price > selected_variant.price %}
+                <span class="product-price__compare">{{ selected_variant.compare_at_price | money }}</span>
+            {% endif %}
+            <span class="product-price__current">{{ selected_variant.price | money }}</span>
+            {% if selected_variant.compare_at_price > selected_variant.price %}
+                <span class="product-price__badge">Sale</span>
+            {% endif %}
+        </div>
+
+        <div class="add-fields">
+            <div class="product-quantity">
+                <label for="quantity-{{ section.id }}" class="visually-hidden">Quantity</label>
+                <div class="quantity-selector">
+                    <button type="button" class="quantity-button quantity-button--minus" aria-label="Decrease quantity">
+                        <img src="{{ 'icon-btn-minus.svg' | asset_url }}" alt="" width="20" height="20" aria-hidden="true">
+                    </button>
+                    <input type="number"
+                           name="quantity"
+                           id="quantity-{{ section.id }}"
+                           value="1"
+                           min="1"
+                           class="quantity-input"
+                           aria-label="Quantity">
+                    <button type="button" class="quantity-button quantity-button--plus" aria-label="Increase quantity">
+                        <img src="{{ 'icon-btn-plus.svg' | asset_url }}" alt="" width="20" height="20" aria-hidden="true">
+                    </button>
+                </div>
+            </div>
+
+            <button type="submit"
+                    name="add"
+                    class="product-add-to-cart button-primary"
+            {% if selected_variant.available == false %} disabled {% endif %}>
+                {% if selected_variant.available == false %}
+                    Sold out
+                {% else %}
+                    Add to cart
+                {% endif %}
+            </button>
+        </div>
+    {% endform %}
+
+    {% if section.blocks.size > 0 %}
+        <div class="product-box-info__features">
+            {% for block in section.blocks %}
+                {% if block.type == 'info_box' %}
+                    <div class="product-feature-item">
+                        {% case block.settings.icon %}
+                            {% when 'checkmark' %}
+                                <img src="{{ 'icon-header--checkmark-circle.svg' | asset_url }}" alt="" width="20" height="20" aria-hidden="true">
+                            {% when 'heart' %}
+                                <img src="{{ 'icon-header--heart.svg' | asset_url }}" alt="" width="20" height="20" aria-hidden="true">
+                            {% when 'shopping-bag' %}
+                                <img src="{{ 'icon-header--shopping-bag.svg' | asset_url }}" alt="" width="20" height="20" aria-hidden="true">
+                            {% when 'avatar' %}
+                                <img src="{{ 'icon-header--avatar.svg' | asset_url }}" alt="" width="20" height="20" aria-hidden="true">
+                            {% when 'five-stars' %}
+                                <img src="{{ 'icon-header--five-stars.svg' | asset_url }}" alt="" width="72" height="16" aria-hidden="true">
+                        {% endcase %}
+                        <span>{{ block.settings.text }}</span>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    <div class="product-payment-methods">
+        <p class="product-payment-methods__title meta">Payment methods</p>
+        <div class="product-payment-methods__icons">
+            <img src="{{ 'icon-payment-visa.svg' | asset_url }}" alt="Visa" width="40" height="24">
+            <img src="{{ 'icon-payment-mastercard.svg' | asset_url }}" alt="Mastercard" width="40" height="24">
+            <img src="{{ 'icon-payment-paypal.svg' | asset_url }}" alt="PayPal" width="40" height="24">
+            <img src="{{ 'icon-payment-applepay.svg' | asset_url }}" alt="Apple Pay" width="40" height="24">
+            <img src="{{ 'icon-payment-giropay.svg' | asset_url }}" alt="Giropay" width="40" height="24">
+        </div>
+    </div>
+</div>
+
+<style>
+    .product-box-info {
+        background: var(--color-white);
+        border-radius: var(--border-radius);
+        padding: calc(var(--baseline) * 4);
+    }
+
+    .product-box-info__features {
+        margin-bottom: 24px;
+    }
+
+    .product-feature-item {
+        display: flex;
+        align-items: center;
+        gap: calc(var(--baseline) * 1.5);
+        margin-bottom: calc(var(--baseline) * 2);
+    }
+
+    .product-feature-item:last-child {
+        margin-bottom: 0;
+    }
+
+    .product-feature-item img {
+        flex-shrink: 0;
+    }
+
+    .product-feature-item span {
+        font-family: var(--font-family-paragraph);
+        font-size: var(--font-size-meta);
+        color: var(--color-text);
+    }
+
+    .product-variant-group {
+        margin-bottom: calc(var(--baseline) * 3);
+    }
+
+    .product-variant-group > label {
+        display: block;
+        font-weight: var(--font-weight-medium);
+        margin-bottom: calc(var(--baseline) * 1);
+        color: var(--color-text);
+    }
+
+    .product-price {
+        display: flex;
+        align-items: center;
+        gap: calc(var(--baseline) * 2);
+        margin-bottom: 24px;
+    }
+
+    .product-price__current {
+        font-size: var(--font-size-h3);
+        font-weight: var(--font-weight-semibold);
+        color: var(--color-primary);
+    }
+
+    .product-price__compare {
+        font-size: var(--font-size-lead);
+        color: var(--color-grey-dark);
+        text-decoration: line-through;
+    }
+
+    .product-price__badge {
+        background: var(--color-error);
+        color: var(--color-white);
+        padding: 4px 12px;
+        border-radius: 4px;
+        font-size: var(--font-size-meta);
+        font-weight: var(--font-weight-medium);
+    }
+
+    .add-fields {
+        display: flex;
+        flex-direction: row;
+        gap: 32px;
+        margin-bottom: 24px;
+    }
+
+    @media (min-width: 1024px) {
+        .add-fields {
+            flex-direction: column;
+        }
+    }
+
+    .add-fields button {
+        margin-bottom: 0;
+    }
+
+    .quantity-selector {
+        display: flex;
+        height: 54px;
+        justify-content: center;
+        align-items: center;
+        border-radius: var(--border-radius);
+        border: 1px solid var(--color-grey);
+        overflow: visible;
+        width: fit-content;
+    }
+
+    .quantity-selector input[type=number] {
+        border: 0;
+        padding: 0;
+        width: 40px;
+    }
+
+    .quantity-button {
+        width: 48px;
+        height: 54px;
+        border: none;
+        background: transparent;
+        color: var(--color-text);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color var(--transition-duration) ease;
+        margin: 0;
+        padding: 0;
+    }
+
+    .quantity-button:hover {
+        background: transparent;
+        opacity: 0.7;
+    }
+
+    .quantity-input {
+        width: auto;
+        height: auto;
+        border: none;
+        text-align: center;
+        background: transparent;
+        outline: none;
+        -moz-appearance: textfield;
+        min-width: 30px;
+    }
+
+    .quantity-input::-webkit-outer-spin-button,
+    .quantity-input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    .product-add-to-cart {
+        width: fit-content;
+        justify-content: center;
+        padding: calc(var(--baseline) * 2) calc(var(--baseline) * 3);
+    }
+
+    .product-add-to-cart:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+
+    .product-payment-methods__icons {
+        display: flex;
+        gap: calc(var(--baseline) * 1);
+        flex-wrap: wrap;
+    }
+
+    .product-payment-methods__icons img {
+        height: 30px;
+        width: auto;
+    }
+
+    .product-payment-methods__title {
+        font-weight: var(--font-weight-medium);
+        color: var(--color-primary);
+        margin-bottom: 16px;
+    }
+
+    @media (max-width: 767px) {
+        .product-box-info {
+            padding: 44px;
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const quantitySelectors = document.querySelectorAll('.quantity-selector');
+
+        quantitySelectors.forEach(selector => {
+            const minus = selector.querySelector('.quantity-button--minus');
+            const plus = selector.querySelector('.quantity-button--plus');
+            const input = selector.querySelector('.quantity-input');
+
+            minus.addEventListener('click', () => {
+                const currentValue = parseInt(input.value);
+                if (currentValue > 1) {
+                    input.value = currentValue - 1;
+                }
+            });
+
+            plus.addEventListener('click', () => {
+                const currentValue = parseInt(input.value);
+                input.value = currentValue + 1;
+            });
+
+            input.addEventListener('change', () => {
+                if (parseInt(input.value) < 1) {
+                    input.value = 1;
+                }
+            });
+        });
+    });
+</script>

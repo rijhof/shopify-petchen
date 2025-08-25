@@ -1,60 +1,87 @@
+<!-- templates/product.liquid -->
+{{ 'template-product.css' | asset_url | stylesheet_tag }}
+{{ 'snippet-accordion.css' | asset_url | stylesheet_tag }}
+
 {% assign selected_variant = product.selected_or_first_available_variant %}
 
-{% for media in product.media %}
-  {% render 'product-media', media: media %}
-{% endfor %}
+<div class="product-container">
+  <div class="product-grid">
+    <div class="product-column product-column--media">
+      {% render 'product-thumbslider', product: product %}
+    </div>
 
-{% form 'product', product, id: 'product-form', novalidate: 'novalidate' %}
-  <input type="hidden" name="id" value="{{ selected_variant.id }}">
-  {% for block in section.blocks %}
-    {% case block.type %}
-      {% when 'vendor' %}
-        {{ product.vendor }}
-      {% when 'title' %}
-        <h1>{{ product.title }}</h1>
-      {% when 'price' %}
-        <div id="price-{{ section.id }}">
-          <span>{{ selected_variant.compare_at_price | money }}</span>
-          <span>{{ selected_variant.price | money }}</span>
-          {% if selected_variant.price < selected_variant.compare_at_price %}
-            <span>Sale</span>
+    <div class="product-column product-column--info">
+      <div class="product-wishlist">
+        <button type="button" class="button-secondary icon icon-empty" aria-label="Add to wishlist">
+          <img src="{{ 'icon-header--heart.svg' | asset_url }}" alt="" aria-hidden="true">
+        </button>
+      </div>
+
+      {% render 'product-info', product: product %}
+
+      {% render 'product-box-info', product: product, selected_variant: selected_variant, section: section %}
+
+      {% if product.metafields.custom.anwendung != blank or product.metafields.custom.inhaltsstoffe != blank %}
+        <div class="product-accordions">
+          {% if product.metafields.custom.anwendung != blank %}
+            {% assign usage_html = product.metafields.custom.anwendung | metafield_tag %}
+            {% render 'accordion', title: 'Anwendungsfälle', content: usage_html, open: true %}
+          {% endif %}
+
+          {% if product.metafields.custom.inhaltsstoffe != blank %}
+            {% assign ingredients_content = product.metafields.custom.inhaltsstoffe | metafield_tag %}
+            {% render 'accordion', title: 'Ingredients', content: ingredients_content %}
           {% endif %}
         </div>
-      {% when 'variant_selector' %}
-        {% unless product.has_only_default_variant %}
-          <variant-selector data-url="{{ product.url }}" data-section="{{ section.id }}">
-            {% for option in product.options_with_values %}
-              <label for="option-{{ section.id }}-{{ forloop.index0 }}">{{ option.name }}</label>
-              <select name="options[{{ option.name | escape }}]" id="option-{{ section.id }}-{{ forloop.index0 }}">
-                {% for value in option.values %}
-                  <option value="{{ value | escape }}" {% if option.selected_value == value %} selected="selected" {% endif %}>{{ value }}</option>
-                {% endfor %}
-              </select>
-              <script type="application/json">
-                {{ product.variants | json }}
-              </script>
-            {% endfor %}
-          </variant-selector>
-        {% endunless %}
-      {% when 'quantity' %}
-        <label for="quantity-{{ section.id }}">Quantity</label>
-        <input type="number" name="quantity" id="quantity-{{ section.id }}" value="1" min="1">
-      {% when 'description' %}
-        <p>{{ product.description }}</p>
-      {% when 'checkout_buttons' %}
-        <button type="submit" name="add" {% if selected_variant.available == false %} disabled {% endif %}>
-          {% if selected_variant.available == false %}
-              Sold out
-          {% else %}
-              Add to cart
-          {% endif %}
-        </button>
-      {% else %}
-                
-    {% endcase %}
-  {% endfor %}
-{% endform %}
-            
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<style>
+  .product-container {
+    padding: var(--component-spacing-y) 0;
+  }
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--grid-gap-column);
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding-x);
+  }
+
+  @media (min-width: 1024px) {
+    .product-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .product-column {
+    position: relative;
+  }
+
+  .product-wishlist {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .product-wishlist button {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 1023px) {
+    .product-wishlist {
+      position: absolute;
+      top: calc(var(--baseline) * 2);
+      right: calc(var(--baseline) * 2);
+      z-index: 10;
+    }
+  }
+</style>
+
+<script src="{{ 'snippet-accordion.js' | asset_url }}" defer></script>
 
 <script>
   class VariantSelector extends HTMLElement {
@@ -70,12 +97,12 @@
         this.updateURL();
         this.updateFormID();
         this.updatePrice();
+        this.updateMedia();
       }
     }
 
     getSelectedOptions() {
       this.options = Array.from(this.querySelectorAll('select'), (select) => select.value);
-      console.log(this.options);
     }
 
     getVariantJSON() {
@@ -90,7 +117,6 @@
         }).includes(false);
         if (findings) return variant;
       });
-      console.log(this.currentVariant);
     }
 
     updateURL() {
@@ -105,58 +131,75 @@
 
     updatePrice() {
       fetch(`${this.dataset.url}?variant=${this.currentVariant.id}&section_id=${this.dataset.section}`)
-        .then((response) => response.text())
-        .then((responseText) => {
-          const id = `price-${this.dataset.section}`;
-          const html = new DOMParser().parseFromString(responseText, 'text/html');
-          const oldPrice = document.getElementById(id);
-          const newPrice = html.getElementById(id);
-          if (oldPrice && newPrice) oldPrice.innerHTML = newPrice.innerHTML;
-        });
+              .then((response) => response.text())
+              .then((responseText) => {
+                const id = `price-${this.dataset.section}`;
+                const html = new DOMParser().parseFromString(responseText, 'text/html');
+                const oldPrice = document.getElementById(id);
+                const newPrice = html.getElementById(id);
+                if (oldPrice && newPrice) oldPrice.innerHTML = newPrice.innerHTML;
+              });
+    }
+
+    updateMedia() {
+      if (!this.currentVariant.featured_media) return;
+      const newMediaId = this.currentVariant.featured_media.id;
+      const thumbSlider = document.querySelector('.product-thumbslider');
+      if (thumbSlider) {
+        const targetThumb = thumbSlider.querySelector(`[data-media-id="${newMediaId}"]`);
+        if (targetThumb) {
+          targetThumb.click();
+        }
+      }
     }
   }
   customElements.define("variant-selector", VariantSelector);
 </script>
-
+<script src="{{ 'snippet-accordion.js' | asset_url }}" defer></script>
 
 {% schema %}
 {
   "name": "Product",
   "blocks": [
     {
-      "type": "vendor",
-      "name": "Vendor",
-      "limit": 1
-    },
-    {
-      "type": "title",
-      "name": "Title",
-      "limit": 1
-    },
-    {
-      "type": "price",
-      "name": "Price",
-      "limit": 1
-    },
-    {
-      "type": "variant_selector",
-      "name": "Variant Selector",
-      "limit": 1
-    },
-    {
-      "type": "quantity",
-      "name": "Quantity",
-      "limit": 1
-    },
-    {
-      "type": "description",
-      "name": "Description",
-      "limit": 1
-    },
-    {
-      "type": "checkout_buttons",
-      "name": "Checkout Buttons",
-      "limit": 1
+      "type": "info_box",
+      "name": "Info Box Item",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            {
+              "value": "checkmark",
+              "label": "Checkmark"
+            },
+            {
+              "value": "heart",
+              "label": "Heart"
+            },
+            {
+              "value": "shopping-bag",
+              "label": "Shopping Bag"
+            },
+            {
+              "value": "avatar",
+              "label": "Avatar"
+            },
+            {
+              "value": "five-stars",
+              "label": "Five Stars"
+            }
+          ],
+          "default": "checkmark"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Free shipping from $50"
+        }
+      ]
     }
   ]
 }

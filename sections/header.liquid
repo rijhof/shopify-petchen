@@ -105,7 +105,7 @@
         </a>
 
         <div class="header-actions">
-          <button class="header-search-toggle hide-mobile button-secondary icon"
+          <button class="header-search-toggle hide-mobile button-secondary icon icon-empty"
                   type="button"
                   aria-expanded="false"
                   aria-controls="header-search"
@@ -114,21 +114,21 @@
           </button>
 
           <a href="{{ routes.account_url }}"
-             class="header-action-link hide-mobile button-secondary icon"
+             class="header-action-link hide-mobile button-secondary icon icon-empty"
              aria-label="Wishlist{% if customer %}{% else %} - Login required{% endif %}">
             <img src="{{ 'icon-header--heart.svg' | asset_url }}" aria-hidden="true">
             <span class="visually-hidden">Wishlist</span>
           </a>
 
           <a href="{% if customer %}{{ routes.account_url }}{% else %}{{ routes.account_login_url }}{% endif %}"
-             class="header-action-link button-secondary icon hide-"
+             class="header-action-link button-secondary icon icon-empty"
              aria-label="{% if customer %}My account{% else %}Login or register{% endif %}">
             <img src="{{ 'icon-header--avatar.svg' | asset_url }}" aria-hidden="true">
             <span class="visually-hidden">{% if customer %}My account{% else %}Login{% endif %}</span>
           </a>
 
           <a href="{{ routes.cart_url }}"
-             class="header-action-link header-cart button-secondary icon"
+             class="header-action-link header-cart button-secondary icon icon-empty"
              aria-label="Shopping cart with {{ cart.item_count }} {% if cart.item_count == 1 %}item{% else %}items{% endif %}">
             <img src="{{ 'icon-header--shopping-bag.svg' | asset_url }}" aria-hidden="true">
             {% if cart.item_count > 0 %}
@@ -137,7 +137,7 @@
             <span class="visually-hidden">Shopping cart</span>
           </a>
 
-          <button class="header-mobile-menu-toggle hide-desktop button-secondary icon"
+          <button class="header-mobile-menu-toggle hide-desktop button-secondary icon icon-empty"
                   type="button"
                   aria-expanded="false"
                   aria-controls="mobile-navigation"
@@ -188,7 +188,7 @@
             {% endif %}
           </a>
 
-          <button class="mobile-navigation-close button-secondary icon"
+          <button class="mobile-navigation-close button-secondary icon icon-empty"
                   type="button"
                   aria-label="Close navigation menu">
             <svg xmlns="http://www.w3.org/2000/svg" width="41" height="40" viewBox="0 0 41 40" fill="none">

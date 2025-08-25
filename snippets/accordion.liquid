@@ -1,0 +1,37 @@
+{% comment %}
+  Renders an accordion component
+
+  Accepts:
+  - title: {String} The accordion title
+  - content: {String} The accordion content
+  - open: {Boolean} Whether the accordion should be open by default (optional)
+
+  Usage:
+  {% render 'accordion', title: 'Anwendungsfälle', content: product.metafields.custom.usage %}
+{% endcomment %}
+
+{% assign is_open = open | default: false %}
+
+<div class="accordion-item" data-accordion-open="{{ is_open }}">
+    <button
+            class="accordion-header"
+            type="button"
+            aria-expanded="{{ is_open }}"
+            aria-controls="accordion-content-{{ title | handle }}"
+    >
+        <h3 class="accordion-title">{{ title }}</h3>
+        <span class="accordion-icon" aria-hidden="true">
+      <img src="{{ 'icon-chevron-right--bg.svg' | asset_url }}" alt="" loading="lazy">
+    </span>
+    </button>
+
+    <div
+            class="accordion-content {% if is_open %}accordion-content--open{% endif %}"
+            id="accordion-content-{{ title | handle }}"
+            aria-hidden="{% if is_open %}false{% else %}true{% endif %}"
+    >
+        <div class="accordion-content-inner">
+            <p>{{ content }}</p>
+        </div>
+    </div>
+</div>

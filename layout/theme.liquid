@@ -29,12 +29,15 @@
     {% endif %}
 
     {% render 'meta-tags' %}
-    
+
     {{ content_for_header }}
 
     {% comment %}{{ 'reset.css' | asset_url | stylesheet_tag }}{% endcomment %}
     {{ 'theme.css' | asset_url | stylesheet_tag }}
     {{ 'section-header.css' | asset_url | stylesheet_tag }}
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
   </head>
   <body>
     {% section 'header' %}

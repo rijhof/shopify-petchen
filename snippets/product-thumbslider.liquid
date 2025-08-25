@@ -1,0 +1,440 @@
+<div class="product-thumbslider" role="region" aria-label="Product images">
+    <!-- Main Swiper -->
+    <div class="thumbslider-main">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                {% for media in product.media %}
+                    <div class="swiper-slide thumbslider-main-slide" data-media-id="{{ media.id }}">
+                        {% case media.media_type %}
+                            {% when 'image' %}
+                                <img src="{{ media | img_url: '800x' }}"
+                                     alt="{{ media.alt | escape }}"
+                                     width="800"
+                                     height="{{ 800 | divided_by: media.aspect_ratio | round }}"
+                                     loading="{% if forloop.first %}eager{% else %}lazy{% endif %}">
+                            {% when 'video' %}
+                                {{ media | video_tag: controls: true, muted: true, loop: true }}
+                            {% when 'external_video' %}
+                                {{ media | external_video_tag }}
+                            {% when 'model' %}
+                                {{ media | model_viewer_tag }}
+                        {% endcase %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    {% if product.media.size > 1 %}
+        <!-- Thumbnail Swiper -->
+        <div class="swiper thumbslider-nav">
+            <div class="swiper-wrapper">
+                {% for media in product.media %}
+                    <div class="swiper-slide thumbslider-nav-slide" data-media-id="{{ media.id }}">
+                        {% case media.media_type %}
+                            {% when 'image' %}
+                                <img src="{{ media | img_url: '120x' }}"
+                                     alt="View {{ media.alt | default: product.title }} - Image {{ forloop.index }}"
+                                     width="120"
+                                     height="{{ 120 | divided_by: media.aspect_ratio | round }}"
+                                     loading="lazy">
+                            {% when 'video' %}
+                                <div class="thumbslider-nav-video">
+                                    <img src="{{ media.preview_image | img_url: '120x' }}"
+                                         alt="Play video - {{ product.title }}"
+                                         width="120"
+                                         height="{{ 120 | divided_by: media.preview_image.aspect_ratio | round }}"
+                                         loading="lazy">
+                                    <span class="thumbslider-nav-video-icon" aria-hidden="true">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M8 5v14l11-7z"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                            {% when 'external_video' %}
+                                <div class="thumbslider-nav-video">
+                                    <div class="thumbslider-nav-placeholder"></div>
+                                    <span class="thumbslider-nav-video-icon" aria-hidden="true">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M8 5v14l11-7z"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                            {% when 'model' %}
+                                <div class="thumbslider-nav-model">
+                                    <img src="{{ media.preview_image | img_url: '120x' }}"
+                                         alt="View 3D model - {{ product.title }}"
+                                         width="120"
+                                         height="{{ 120 | divided_by: media.preview_image.aspect_ratio | round }}"
+                                         loading="lazy">
+                                    <span class="thumbslider-nav-model-icon" aria-hidden="true">3D</span>
+                                </div>
+                        {% endcase %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    {% endif %}
+</div>
+
+<style>
+    .product-thumbslider {
+        position: relative;
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    /* Main Slider Container */
+    .thumbslider-main {
+        width: 100%;
+        max-width: 100%;
+        height: 0;
+        padding-bottom: 100%; /* 1:1 Aspect Ratio */
+        background: #f8f8f8;
+        border-radius: 8px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .thumbslider-main .swiper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .thumbslider-main .swiper-wrapper {
+        width: 100%;
+        height: 100%;
+    }
+
+    .thumbslider-main .swiper-slide {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #fff;
+        overflow: hidden;
+    }
+
+    .thumbslider-main img,
+    .thumbslider-main video {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        display: block;
+    }
+
+    .thumbslider-main model-viewer {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Thumbnail Navigation - Optimiert für 4 sichtbare Thumbnails */
+    .thumbslider-nav {
+        margin-top: 16px;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .thumbslider-nav .swiper-slide {
+        width: calc(25% - 7.5px) !important; /* 4 Slides mit Gaps */
+        height: 0;
+        padding-bottom: calc(25% - 7.5px); /* Quadratische Thumbnails - Höhe = Breite */
+        position: relative;
+        opacity: 0.6;
+        cursor: pointer;
+        border: 2px solid transparent;
+        border-radius: 8px;
+        overflow: hidden;
+        background: #f8f8f8;
+        transition: all 0.3s ease;
+        flex-shrink: 0;
+    }
+
+    .thumbslider-nav .swiper-slide-thumb-active {
+        opacity: 1;
+        border-color: #000;
+    }
+
+    .thumbslider-nav .swiper-slide:hover {
+        opacity: 1;
+        border-color: #666;
+    }
+
+    .thumbslider-nav img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Video & Model Thumbnails */
+    .thumbslider-nav-video,
+    .thumbslider-nav-model {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .thumbslider-nav-placeholder {
+        width: 100%;
+        height: 100%;
+        background: #e0e0e0;
+    }
+
+    .thumbslider-nav-video-icon,
+    .thumbslider-nav-model-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(255, 255, 255, 0.95);
+        padding: 6px 10px;
+        border-radius: 4px;
+        font-size: 11px;
+        font-weight: 600;
+        color: #000;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        pointer-events: none;
+    }
+
+    .thumbslider-nav-video-icon svg {
+        display: block;
+        width: 20px;
+        height: 20px;
+    }
+
+    /* Swiper Overrides für sauberes Aussehen */
+    .thumbslider-main .swiper {
+        width: 100%;
+        height: 100%;
+    }
+
+    .thumbslider-main .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .thumbslider-nav .swiper-wrapper {
+        align-items: stretch;
+    }
+
+    /* Verhindere Swiper-Overflow */
+    .swiper {
+        overflow: hidden !important;
+    }
+
+    .swiper-slide img {
+        display: block;
+        max-width: 100% !important;
+    }
+
+    /* Verhindere dass Swiper die Größe überschreibt */
+    .thumbslider-main .swiper-slide-active {
+        width: 100% !important;
+    }
+
+    /* Reset Swiper defaults die Probleme verursachen könnten */
+    .thumbslider-main .swiper-wrapper {
+        align-items: center;
+    }
+
+    /* Mobile Anpassungen - 4 Thumbnails sichtbar */
+    @media (max-width: 480px) {
+        .thumbslider-nav .swiper-slide {
+            width: calc(25% - 6px) !important;
+            padding-bottom: calc(25% - 6px);
+        }
+
+        .thumbslider-nav .swiper-wrapper {
+            gap: 8px;
+        }
+
+        .thumbslider-nav-video-icon,
+        .thumbslider-nav-model-icon {
+            font-size: 9px;
+            padding: 3px 5px;
+        }
+
+        .thumbslider-nav-video-icon svg {
+            width: 14px;
+            height: 14px;
+        }
+    }
+
+    /* Kleine Mobile Geräte */
+    @media (min-width: 481px) and (max-width: 767px) {
+        .thumbslider-nav .swiper-slide {
+            width: calc(25% - 7.5px) !important;
+            padding-bottom: calc(25% - 7.5px);
+        }
+
+        .thumbslider-nav .swiper-wrapper {
+            gap: 10px;
+        }
+
+        .thumbslider-nav-video-icon,
+        .thumbslider-nav-model-icon {
+            font-size: 10px;
+            padding: 4px 6px;
+        }
+
+        .thumbslider-nav-video-icon svg {
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    /* Tablet */
+    @media (min-width: 768px) and (max-width: 1024px) {
+        .product-thumbslider {
+            max-width: 500px;
+        }
+
+        .thumbslider-nav .swiper-slide {
+            width: calc(25% - 7.5px) !important;
+            padding-bottom: calc(25% - 7.5px);
+        }
+    }
+
+    /* Desktop Large */
+    @media (min-width: 1440px) {
+        .product-thumbslider {
+            max-width: 700px;
+        }
+
+        .thumbslider-nav .swiper-slide {
+            width: calc(25% - 7.5px) !important;
+            padding-bottom: calc(25% - 7.5px);
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Warte bis Swiper geladen ist
+        if (typeof Swiper === 'undefined') {
+            console.error('Swiper.js ist nicht geladen');
+            return;
+        }
+
+        // Initialisiere Thumbnail Navigation - Forciere 4 sichtbare Slides
+        const thumbsSwiper = new Swiper('.thumbslider-nav', {
+            spaceBetween: 10,
+            slidesPerView: 4, // Explizit 4 ohne Anführungszeichen
+            freeMode: false, // Deaktiviert für bessere Kontrolle
+            watchSlidesProgress: true,
+            allowTouchMove: true,
+            breakpoints: {
+                0: {
+                    spaceBetween: 8,
+                    slidesPerView: 4
+                },
+                481: {
+                    spaceBetween: 10,
+                    slidesPerView: 4
+                },
+                768: {
+                    spaceBetween: 10,
+                    slidesPerView: 4
+                },
+                1024: {
+                    spaceBetween: 10,
+                    slidesPerView: 4
+                }
+            },
+            // Zusätzliche Optionen für bessere Darstellung
+            centerInsufficientSlides: false,
+            centeredSlides: false,
+            loop: false,
+            loopFillGroupWithBlank: false
+        });
+
+        // Initialisiere Hauptslider
+        const mainSwiper = new Swiper('.thumbslider-main .swiper', {
+            spaceBetween: 0,
+            slidesPerView: 1,
+            thumbs: {
+                swiper: thumbsSwiper
+            },
+            autoHeight: false,
+            touchEventsTarget: 'container',
+            grabCursor: true,
+            watchOverflow: true,
+            centerInsufficientSlides: true,
+            observer: true,
+            observeParents: true,
+            lazy: {
+                loadPrevNext: true,
+            },
+            a11y: {
+                enabled: true,
+                prevSlideMessage: 'Vorheriges Bild',
+                nextSlideMessage: 'Nächstes Bild',
+                firstSlideMessage: 'Dies ist das erste Bild',
+                lastSlideMessage: 'Dies ist das letzte Bild'
+            }
+        });
+
+        // Optional: Keyboard Navigation
+        mainSwiper.keyboard = {
+            enabled: true,
+            onlyInViewport: true
+        };
+
+        // Video-Handling: Pausiere Videos beim Slide-Wechsel
+        mainSwiper.on('slideChange', function() {
+            // Pausiere alle Videos
+            const videos = document.querySelectorAll('.thumbslider-main video');
+            videos.forEach(video => {
+                if (video) video.pause();
+            });
+
+            // Spiele Video im aktiven Slide ab, wenn autoplay gewünscht
+            const activeSlide = mainSwiper.slides[mainSwiper.activeIndex];
+            const activeVideo = activeSlide?.querySelector('video');
+            if (activeVideo && activeVideo.hasAttribute('autoplay')) {
+                activeVideo.play();
+            }
+        });
+
+        // Fix für initiale Größe und Thumbnails
+        setTimeout(() => {
+            mainSwiper.update();
+            thumbsSwiper.update();
+
+            // Debug: Prüfe ob 4 Thumbnails sichtbar sind
+            const visibleSlides = document.querySelectorAll('.thumbslider-nav .swiper-slide');
+            console.log(`Anzahl Thumbnail-Slides: ${visibleSlides.length}`);
+
+            // Force Update der Thumbnail-Größen
+            visibleSlides.forEach((slide, index) => {
+                slide.style.width = 'calc(25% - 7.5px)';
+                slide.style.flexShrink = '0';
+            });
+        }, 100);
+
+        // Resize Handler für konsistente Darstellung
+        window.addEventListener('resize', function() {
+            setTimeout(() => {
+                thumbsSwiper.update();
+                mainSwiper.update();
+            }, 100);
+        });
+    });
+</script>

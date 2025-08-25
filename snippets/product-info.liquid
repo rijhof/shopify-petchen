@@ -1,0 +1,57 @@
+<div class="product-info">
+    <h1 >{{ product.title }}</h1>
+
+    {% if product.description != blank %}
+        {{ product.description }}
+    {% endif %}
+
+    {% if product.metafields.custom.unique_selling_points %}
+        <div class="product-info__usps">
+            {% assign usps = product.metafields.custom.unique_selling_points.value %}
+            {% if usps.size > 0 %}
+                <ul class="product-usps-list">
+                    {% for usp in usps %}
+                        <li class="product-usps-item">
+                            <img src="{{ 'icon-set-checkmark-hollow.svg' | asset_url }}"
+                                 alt=""
+                                 width="20"
+                                 height="20"
+                                 class="product-usps-icon"
+                                 aria-hidden="true">
+                            <span class="product-usps-text">{{ usp }}</span>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+    {% endif %}
+</div>
+
+<style>
+    .product-info {
+        margin-bottom: 48px;
+    }
+
+    .product-usps-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .product-usps-item {
+        display: flex;
+        align-items: center;
+        gap: calc(var(--baseline) * 1.5);
+        margin-bottom: 0;
+        padding-left: 0;
+    }
+
+    .product-usps-icon {
+        flex-shrink: 0;
+        width: 24px;
+        height: 24px;
+    }
+</style>
