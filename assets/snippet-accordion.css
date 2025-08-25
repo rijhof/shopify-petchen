@@ -11,16 +11,12 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: calc(var(--baseline) * 3) 0;
+    padding: calc(var(--baseline) * 4) 0;
     background: none;
     border: none;
     cursor: pointer;
     margin-bottom: 0;
     transition: all var(--transition-duration) ease;
-}
-
-.accordion-header:hover .accordion-title {
-    color: var(--color-primary);
 }
 
 .accordion-title {
@@ -50,11 +46,7 @@
 }
 
 .accordion-content-inner {
-    padding: 0 0 calc(var(--baseline) * 3) 0;
-}
-
-.accordion-content-inner p {
-    margin-bottom: var(--font-paragraph-spacing);
+    padding: 0 0 calc(var(--baseline) * 1) 0;
 }
 
 .accordion-content-inner p:last-child {

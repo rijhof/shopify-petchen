@@ -1,0 +1,93 @@
+.section-accordion {
+    padding-top: var(--component-spacing-y);
+    padding-bottom: var(--component-spacing-y);
+}
+
+.section-accordion__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: calc(var(--baseline) * 4);
+}
+
+.section-accordion__header {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--baseline) * 2);
+}
+
+.section-accordion__title {
+    margin: 0;
+}
+
+.section-accordion__description {
+    margin: 0;
+}
+
+.section-accordion__content {
+    width: 100%;
+}
+
+.section-accordion__items {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Tablet und größer */
+@media (min-width: 1024px) {
+    .section-accordion__wrapper {
+        grid-template-columns: 1fr 1fr;
+        gap: calc(var(--baseline) * 4);
+        align-items: start;
+    }
+
+    .section-accordion__header {
+        position: sticky;
+        top: calc(var(--baseline) * 4);
+    }
+}
+
+@media (min-width: 1280px) {
+    .section-accordion__wrapper {
+        grid-template-columns: repeat(12, 1fr);
+        gap: var(--grid-gap-column);
+    }
+
+    .section-accordion__header {
+        grid-column: 1 / 6;
+        gap: calc(var(--baseline) * 3);
+    }
+
+    .section-accordion__content {
+        grid-column: 7 / 13;
+    }
+}
+
+/* Focus-Stil für Barrierefreiheit */
+.section-accordion__items .accordion-header:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+    border-radius: var(--border-radius);
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    .section-accordion__items .accordion-content,
+    .section-accordion__items .accordion-icon {
+        transition: none;
+    }
+}
+
+/* Contrast Mode Support */
+.background-contrast .section-accordion__items .accordion-item {
+    border-top-color: var(--color-white);
+}
+
+.background-contrast .section-accordion__items .accordion-header:hover .accordion-title {
+    color: var(--color-background-two);
+}
+
+/* Change accordion padding */
+
+.section-accordion__items .accordion-item:first-of-type .accordion-header {
+    padding-top: 0;
+}

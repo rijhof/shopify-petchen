@@ -1,0 +1,143 @@
+{{ 'section-accordion.css' | asset_url | stylesheet_tag }}
+{{ 'snippet-accordion.css' | asset_url | stylesheet_tag }}
+{{ 'snippet-accordion.js' | asset_url | script_tag }}
+
+{% comment %} Hintergrundklassen basierend auf Auswahl setzen {% endcomment %}
+{% assign background_classes = '' %}
+{% case section.settings.background_color %}
+  {% when 'green' %}
+    {% assign background_classes = ' background-one background-contrast' %}
+  {% when 'dark_green' %}
+    {% assign background_classes = ' background-two background-contrast' %}
+  {% else %}
+    {% assign background_classes = '' %}
+{% endcase %}
+
+<section class="section-accordion section{{ background_classes }}" aria-labelledby="section-accordion-{{ section.id }}">
+  <div class="container">
+    <div class="section-accordion__wrapper">
+      <div class="section-accordion__header">
+        <h2 id="section-accordion-{{ section.id }}" class="section-accordion__title">
+          {{ section.settings.heading | default: 'FAQ' }}
+        </h2>
+        <p class="section-accordion__description lead">
+          {{ section.settings.description | default: 'Häufig gestellte Fragen zu diesem Produkt.' }}
+        </p>
+      </div>
+
+      <div class="section-accordion__content">
+        {% if section.blocks.size > 0 %}
+          <div class="section-accordion__items">
+            {% for block in section.blocks %}
+              {% case block.type %}
+                {% when 'faq_item' %}
+                  {% render 'accordion',
+                          title: block.settings.question | default: 'Frage eingeben',
+                          content: block.settings.answer | default: 'Antwort eingeben',
+                          open: block.settings.open_by_default,
+                          class: 'h4'
+                  %}
+              {% endcase %}
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "FAQ Accordion",
+  "tag": "section",
+  "class": "section-accordion-wrapper",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Überschrift",
+      "default": "FAQ"
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "Beschreibungstext",
+      "default": "Häufig gestellte Fragen zu diesem Produkt."
+    },
+    {
+      "type": "select",
+      "id": "background_color",
+      "label": "Hintergrundfarbe",
+      "options": [
+        {
+          "value": "default",
+          "label": "Standard Hintergrund"
+        },
+        {
+          "value": "green",
+          "label": "Grün"
+        },
+        {
+          "value": "dark_green",
+          "label": "Dunkel Grün"
+        }
+      ],
+      "default": "default"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq_item",
+      "name": "FAQ Eintrag",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Frage",
+          "default": "Wie verwende ich dieses Produkt?"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Antwort",
+          "default": "<p>Fügen Sie hier die Antwort auf die Frage ein.</p>"
+        },
+        {
+          "type": "checkbox",
+          "id": "open_by_default",
+          "label": "Standardmäßig geöffnet",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ Accordion",
+      "blocks": [
+        {
+          "type": "faq_item",
+          "settings": {
+            "question": "Wie verwende ich dieses Produkt?",
+            "answer": "<p>Unser Produkt ist einfach in der Anwendung. Befolgen Sie die mitgelieferte Anleitung für beste Ergebnisse.</p>"
+          }
+        },
+        {
+          "type": "faq_item",
+          "settings": {
+            "question": "Welche Inhaltsstoffe sind enthalten?",
+            "answer": "<p>Wir verwenden nur hochwertige, natürliche Inhaltsstoffe. Die vollständige Liste finden Sie auf der Produktverpackung.</p>"
+          }
+        },
+        {
+          "type": "faq_item",
+          "settings": {
+            "question": "Wie lange ist die Lieferzeit?",
+            "answer": "<p>Die Standardlieferzeit beträgt 2-3 Werktage innerhalb Deutschlands.</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

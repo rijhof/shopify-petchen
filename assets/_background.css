@@ -1,0 +1,7 @@
+.background-one {
+    background-color: var(--color-primary);
+}
+
+.background-two {
+    background-color: var(--color-text);
+}
