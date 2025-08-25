@@ -15,6 +15,10 @@
     width: 100%;
 }
 
+.section-image-text__action {
+    margin-top: 8px;
+}
+
 @media (min-width: 768px) {
     .section-image-symbols-text__media {
         position: sticky;

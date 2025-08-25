@@ -98,7 +98,7 @@
 }
 
 .section-image-text__action {
-    margin-top: calc(var(--baseline) * 2);
+    margin-top: calc(var(--baseline) * 1);
 }
 
 /* Tablet */

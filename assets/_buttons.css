@@ -28,7 +28,6 @@ button {
 }
 
 .button-primary:not(.icon--left):not(.icon--right):not(.icon) {
-    /* Der Text bekommt einen höheren z-index */
     position: relative;
     z-index: 1;
 }
@@ -48,7 +47,7 @@ button {
     left: 8px;
     top: 48%;
     transform: translateY(-50%);
-    z-index: -1; /* Hinter dem Text-Container */
+    z-index: -1;
 }
 
 .button-primary:hover {
