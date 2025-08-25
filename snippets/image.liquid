@@ -1,0 +1,80 @@
+{% comment %} snippets/image.liquid {% endcomment %}
+{% comment %}
+  Render responsive image with lazy loading and decorations
+
+  Parameters:
+  - image: Image object
+  - aspect_ratio: Aspect ratio (1-1, 4-3, 3-2, 16-9)
+  - decoration_type: Type of decoration (flower-grass-bottom-left, flower-grass-bottom-right, heart-bottom-right-edge, heart-bottom-right-inside)
+  - alt: Alt text for accessibility
+  - loading: Loading strategy (lazy, eager)
+  - sizes: Responsive sizes attribute
+  - class: Additional CSS classes
+{% endcomment %}
+
+{% assign aspect_class = 'image__aspect--' | append: aspect_ratio | default: 'image__aspect--4-3' %}
+{% assign decoration_class = '' %}
+
+{% if decoration_type and decoration_type != 'none' %}
+    {% assign decoration_class = ' image--has-decoration image--decoration-' | append: decoration_type %}
+{% endif %}
+
+<figure class="image{{ decoration_class }}{% if class %} {{ class }}{% endif %}">
+    <div class="image__wrapper {{ aspect_class }}">
+        {% if image %}
+            {% comment %} Blur Placeholder {% endcomment %}
+            <img
+                    class="image__img image__img--blur"
+                    src="{{ image | image_url: width: 50 }}"
+                    alt=""
+                    aria-hidden="true"
+            >
+
+            {% comment %} Main Image {% endcomment %}
+            <img
+                    class="image__img image__img--main lazyload blur-up"
+                    data-src="{{ image | image_url: width: 1400 }}"
+                    data-sizes="{{ sizes | default: 'auto' }}"
+                    data-srcset="
+          {{ image | image_url: width: 375 }} 375w,
+          {{ image | image_url: width: 550 }} 550w,
+          {{ image | image_url: width: 750 }} 750w,
+          {{ image | image_url: width: 1100 }} 1100w,
+          {{ image | image_url: width: 1400 }} 1400w
+        "
+                    alt="{{ alt | escape }}"
+                    width="{{ image.width }}"
+                    height="{{ image.height }}"
+                    loading="{{ loading | default: 'lazy' }}"
+            >
+
+            <noscript>
+                <img
+                        class="image__img"
+                        src="{{ image | image_url: width: 1400 }}"
+                        alt="{{ alt | escape }}"
+                        width="{{ image.width }}"
+                        height="{{ image.height }}"
+                        loading="{{ loading | default: 'lazy' }}"
+                >
+            </noscript>
+        {% else %}
+            {{ 'image' | placeholder_svg_tag: 'image__placeholder' }}
+        {% endif %}
+    </div>
+
+    {% if decoration_type and decoration_type != 'none' %}
+        <div class="image__decoration" aria-hidden="true">
+            {% case decoration_type %}
+                {% when 'flower-grass-bottom-left' %}
+                    <img class="image__decoration-icon" src="{{ 'illustration-flower-grass.svg' | asset_url }}" alt="" width="95" height="83">
+                {% when 'flower-grass-bottom-right' %}
+                    <img class="image__decoration-icon" src="{{ 'illustration-flower-grass.svg' | asset_url }}" alt="" width="95" height="83">
+                {% when 'heart-bottom-right-edge' %}
+                    <img class="image__decoration-icon" src="{{ 'illustration-heart.svg' | asset_url }}" alt="" width="60" height="60">
+                {% when 'heart-bottom-right-inside' %}
+                    <img class="image__decoration-icon" src="{{ 'illustration-heart.svg' | asset_url }}" alt="" width="60" height="60">
+            {% endcase %}
+        </div>
+    {% endif %}
+</figure>

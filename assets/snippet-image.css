@@ -1,0 +1,166 @@
+/* assets/snippet-image.css */
+.image {
+    position: relative;
+    width: 100%;
+}
+
+.image__wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 32px;
+    background-color: var(--color-grey-light);
+}
+
+.image__aspect--1-1 {
+    aspect-ratio: 1 / 1;
+}
+
+.image__aspect--4-3 {
+    aspect-ratio: 4 / 3;
+}
+
+.image__aspect--3-2 {
+    aspect-ratio: 3 / 2;
+}
+
+.image__aspect--16-9 {
+    aspect-ratio: 16 / 9;
+}
+
+.image__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Blur-up Effect */
+.image__img--blur {
+    filter: blur(8px);
+    opacity: 1;
+    transition: opacity var(--transition-duration) ease;
+}
+
+.image__img--main {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.image__img--main.lazyloaded {
+    opacity: 1;
+}
+
+.image__wrapper.image--loaded .image__img--blur {
+    opacity: 0;
+}
+
+.image__placeholder {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0.2;
+}
+
+/* Decoration Styles */
+.image--has-decoration {
+    position: relative;
+}
+
+.image__decoration {
+    position: absolute;
+    z-index: 2;
+    pointer-events: none;
+    transform: scale(0.9);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.image--decoration-visible .image__decoration {
+    transform: scale(1);
+}
+
+.image__decoration-icon {
+    display: block;
+    object-fit: contain;
+}
+
+/* Desktop Decoration Positions */
+
+/* Blume mit Gras unten links */
+.image--decoration-flower-grass-bottom-left .image__decoration {
+    bottom: 146px;
+    left: -86px;
+}
+
+/* Blume mit Gras unten rechts */
+.image--decoration-flower-grass-bottom-right .image__decoration {
+    bottom: 64px;
+    right: -57px;
+}
+
+/* Herz unten rechts (Rand) */
+.image--decoration-heart-bottom-right-edge .image__decoration {
+    bottom: -50px;
+    right: 30px;
+}
+
+/* Herz unten rechts (im Bild) */
+.image--decoration-heart-bottom-right-inside .image__decoration {
+    bottom: 18px;
+    right: 51px;
+}
+
+/* Mobile Styles */
+
+@media screen and (max-width: 1280px) {
+    .image--decoration-flower-grass-bottom-left .image__decoration {
+        left: -24px;
+    }
+
+    .image--decoration-flower-grass-bottom-right .image__decoration {
+        right: -28px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .image--decoration-flower-grass-bottom-left .image__decoration-icon,
+    .image--decoration-flower-grass-bottom-right .image__decoration-icon {
+        width: 52px;
+        height: 60px;
+    }
+
+    .image--decoration-heart-bottom-right-edge .image__decoration-icon,
+    .image--decoration-heart-bottom-right-inside .image__decoration-icon {
+        width: 42px;
+        height: 52px;
+    }
+
+    .image--decoration-flower-grass-bottom-left .image__decoration,
+    .image--decoration-flower-grass-bottom-right .image__decoration {
+        bottom: -30px;
+        right: 14px;
+        left: unset;
+    }
+
+    .image--decoration-heart-bottom-right-edge .image__decoration,
+    .image--decoration-heart-bottom-right-inside .image__decoration {
+        bottom: -17px;
+        right: 32px;
+    }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    .image__img--blur,
+    .image__img--main,
+    .image__decoration {
+        transition: none;
+    }
+
+    .image__img--blur {
+        filter: none;
+    }
+}

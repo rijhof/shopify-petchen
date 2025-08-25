@@ -204,7 +204,7 @@ figcaption {
 .background-reset .h5,
 .background-reset .h6,
 .background-reset a,
-.background-contrast span {
+.background-reset span {
     color: var(--color-primary);
 }
 
