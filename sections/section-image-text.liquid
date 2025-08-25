@@ -1,0 +1,238 @@
+{{ 'section-image-text.css' | asset_url | stylesheet_tag }}
+{{ 'snippet-image.css' | asset_url | stylesheet_tag }}
+{{ 'snippet-image.js' | asset_url | script_tag }}
+
+{% assign background_classes = '' %}
+{% case section.settings.background_color %}
+    {% when 'green' %}
+        {% assign background_classes = ' background-one background-contrast' %}
+    {% when 'dark_green' %}
+        {% assign background_classes = ' background-two background-contrast' %}
+    {% else %}
+        {% assign background_classes = '' %}
+{% endcase %}
+
+{% assign layout_class = '' %}
+{% if section.settings.image_position == 'right' %}
+    {% assign layout_class = ' section-image-text--image-right' %}
+{% endif %}
+
+<section class="section-image-text section{{ background_classes }}{{ layout_class }}" aria-labelledby="section-image-text-{{ section.id }}">
+    <div class="container">
+        <div class="section-image-text__wrapper">
+
+            <div class="section-image-text__media">
+                {% if section.settings.image %}
+                    {% render 'image',
+                            image: section.settings.image,
+                            aspect_ratio: '1-1',
+                            decoration_type: section.settings.decoration_type,
+                            alt: section.settings.image_alt,
+                            loading: 'lazy',
+                            sizes: '(min-width: 1280px) 700px, (min-width: 768px) 50vw, 100vw'
+                    %}
+                {% else %}
+                    <div class="section-image-text__placeholder">
+                        {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                    </div>
+                {% endif %}
+            </div>
+
+            <div class="section-image-text__content">
+                <div class="section-image-text__header">
+                    <h2 id="section-image-text-{{ section.id }}" class="section-image-text__title">
+                        {{ section.settings.heading | default: 'Überschrift' }}
+                    </h2>
+                </div>
+
+                {% if section.settings.content != blank %}
+                    <div class="section-image-text__richtext">
+                        {{ section.settings.content }}
+                    </div>
+                {% endif %}
+
+                {% if section.settings.button_text != blank %}
+                    <div class="section-image-text__action">
+                        {% render 'button',
+                                button_text: section.settings.button_text,
+                                button_url: section.settings.button_link,
+                                button_type: section.settings.button_type,
+                                icon_position: section.settings.icon_position
+                        %}
+                    </div>
+                {% endif %}
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+  "name": "Bild mit Text",
+  "tag": "section",
+  "class": "section-image-text-wrapper",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Bild-Einstellungen"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Bild"
+    },
+    {
+      "type": "text",
+      "id": "image_alt",
+      "label": "Bildbeschreibung (Alt-Text)",
+      "info": "Beschreibe das Bild für Barrierefreiheit"
+    },
+    {
+      "type": "select",
+      "id": "decoration_type",
+      "label": "Dekoration",
+      "options": [
+        {
+          "value": "none",
+          "label": "Keine"
+        },
+        {
+          "value": "flower-grass-bottom-left",
+          "label": "Blume mit Gras unten links"
+        },
+        {
+          "value": "flower-grass-bottom-right",
+          "label": "Blume mit Gras unten rechts"
+        },
+        {
+          "value": "heart-bottom-right-edge",
+          "label": "Herz unten rechts (Rand)"
+        },
+        {
+          "value": "heart-bottom-right-inside",
+          "label": "Herz unten rechts (im Bild)"
+        }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Bildposition",
+      "options": [
+        {
+          "value": "left",
+          "label": "Links"
+        },
+        {
+          "value": "right",
+          "label": "Rechts"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "header",
+      "content": "Inhalt"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Überschrift",
+      "default": "Überschrift"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Inhalt",
+      "default": "<p>Fügen Sie hier Ihren Text ein. Nutzen Sie die Formatierungsoptionen, um Ihren Inhalt zu strukturieren.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "select",
+      "id": "button_type",
+      "label": "Button Type",
+      "options": [
+        {
+          "value": "primary",
+          "label": "Primary"
+        },
+        {
+          "value": "secondary",
+          "label": "Secondary"
+        },
+        {
+          "value": "tertiary",
+          "label": "Tertiary"
+        }
+      ],
+      "default": "primary"
+    },
+    {
+      "type": "select",
+      "id": "icon_position",
+      "label": "Icon Position",
+      "options": [
+        {
+          "value": "none",
+          "label": "No Icon"
+        },
+        {
+          "value": "left",
+          "label": "Icon Left"
+        },
+        {
+          "value": "right",
+          "label": "Icon Right"
+        }
+      ],
+      "default": "right"
+    },
+    {
+      "type": "header",
+      "content": "Design"
+    },
+    {
+      "type": "select",
+      "id": "background_color",
+      "label": "Hintergrundfarbe",
+      "options": [
+        {
+          "value": "default",
+          "label": "Standard"
+        },
+        {
+          "value": "green",
+          "label": "Grün"
+        },
+        {
+          "value": "dark_green",
+          "label": "Dunkel Grün"
+        }
+      ],
+      "default": "default"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Bild mit Text",
+      "category": "Bild + Inhalt"
+    }
+  ]
+}
+{% endschema %}
