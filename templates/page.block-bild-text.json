@@ -13,21 +13,116 @@
       "type": "template-page",
       "settings": {}
     },
-    "section_hero_small_jxafTM": {
-      "type": "section-hero-small",
-      "name": "Hero Klein",
+    "section_image_text_EdfWrh": {
+      "type": "section-image-text",
+      "name": "Bild mit Text",
       "settings": {
+        "image": "shopify://shop_images/img.png",
         "image_alt": "",
-        "breadcrumb_current": "",
-        "heading_h1": "Lorem Ipsum",
-        "heading_h2": "Entdecken Sie unsere Produkte",
-        "button_text": "Jetzt entdecken",
-        "button_link": ""
+        "decoration_type": "flower-grass-bottom-left",
+        "image_position": "right",
+        "heading": "We got you a little something",
+        "content": "<p>Our new little sizes of Pineapple Refresh and Glazing Milk have arrived. Same nourishing formulas, just a little smaller. Get them solo or in the Travel Set to take your rhode routine on the go.</p>",
+        "button_text": "Label",
+        "button_link": "#",
+        "button_type": "secondary",
+        "icon_position": "none",
+        "background_color": "default"
+      }
+    },
+    "section_image_text_feDYd4": {
+      "type": "section-image-text",
+      "name": "Bild mit Text",
+      "settings": {
+        "image": "shopify://shop_images/doggo.png",
+        "image_alt": "",
+        "decoration_type": "flower-grass-bottom-right",
+        "image_position": "left",
+        "heading": "We got you a little something",
+        "content": "<p>Our new little sizes of Pineapple Refresh and Glazing Milk have arrived. Same nourishing formulas, just a little smaller. Get them solo or in the Travel Set to take your rhode routine on the go.</p>",
+        "button_text": "Label",
+        "button_link": "#",
+        "button_type": "secondary",
+        "icon_position": "none",
+        "background_color": "default"
+      }
+    },
+    "section_image_text_PjNgeW": {
+      "type": "section-image-text",
+      "name": "Bild mit Text",
+      "settings": {
+        "image": "shopify://shop_images/img.png",
+        "image_alt": "",
+        "decoration_type": "none",
+        "image_position": "right",
+        "heading": "We got you a little something",
+        "content": "<p>Our new little sizes of Pineapple Refresh and Glazing Milk have arrived. Same nourishing formulas, just a little smaller. Get them solo or in the Travel Set to take your rhode routine on the go.</p>",
+        "button_text": "Label",
+        "button_link": "#",
+        "button_type": "secondary",
+        "icon_position": "none",
+        "background_color": "green"
+      }
+    },
+    "section_image_text_bbRcxR": {
+      "type": "section-image-text",
+      "name": "Bild mit Text",
+      "settings": {
+        "image": "shopify://shop_images/martin-ruther-mit-hund.png",
+        "image_alt": "",
+        "decoration_type": "heart-bottom-right-edge",
+        "image_position": "right",
+        "heading": "We got you a little something",
+        "content": "<p>Our new little sizes of Pineapple Refresh and Glazing Milk have arrived. Same nourishing formulas, just a little smaller. Get them solo or in the Travel Set to take your rhode routine on the go.</p>",
+        "button_text": "Label",
+        "button_link": "#",
+        "button_type": "secondary",
+        "icon_position": "none",
+        "background_color": "green"
+      }
+    },
+    "section_image_text_KQHDCt": {
+      "type": "section-image-text",
+      "name": "Bild mit Text",
+      "settings": {
+        "image": "shopify://shop_images/martin-ruther-mit-hund.png",
+        "image_alt": "",
+        "decoration_type": "heart-bottom-right-inside",
+        "image_position": "left",
+        "heading": "We got you a little something",
+        "content": "<p>Our new little sizes of Pineapple Refresh and Glazing Milk have arrived. Same nourishing formulas, just a little smaller. Get them solo or in the Travel Set to take your rhode routine on the go.</p>",
+        "button_text": "Label",
+        "button_link": "#",
+        "button_type": "secondary",
+        "icon_position": "none",
+        "background_color": "dark_green"
+      }
+    },
+    "section_image_text_mqWiMR": {
+      "type": "section-image-text",
+      "name": "Bild mit Text",
+      "settings": {
+        "image": "shopify://shop_images/martin-ruther-mit-hund.png",
+        "image_alt": "",
+        "decoration_type": "heart-bottom-right-inside",
+        "image_position": "right",
+        "heading": "We got you a little something",
+        "content": "<p>Our new little sizes of Pineapple Refresh and Glazing Milk have arrived. Same nourishing formulas, just a little smaller. Get them solo or in the Travel Set to take your rhode routine on the go.</p>",
+        "button_text": "Label",
+        "button_link": "#",
+        "button_type": "secondary",
+        "icon_position": "none",
+        "background_color": "dark_green"
       }
     }
   },
   "order": [
     "template",
-    "section_hero_small_jxafTM"
+    "section_image_text_EdfWrh",
+    "section_image_text_feDYd4",
+    "section_image_text_PjNgeW",
+    "section_image_text_bbRcxR",
+    "section_image_text_KQHDCt",
+    "section_image_text_mqWiMR"
   ]
 }
