@@ -1,0 +1,293 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "template": {
+      "type": "template-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "section_image_accordion_RjVkPp": {
+      "type": "section-image-accordion",
+      "blocks": {
+        "accordion_item_EbNnwJ": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Unsere Werte",
+            "content": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. <br/><br/><a href=\"/pages/accordion\" title=\"Accordion\">Label</a></p>",
+            "open_by_default": true
+          }
+        },
+        "accordion_item_ejPNyt": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Unsere Inhaltsstoffe",
+            "content": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>",
+            "open_by_default": false
+          }
+        },
+        "accordion_item_G3pCdx": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Unser kleiner Pfotenabdruck",
+            "content": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>",
+            "open_by_default": false
+          }
+        }
+      },
+      "block_order": [
+        "accordion_item_EbNnwJ",
+        "accordion_item_ejPNyt",
+        "accordion_item_G3pCdx"
+      ],
+      "name": "Bild mit Accordion",
+      "settings": {
+        "image": "shopify://shop_images/doggo.png",
+        "image_alt": "",
+        "decoration_type": "flower-grass-bottom-right",
+        "image_position": "left",
+        "heading": "Lorem ipsum dolor sit amet",
+        "background_color": "default"
+      }
+    },
+    "section_image_accordion_MiPgee": {
+      "type": "section-image-accordion",
+      "blocks": {
+        "accordion_item_VgEfVJ": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Unsere Werte",
+            "content": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. <br/><br/><a href=\"/pages/accordion\" title=\"Accordion\">Label</a></p>",
+            "open_by_default": true
+          }
+        },
+        "accordion_item_dRJBhK": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Unsere Inhaltsstoffe",
+            "content": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>",
+            "open_by_default": false
+          }
+        },
+        "accordion_item_YtxwkE": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Unser kleiner Pfotenabdruck",
+            "content": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>",
+            "open_by_default": false
+          }
+        }
+      },
+      "block_order": [
+        "accordion_item_VgEfVJ",
+        "accordion_item_dRJBhK",
+        "accordion_item_YtxwkE"
+      ],
+      "name": "Bild mit Accordion",
+      "settings": {
+        "image": "shopify://shop_images/martin-ruther-mit-hund.png",
+        "image_alt": "",
+        "decoration_type": "flower-grass-bottom-left",
+        "image_position": "right",
+        "heading": "Lorem ipsum dolor sit amet",
+        "background_color": "default"
+      }
+    },
+    "section_image_accordion_XVTKjd": {
+      "type": "section-image-accordion",
+      "blocks": {
+        "accordion_item_tKEbJ4": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Unsere Werte",
+            "content": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. <br/><br/><a href=\"/pages/accordion\" title=\"Accordion\">Label</a></p>",
+            "open_by_default": true
+          }
+        },
+        "accordion_item_6XedTW": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Unsere Inhaltsstoffe",
+            "content": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>",
+            "open_by_default": false
+          }
+        },
+        "accordion_item_HWJnED": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Unser kleiner Pfotenabdruck",
+            "content": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>",
+            "open_by_default": false
+          }
+        }
+      },
+      "block_order": [
+        "accordion_item_tKEbJ4",
+        "accordion_item_6XedTW",
+        "accordion_item_HWJnED"
+      ],
+      "name": "Bild mit Accordion",
+      "settings": {
+        "image": "shopify://shop_images/doggo.png",
+        "image_alt": "",
+        "decoration_type": "flower-grass-bottom-right",
+        "image_position": "left",
+        "heading": "Lorem ipsum dolor sit amet",
+        "background_color": "green"
+      }
+    },
+    "section_image_accordion_MWCKif": {
+      "type": "section-image-accordion",
+      "blocks": {
+        "accordion_item_ixkgME": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Unsere Werte",
+            "content": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. <br/><br/><a href=\"/pages/accordion\" title=\"Accordion\">Label</a></p>",
+            "open_by_default": true
+          }
+        },
+        "accordion_item_PYiPHK": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Unsere Inhaltsstoffe",
+            "content": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>",
+            "open_by_default": false
+          }
+        },
+        "accordion_item_8XbM37": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Unser kleiner Pfotenabdruck",
+            "content": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>",
+            "open_by_default": false
+          }
+        }
+      },
+      "block_order": [
+        "accordion_item_ixkgME",
+        "accordion_item_PYiPHK",
+        "accordion_item_8XbM37"
+      ],
+      "name": "Bild mit Accordion",
+      "settings": {
+        "image": "shopify://shop_images/martin-ruther-mit-hund.png",
+        "image_alt": "",
+        "decoration_type": "flower-grass-bottom-left",
+        "image_position": "right",
+        "heading": "Lorem ipsum dolor sit amet",
+        "background_color": "green"
+      }
+    },
+    "section_image_accordion_KEWHfV": {
+      "type": "section-image-accordion",
+      "blocks": {
+        "accordion_item_da6xBb": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Unsere Werte",
+            "content": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. <br/><br/><a href=\"/pages/accordion\" title=\"Accordion\">Label</a></p>",
+            "open_by_default": true
+          }
+        },
+        "accordion_item_xyenWC": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Unsere Inhaltsstoffe",
+            "content": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>",
+            "open_by_default": false
+          }
+        },
+        "accordion_item_A9qgKC": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Unser kleiner Pfotenabdruck",
+            "content": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>",
+            "open_by_default": false
+          }
+        }
+      },
+      "block_order": [
+        "accordion_item_da6xBb",
+        "accordion_item_xyenWC",
+        "accordion_item_A9qgKC"
+      ],
+      "name": "Bild mit Accordion",
+      "settings": {
+        "image": "shopify://shop_images/doggo.png",
+        "image_alt": "",
+        "decoration_type": "flower-grass-bottom-right",
+        "image_position": "left",
+        "heading": "Lorem ipsum dolor sit amet",
+        "background_color": "dark_green"
+      }
+    },
+    "section_image_accordion_paCcJa": {
+      "type": "section-image-accordion",
+      "blocks": {
+        "accordion_item_YJhn3K": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Unsere Werte",
+            "content": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. <br/><br/><a href=\"/pages/accordion\" title=\"Accordion\">Label</a></p>",
+            "open_by_default": true
+          }
+        },
+        "accordion_item_Xtma9g": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Unsere Inhaltsstoffe",
+            "content": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>",
+            "open_by_default": false
+          }
+        },
+        "accordion_item_zYJiWq": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Unser kleiner Pfotenabdruck",
+            "content": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>",
+            "open_by_default": false
+          }
+        }
+      },
+      "block_order": [
+        "accordion_item_YJhn3K",
+        "accordion_item_Xtma9g",
+        "accordion_item_zYJiWq"
+      ],
+      "name": "Bild mit Accordion",
+      "settings": {
+        "image": "shopify://shop_images/martin-ruther-mit-hund.png",
+        "image_alt": "",
+        "decoration_type": "flower-grass-bottom-left",
+        "image_position": "right",
+        "heading": "Lorem ipsum dolor sit amet",
+        "background_color": "dark_green"
+      }
+    },
+    "contact_form_CwDzYK": {
+      "type": "contact-form",
+      "name": "Contact Form",
+      "settings": {
+        "title": ""
+      }
+    }
+  },
+  "order": [
+    "template",
+    "section_image_accordion_RjVkPp",
+    "section_image_accordion_MiPgee",
+    "section_image_accordion_XVTKjd",
+    "section_image_accordion_MWCKif",
+    "section_image_accordion_KEWHfV",
+    "section_image_accordion_paCcJa",
+    "contact_form_CwDzYK"
+  ]
+}
