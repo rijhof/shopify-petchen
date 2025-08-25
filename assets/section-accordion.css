@@ -40,10 +40,6 @@
         align-items: start;
     }
 
-    .section-accordion__header {
-        position: sticky;
-        top: calc(var(--baseline) * 4);
-    }
 }
 
 @media (min-width: 1280px) {
