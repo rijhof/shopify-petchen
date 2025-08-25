@@ -271,6 +271,13 @@
         "heading": "Lorem ipsum dolor sit amet",
         "background_color": "dark_green"
       }
+    },
+    "contact_form_CwDzYK": {
+      "type": "contact-form",
+      "name": "Contact Form",
+      "settings": {
+        "title": ""
+      }
     }
   },
   "order": [
@@ -280,6 +287,7 @@
     "section_image_accordion_XVTKjd",
     "section_image_accordion_MWCKif",
     "section_image_accordion_KEWHfV",
-    "section_image_accordion_paCcJa"
+    "section_image_accordion_paCcJa",
+    "contact_form_CwDzYK"
   ]
 }
