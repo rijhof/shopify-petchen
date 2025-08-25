@@ -52,6 +52,9 @@
         "image_alt": "",
         "image_position": "left",
         "heading": "Überschrift",
+        "button_text": "",
+        "button_link": "",
+        "button_type": "primary",
         "background_color": "default"
       }
     },
@@ -62,8 +65,8 @@
           "type": "symbol_text",
           "settings": {
             "icon": "icon-decor-heart-paw.svg",
-            "heading": "Liebevolle Betreuung",
-            "content": "<p>Mehr Verantwortung. Weniger Leid. Und ein Zuhause für die, die keins haben.<br/><br/>Mehr Infos auf <a href=\"#\" title=\"#\">unserer Website</a> oder @adoptierenstattproduzieren bei <a href=\"#\" title=\"#\"><strong>Instagram</strong></a>.</p>"
+            "heading": "",
+            "content": "<p>Mehr Verantwortung. Weniger Leid. Und ein Zuhause für die, die keins haben.<br/><br/>Mehr Infos auf <strong>unserer Website</strong> oder @adoptierenstattproduzieren bei <strong>Instagram</strong>.</p>"
           }
         }
       },
@@ -76,6 +79,9 @@
         "image_alt": "",
         "image_position": "right",
         "heading": "Überschrift",
+        "button_text": "Zur Website",
+        "button_link": "#",
+        "button_type": "secondary",
         "background_color": "default"
       }
     }
