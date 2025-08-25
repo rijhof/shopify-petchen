@@ -26,7 +26,7 @@
                     {% render 'image',
                             image: section.settings.image,
                             aspect_ratio: '1-1',
-                            decoration_type: section.settings.decoration_type,
+                            decoration_type: none,
                             alt: section.settings.image_alt,
                             loading: 'lazy',
                             sizes: '(min-width: 1280px) 700px, (min-width: 768px) 50vw, 100vw'
@@ -98,34 +98,6 @@
       "id": "image_alt",
       "label": "Bildbeschreibung (Alt-Text)",
       "info": "Beschreibe das Bild für Barrierefreiheit"
-    },
-    {
-      "type": "select",
-      "id": "decoration_type",
-      "label": "Dekoration",
-      "options": [
-        {
-          "value": "none",
-          "label": "Keine"
-        },
-        {
-          "value": "flower-grass-bottom-left",
-          "label": "Blume mit Gras unten links"
-        },
-        {
-          "value": "flower-grass-bottom-right",
-          "label": "Blume mit Gras unten rechts"
-        },
-        {
-          "value": "heart-bottom-right-edge",
-          "label": "Herz unten rechts (Rand)"
-        },
-        {
-          "value": "heart-bottom-right-inside",
-          "label": "Herz unten rechts (im Bild)"
-        }
-      ],
-      "default": "none"
     },
     {
       "type": "select",
