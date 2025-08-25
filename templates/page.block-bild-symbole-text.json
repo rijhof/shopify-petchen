@@ -13,21 +13,76 @@
       "type": "template-page",
       "settings": {}
     },
-    "section_hero_small_jxafTM": {
-      "type": "section-hero-small",
-      "name": "Hero Klein",
+    "section_image_symbols_text_JFBRtx": {
+      "type": "section-image-symbols-text",
+      "blocks": {
+        "symbol_text_WgQxKR": {
+          "type": "symbol_text",
+          "settings": {
+            "icon": "icon-decor-heart-paw.svg",
+            "heading": "Liebevolle Betreuung",
+            "content": "<p>Wir kümmern uns mit viel Liebe und Aufmerksamkeit um Ihre Tiere.</p>"
+          }
+        },
+        "symbol_text_3YJKVF": {
+          "type": "symbol_text",
+          "settings": {
+            "icon": "icon-decor-house-paw.svg",
+            "heading": "Sicheres Zuhause",
+            "content": "<p>Ein sicherer und gemütlicher Ort für Ihre Lieblinge.</p>"
+          }
+        },
+        "symbol_text_LmwYrP": {
+          "type": "symbol_text",
+          "settings": {
+            "icon": "icon-decor-paws.svg",
+            "heading": "Professionelle Pflege",
+            "content": "<p>Erfahrene Pfleger sorgen für das Wohlbefinden Ihrer Tiere.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "symbol_text_WgQxKR",
+        "symbol_text_3YJKVF",
+        "symbol_text_LmwYrP"
+      ],
+      "name": "Bild mit Symbolen & Text",
       "settings": {
+        "image": "shopify://shop_images/doggo.png",
         "image_alt": "",
-        "breadcrumb_current": "",
-        "heading_h1": "Lorem Ipsum",
-        "heading_h2": "Entdecken Sie unsere Produkte",
-        "button_text": "Jetzt entdecken",
-        "button_link": ""
+        "image_position": "left",
+        "heading": "Überschrift",
+        "background_color": "default"
+      }
+    },
+    "section_image_symbols_text_jLbrDQ": {
+      "type": "section-image-symbols-text",
+      "blocks": {
+        "symbol_text_7UyFdm": {
+          "type": "symbol_text",
+          "settings": {
+            "icon": "icon-decor-heart-paw.svg",
+            "heading": "Liebevolle Betreuung",
+            "content": "<p>Mehr Verantwortung. Weniger Leid. Und ein Zuhause für die, die keins haben.<br/><br/>Mehr Infos auf <a href=\"#\" title=\"#\">unserer Website</a> oder @adoptierenstattproduzieren bei <a href=\"#\" title=\"#\"><strong>Instagram</strong></a>.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "symbol_text_7UyFdm"
+      ],
+      "name": "Bild mit Symbolen & Text",
+      "settings": {
+        "image": "shopify://shop_images/doggo.png",
+        "image_alt": "",
+        "image_position": "right",
+        "heading": "Überschrift",
+        "background_color": "default"
       }
     }
   },
   "order": [
     "template",
-    "section_hero_small_jxafTM"
+    "section_image_symbols_text_JFBRtx",
+    "section_image_symbols_text_jLbrDQ"
   ]
 }
