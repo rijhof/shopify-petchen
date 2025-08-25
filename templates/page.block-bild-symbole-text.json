@@ -11,6 +11,7 @@
   "sections": {
     "template": {
       "type": "template-page",
+      "disabled": true,
       "settings": {}
     },
     "section_image_symbols_text_JFBRtx": {
