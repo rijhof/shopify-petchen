@@ -148,6 +148,10 @@ li {
     padding-left: 16px;
 }
 
+span {
+    color: var(--color-text);
+}
+
 li:last-child {
     margin-bottom: 0;
 }
