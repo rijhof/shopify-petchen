@@ -3,22 +3,24 @@
     "template": {
       "type": "template-product",
       "blocks": {
-        "vendor": { "type": "vendor" },
-        "title": { "type": "title" },
-        "price": { "type": "price" },
-        "variant_selector": { "type": "variant_selector" },
-        "quantity": { "type": "quantity" },
-        "description": { "type": "description" },
-        "checkout_buttons": { "type": "checkout_buttons" }
+        "info_box_1": {
+          "type": "info_box",
+          "settings": {
+            "icon": "checkmark",
+            "text": "Free shipping from $50"
+          }
+        },
+        "info_box_2": {
+          "type": "info_box",
+          "settings": {
+            "icon": "heart",
+            "text": "30 day return policy"
+          }
+        }
       },
       "block_order": [
-        "vendor",
-        "title",
-        "price",
-        "variant_selector",
-        "quantity",
-        "description",
-        "checkout_buttons"
+        "info_box_1",
+        "info_box_2"
       ]
     }
   },

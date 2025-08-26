@@ -133,24 +133,22 @@
         height: 100%;
     }
 
-    /* Thumbnail Navigation - Optimiert für 4 sichtbare Thumbnails */
     .thumbslider-nav {
-        margin-top: 16px;
+        margin-top: 32px;
         width: 100%;
         overflow: hidden;
     }
 
     .thumbslider-nav .swiper-slide {
-        width: calc(25% - 7.5px) !important; /* 4 Slides mit Gaps */
+        width: calc(25% - 7.5px) !important;
         height: 0;
-        padding-bottom: calc(25% - 7.5px); /* Quadratische Thumbnails - Höhe = Breite */
+        padding-bottom: calc(25% - 7.5px);
         position: relative;
         opacity: 0.6;
         cursor: pointer;
         border: 2px solid transparent;
         border-radius: 8px;
         overflow: hidden;
-        background: #f8f8f8;
         transition: all 0.3s ease;
         flex-shrink: 0;
     }
@@ -261,10 +259,6 @@
             padding-bottom: calc(25% - 6px);
         }
 
-        .thumbslider-nav .swiper-wrapper {
-            gap: 8px;
-        }
-
         .thumbslider-nav-video-icon,
         .thumbslider-nav-model-icon {
             font-size: 9px;
@@ -282,10 +276,6 @@
         .thumbslider-nav .swiper-slide {
             width: calc(25% - 7.5px) !important;
             padding-bottom: calc(25% - 7.5px);
-        }
-
-        .thumbslider-nav .swiper-wrapper {
-            gap: 10px;
         }
 
         .thumbslider-nav-video-icon,

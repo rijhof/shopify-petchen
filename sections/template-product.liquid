@@ -50,16 +50,29 @@
     max-width: var(--container-max-width);
     margin: 0 auto;
     padding: 0 var(--container-padding-x);
+    position: relative;
+  }
+
+  .product-column {
+    position: relative;
   }
 
   @media (min-width: 1024px) {
     .product-grid {
       grid-template-columns: 1fr 1fr;
     }
-  }
 
-  .product-column {
-    position: relative;
+    .product-column--media {
+      position: sticky;
+      top: 120px;
+      align-self: start;
+      height: fit-content; /* Füge diese Zeile hinzu */
+    }
+
+    /* Stelle sicher, dass kein Parent overflow: hidden hat */
+    .product-container {
+      overflow: visible;
+    }
   }
 
   .product-wishlist {
@@ -71,14 +84,6 @@
     margin-bottom: 0;
   }
 
-  @media (max-width: 1023px) {
-    .product-wishlist {
-      position: absolute;
-      top: calc(var(--baseline) * 2);
-      right: calc(var(--baseline) * 2);
-      z-index: 10;
-    }
-  }
 </style>
 
 <script src="{{ 'snippet-accordion.js' | asset_url }}" defer></script>
