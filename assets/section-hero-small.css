@@ -43,8 +43,14 @@
     position: relative;
     display: flex;
     align-items: flex-end;
-    min-height: calc(600px - 64px);
+    min-height: 750px;
     overflow: hidden;
+}
+
+@media (min-width: 768px) {
+    .hero-section {
+        min-height: calc(600px - 64px);
+    }
 }
 
 .hero-background {
