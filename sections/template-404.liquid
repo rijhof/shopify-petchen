@@ -1,13 +1,30 @@
-<div class="template-404" id="template-404">
-  {{ section.settings.title }}
-  {{ section.settings.subtext_title }}
-  
-  {% if section.settings.button_url == blank %}
-    {% assign shop_url = shop.secure_url %}
-  {% else %}
-    {% assign shop_url = section.settings.button_url %}
-  {% endif %}
-  <a href="{{ shop_url }}">{{ section.settings.button_label }}</a>
+{{ 'template-404.css' | asset_url | stylesheet_tag }}
+
+<div class="section template-404 background-contrast background-one" id="template-404">
+  <div class="container">
+    <div class="template-404__content">
+      <div class="template-404__decoration template-404__decoration--left" aria-hidden="true">
+        {{ 'illustration-butterfly.svg' | asset_url | img_tag: loading: 'lazy', alt: '' }}
+      </div>
+      <div class="template-404__decoration template-404__decoration--right" aria-hidden="true">
+        {{ 'illustration-grass.svg' | asset_url | img_tag: loading: 'lazy', alt: '' }}
+      </div>
+
+      <h1>
+        {{ section.settings.title }}
+      </h1>
+      <p class="h4">
+        {{ section.settings.subtext_title }}
+      </p>
+
+      {% if section.settings.button_url == blank %}
+        {% assign shop_url = shop.secure_url %}
+      {% else %}
+        {% assign shop_url = section.settings.button_url %}
+      {% endif %}
+      <a href="{{ shop_url }}" class="button-primary">{{ section.settings.button_label }}</a>
+    </div>
+  </div>
 </div>
 
 
@@ -25,13 +42,13 @@
     {
       "type": "text",
       "id": "subtext_title",
-      "default": "The page that you're looking for is not found",
+      "default": "Leider konnte die gewünschte Seite nicht gefunden werden",
       "label": "404 Subtext Title"
     },
     {
       "type": "text",
       "id": "button_label",
-      "default": "Back to homepage",
+      "default": "Zur Startseite",
       "label": "Button Label"
     },
     {
