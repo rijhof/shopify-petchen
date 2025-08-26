@@ -1,0 +1,253 @@
+{{ 'section-text.css' | asset_url | stylesheet_tag }}
+
+{% assign background_classes = '' %}
+{% case section.settings.background_color %}
+  {% when 'green' %}
+    {% assign background_classes = ' background-one background-contrast' %}
+  {% when 'dark_green' %}
+    {% assign background_classes = ' background-two background-contrast' %}
+  {% else %}
+    {% assign background_classes = '' %}
+{% endcase %}
+
+{% assign decoration_class = '' %}
+{% if section.settings.show_decoration %}
+  {% assign decoration_class = ' section-text--with-decoration' %}
+{% endif %}
+
+<section class="section-text section{{ background_classes }}{{ decoration_class }}" aria-labelledby="section-text-{{ section.id }}">
+  <div class="container">
+    <div class="section-text__wrapper">
+      <div class="section-text__content">
+        {% if section.blocks.size > 0 %}
+          <blockquote class="section-text__quote h4">
+
+            {% if section.settings.show_decoration %}
+              <div class="section-text__decoration" aria-hidden="true">
+                {{ 'illustration-flowers.svg' | asset_url | img_tag: loading: 'lazy', alt: '' }}
+              </div>
+            {% endif %}
+
+            {% for block in section.blocks %}
+              {% case block.type %}
+                {% when 'text' %}
+                  <span class="section-text__text">{{ block.settings.text }}</span>
+                {% when 'icon' %}
+                  <span class="section-text__icon" aria-hidden="true">
+                    {% case block.settings.icon %}
+                      {% when 'ball' %}
+                        {{ 'icon-decor-ball.svg' | asset_url | img_tag: loading: 'lazy', alt: '' }}
+                      {% when 'broken_heart' %}
+                        {{ 'icon-decor-broken-heart.svg' | asset_url | img_tag: loading: 'lazy', alt: '' }}
+                      {% when 'business_card' %}
+                        {{ 'icon-decor-business-card.svg' | asset_url | img_tag: loading: 'lazy', alt: '' }}
+                      {% when 'butterfly_side' %}
+                        {{ 'icon-decor-butterfly-side.svg' | asset_url | img_tag: loading: 'lazy', alt: '' }}
+                      {% when 'butterfly' %}
+                        {{ 'icon-decor-butterfly.svg' | asset_url | img_tag: loading: 'lazy', alt: '' }}
+                      {% when 'clouds' %}
+                        {{ 'icon-decor-clouds.svg' | asset_url | img_tag: loading: 'lazy', alt: '' }}
+                      {% when 'drop' %}
+                        {{ 'icon-decor-drop.svg' | asset_url | img_tag: loading: 'lazy', alt: '' }}
+                      {% when 'flower_grass' %}
+                        {{ 'icon-decor-flower-grass.svg' | asset_url | img_tag: loading: 'lazy', alt: '' }}
+                      {% when 'flower_single' %}
+                        {{ 'icon-decor-flower-single.svg' | asset_url | img_tag: loading: 'lazy', alt: '' }}
+                      {% when 'flower' %}
+                        {{ 'icon-decor-flower.svg' | asset_url | img_tag: loading: 'lazy', alt: '' }}
+                      {% when 'heart_paw' %}
+                        {{ 'icon-decor-heart-paw.svg' | asset_url | img_tag: loading: 'lazy', alt: '' }}
+                      {% when 'house_paw' %}
+                        {{ 'icon-decor-house-paw.svg' | asset_url | img_tag: loading: 'lazy', alt: '' }}
+                      {% when 'little_heart' %}
+                        {{ 'icon-decor-little-heart.svg' | asset_url | img_tag: loading: 'lazy', alt: '' }}
+                      {% when 'paws' %}
+                        {{ 'icon-decor-paws.svg' | asset_url | img_tag: loading: 'lazy', alt: '' }}
+                    {% endcase %}
+                  </span>
+              {% endcase %}
+            {% endfor %}
+          </blockquote>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Text mit Icons",
+  "tag": "section",
+  "class": "section-text-wrapper",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Inhalt"
+    },
+    {
+      "type": "header",
+      "content": "Design"
+    },
+    {
+      "type": "select",
+      "id": "background_color",
+      "label": "Hintergrundfarbe",
+      "options": [
+        {
+          "value": "default",
+          "label": "Standard"
+        },
+        {
+          "value": "green",
+          "label": "Grün"
+        },
+        {
+          "value": "dark_green",
+          "label": "Dunkelgrün"
+        }
+      ],
+      "default": "default"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_decoration",
+      "label": "Hintergrunddekoration anzeigen",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Textinhalt",
+          "default": "Beispieltext"
+        }
+      ]
+    },
+    {
+      "type": "icon",
+      "name": "Icon",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon auswählen",
+          "options": [
+            {
+              "value": "ball",
+              "label": "Ball"
+            },
+            {
+              "value": "broken_heart",
+              "label": "Gebrochenes Herz"
+            },
+            {
+              "value": "business_card",
+              "label": "Visitenkarte"
+            },
+            {
+              "value": "butterfly_side",
+              "label": "Schmetterling seitlich"
+            },
+            {
+              "value": "butterfly",
+              "label": "Schmetterling"
+            },
+            {
+              "value": "clouds",
+              "label": "Wolken"
+            },
+            {
+              "value": "drop",
+              "label": "Tropfen"
+            },
+            {
+              "value": "flower_grass",
+              "label": "Blume mit Gras"
+            },
+            {
+              "value": "flower_single",
+              "label": "Einzelne Blume"
+            },
+            {
+              "value": "flower",
+              "label": "Blume"
+            },
+            {
+              "value": "heart_paw",
+              "label": "Herz mit Pfote"
+            },
+            {
+              "value": "house_paw",
+              "label": "Haus mit Pfote"
+            },
+            {
+              "value": "little_heart",
+              "label": "Kleines Herz"
+            },
+            {
+              "value": "paws",
+              "label": "Pfoten"
+            }
+          ],
+          "default": "flower"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Text mit Icons",
+      "category": "Text",
+      "blocks": [
+        {
+          "type": "text",
+          "settings": {
+            "text": "Wir lieben unsere Tiere"
+          }
+        },
+        {
+          "type": "icon",
+          "settings": {
+            "icon": "heart_paw"
+          }
+        },
+        {
+          "type": "text",
+          "settings": {
+            "text": "und möchten ihnen nur das Beste geben."
+          }
+        },
+        {
+          "type": "icon",
+          "settings": {
+            "icon": "flower"
+          }
+        },
+        {
+          "type": "text",
+          "settings": {
+            "text": "Deshalb verwenden wir nur natürliche Zutaten"
+          }
+        },
+        {
+          "type": "icon",
+          "settings": {
+            "icon": "butterfly"
+          }
+        },
+        {
+          "type": "text",
+          "settings": {
+            "text": "für unsere Produkte."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,103 @@
+.section-text {
+    position: relative;
+}
+
+.section-text__wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+}
+
+.section-text__content {
+    width: 100%;
+}
+
+.section-text__quote {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    position: relative;
+}
+
+.section-text__text {
+    vertical-align: baseline;
+    color: var(--color-primary);
+}
+
+.section-text__icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    position: relative;
+}
+
+.section-text__icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* Hintergrunddekoration */
+.section-text__decoration {
+    position: absolute;
+    left: -85px;
+    bottom: -41px;
+    width: 81px;
+    height: 84px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.section-text__decoration img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.section-text--with-decoration {
+    overflow: visible;
+}
+
+.section-text--with-decoration .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Mobile Anpassungen */
+@media (max-width: 767px) {
+    .section-text__icon {
+        height: 32px;
+        width: 32px;
+    }
+
+    .section-text__decoration {
+        left: auto;
+        right: 5px;
+        bottom: -49px;
+        width: 49px;
+        height: 45px;
+    }
+}
+
+/* Hover-Effekt für Icons */
+.section-text__icon {
+    transition: transform var(--transition-duration) ease;
+}
+
+.section-text__icon:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    .section-text__icon {
+        transition: none;
+    }
+
+    .section-text__icon:hover {
+        transform: none;
+    }
+}
