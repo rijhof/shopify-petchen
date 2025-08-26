@@ -198,3 +198,14 @@
     height: 100%;
     object-fit: cover;
 }
+
+/* Remove padding-top when same backgrounds are consecutive */
+.section.background-one + .section.background-one,
+.section.background-two + .section.background-two {
+    padding-top: 0;
+}
+
+/* Remove padding-top for sections without background-one/two when consecutive */
+.section:not(.background-one):not(.background-two) + .section:not(.background-one):not(.background-two) {
+    padding-top: 0;
+}
