@@ -68,6 +68,11 @@
     object-fit: contain;
 }
 
+.section-cta__decoration--dog {
+    pointer-events: auto;
+    transition: transform 0.3s ease;
+}
+
 /* Mobile: Hide desktop, show mobile */
 @media (max-width: 767px) {
     .section-cta__decoration--desktop {
@@ -143,7 +148,7 @@
     }
 
     .section-cta__decoration--dog:hover {
-        transform: translateY(6px) scale(1.1);
+        transform: translateY(-6px) scale(1.1);
     }
 }
 
@@ -181,6 +186,10 @@
 
 @media (prefers-reduced-motion: reduce) {
     .section-cta__action button {
+        transition: none;
+    }
+
+    .section-cta__decoration--dog {
         transition: none;
     }
 }
