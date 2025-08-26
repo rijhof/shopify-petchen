@@ -157,7 +157,7 @@ select:disabled {
     border-color: var(--input-font-color-placeholder);
     color: var(--input-font-color-placeholder);
     cursor: not-allowed;
-    background-color: transparent;
+    background-color: var(--color-white);
 }
 
 /* Disabled state for select with separator */
