@@ -30,17 +30,45 @@
         "title": "Featured Collection"
       }
     },
-    "section_hero_Nti7CL": {
-      "type": "section-hero",
-      "name": "Hero",
+    "section_column_products_zKWqkp": {
+      "type": "section-column-products",
+      "blocks": {
+        "product_RpePnn": {
+          "type": "product",
+          "settings": {
+            "product": ""
+          }
+        },
+        "product_y3VPLB": {
+          "type": "product",
+          "settings": {
+            "product": ""
+          }
+        },
+        "product_rdJ4TX": {
+          "type": "product",
+          "settings": {
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_RpePnn",
+        "product_y3VPLB",
+        "product_rdJ4TX"
+      ],
+      "name": "Produkte Spalten",
       "settings": {
-        "image_desktop": "shopify://shop_images/Hero__Bild_oder_Vi_deo.png",
-        "image_mobile": "shopify://shop_images/Hero__Bild_oder_Vi_deo_14517e2b-daf6-4ae9-8c25-6ad1790946d1.png",
-        "image_alt": "",
-        "heading_h1": "Wasser marsch... nasses Fell, trockene Nase, wackelnde Ohren...",
-        "heading_h2": "Pflege, was du liebst",
-        "button_text": "Produkte entdecken",
-        "button_link": ""
+        "heading": "Unsere Bestseller",
+        "product_source": "manual",
+        "collection": "",
+        "product_limit": 3,
+        "show_quick_add": true,
+        "show_wishlist": true,
+        "show_view_all": false,
+        "view_all_url": "",
+        "view_all_text": "Alle Produkte anzeigen",
+        "background_color": "default"
       }
     }
   },
@@ -48,6 +76,6 @@
     "store-name",
     "featured-collection",
     "base_style_CzEDEe",
-    "section_hero_Nti7CL"
+    "section_column_products_zKWqkp"
   ]
 }
