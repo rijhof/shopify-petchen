@@ -73,15 +73,6 @@
     }
 }
 
-/* Contrast Mode Support */
-.background-contrast .section-accordion__items .accordion-item {
-    border-top-color: var(--color-white);
-}
-
-.background-contrast .section-accordion__items .accordion-header:hover .accordion-title {
-    color: var(--color-background-two);
-}
-
 /* Change accordion padding */
 
 .section-accordion__items .accordion-item:first-of-type .accordion-header {
