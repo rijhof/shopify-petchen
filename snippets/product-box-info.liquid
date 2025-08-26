@@ -108,7 +108,13 @@
     .product-box-info {
         background: var(--color-white);
         border-radius: var(--border-radius);
-        padding: calc(var(--baseline) * 5.5) calc(var(--baseline) * 4);
+        padding: calc(var(--baseline) * 3);
+    }
+    
+    @media (min-width: 1024px) {
+        .product-box-info {
+            padding: calc(var(--baseline) * 4) calc(var(--baseline) * 5.5);
+        }
     }
 
     .product-box-info__features {
@@ -177,15 +183,9 @@
 
     .add-fields {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         gap: 32px;
         margin-bottom: 24px;
-    }
-
-    @media (min-width: 1024px) {
-        .add-fields {
-            flex-direction: column;
-        }
     }
 
     .add-fields button {

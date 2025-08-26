@@ -33,17 +33,17 @@
                     <div class="swiper-slide thumbslider-nav-slide" data-media-id="{{ media.id }}">
                         {% case media.media_type %}
                             {% when 'image' %}
-                                <img src="{{ media | img_url: '120x' }}"
+                                <img src="{{ media | img_url: '600x600' }}"
                                      alt="View {{ media.alt | default: product.title }} - Image {{ forloop.index }}"
-                                     width="120"
-                                     height="{{ 120 | divided_by: media.aspect_ratio | round }}"
+                                     width="600"
+                                     height="600"
                                      loading="lazy">
                             {% when 'video' %}
                                 <div class="thumbslider-nav-video">
-                                    <img src="{{ media.preview_image | img_url: '120x' }}"
+                                    <img src="{{ media.preview_image | img_url: '600x600' }}"
                                          alt="Play video - {{ product.title }}"
-                                         width="120"
-                                         height="{{ 120 | divided_by: media.preview_image.aspect_ratio | round }}"
+                                         width="600"
+                                         height="600"
                                          loading="lazy">
                                     <span class="thumbslider-nav-video-icon" aria-hidden="true">
                                         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -62,10 +62,10 @@
                                 </div>
                             {% when 'model' %}
                                 <div class="thumbslider-nav-model">
-                                    <img src="{{ media.preview_image | img_url: '120x' }}"
+                                    <img src="{{ media.preview_image | img_url: '600x600' }}"
                                          alt="View 3D model - {{ product.title }}"
-                                         width="120"
-                                         height="{{ 120 | divided_by: media.preview_image.aspect_ratio | round }}"
+                                         width="600"
+                                         height="600"
                                          loading="lazy">
                                     <span class="thumbslider-nav-model-icon" aria-hidden="true">3D</span>
                                 </div>
@@ -85,12 +85,11 @@
         margin: 0 auto;
     }
 
-    /* Main Slider Container */
     .thumbslider-main {
         width: 100%;
         max-width: 100%;
         height: 0;
-        padding-bottom: 100%; /* 1:1 Aspect Ratio */
+        padding-bottom: 100%;
         background: #f8f8f8;
         border-radius: 8px;
         overflow: hidden;
@@ -144,22 +143,20 @@
         height: 0;
         padding-bottom: calc(25% - 7.5px);
         position: relative;
-        opacity: 0.6;
         cursor: pointer;
         border: 2px solid transparent;
         border-radius: 8px;
         overflow: hidden;
         transition: all 0.3s ease;
         flex-shrink: 0;
+        opacity: 1 !important;
     }
 
     .thumbslider-nav .swiper-slide-thumb-active {
-        opacity: 1;
         border-color: #000;
     }
 
     .thumbslider-nav .swiper-slide:hover {
-        opacity: 1;
         border-color: #666;
     }
 
@@ -170,9 +167,10 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
     }
 
-    /* Video & Model Thumbnails */
     .thumbslider-nav-video,
     .thumbslider-nav-model {
         position: absolute;
@@ -213,7 +211,6 @@
         height: 20px;
     }
 
-    /* Swiper Overrides für sauberes Aussehen */
     .thumbslider-main .swiper {
         width: 100%;
         height: 100%;
@@ -232,7 +229,6 @@
         align-items: stretch;
     }
 
-    /* Verhindere Swiper-Overflow */
     .swiper {
         overflow: hidden !important;
     }
@@ -242,17 +238,14 @@
         max-width: 100% !important;
     }
 
-    /* Verhindere dass Swiper die Größe überschreibt */
     .thumbslider-main .swiper-slide-active {
         width: 100% !important;
     }
 
-    /* Reset Swiper defaults die Probleme verursachen könnten */
     .thumbslider-main .swiper-wrapper {
         align-items: center;
     }
 
-    /* Mobile Anpassungen - 4 Thumbnails sichtbar */
     @media (max-width: 480px) {
         .thumbslider-nav .swiper-slide {
             width: calc(25% - 6px) !important;
@@ -271,7 +264,6 @@
         }
     }
 
-    /* Kleine Mobile Geräte */
     @media (min-width: 481px) and (max-width: 767px) {
         .thumbslider-nav .swiper-slide {
             width: calc(25% - 7.5px) !important;
@@ -290,7 +282,6 @@
         }
     }
 
-    /* Tablet */
     @media (min-width: 768px) and (max-width: 1024px) {
         .product-thumbslider {
             max-width: 500px;
@@ -302,7 +293,6 @@
         }
     }
 
-    /* Desktop Large */
     @media (min-width: 1440px) {
         .product-thumbslider {
             max-width: 700px;
@@ -317,17 +307,15 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // Warte bis Swiper geladen ist
         if (typeof Swiper === 'undefined') {
             console.error('Swiper.js ist nicht geladen');
             return;
         }
 
-        // Initialisiere Thumbnail Navigation - Forciere 4 sichtbare Slides
         const thumbsSwiper = new Swiper('.thumbslider-nav', {
             spaceBetween: 10,
-            slidesPerView: 4, // Explizit 4 ohne Anführungszeichen
-            freeMode: false, // Deaktiviert für bessere Kontrolle
+            slidesPerView: 4,
+            freeMode: false,
             watchSlidesProgress: true,
             allowTouchMove: true,
             breakpoints: {
@@ -348,14 +336,12 @@
                     slidesPerView: 4
                 }
             },
-            // Zusätzliche Optionen für bessere Darstellung
             centerInsufficientSlides: false,
             centeredSlides: false,
             loop: false,
             loopFillGroupWithBlank: false
         });
 
-        // Initialisiere Hauptslider
         const mainSwiper = new Swiper('.thumbslider-main .swiper', {
             spaceBetween: 0,
             slidesPerView: 1,
@@ -381,21 +367,17 @@
             }
         });
 
-        // Optional: Keyboard Navigation
         mainSwiper.keyboard = {
             enabled: true,
             onlyInViewport: true
         };
 
-        // Video-Handling: Pausiere Videos beim Slide-Wechsel
         mainSwiper.on('slideChange', function() {
-            // Pausiere alle Videos
             const videos = document.querySelectorAll('.thumbslider-main video');
             videos.forEach(video => {
                 if (video) video.pause();
             });
 
-            // Spiele Video im aktiven Slide ab, wenn autoplay gewünscht
             const activeSlide = mainSwiper.slides[mainSwiper.activeIndex];
             const activeVideo = activeSlide?.querySelector('video');
             if (activeVideo && activeVideo.hasAttribute('autoplay')) {
@@ -403,23 +385,19 @@
             }
         });
 
-        // Fix für initiale Größe und Thumbnails
         setTimeout(() => {
             mainSwiper.update();
             thumbsSwiper.update();
 
-            // Debug: Prüfe ob 4 Thumbnails sichtbar sind
             const visibleSlides = document.querySelectorAll('.thumbslider-nav .swiper-slide');
             console.log(`Anzahl Thumbnail-Slides: ${visibleSlides.length}`);
 
-            // Force Update der Thumbnail-Größen
             visibleSlides.forEach((slide, index) => {
                 slide.style.width = 'calc(25% - 7.5px)';
                 slide.style.flexShrink = '0';
             });
         }, 100);
 
-        // Resize Handler für konsistente Darstellung
         window.addEventListener('resize', function() {
             setTimeout(() => {
                 thumbsSwiper.update();
