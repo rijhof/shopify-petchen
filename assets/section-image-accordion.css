@@ -6,7 +6,7 @@
 .section-image-text__wrapper {
     display: grid;
     grid-template-columns: 1fr;
-    gap: calc(var(--baseline) * 4);
+    gap: calc(var(--baseline) * 3);
     align-items: start;
     position: relative;
 }
