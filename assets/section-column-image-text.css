@@ -31,17 +31,27 @@
 }
 
 .section-column-image-text__column-title {
-    margin-bottom: calc(var(--baseline) * 3);
+    margin-bottom: calc(var(--baseline) * 2);
 }
 
 .section-column-image-text__column-richtext {
     margin-bottom: 0;
 }
 
+@media (max-width: 767px) {
+    .section-column-image-text__title h2 {
+        margin-bottom: calc(var(--baseline) * 1);
+    }
+}
+
 /* Tablet Layout */
 @media (min-width: 768px) {
     .section-column-image-text__grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section-column-image-text__column-title {
+        margin-bottom: calc(var(--baseline) * 3);
     }
 }
 
