@@ -13,21 +13,140 @@
       "type": "template-page",
       "settings": {}
     },
-    "section_hero_small_jxafTM": {
-      "type": "section-hero-small",
-      "name": "Hero Klein",
+    "section_column_image_text_zGqUbQ": {
+      "type": "section-column-image-text",
+      "blocks": {
+        "column_jiaDCE": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Image3.png",
+            "image_alt": "",
+            "heading": "Lorem ipsum dolor sit amet",
+            "content": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadi pscing elitr</p>"
+          }
+        },
+        "column_QxPkGM": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Image2.png",
+            "image_alt": "",
+            "heading": "Lorem ipsum dolor sit amet",
+            "content": "<p>Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadi pscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>"
+          }
+        },
+        "column_jAd3rU": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Image1.png",
+            "image_alt": "",
+            "heading": "Lorem ipsum dolor sit amet",
+            "content": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadi pscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "column_jiaDCE",
+        "column_QxPkGM",
+        "column_jAd3rU"
+      ],
+      "name": "Column Image Text",
       "settings": {
-        "image_alt": "",
-        "breadcrumb_current": "",
-        "heading_h1": "Lorem Ipsum",
-        "heading_h2": "Entdecken Sie unsere Produkte",
-        "button_text": "Jetzt entdecken",
-        "button_link": ""
+        "heading": "Produktvorteile",
+        "content": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>",
+        "background_color": "default"
+      }
+    },
+    "section_column_image_text_4FK3Dg": {
+      "type": "section-column-image-text",
+      "blocks": {
+        "column_xtFwVf": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Image6.png",
+            "image_alt": "",
+            "heading": "Lorem ipsum dolor sit amet",
+            "content": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadi pscing elitr</p>"
+          }
+        },
+        "column_B8VWPV": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Image4.png",
+            "image_alt": "",
+            "heading": "Lorem ipsum dolor sit amet",
+            "content": "<p>Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadi pscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>"
+          }
+        },
+        "column_cxdVnz": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Image5.png",
+            "image_alt": "",
+            "heading": "Lorem ipsum dolor sit amet",
+            "content": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadi pscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "column_xtFwVf",
+        "column_B8VWPV",
+        "column_cxdVnz"
+      ],
+      "name": "Column Image Text",
+      "settings": {
+        "heading": "Produktvorteile",
+        "content": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>",
+        "background_color": "green"
+      }
+    },
+    "section_column_image_text_NGCdtA": {
+      "type": "section-column-image-text",
+      "blocks": {
+        "column_dgLerb": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Image6.png",
+            "image_alt": "",
+            "heading": "Lorem ipsum dolor sit amet",
+            "content": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadi pscing elitr</p>"
+          }
+        },
+        "column_CP9Khw": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Image4.png",
+            "image_alt": "",
+            "heading": "Lorem ipsum dolor sit amet",
+            "content": "<p>Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadi pscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>"
+          }
+        },
+        "column_JKpQnQ": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Image5.png",
+            "image_alt": "",
+            "heading": "Lorem ipsum dolor sit amet",
+            "content": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadi pscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "column_dgLerb",
+        "column_CP9Khw",
+        "column_JKpQnQ"
+      ],
+      "name": "Column Image Text",
+      "settings": {
+        "heading": "Produktvorteile",
+        "content": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>",
+        "background_color": "dark_green"
       }
     }
   },
   "order": [
     "template",
-    "section_hero_small_jxafTM"
+    "section_column_image_text_zGqUbQ",
+    "section_column_image_text_4FK3Dg",
+    "section_column_image_text_NGCdtA"
   ]
 }
