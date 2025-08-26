@@ -38,10 +38,6 @@
     margin-bottom: 0;
 }
 
-.section-column-image-text__column-richtext p:last-child {
-    margin-bottom: 0;
-}
-
 /* Tablet Layout */
 @media (min-width: 768px) {
     .section-column-image-text__grid {
