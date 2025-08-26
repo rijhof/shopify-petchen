@@ -1,0 +1,77 @@
+.section-cta {
+    position: relative;
+}
+
+.section-cta__wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+}
+
+.section-cta__content {
+    width: 100%;
+}
+
+
+/* Hintergrunddekoration */
+.section-cta__decoration {
+    position: absolute;
+    left: -85px;
+    bottom: -41px;
+    width: 81px;
+    height: 84px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.section-cta__decoration img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.section-cta--with-decoration {
+    overflow: visible;
+}
+
+.section-cta--with-decoration .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Mobile Anpassungen */
+@media (max-width: 767px) {
+    .section-cta__icon {
+        height: 32px;
+        width: 32px;
+    }
+
+    .section-cta__decoration {
+        left: auto;
+        right: 5px;
+        bottom: -49px;
+        width: 49px;
+        height: 45px;
+    }
+}
+
+/* Hover-Effekt für Icons */
+.section-cta__icon {
+    transition: transform var(--transition-duration) ease;
+}
+
+.section-cta__icon:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    .section-cta__icon {
+        transition: none;
+    }
+
+    .section-cta__icon:hover {
+        transform: none;
+    }
+}
