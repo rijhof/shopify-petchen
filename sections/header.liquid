@@ -46,7 +46,7 @@
             {% for link in main_menu_linklist %}
               <li class="header-nav-item{% if link.links != blank %} has-dropdown{% endif %}">
                 {% if link.links != blank %}
-                  <button class="header-nav-link header-nav-dropdown-toggle"
+                  <button class="header-nav-link header-nav-dropdown-toggle{% if link.active %} current-page{% endif %}"
                           type="button"
                           aria-expanded="false"
                           aria-controls="dropdown-{{ link.handle }}"
@@ -61,7 +61,7 @@
                     {% for childlink in link.links %}
                       <li class="header-dropdown-item{% if childlink.links != blank %} has-subdropdown{% endif %}">
                         {% if childlink.links != blank %}
-                          <button class="header-subdropdown-toggle lead"
+                          <button class="header-subdropdown-toggle lead{% if childlink.active %} current-page{% endif %}"
                                   type="button"
                                   aria-expanded="false"
                                   aria-controls="subdropdown-{{ childlink.handle }}"
@@ -74,18 +74,18 @@
                           <ul class="header-subdropdown" id="subdropdown-{{ childlink.handle }}" aria-label="Submenu for {{ childlink.title }}">
                             {% for subchildlink in childlink.links %}
                               <li class="header-subdropdown-item">
-                                <a href="{{ subchildlink.url }}" class="lead">{{ subchildlink.title }}</a>
+                                <a href="{{ subchildlink.url }}" class="lead{% if subchildlink.active %} current-page{% endif %}">{{ subchildlink.title }}</a>
                               </li>
                             {% endfor %}
                           </ul>
                         {% else %}
-                          <a href="{{ childlink.url }}" class="lead">{{ childlink.title }}</a>
+                          <a href="{{ childlink.url }}" class="lead{% if childlink.active %} current-page{% endif %}">{{ childlink.title }}</a>
                         {% endif %}
                       </li>
                     {% endfor %}
                   </ul>
                 {% else %}
-                  <a href="{{ link.url }}" class="header-nav-link">{{ link.title }}</a>
+                  <a href="{{ link.url }}" class="header-nav-link{% if link.active %} current-page{% endif %}">{{ link.title }}</a>
                 {% endif %}
               </li>
             {% endfor %}

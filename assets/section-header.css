@@ -184,6 +184,10 @@ header .button-secondary.icon::after {
     transform: rotate(90deg) rotateY(180deg);
 }
 
+.current-page {
+    text-decoration: underline;
+}
+
 /* Dropdown Menu */
 .header-dropdown {
     position: absolute;
@@ -424,19 +428,19 @@ header .button-secondary.icon::after {
 .mobile-navigation {
     position: fixed;
     top: 0;
-    left: -100%;
+    right: -100%;
     width: 100%;
     max-width: 400px;
     height: 100vh;
     background: var(--color-white);
-    box-shadow: 2px 0 12px rgba(0,0,0,0.1);
+    box-shadow: -2px 0 12px rgba(0,0,0,0.1);
     z-index: 1000;
-    transition: left 0.3s ease;
+    transition: right 0.3s ease;
     overflow-y: auto;
 }
 
 .mobile-navigation[aria-hidden="false"] {
-    left: 0;
+    right: 0;
 }
 
 .mobile-navigation-inner {
