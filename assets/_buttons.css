@@ -280,14 +280,6 @@ button {
     transition: transform var(--transition-duration) ease;
 }
 
-.button-tertiary.icon--right:hover::after {
-    transform: translateX(8px);
-}
-
-.button-tertiary.icon--left {
-    gap: var(--button-gap);
-}
-
 .button-tertiary.icon--left::before {
     content: '';
     width: 24px;
@@ -444,8 +436,16 @@ button:not([class]):hover {
     background-image: url('icon-chevron-right.svg');
 }
 
+.background-contrast .button-tertiary.icon--right:hover::after {
+    background-image: url('icon-chevron-right-hover.svg');
+}
+
 .background-contrast .button-tertiary.icon--left::before {
     background-image: url('icon-chevron-right.svg');
+}
+
+.background-contrast .button-tertiary.icon--left:hover::before {
+    background-image: url('icon-chevron-right-hover.svg');
 }
 
 .background-contrast button:not([class]) {

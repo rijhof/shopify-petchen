@@ -118,8 +118,7 @@ a {
 }
 
 a.button-primary,
-a.button-secondary,
-a.button-tertiary {
+a.button-secondary {
     text-decoration: none;
 }
 
