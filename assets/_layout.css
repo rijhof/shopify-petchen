@@ -198,3 +198,20 @@
     height: 100%;
     object-fit: cover;
 }
+
+/* Remove padding-top when same backgrounds are consecutive in Shopify sections */
+
+/* When background-one follows background-one */
+.shopify-section:has(.section.background-one) + .shopify-section > .section.background-one {
+    padding-top: 0 !important;
+}
+
+/* When background-two follows background-two */
+.shopify-section:has(.section.background-two) + .shopify-section > .section.background-two {
+    padding-top: 0 !important;
+}
+
+/* When sections without background-one/two follow each other */
+.shopify-section:has(.section:not(.background-one):not(.background-two)) + .shopify-section > .section:not(.background-one):not(.background-two) {
+    padding-top: 0 !important;
+}
