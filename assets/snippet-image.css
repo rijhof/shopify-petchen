@@ -95,19 +95,16 @@
     left: -86px;
 }
 
-/* Blume mit Gras unten rechts */
 .image--decoration-flower-grass-bottom-right .image__decoration {
     bottom: 64px;
     right: -57px;
 }
 
-/* Herz unten rechts (Rand) */
 .image--decoration-heart-bottom-right-edge .image__decoration {
-    bottom: -50px;
+    bottom: -35px;
     right: 30px;
 }
 
-/* Herz unten rechts (im Bild) */
 .image--decoration-heart-bottom-right-inside .image__decoration {
     bottom: 18px;
     right: 51px;
