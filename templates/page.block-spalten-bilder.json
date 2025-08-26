@@ -13,21 +13,24 @@
       "type": "template-page",
       "settings": {}
     },
-    "section_hero_small_jxafTM": {
-      "type": "section-hero-small",
-      "name": "Hero Klein",
+    "section_logo_grid_DPpeXQ": {
+      "type": "section-logo-grid",
+      "name": "Logo Grid",
       "settings": {
-        "image_alt": "",
-        "breadcrumb_current": "",
-        "heading_h1": "Lorem Ipsum",
-        "heading_h2": "Entdecken Sie unsere Produkte",
-        "button_text": "Jetzt entdecken",
-        "button_link": ""
+        "heading": "",
+        "logo_1": "shopify://shop_images/Certificate-eco-cert-1.png",
+        "logo_1_alt": "",
+        "logo_2": "shopify://shop_images/Certificate-recycled-packaging-2.png",
+        "logo_2_alt": "",
+        "logo_3": "shopify://shop_images/Certificate-vegan-formula-3.png",
+        "logo_3_alt": "",
+        "logo_4": "shopify://shop_images/Certificate-plant-based-2.png",
+        "logo_4_alt": ""
       }
     }
   },
   "order": [
     "template",
-    "section_hero_small_jxafTM"
+    "section_logo_grid_DPpeXQ"
   ]
 }
