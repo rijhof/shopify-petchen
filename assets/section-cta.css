@@ -1,27 +1,64 @@
 .section-cta {
     position: relative;
+    text-align: left;
+    overflow: visible;
+}
+
+@media (min-width: 768px) {
+    .section-cta {
+        text-align: center;
+    }
 }
 
 .section-cta__wrapper {
     display: flex;
     flex-direction: column;
+    align-items: center;
     max-width: var(--content-max-width);
     margin: 0 auto;
+    position: relative;
+    z-index: 2;
 }
 
 .section-cta__content {
     width: 100%;
+    position: relative;
+    min-height: 460px;
+    align-content: center;
 }
 
+.section-cta__richtext p:last-child {
+    margin-bottom: 0;
+}
 
-/* Hintergrunddekoration */
+.section-cta__action {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 24px;
+}
+
+@media (min-width: 768px) {
+    .section-cta__action {
+        justify-content: center;
+        margin-top: 32px;
+    }
+}
+
+.section-cta__decorations {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
 .section-cta__decoration {
     position: absolute;
-    left: -85px;
-    bottom: -41px;
-    width: 81px;
-    height: 84px;
-    z-index: 1;
     pointer-events: none;
 }
 
@@ -31,47 +68,114 @@
     object-fit: contain;
 }
 
-.section-cta--with-decoration {
-    overflow: visible;
-}
-
-.section-cta--with-decoration .container {
-    position: relative;
-    z-index: 2;
-}
-
-/* Mobile Anpassungen */
+/* Mobile: Hide desktop, show mobile */
 @media (max-width: 767px) {
-    .section-cta__icon {
-        height: 32px;
-        width: 32px;
+    .section-cta__decoration--desktop {
+        display: none;
     }
 
-    .section-cta__decoration {
-        left: auto;
-        right: 5px;
-        bottom: -49px;
-        width: 49px;
-        height: 45px;
+    .section-cta__decoration--mobile {
+        display: block;
+    }
+
+    .section-cta__decoration--cloud-one {
+        bottom: 0;
+        left: 0;
+        width: 299px;
+    }
+
+    .section-cta__decoration--cloud-two {
+        top: 23px;
+        left: 0;
+    }
+
+    .section-cta__decoration--cloud-three {
+        top: 10px;
+        right: 23px;
+    }
+
+    .section-cta__decoration--cloud-four {
+        display: none;
+    }
+
+    .section-cta__decoration--dog {
+        bottom: 32px;
+        right: 20px;
+        height: 100px;
     }
 }
 
-/* Hover-Effekt für Icons */
-.section-cta__icon {
-    transition: transform var(--transition-duration) ease;
+/* Desktop: Hide mobile, show desktop */
+@media (min-width: 768px) {
+    .section-cta__decoration--mobile {
+        display: none !important;
+    }
+
+    .section-cta__decoration--desktop {
+        display: block;
+    }
+
+    .section-cta__decoration--cloud-one {
+        bottom: -40px;
+        left: -20px;
+    }
+
+    .section-cta__decoration--cloud-two {
+        top: -32px;
+        left: -20px;
+    }
+
+    .section-cta__decoration--cloud-three {
+        top: -20px;
+        right: -30px;
+    }
+
+    .section-cta__decoration--cloud-four {
+        bottom: 27px;
+        right: -24px;
+    }
+
+    .section-cta__decoration--dog {
+        bottom: 32px;
+        right: 20px;
+        height: 100px;
+    }
 }
 
-.section-cta__icon:hover {
-    transform: scale(1.1) rotate(5deg);
+@media (min-width: 1280px) {
+    .section-cta__decoration--dog {
+        bottom: 32px;
+        right: 77px;
+        height: unset;
+    }
+
+    .section-cta__decoration--desktop {
+        display: block;
+    }
+
+    .section-cta__decoration--cloud-one {
+        bottom: 0;
+        left: 0;
+    }
+
+    .section-cta__decoration--cloud-two {
+        top: 23px;
+        left: 26px;
+    }
+
+    .section-cta__decoration--cloud-three {
+        top: 0;
+        right: 130px;
+    }
+
+    .section-cta__decoration--cloud-four {
+        bottom: 27px;
+        right: 0;
+    }
 }
 
-/* Reduced Motion Support */
 @media (prefers-reduced-motion: reduce) {
-    .section-cta__icon {
+    .section-cta__action button {
         transition: none;
-    }
-
-    .section-cta__icon:hover {
-        transform: none;
     }
 }

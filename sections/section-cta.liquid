@@ -1,73 +1,56 @@
-{{ 'section-text.css' | asset_url | stylesheet_tag }}
+{{ 'section-cta.css' | asset_url | stylesheet_tag }}
 
 {% assign background_classes = '' %}
-{% case section.settings.background_color %}
-  {% when 'green' %}
-    {% assign background_classes = ' background-one background-contrast' %}
-  {% when 'dark_green' %}
-    {% assign background_classes = ' background-two background-contrast' %}
-  {% else %}
-    {% assign background_classes = '' %}
-{% endcase %}
+<section class="section-cta section background-two background-contrast" aria-labelledby="section-cta-{{ section.id }}">
+  <div class="section-cta__decorations">
+    <div class="section-cta__decoration section-cta__decoration--cloud-one section-cta__decoration--desktop">
+      <img src="{{ 'illustration-cloud-one.svg' | asset_url }}" alt="" role="presentation">
+    </div>
+    <div class="section-cta__decoration section-cta__decoration--cloud-one section-cta__decoration--mobile">
+      <img src="{{ 'illustration-mobile-cloud-one.svg' | asset_url }}" alt="" role="presentation">
+    </div>
+    <div class="section-cta__decoration section-cta__decoration--cloud-two section-cta__decoration--desktop">
+      <img src="{{ 'illustration-cloud-two.svg' | asset_url }}" alt="" role="presentation">
+    </div>
+    <div class="section-cta__decoration section-cta__decoration--cloud-two section-cta__decoration--mobile">
+      <img src="{{ 'illustration-mobile-cloud-two.svg' | asset_url }}" alt="" role="presentation">
+    </div>
+    <div class="section-cta__decoration section-cta__decoration--cloud-three section-cta__decoration--desktop">
+      <img src="{{ 'illustration-cloud-three.svg' | asset_url }}" alt="" role="presentation">
+    </div>
+    <div class="section-cta__decoration section-cta__decoration--cloud-three section-cta__decoration--mobile">
+      <img src="{{ 'illustration-mobile-cloud-three.svg' | asset_url }}" alt="" role="presentation">
+    </div>
+    <div class="section-cta__decoration section-cta__decoration--cloud-four">
+      <img src="{{ 'illustration-cloud-four.svg' | asset_url }}" alt="" role="presentation">
+    </div>
+    <div class="section-cta__decoration section-cta__decoration--dog">
+      <img src="{{ 'illustration-dog.svg' | asset_url }}" alt="" role="presentation">
+    </div>
+  </div>
 
-{% assign decoration_class = '' %}
-{% if section.settings.show_decoration %}
-  {% assign decoration_class = ' section-text--with-decoration' %}
-{% endif %}
-
-<section class="section-text section{{ background_classes }}{{ decoration_class }}" aria-labelledby="section-text-{{ section.id }}">
   <div class="container">
-    <div class="section-text__wrapper">
-      <div class="section-text__content">
-        {% if section.blocks.size > 0 %}
-          <blockquote class="section-text__quote h4">
+    <div class="section-cta__wrapper">
+      <div class="section-cta__content">
+        <h2 id="section-cta-{{ section.id }}" class="section-cta__title">
+          {{ section.settings.heading | default: 'Ãœberschrift' }}
+        </h2>
 
-            {% if section.settings.show_decoration %}
-              <div class="section-text__decoration" aria-hidden="true">
-                {{ 'illustration-flowers.svg' | asset_url | img_tag: loading: 'lazy', alt: '' }}
-              </div>
-            {% endif %}
+        {% if section.settings.content != blank %}
+          <div class="section-cta__richtext">
+            {{ section.settings.content }}
+          </div>
+        {% endif %}
 
-            {% for block in section.blocks %}
-              {% case block.type %}
-                {% when 'text' %}
-                  <span class="section-text__text">{{ block.settings.text }}</span>
-                {% when 'icon' %}
-                  <span class="section-text__icon" aria-hidden="true">
-                    {% case block.settings.icon %}
-                      {% when 'ball' %}
-                        {{ 'icon-decor-ball.svg' | asset_url | img_tag: loading: 'lazy', alt: '' }}
-                      {% when 'broken_heart' %}
-                        {{ 'icon-decor-broken-heart.svg' | asset_url | img_tag: loading: 'lazy', alt: '' }}
-                      {% when 'business_card' %}
-                        {{ 'icon-decor-business-card.svg' | asset_url | img_tag: loading: 'lazy', alt: '' }}
-                      {% when 'butterfly_side' %}
-                        {{ 'icon-decor-butterfly-side.svg' | asset_url | img_tag: loading: 'lazy', alt: '' }}
-                      {% when 'butterfly' %}
-                        {{ 'icon-decor-butterfly.svg' | asset_url | img_tag: loading: 'lazy', alt: '' }}
-                      {% when 'clouds' %}
-                        {{ 'icon-decor-clouds.svg' | asset_url | img_tag: loading: 'lazy', alt: '' }}
-                      {% when 'drop' %}
-                        {{ 'icon-decor-drop.svg' | asset_url | img_tag: loading: 'lazy', alt: '' }}
-                      {% when 'flower_grass' %}
-                        {{ 'icon-decor-flower-grass.svg' | asset_url | img_tag: loading: 'lazy', alt: '' }}
-                      {% when 'flower_single' %}
-                        {{ 'icon-decor-flower-single.svg' | asset_url | img_tag: loading: 'lazy', alt: '' }}
-                      {% when 'flower' %}
-                        {{ 'icon-decor-flower.svg' | asset_url | img_tag: loading: 'lazy', alt: '' }}
-                      {% when 'heart_paw' %}
-                        {{ 'icon-decor-heart-paw.svg' | asset_url | img_tag: loading: 'lazy', alt: '' }}
-                      {% when 'house_paw' %}
-                        {{ 'icon-decor-house-paw.svg' | asset_url | img_tag: loading: 'lazy', alt: '' }}
-                      {% when 'little_heart' %}
-                        {{ 'icon-decor-little-heart.svg' | asset_url | img_tag: loading: 'lazy', alt: '' }}
-                      {% when 'paws' %}
-                        {{ 'icon-decor-paws.svg' | asset_url | img_tag: loading: 'lazy', alt: '' }}
-                    {% endcase %}
-                  </span>
-              {% endcase %}
-            {% endfor %}
-          </blockquote>
+        {% if section.settings.button_text != blank %}
+          <div class="section-cta__action">
+            {% render 'button',
+                    button_text: section.settings.button_text,
+                    button_url: section.settings.button_link,
+                    button_type: section.settings.button_type,
+                    icon_position: section.settings.icon_position
+            %}
+          </div>
         {% endif %}
       </div>
     </div>
@@ -76,177 +59,85 @@
 
 {% schema %}
 {
-  "name": "Text mit Icons",
+  "name": "Call to Action",
   "tag": "section",
-  "class": "section-text-wrapper",
+  "class": "section-cta-wrapper",
   "settings": [
     {
       "type": "header",
       "content": "Inhalt"
     },
     {
+      "type": "text",
+      "id": "heading",
+      "label": "Ãœberschrift",
+      "default": "Ihre Ãœberschrift hier"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Inhalt",
+      "default": "<p>FÃ¼gen Sie hier Ihren Text ein. Nutzen Sie die Formatierungsoptionen, um Ihren Inhalt zu strukturieren.</p>"
+    },
+    {
       "type": "header",
-      "content": "Design"
+      "content": "Button"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
     },
     {
       "type": "select",
-      "id": "background_color",
-      "label": "Hintergrundfarbe",
+      "id": "button_type",
+      "label": "Button Type",
       "options": [
         {
-          "value": "default",
-          "label": "Standard"
+          "value": "primary",
+          "label": "Primary"
         },
         {
-          "value": "green",
-          "label": "Grün"
+          "value": "secondary",
+          "label": "Secondary"
         },
         {
-          "value": "dark_green",
-          "label": "Dunkelgrün"
+          "value": "tertiary",
+          "label": "Tertiary"
         }
       ],
-      "default": "default"
+      "default": "primary"
     },
     {
-      "type": "checkbox",
-      "id": "show_decoration",
-      "label": "Hintergrunddekoration anzeigen",
-      "default": false
-    }
-  ],
-  "blocks": [
-    {
-      "type": "text",
-      "name": "Text",
-      "settings": [
+      "type": "select",
+      "id": "icon_position",
+      "label": "Icon Position",
+      "options": [
         {
-          "type": "text",
-          "id": "text",
-          "label": "Textinhalt",
-          "default": "Beispieltext"
-        }
-      ]
-    },
-    {
-      "type": "icon",
-      "name": "Icon",
-      "settings": [
+          "value": "none",
+          "label": "No Icon"
+        },
         {
-          "type": "select",
-          "id": "icon",
-          "label": "Icon auswählen",
-          "options": [
-            {
-              "value": "ball",
-              "label": "Ball"
-            },
-            {
-              "value": "broken_heart",
-              "label": "Gebrochenes Herz"
-            },
-            {
-              "value": "business_card",
-              "label": "Visitenkarte"
-            },
-            {
-              "value": "butterfly_side",
-              "label": "Schmetterling seitlich"
-            },
-            {
-              "value": "butterfly",
-              "label": "Schmetterling"
-            },
-            {
-              "value": "clouds",
-              "label": "Wolken"
-            },
-            {
-              "value": "drop",
-              "label": "Tropfen"
-            },
-            {
-              "value": "flower_grass",
-              "label": "Blume mit Gras"
-            },
-            {
-              "value": "flower_single",
-              "label": "Einzelne Blume"
-            },
-            {
-              "value": "flower",
-              "label": "Blume"
-            },
-            {
-              "value": "heart_paw",
-              "label": "Herz mit Pfote"
-            },
-            {
-              "value": "house_paw",
-              "label": "Haus mit Pfote"
-            },
-            {
-              "value": "little_heart",
-              "label": "Kleines Herz"
-            },
-            {
-              "value": "paws",
-              "label": "Pfoten"
-            }
-          ],
-          "default": "flower"
+          "value": "left",
+          "label": "Icon Left"
+        },
+        {
+          "value": "right",
+          "label": "Icon Right"
         }
-      ]
+      ],
+      "default": "right"
     }
   ],
   "presets": [
     {
-      "name": "Text mit Icons",
-      "category": "Text",
-      "blocks": [
-        {
-          "type": "text",
-          "settings": {
-            "text": "Wir lieben unsere Tiere"
-          }
-        },
-        {
-          "type": "icon",
-          "settings": {
-            "icon": "heart_paw"
-          }
-        },
-        {
-          "type": "text",
-          "settings": {
-            "text": "und möchten ihnen nur das Beste geben."
-          }
-        },
-        {
-          "type": "icon",
-          "settings": {
-            "icon": "flower"
-          }
-        },
-        {
-          "type": "text",
-          "settings": {
-            "text": "Deshalb verwenden wir nur natürliche Zutaten"
-          }
-        },
-        {
-          "type": "icon",
-          "settings": {
-            "icon": "butterfly"
-          }
-        },
-        {
-          "type": "text",
-          "settings": {
-            "text": "für unsere Produkte."
-          }
-        }
-      ]
+      "name": "Call to Action",
+      "category": "Inhalt"
     }
   ]
 }
