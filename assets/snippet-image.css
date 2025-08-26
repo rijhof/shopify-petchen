@@ -9,7 +9,7 @@
     width: 100%;
     overflow: hidden;
     border-radius: 32px;
-    background-color: var(--color-grey-light);
+    background-color: var(--color-white);
 }
 
 .image__aspect--1-1 {

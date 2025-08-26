@@ -1,0 +1,308 @@
+{{ 'section-column-products.css' | asset_url | stylesheet_tag }}
+{{ 'snippet-product-card.css' | asset_url | stylesheet_tag }}
+{{ 'snippet-image.css' | asset_url | stylesheet_tag }}
+{{ 'snippet-image.js' | asset_url | script_tag }}
+
+{% assign background_classes = '' %}
+{% case section.settings.background_color %}
+    {% when 'green' %}
+        {% assign background_classes = ' background-one background-contrast' %}
+    {% when 'dark_green' %}
+        {% assign background_classes = ' background-two background-contrast' %}
+    {% else %}
+        {% assign background_classes = '' %}
+{% endcase %}
+
+<section class="section-column-products section{{ background_classes }}" aria-labelledby="section-column-products-{{ section.id }}">
+    <div class="container">
+
+        {% if section.settings.heading != blank or section.settings.content != blank %}
+            <div class="section-column-products__precontent">
+                {% if section.settings.heading != blank %}
+                    <h2 id="section-column-products-{{ section.id }}" class="section-column-products__title">
+                        {{ section.settings.heading }}
+                    </h2>
+                {% endif %}
+            </div>
+        {% endif %}
+
+        <div class="section-column-products__wrapper">
+            <div class="section-column-products__grid">
+                {% case section.settings.product_source %}
+                    {% when 'manual' %}
+                        {% for block in section.blocks %}
+                            {% if block.type == 'product' and block.settings.product != blank %}
+                                <div class="section-column-products__item background-reset" {{ block.shopify_attributes }}>
+                                    {% render 'product-card',
+                                            product: block.settings.product,
+                                            aspect_ratio: '1-1',
+                                            show_quick_add: section.settings.show_quick_add,
+                                            show_wishlist: section.settings.show_wishlist
+                                    %}
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+
+                    {% when 'collection' %}
+                        {% if section.settings.collection != blank %}
+                            {% for product in section.settings.collection.products limit: section.settings.product_limit %}
+                                <div class="section-column-products__item background-reset">
+                                    {% render 'product-card',
+                                            product: product,
+                                            aspect_ratio: '1-1',
+                                            show_quick_add: section.settings.show_quick_add,
+                                            show_wishlist: section.settings.show_wishlist
+                                    %}
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+
+                    {% when 'recently_viewed' %}
+                        <div class="section-column-products__recently-viewed background-reset"
+                             data-limit="{{ section.settings.product_limit }}"
+                             data-show-quick-add="{{ section.settings.show_quick_add }}"
+                             data-show-wishlist="{{ section.settings.show_wishlist }}">
+                        </div>
+
+                    {% when 'newest' %}
+                        {% assign newest_products = collections.all.products | sort: 'created_at' | reverse %}
+                        {% for product in newest_products limit: section.settings.product_limit %}
+                            <div class="section-column-products__item background-reset">
+                                {% render 'product-card',
+                                        product: product,
+                                        aspect_ratio: '1-1',
+                                        show_quick_add: section.settings.show_quick_add,
+                                        show_wishlist: section.settings.show_wishlist
+                                %}
+                            </div>
+                        {% endfor %}
+
+                    {% when 'bestsellers' %}
+                        {% assign bestseller_collection = collections['bestseller'] | default: collections['bestsellers'] %}
+                        {% if bestseller_collection %}
+                            {% for product in bestseller_collection.products limit: section.settings.product_limit %}
+                                <div class="section-column-products__item background-reset">
+                                    {% render 'product-card',
+                                            product: product,
+                                            aspect_ratio: '1-1',
+                                            show_quick_add: section.settings.show_quick_add,
+                                            show_wishlist: section.settings.show_wishlist
+                                    %}
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+
+                {% endcase %}
+            </div>
+
+            {% if section.settings.show_view_all and section.settings.view_all_url != blank %}
+                <div class="section-column-products__footer">
+                    <a href="{{ section.settings.view_all_url }}" class="button-secondary icon--right">
+                        {{ section.settings.view_all_text | default: 'Alle Produkte anzeigen' }}
+                    </a>
+                </div>
+            {% endif %}
+        </div>
+
+        {% if section.settings.button_text != blank %}
+            <div class="section-image-text__action">
+                {% render 'button',
+                        button_text: section.settings.button_text,
+                        button_url: section.settings.button_link,
+                        button_type: section.settings.button_type,
+                        icon_position: section.settings.icon_position
+                %}
+            </div>
+        {% endif %}
+    </div>
+</section>
+
+{% if section.settings.product_source == 'recently_viewed' %}
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Recently Viewed Products Logic
+            const container = document.querySelector('.section-column-products__recently-viewed');
+            if (container) {
+                const recentlyViewed = JSON.parse(localStorage.getItem('recentlyViewed') || '[]');
+                const limit = parseInt(container.dataset.limit) || 3;
+                const showQuickAdd = container.dataset.showQuickAdd === 'true';
+                const showWishlist = container.dataset.showWishlist === 'true';
+
+                if (recentlyViewed.length > 0) {
+                    const productHandles = recentlyViewed.slice(0, limit).join(',');
+
+                    // Fetch product data via AJAX
+                    fetch(`/collections/all?view=products-json&handles=${productHandles}`)
+                        .then(response => response.json())
+                        .then(products => {
+                            products.forEach(product => {
+                                // Create product card dynamically
+                                // This would need a separate JavaScript implementation
+                                console.log('Product loaded:', product);
+                            });
+                        });
+                }
+            }
+        });
+    </script>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Produkte Spalten",
+  "tag": "section",
+  "class": "section-column-products-wrapper",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Pre-Content"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Überschrift",
+      "default": "Unsere Produkte"
+    },
+    {
+      "type": "header",
+      "content": "Produkt-Einstellungen"
+    },
+    {
+      "type": "select",
+      "id": "product_source",
+      "label": "Produktquelle",
+      "options": [
+        {
+          "value": "manual",
+          "label": "Manuell auswählen"
+        },
+        {
+          "value": "collection",
+          "label": "Aus Kollektion"
+        },
+        {
+          "value": "recently_viewed",
+          "label": "Zuletzt angesehen"
+        },
+        {
+          "value": "newest",
+          "label": "Neueste Produkte"
+        },
+        {
+          "value": "bestsellers",
+          "label": "Bestseller"
+        }
+      ],
+      "default": "manual"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Kollektion",
+      "info": "Wird nur verwendet, wenn 'Aus Kollektion' ausgewählt ist"
+    },
+    {
+      "type": "range",
+      "id": "product_limit",
+      "label": "Anzahl der Produkte",
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "default": 3,
+      "info": "Wird nicht bei manueller Auswahl verwendet"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_quick_add",
+      "label": "Quick Add Button anzeigen",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_wishlist",
+      "label": "Wunschliste Button anzeigen",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Alle anzeigen Link"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_view_all",
+      "label": "'Alle anzeigen' Link anzeigen",
+      "default": false
+    },
+    {
+      "type": "url",
+      "id": "view_all_url",
+      "label": "Link URL"
+    },
+    {
+      "type": "text",
+      "id": "view_all_text",
+      "label": "Link Text",
+      "default": "Alle Produkte anzeigen"
+    },
+    {
+      "type": "header",
+      "content": "Design"
+    },
+    {
+      "type": "select",
+      "id": "background_color",
+      "label": "Hintergrundfarbe",
+      "options": [
+        {
+          "value": "default",
+          "label": "Standard"
+        },
+        {
+          "value": "green",
+          "label": "Grün"
+        },
+        {
+          "value": "dark_green",
+          "label": "Dunkel Grün"
+        }
+      ],
+      "default": "default"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Produkt",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Produkt"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Produkte Spalten",
+      "category": "Produkte",
+      "settings": {
+        "heading": "Unsere Bestseller",
+        "product_source": "manual",
+        "product_limit": 3
+      },
+      "blocks": [
+        {
+          "type": "product"
+        },
+        {
+          "type": "product"
+        },
+        {
+          "type": "product"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
