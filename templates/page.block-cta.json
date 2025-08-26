@@ -13,21 +13,21 @@
       "type": "template-page",
       "settings": {}
     },
-    "section_hero_small_jxafTM": {
-      "type": "section-hero-small",
-      "name": "Hero Klein",
+    "section_cta_BWMe3t": {
+      "type": "section-cta",
+      "name": "Call to Action",
       "settings": {
-        "image_alt": "",
-        "breadcrumb_current": "",
-        "heading_h1": "Lorem Ipsum",
-        "heading_h2": "Entdecken Sie unsere Produkte",
-        "button_text": "Jetzt entdecken",
-        "button_link": ""
+        "heading": "Lorem ipsum dolor sit amet consetetur sit amet sadipscing",
+        "content": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>",
+        "button_text": "Label",
+        "button_link": "shopify://collections/frontpage",
+        "button_type": "primary",
+        "icon_position": "none"
       }
     }
   },
   "order": [
     "template",
-    "section_hero_small_jxafTM"
+    "section_cta_BWMe3t"
   ]
 }
