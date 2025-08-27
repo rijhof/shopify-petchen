@@ -1,0 +1,299 @@
+#shopify-pc__banner__btn-manage-prefs {
+    display: flex;
+    align-items: center;
+    gap: var(--button-gap);
+    padding: 0;
+    background-color: transparent;
+    background-image: none;
+    border: none;
+    color: var(--color-link);
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: var(--font-size-link);
+    font-weight: var(--font-weight-medium);
+    transition: all var(--transition-duration) ease;
+    appearance: none;
+    width: fit-content;
+}
+
+#shopify-pc__banner__btn-manage-prefs:hover {
+    color: var(--color-text);
+}
+
+#shopify-pc__banner__btn-decline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--button-gap);
+    padding: var(--button-padding-primary);
+    background-image: url('icon-btn-scndry-bg.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 99%;
+    background-color: transparent;
+    color: var(--button-background-color);
+    border: none;
+    border-radius: var(--button-border-radius);
+    cursor: pointer;
+    font-family: inherit;
+    font-size: var(--button-font-size);
+    font-weight: var(--font-weight-medium);
+    transition: all var(--transition-duration) ease;
+    appearance: none;
+    width: fit-content;
+    position: relative;
+    z-index: 1;
+}
+
+#shopify-pc__banner__btn-decline:hover {
+    background-image: url('icon-btn-scndry-bg--hover.svg');
+    color: var(--button-font-color);
+}
+
+#shopify-pc__banner__btn-decline:focus {
+    background-image: url('icon-btn-scndry-bg--focused.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 99%;
+    color: var(--button-font-color);
+    outline: none;
+}
+
+#shopify-pc__banner__btn-decline:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+#shopify-pc__banner__btn-decline::before {
+    content: '';
+    width: 30px;
+    height: 28px;
+    background-image: url('icon-paw.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    flex-shrink: 0;
+    pointer-events: none;
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+#shopify-pc__banner__btn-accept {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--button-padding-primary);
+    background-image: url('icon-btn-bg.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 99%;
+    background-color: transparent;
+    color: var(--button-font-color);
+    border: none;
+    border-radius: var(--button-border-radius);
+    cursor: pointer;
+    font-family: inherit;
+    font-size: var(--button-font-size);
+    font-weight: var(--font-weight-medium);
+    transition: all var(--transition-duration) ease;
+    appearance: none;
+    position: relative;
+    width: fit-content;
+    z-index: 1;
+}
+
+#shopify-pc__banner__btn-accept:hover {
+    background-image: url('icon-btn-bg--hover.svg');
+}
+
+#shopify-pc__banner__btn-accept:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+#shopify-pc__banner__btn-accept:focus {
+    background-image: url('icon-btn-bg--focused.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 99%;
+    color: var(--button-font-color);
+    outline: none;
+}
+
+#shopify-pc__banner__btn-accept::before {
+    content: '';
+    width: 30px;
+    height: 28px;
+    background-image: url('icon-paw.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    flex-shrink: 0;
+    pointer-events: none;
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+#shopify-pc__prefs__header-accept {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--button-padding-primary);
+    background-image: url('icon-btn-bg.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 99%;
+    background-color: transparent;
+    color: var(--button-font-color);
+    border: none;
+    border-radius: var(--button-border-radius);
+    cursor: pointer;
+    font-family: inherit;
+    font-size: var(--button-font-size);
+    font-weight: var(--font-weight-medium);
+    transition: all var(--transition-duration) ease;
+    appearance: none;
+    position: relative;
+    width: fit-content;
+    z-index: 1;
+}
+
+#shopify-pc__prefs__header-accept:hover {
+    background-image: url('icon-btn-bg--hover.svg');
+}
+
+#shopify-pc__prefs__header-accept:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+#shopify-pc__prefs__header-accept:focus {
+    background-image: url('icon-btn-bg--focused.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 99%;
+    color: var(--button-font-color);
+    outline: none;
+}
+
+#shopify-pc__prefs__header-accept::before {
+    content: '';
+    width: 30px;
+    height: 28px;
+    background-image: url('icon-paw.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    flex-shrink: 0;
+    pointer-events: none;
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+#shopify-pc__prefs__header-decline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--button-gap);
+    padding: var(--button-padding-primary);
+    background-image: url('icon-btn-scndry-bg.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 99%;
+    background-color: transparent;
+    color: var(--button-background-color);
+    border: none;
+    border-radius: var(--button-border-radius);
+    cursor: pointer;
+    font-family: inherit;
+    font-size: var(--button-font-size);
+    font-weight: var(--font-weight-medium);
+    transition: all var(--transition-duration) ease;
+    appearance: none;
+    width: fit-content;
+    position: relative;
+    z-index: 1;
+}
+
+#shopify-pc__prefs__header-decline:hover {
+    background-image: url('icon-btn-scndry-bg--hover.svg');
+    color: var(--button-font-color);
+}
+
+#shopify-pc__prefs__header-decline:focus {
+    background-image: url('icon-btn-scndry-bg--focused.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 99%;
+    color: var(--button-font-color);
+    outline: none;
+}
+
+#shopify-pc__prefs__header-decline:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+#shopify-pc__prefs__header-decline::before {
+    content: '';
+    width: 30px;
+    height: 28px;
+    background-image: url('icon-paw.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    flex-shrink: 0;
+    pointer-events: none;
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+#shopify-pc__prefs__header-save {
+    display: flex;
+    align-items: center;
+    gap: var(--button-gap);
+    padding: 0;
+    background-color: transparent;
+    background-image: none;
+    border: none;
+    color: var(--color-link);
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: var(--font-size-link);
+    font-weight: var(--font-weight-medium);
+    transition: all var(--transition-duration) ease;
+    appearance: none;
+    width: fit-content;
+}
+
+#shopify-pc__prefs__header-save:hover {
+    color: var(--color-text);
+}
