@@ -146,6 +146,14 @@
     color: var(--color-text);
 }
 
+.shopify-pc__banner__btn-manage-prefs {
+    justify-content: center;
+}
+
+.shopify-pc__prefs__header-save {
+    margin: auto;
+}
+
 /* Typography Overrides */
 #shopify-pc__banner__body-title,
 #shopify-pc__prefs__header-title {
@@ -209,6 +217,8 @@
     font-weight: var(--font-weight-light);
     line-height: var(--line-height-lead);
     font-feature-settings: 'liga' off, 'clig' off;
+    display: flex;
+    align-items: center;
 }
 
 .shopify-pc__prefs__options .shopify-pc__prefs__option p {
@@ -220,6 +230,7 @@
     line-height: var(--line-height-paragraph);
     font-feature-settings: 'liga' off, 'clig' off;
     margin: 0 0 var(--font-paragraph-spacing);
+    padding-left: 0;
 }
 
 @media (max-width: 767px) {
