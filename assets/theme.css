@@ -1,3 +1,16 @@
+/* Base CSS - Main import file for Minimal Shopify Theme */
+/* Imports all modular CSS files */
+
+@import url('_variables.css');
+@import url('_motion.css');
+@import url('_base.css');
+@import url('_typography.css');
+@import url('_buttons.css');
+@import url('_forms.css');
+@import url('_layout.css');
+@import url('_utilities.css');
+@import url('_background.css');
+
 /* Shopify Cookie Banner Button Overrides */
 
 /* Primary Button Styles */
