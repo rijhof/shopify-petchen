@@ -13,21 +13,26 @@
       "type": "template-page",
       "settings": {}
     },
-    "section_hero_small_jxafTM": {
-      "type": "section-hero-small",
-      "name": "Hero Klein",
+    "section_all_products_bJ3pwt": {
+      "type": "section-all-products",
+      "name": "Alle Produkte",
       "settings": {
-        "image_alt": "",
-        "breadcrumb_current": "",
-        "heading_h1": "Lorem Ipsum",
-        "heading_h2": "Entdecken Sie unsere Produkte",
-        "button_text": "Jetzt entdecken",
-        "button_link": ""
+        "heading": "Alle Produkte",
+        "product_limit": 12,
+        "show_quick_add": true,
+        "show_wishlist": true,
+        "show_view_all": false,
+        "view_all_url": "",
+        "view_all_text": "Alle Produkte anzeigen",
+        "button_text": "",
+        "button_link": "",
+        "button_type": "primary",
+        "icon_position": "right"
       }
     }
   },
   "order": [
     "template",
-    "section_hero_small_jxafTM"
+    "section_all_products_bJ3pwt"
   ]
 }
