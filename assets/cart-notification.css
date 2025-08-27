@@ -3,7 +3,6 @@
 /* Container and Overlay */
 .cart-notification {
     position: fixed;
-    top: 88px;
     right: 16px;
     z-index: 1000;
     pointer-events: none;
@@ -35,7 +34,7 @@
     width: 100%;
     max-width: 400px;
     min-height: auto;
-    max-height: calc(100vh - 88px - 16px);
+    /* max-height wird dynamisch via JavaScript gesetzt */
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
     border-radius: var(--border-radius, 8px);
     transform: translateX(calc(100% + 16px));
@@ -204,28 +203,6 @@
 }
 
 /* Responsive Styles */
-
-/* Mobile and Tablet up to 1280px */
-@media (max-width: 1280px) {
-    .cart-notification {
-        top: 88px;
-    }
-
-    .cart-notification__content {
-        max-height: calc(100vh - 88px - 16px);
-    }
-}
-
-/* Desktop from 1281px */
-@media (min-width: 1281px) {
-    .cart-notification {
-        top: 120px;
-    }
-
-    .cart-notification__content {
-        max-height: calc(100vh - 120px - 16px);
-    }
-}
 
 /* Desktop from 768px */
 @media (min-width: 768px) {

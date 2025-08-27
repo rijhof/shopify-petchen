@@ -13,8 +13,13 @@ class CartNotification {
         this.triggerElement = null;
         this.autoCloseTimeout = null;
 
+        this.headerWrapper = document.querySelector('.header-wrapper');
+        this.headerHeight = 0;
+        this.headerOffset = 16;
+
         console.log('CartNotification initialized');
         this.init();
+        this.initHeaderTracking();
     }
 
     init() {
@@ -40,6 +45,74 @@ class CartNotification {
         this.notification.addEventListener('click', (e) => {
             if (e.target === this.notification.querySelector('.cart-notification__overlay')) {
                 this.close();
+            }
+        });
+    }
+
+    initHeaderTracking() {
+        if (!this.headerWrapper) {
+            console.warn('Header wrapper not found, using default positioning');
+            return;
+        }
+
+        this.updateNotificationPosition();
+
+        let ticking = false;
+        const updatePosition = () => {
+            this.updateNotificationPosition();
+            ticking = false;
+        };
+
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                requestAnimationFrame(updatePosition);
+                ticking = true;
+            }
+        });
+
+        window.addEventListener('resize', () => {
+            this.updateNotificationPosition();
+        });
+
+        if ('MutationObserver' in window) {
+            const observer = new MutationObserver(() => {
+                this.updateNotificationPosition();
+            });
+
+            observer.observe(this.headerWrapper, {
+                attributes: true,
+                attributeFilter: ['class', 'style']
+            });
+        }
+    }
+
+    updateNotificationPosition() {
+        if (!this.headerWrapper || !this.notification) return;
+
+        const headerRect = this.headerWrapper.getBoundingClientRect();
+
+        let topPosition;
+
+        if (headerRect.bottom <= 0) {
+            topPosition = this.headerOffset;
+        } else {
+            topPosition = headerRect.bottom + this.headerOffset;
+        }
+
+        this.notification.style.top = `${topPosition}px`;
+
+        const maxHeight = `calc(100vh - ${topPosition}px - ${this.headerOffset}px)`;
+        const content = this.notification.querySelector('.cart-notification__content');
+        if (content) {
+            content.style.maxHeight = maxHeight;
+        }
+
+        console.log('Notification position updated:', {
+            topPosition,
+            headerRect: {
+                top: headerRect.top,
+                bottom: headerRect.bottom,
+                height: headerRect.height
             }
         });
     }
@@ -194,6 +267,9 @@ class CartNotification {
         if (!this.notification || this.isOpen) return;
 
         console.log('Opening cart notification');
+
+        // Position vor dem Öffnen aktualisieren
+        this.updateNotificationPosition();
 
         this.notification.classList.add('active');
         this.notification.setAttribute('aria-hidden', 'false');
