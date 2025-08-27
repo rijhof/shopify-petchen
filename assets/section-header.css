@@ -375,7 +375,7 @@ header .button-secondary.icon::after {
 }
 
 .header-search[aria-hidden="false"] {
-    max-height: 80px;
+    max-height: 88px;
     padding: 16px 0;
 }
 
@@ -662,7 +662,7 @@ header .button-secondary.icon::after {
     padding-inline: 20px;
 }
 
-.mobile-nav-footer a:first-child {
+.mobile-nav-footer a:not(:last-child) {
     padding-bottom: 24px;
 }
 

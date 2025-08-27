@@ -1,11 +1,8 @@
-// Header Section JavaScript
-
 document.addEventListener('DOMContentLoaded', function() {
     const headerWrapper = document.querySelector('.header-wrapper');
     let lastScrollY = window.scrollY;
     let ticking = false;
 
-    // Set dynamic body padding based on header height
     function setBodyPadding() {
         const headerHeight = headerWrapper.offsetHeight;
         document.body.style.paddingTop = headerHeight + 'px';
@@ -14,28 +11,25 @@ document.addEventListener('DOMContentLoaded', function() {
     setBodyPadding();
     window.addEventListener('resize', setBodyPadding);
 
-    // Header scroll behavior
     function updateHeader() {
         const currentScrollY = window.scrollY;
 
-        // Add shadow when scrolled
         if (currentScrollY > 10) {
             headerWrapper.classList.add('scrolled');
         } else {
             headerWrapper.classList.remove('scrolled');
         }
 
-        // Hide/show header based on scroll direction
         if (currentScrollY > 100) {
             if (currentScrollY > lastScrollY && currentScrollY > 300) {
-                // Scrolling down & past 300px
+                headerWrapper.style.transform = 'translateY(calc(-100% - 18px))';
                 headerWrapper.classList.add('hide');
             } else if (currentScrollY < lastScrollY) {
-                // Scrolling up
+                headerWrapper.style.transform = 'translateY(0)';
                 headerWrapper.classList.remove('hide');
             }
         } else {
-            // Always show when near top
+            headerWrapper.style.transform = 'translateY(0)';
             headerWrapper.classList.remove('hide');
         }
 
@@ -50,7 +44,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Search functionality
     const searchToggle = document.querySelector('.header-search-toggle');
     const searchArea = document.querySelector('.header-search');
     const searchInput = document.querySelector('#header-search-input');
@@ -66,7 +59,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        // Close search on Escape key
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape' && searchArea.getAttribute('aria-hidden') === 'false') {
                 searchToggle.setAttribute('aria-expanded', 'false');
@@ -76,7 +68,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Desktop dropdown toggles - click only, no hover
     const dropdownToggles = document.querySelectorAll('.header-nav-dropdown-toggle');
     dropdownToggles.forEach(toggle => {
         toggle.addEventListener('click', function(e) {
@@ -84,14 +75,12 @@ document.addEventListener('DOMContentLoaded', function() {
             e.stopPropagation();
             const isExpanded = this.getAttribute('aria-expanded') === 'true';
 
-            // Close all other dropdowns
             dropdownToggles.forEach(t => {
                 if (t !== this) {
                     t.setAttribute('aria-expanded', 'false');
                 }
             });
 
-            // Close all subdropdowns when closing main dropdown
             if (isExpanded) {
                 const dropdown = this.nextElementSibling;
                 if (dropdown) {
@@ -106,7 +95,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Desktop subdropdown toggles
     const subdropdownToggles = document.querySelectorAll('.header-subdropdown-toggle');
     subdropdownToggles.forEach(toggle => {
         toggle.addEventListener('click', function(e) {
@@ -114,7 +102,6 @@ document.addEventListener('DOMContentLoaded', function() {
             e.stopPropagation();
             const isExpanded = this.getAttribute('aria-expanded') === 'true';
 
-            // Close all other subdropdowns in the same parent dropdown
             const parentDropdown = this.closest('.header-dropdown');
             if (parentDropdown) {
                 const siblingToggles = parentDropdown.querySelectorAll('.header-subdropdown-toggle');
@@ -129,7 +116,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Mobile menu toggle
     const mobileMenuToggle = document.querySelector('.header-mobile-menu-toggle');
     const mobileMenuClose = document.querySelector('.mobile-navigation-close');
     const mobileNav = document.querySelector('.mobile-navigation');
@@ -151,7 +137,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Mobile submenu toggles
     const mobileSubmenuToggles = document.querySelectorAll('.mobile-submenu-toggle');
     mobileSubmenuToggles.forEach(toggle => {
         toggle.addEventListener('click', function() {
@@ -165,7 +150,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Mobile sub-submenu toggles
     const mobileSubsubmenuToggles = document.querySelectorAll('.mobile-subsubmenu-toggle');
     mobileSubsubmenuToggles.forEach(toggle => {
         toggle.addEventListener('click', function() {
@@ -179,9 +163,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Close dropdowns when clicking outside
     document.addEventListener('click', function(e) {
-        // Close desktop dropdowns when clicking outside
         if (!e.target.closest('.header-nav-item')) {
             dropdownToggles.forEach(toggle => {
                 toggle.setAttribute('aria-expanded', 'false');
@@ -191,7 +173,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
 
-        // Close search when clicking outside
         if (!e.target.closest('.header-search') && !e.target.closest('.header-search-toggle')) {
             if (searchToggle && searchArea) {
                 searchToggle.setAttribute('aria-expanded', 'false');
@@ -200,7 +181,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Prevent dropdown links from closing the dropdown
     const dropdownLinks = document.querySelectorAll('.header-dropdown a, .header-subdropdown a');
     dropdownLinks.forEach(link => {
         link.addEventListener('click', function(e) {
