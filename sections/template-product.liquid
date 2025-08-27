@@ -25,7 +25,7 @@
         <div class="product-accordions">
           {% if product.metafields.custom.anwendung != blank %}
             {% assign usage_html = product.metafields.custom.anwendung | metafield_tag %}
-            {% render 'accordion', title: 'Anwendungsfälle', content: usage_html, open: true %}
+            {% render 'accordion', title: 'AnwendungsfÃ¤lle', content: usage_html, open: true %}
           {% endif %}
 
           {% if product.metafields.custom.inhaltsstoffe != blank %}
@@ -164,6 +164,20 @@
 {% schema %}
 {
   "name": "Product",
+  "settings": [
+    {
+      "type": "text",
+      "id": "add_to_cart_text",
+      "label": "Add to Cart Button Text",
+      "default": "Add to cart"
+    },
+    {
+      "type": "text",
+      "id": "sold_out_text",
+      "label": "Sold Out Button Text",
+      "default": "Sold out"
+    }
+  ],
   "blocks": [
     {
       "type": "info_box",

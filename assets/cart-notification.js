@@ -13,7 +13,7 @@ class CartNotification {
         this.triggerElement = null;
         this.autoCloseTimeout = null;
 
-        console.log('CartNotification initialized'); // Debug log
+        console.log('CartNotification initialized');
         this.init();
     }
 
@@ -25,10 +25,9 @@ class CartNotification {
             });
         });
 
-        // Debug: Event Listener registrierung
         console.log('Registering cart:item-added event listener');
         window.addEventListener('cart:item-added', (event) => {
-            console.log('cart:item-added event received:', event.detail); // Debug log
+            console.log('cart:item-added event received:', event.detail);
             this.handleItemAdded(event.detail);
         });
 
@@ -46,7 +45,7 @@ class CartNotification {
     }
 
     async handleItemAdded(data) {
-        console.log('handleItemAdded called with data:', data); // Debug log
+        console.log('handleItemAdded called with data:', data);
 
         this.showLoading();
         this.open();
@@ -54,7 +53,6 @@ class CartNotification {
         try {
             let product;
 
-            // Prüfe verschiedene Datenstrukturen
             if (data.product && (data.product.title || data.product.product_title)) {
                 console.log('Using provided product data');
                 product = data.product;
@@ -66,11 +64,27 @@ class CartNotification {
                 throw new Error('No product data available');
             }
 
-            console.log('Product data for display:', product); // Debug log
+            console.log('Product data for display:', product);
             this.displayProduct(product, data.quantity);
+
+            await this.updateCartViewButton();
         } catch (error) {
             console.error('Cart notification error:', error);
             this.showError();
+        }
+    }
+
+    async updateCartViewButton() {
+        try {
+            const response = await fetch('/cart.js');
+            const cart = await response.json();
+
+            const cartViewButton = this.notification.querySelector('.cart-notification__actions .button-secondary');
+            if (cartViewButton && cartViewButton.textContent.includes('Warenkorb')) {
+                cartViewButton.textContent = `Warenkorb ansehen (${cart.item_count})`;
+            }
+        } catch (error) {
+            console.error('Error updating cart view button:', error);
         }
     }
 
@@ -81,7 +95,7 @@ class CartNotification {
             const cartResponse = await fetch('/cart.js');
             const cart = await cartResponse.json();
 
-            console.log('Cart data:', cart); // Debug log
+            console.log('Cart data:', cart);
 
             const cartItem = cart.items.find(item =>
                 item.variant_id === parseInt(variantId) ||
@@ -92,7 +106,7 @@ class CartNotification {
                 throw new Error('Item not found in cart');
             }
 
-            console.log('Found cart item:', cartItem); // Debug log
+            console.log('Found cart item:', cartItem);
             return cartItem;
         } catch (error) {
             console.error('Error fetching product details:', error);
@@ -106,12 +120,11 @@ class CartNotification {
             return;
         }
 
-        console.log('Displaying product:', { product, quantity }); // Debug log
+        console.log('Displaying product:', { product, quantity });
 
         const template = this.productTemplate.content.cloneNode(true);
         const productItem = template.querySelector('.cart-notification__product-item');
 
-        // Image
         const img = productItem.querySelector('img');
         if (product.image || product.featured_image) {
             const imageUrl = product.image || product.featured_image;
@@ -121,12 +134,10 @@ class CartNotification {
             img.style.display = 'none';
         }
 
-        // Title and Link
         const titleLink = productItem.querySelector('.cart-notification__product-title a');
         const title = product.title || product.product_title || 'Unbekanntes Produkt';
         titleLink.textContent = title;
 
-        // URL handling
         let productUrl = product.url;
         if (!productUrl && (product.handle || product.product_handle)) {
             productUrl = `/products/${product.handle || product.product_handle}`;
@@ -135,7 +146,6 @@ class CartNotification {
             titleLink.href = productUrl;
         }
 
-        // USP (Vendor or Variant)
         const uspElement = productItem.querySelector('.cart-notification__product-usp');
         if (product.vendor) {
             uspElement.textContent = product.vendor;
@@ -145,26 +155,23 @@ class CartNotification {
             uspElement.style.display = 'none';
         }
 
-        // Quantity
         const quantityElement = productItem.querySelector('.cart-notification__product-quantity');
         quantityElement.textContent = `Menge: ${quantity || product.quantity || 1}`;
 
-        // Price
         const priceElement = productItem.querySelector('.cart-notification__product-price');
         const price = product.price || product.line_price || 0;
         priceElement.textContent = this.formatMoney(price);
 
-        // Update container
         this.productContainer.innerHTML = '';
         this.productContainer.appendChild(productItem);
 
-        console.log('Product displayed successfully'); // Debug log
+        console.log('Product displayed successfully');
     }
 
     showLoading() {
         if (!this.productContainer) return;
 
-        console.log('Showing loading state'); // Debug log
+        console.log('Showing loading state');
         this.productContainer.innerHTML = `
             <div class="cart-notification__product--loading">
                 <div class="cart-notification__spinner"></div>
@@ -175,7 +182,7 @@ class CartNotification {
     showError() {
         if (!this.productContainer) return;
 
-        console.log('Showing error state'); // Debug log
+        console.log('Showing error state');
         this.productContainer.innerHTML = `
             <div class="cart-notification__error">
                 Fehler beim Laden der Produktdetails
@@ -186,7 +193,7 @@ class CartNotification {
     open() {
         if (!this.notification || this.isOpen) return;
 
-        console.log('Opening cart notification'); // Debug log
+        console.log('Opening cart notification');
 
         this.notification.classList.add('active');
         this.notification.setAttribute('aria-hidden', 'false');
@@ -206,7 +213,7 @@ class CartNotification {
     close() {
         if (!this.notification || !this.isOpen) return;
 
-        console.log('Closing cart notification'); // Debug log
+        console.log('Closing cart notification');
 
         this.notification.classList.remove('active');
         this.notification.setAttribute('aria-hidden', 'true');
@@ -253,7 +260,6 @@ class CartNotification {
     }
 }
 
-// Sicherstellen dass CartNotification verfügbar ist
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
         console.log('Initializing CartNotification on DOMContentLoaded');

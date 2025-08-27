@@ -2,28 +2,28 @@
     {% form 'product', product, id: 'product-form', novalidate: 'novalidate' %}
         <input type="hidden" name="id" value="{{ selected_variant.id }}">
 
-        {% unless product.has_only_default_variant %}
-            <variant-selector data-url="{{ product.url }}" data-section="{{ section.id }}">
-                {% for option in product.options_with_values %}
-                    <div class="product-variant-group">
-                        <label for="option-{{ section.id }}-{{ forloop.index0 }}">{{ option.name }}</label>
-                        <div class="form-group">
-                            <select name="options[{{ option.name | escape }}]" id="option-{{ section.id }}-{{ forloop.index0 }}">
-                                {% for value in option.values %}
-                                    <option value="{{ value | escape }}" {% if option.selected_value == value %} selected="selected" {% endif %}>
-                                        {{ value }}
-                                    </option>
-                                {% endfor %}
-                            </select>
-                            <label for="option-{{ section.id }}-{{ forloop.index0 }}">{{ option.name }}</label>
-                        </div>
-                    </div>
-                {% endfor %}
-                <script type="application/json">
-          {{ product.variants | json }}
-        </script>
-            </variant-selector>
-        {% endunless %}
+        {% comment %}{% unless product.has_only_default_variant %}{% endcomment %}
+        {% comment %}<variant-selector data-url="{{ product.url }}" data-section="{{ section.id }}">{% endcomment %}
+        {% comment %}{% for option in product.options_with_values %}{% endcomment %}
+        {% comment %}<div class="product-variant-group">{% endcomment %}
+        {% comment %}<label for="option-{{ section.id }}-{{ forloop.index0 }}">{{ option.name }}</label>{% endcomment %}
+        {% comment %}<div class="form-group">{% endcomment %}
+        {% comment %}<select name="options[{{ option.name | escape }}]" id="option-{{ section.id }}-{{ forloop.index0 }}">{% endcomment %}
+        {% comment %}{% for value in option.values %}{% endcomment %}
+        {% comment %}<option value="{{ value | escape }}" {% if option.selected_value == value %} selected="selected" {% endif %}>{% endcomment %}
+        {% comment %}{{ value }}{% endcomment %}
+        {% comment %}</option>{% endcomment %}
+        {% comment %}{% endfor %}{% endcomment %}
+        {% comment %}</select>{% endcomment %}
+        {% comment %}<label for="option-{{ section.id }}-{{ forloop.index0 }}">{{ option.name }}</label>{% endcomment %}
+        {% comment %}</div>{% endcomment %}
+        {% comment %}</div>{% endcomment %}
+        {% comment %}{% endfor %}{% endcomment %}
+        {% comment %}<script type="application/json">{% endcomment %}
+        {% comment %}{{ product.variants | json }}{% endcomment %}
+        {% comment %}</script>{% endcomment %}
+        {% comment %}</variant-selector>{% endcomment %}
+        {% comment %}{% endunless %}{% endcomment %}
 
         <div class="product-price" id="price-{{ section.id }}">
             {% if selected_variant.compare_at_price > selected_variant.price %}
@@ -57,12 +57,12 @@
 
             <button type="submit"
                     name="add"
-                    class="product-add-to-cart button-primary"
+                    class="product-add-to-cart button-primary fullwidth"
             {% if selected_variant.available == false %} disabled {% endif %}>
                 {% if selected_variant.available == false %}
-                    Sold out
+                    {{ section.settings.sold_out_text | default: 'Sold out' }}
                 {% else %}
-                    Add to cart
+                    {{ section.settings.add_to_cart_text | default: 'Add to cart' }}
                 {% endif %}
             </button>
         </div>
@@ -104,13 +104,15 @@
     </div>
 </div>
 
+
+
 <style>
     .product-box-info {
         background: var(--color-white);
         border-radius: var(--border-radius);
         padding: calc(var(--baseline) * 3);
     }
-    
+
     @media (min-width: 1024px) {
         .product-box-info {
             padding: calc(var(--baseline) * 4) calc(var(--baseline) * 5.5);
@@ -276,37 +278,188 @@
 
     @media (max-width: 767px) {
         .product-box-info {
-            padding: 44px;
+            padding: calc(var(--baseline) * 3);
         }
     }
 </style>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const quantitySelectors = document.querySelectorAll('.quantity-selector');
+    class ProductBoxInfo {
+        constructor() {
+            this.init();
+        }
 
-        quantitySelectors.forEach(selector => {
-            const minus = selector.querySelector('.quantity-button--minus');
-            const plus = selector.querySelector('.quantity-button--plus');
-            const input = selector.querySelector('.quantity-input');
+        init() {
+            this.initQuickAdd();
+            this.initQuantityButtons();
+        }
 
-            minus.addEventListener('click', () => {
-                const currentValue = parseInt(input.value);
-                if (currentValue > 1) {
-                    input.value = currentValue - 1;
+        initQuickAdd() {
+            const productForm = document.getElementById('product-form');
+            if (!productForm) return;
+
+            productForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                const submitButton = productForm.querySelector('.product-add-to-cart');
+                if (window.cartNotification && submitButton) {
+                    window.cartNotification.setTriggerElement(submitButton);
                 }
+
+                this.addToCart(productForm);
+            });
+        }
+
+        initQuantityButtons() {
+            const quantityButtons = document.querySelectorAll('.quantity-button');
+
+            quantityButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const input = button.parentElement.querySelector('.quantity-input');
+                    const currentValue = parseInt(input.value) || 1;
+
+                    if (button.classList.contains('quantity-button--minus') && currentValue > 1) {
+                        input.value = currentValue - 1;
+                    } else if (button.classList.contains('quantity-button--plus')) {
+                        input.value = currentValue + 1;
+                    }
+                });
             });
 
-            plus.addEventListener('click', () => {
-                const currentValue = parseInt(input.value);
-                input.value = currentValue + 1;
+            const quantityInputs = document.querySelectorAll('.quantity-input');
+            quantityInputs.forEach(input => {
+                input.addEventListener('change', () => {
+                    if (parseInt(input.value) < 1) {
+                        input.value = 1;
+                    }
+                });
             });
+        }
 
-            input.addEventListener('change', () => {
-                if (parseInt(input.value) < 1) {
-                    input.value = 1;
+        async addToCart(form) {
+            const submitButton = form.querySelector('.product-add-to-cart');
+            const originalText = submitButton.textContent;
+
+            submitButton.disabled = true;
+            submitButton.textContent = 'Wird hinzugefügt...';
+
+            try {
+                const formData = new FormData(form);
+                const response = await fetch('/cart/add.js', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    this.triggerCartNotification(result);
+                    this.updateCartCount();
+                    this.showNotification('Produkt wurde zum Warenkorb hinzugefügt');
+                } else {
+                    throw new Error(result.description || 'Fehler beim Hinzufügen zum Warenkorb');
                 }
-            });
+            } catch (error) {
+                console.error('Add to cart error:', error);
+                this.showNotification(error.message, 'error');
+            } finally {
+                submitButton.disabled = false;
+                submitButton.textContent = originalText;
+            }
+        }
+
+        triggerCartNotification(cartItem) {
+            setTimeout(() => {
+                window.dispatchEvent(new CustomEvent('cart:item-added', {
+                    detail: {
+                        variantId: cartItem.variant_id || cartItem.id,
+                        quantity: cartItem.quantity || 1,
+                        product: {
+                            title: cartItem.product_title,
+                            product_title: cartItem.product_title,
+                            handle: cartItem.handle,
+                            product_handle: cartItem.handle,
+                            image: cartItem.image,
+                            featured_image: cartItem.image,
+                            price: cartItem.price,
+                            line_price: cartItem.line_price,
+                            vendor: cartItem.vendor,
+                            variant_title: cartItem.variant_title,
+                            url: cartItem.url
+                        }
+                    }
+                }));
+            }, 100);
+        }
+
+        async updateCartCount() {
+            try {
+                const response = await fetch('/cart.js');
+                const cart = await response.json();
+
+                const cartCountElements = document.querySelectorAll('.cart-count, .header-cart-count');
+                cartCountElements.forEach(el => {
+                    el.textContent = cart.item_count;
+
+                    if (cart.item_count > 0) {
+                        el.style.display = '';
+                    } else {
+                        el.style.display = 'none';
+                    }
+                });
+
+                const cartLinks = document.querySelectorAll('.header-cart');
+                cartLinks.forEach(link => {
+                    const itemText = cart.item_count === 1 ? 'item' : 'items';
+                    link.setAttribute('aria-label', `Shopping cart with ${cart.item_count} ${itemText}`);
+                });
+
+                const cartNotificationViewButtons = document.querySelectorAll('.cart-notification__actions .button-secondary');
+                cartNotificationViewButtons.forEach(button => {
+                    if (button.textContent.includes('Warenkorb ansehen')) {
+                        button.textContent = `Warenkorb ansehen (${cart.item_count})`;
+                    }
+                });
+
+                window.dispatchEvent(new CustomEvent('cart:updated', {
+                    detail: cart
+                }));
+            } catch (error) {
+                console.error('Error updating cart count:', error);
+            }
+        }
+
+        showNotification(message, type = 'success') {
+            const existingNotification = document.querySelector('.product-notification');
+            if (existingNotification) {
+                existingNotification.remove();
+            }
+
+            const notification = document.createElement('div');
+            notification.className = `product-notification product-notification--${type}`;
+            notification.textContent = message;
+
+            document.body.appendChild(notification);
+
+            setTimeout(() => {
+                notification.classList.add('active');
+            }, 10);
+
+            setTimeout(() => {
+                notification.classList.remove('active');
+                setTimeout(() => {
+                    notification.remove();
+                }, 300);
+            }, 3000);
+        }
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => {
+            new ProductBoxInfo();
         });
-    });
+    } else {
+        new ProductBoxInfo();
+    }
 </script>
