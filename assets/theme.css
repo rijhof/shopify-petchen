@@ -242,3 +242,12 @@
         margin-block: 0 calc(var(--button-gap) * 2) !important;
     }
 }
+
+#shopify-pcprefsheader-close svg {
+    display: none;
+}
+
+#shopify-pcprefsheader-close {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path fill="black" d="M18.9451 20L10.7012 11.7561 ..."/></svg>') no-repeat center;
+    background-size: 16px 16px;
+}
