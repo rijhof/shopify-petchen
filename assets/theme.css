@@ -189,7 +189,7 @@
 }
 
 .shopify-pc__banner__dialog p,
-#shopify-pc__prefs__intro-main p {
+.shopify-pc__prefs__intro-main p {
     color: var(--color-text);
     font-family: var(--font-family-paragraph, "Helvetica Neue", "Arial", sans-serif);
     font-size: var(--font-size-paragraph);
@@ -221,7 +221,7 @@
     color: var(--color-text);
 }
 
-#shopify-pc__prefs__intro-main h3 {
+.shopify-pc__prefs__intro-main h3 {
     color: var(--color-text);
     font-family: var(--font-family-paragraph, "Helvetica Neue", "Arial", sans-serif);
     font-size: var(--font-size-lead);
@@ -232,12 +232,12 @@
 }
 
 .shopify-pc__prefs__options .shopify-pc__prefs__option label {
-    color: var(--color-grey-dark);
+    color: var(--color-text);
     font-family: var(--font-family-paragraph, "Helvetica Neue", "Arial", sans-serif);
-    font-size: var(--font-size-meta);
+    font-size: var(--font-size-lead);
     font-style: normal;
-    font-weight: var(--font-weight-medium);
-    line-height: var(--line-height-meta);
+    font-weight: var(--font-weight-light);
+    line-height: var(--line-height-lead);
     font-feature-settings: 'liga' off, 'clig' off;
 }
 
