@@ -13,6 +13,7 @@ class CartNotification {
         this.triggerElement = null;
         this.autoCloseTimeout = null;
 
+        console.log('CartNotification initialized'); // Debug log
         this.init();
     }
 
@@ -24,7 +25,10 @@ class CartNotification {
             });
         });
 
+        // Debug: Event Listener registrierung
+        console.log('Registering cart:item-added event listener');
         window.addEventListener('cart:item-added', (event) => {
+            console.log('cart:item-added event received:', event.detail); // Debug log
             this.handleItemAdded(event.detail);
         });
 
@@ -42,20 +46,27 @@ class CartNotification {
     }
 
     async handleItemAdded(data) {
+        console.log('handleItemAdded called with data:', data); // Debug log
+
         this.showLoading();
         this.open();
 
         try {
             let product;
 
-            if (data.product && data.product.title) {
+            // Prüfe verschiedene Datenstrukturen
+            if (data.product && (data.product.title || data.product.product_title)) {
+                console.log('Using provided product data');
                 product = data.product;
             } else if (data.variantId) {
+                console.log('Fetching product details from cart');
                 product = await this.fetchProductDetails(data.variantId);
             } else {
+                console.error('No valid product data found:', data);
                 throw new Error('No product data available');
             }
 
+            console.log('Product data for display:', product); // Debug log
             this.displayProduct(product, data.quantity);
         } catch (error) {
             console.error('Cart notification error:', error);
@@ -64,27 +75,43 @@ class CartNotification {
     }
 
     async fetchProductDetails(variantId) {
-        const cartResponse = await fetch('/cart.js');
-        const cart = await cartResponse.json();
+        console.log('Fetching product details for variant:', variantId);
 
-        const cartItem = cart.items.find(item =>
-            item.variant_id === parseInt(variantId) ||
-            item.id === parseInt(variantId)
-        );
+        try {
+            const cartResponse = await fetch('/cart.js');
+            const cart = await cartResponse.json();
 
-        if (!cartItem) {
-            throw new Error('Item not found in cart');
+            console.log('Cart data:', cart); // Debug log
+
+            const cartItem = cart.items.find(item =>
+                item.variant_id === parseInt(variantId) ||
+                item.id === parseInt(variantId)
+            );
+
+            if (!cartItem) {
+                throw new Error('Item not found in cart');
+            }
+
+            console.log('Found cart item:', cartItem); // Debug log
+            return cartItem;
+        } catch (error) {
+            console.error('Error fetching product details:', error);
+            throw error;
         }
-
-        return cartItem;
     }
 
     displayProduct(product, quantity = 1) {
-        if (!this.productTemplate || !this.productContainer) return;
+        if (!this.productTemplate || !this.productContainer) {
+            console.error('Missing template or container elements');
+            return;
+        }
+
+        console.log('Displaying product:', { product, quantity }); // Debug log
 
         const template = this.productTemplate.content.cloneNode(true);
         const productItem = template.querySelector('.cart-notification__product-item');
 
+        // Image
         const img = productItem.querySelector('img');
         if (product.image || product.featured_image) {
             const imageUrl = product.image || product.featured_image;
@@ -94,11 +121,21 @@ class CartNotification {
             img.style.display = 'none';
         }
 
+        // Title and Link
         const titleLink = productItem.querySelector('.cart-notification__product-title a');
-        const title = product.title || product.product_title || '';
+        const title = product.title || product.product_title || 'Unbekanntes Produkt';
         titleLink.textContent = title;
-        titleLink.href = product.url || `/products/${product.handle || product.product_handle}`;
 
+        // URL handling
+        let productUrl = product.url;
+        if (!productUrl && (product.handle || product.product_handle)) {
+            productUrl = `/products/${product.handle || product.product_handle}`;
+        }
+        if (productUrl) {
+            titleLink.href = productUrl;
+        }
+
+        // USP (Vendor or Variant)
         const uspElement = productItem.querySelector('.cart-notification__product-usp');
         if (product.vendor) {
             uspElement.textContent = product.vendor;
@@ -108,20 +145,26 @@ class CartNotification {
             uspElement.style.display = 'none';
         }
 
+        // Quantity
         const quantityElement = productItem.querySelector('.cart-notification__product-quantity');
         quantityElement.textContent = `Menge: ${quantity || product.quantity || 1}`;
 
+        // Price
         const priceElement = productItem.querySelector('.cart-notification__product-price');
         const price = product.price || product.line_price || 0;
         priceElement.textContent = this.formatMoney(price);
 
+        // Update container
         this.productContainer.innerHTML = '';
         this.productContainer.appendChild(productItem);
+
+        console.log('Product displayed successfully'); // Debug log
     }
 
     showLoading() {
         if (!this.productContainer) return;
 
+        console.log('Showing loading state'); // Debug log
         this.productContainer.innerHTML = `
             <div class="cart-notification__product--loading">
                 <div class="cart-notification__spinner"></div>
@@ -132,6 +175,7 @@ class CartNotification {
     showError() {
         if (!this.productContainer) return;
 
+        console.log('Showing error state'); // Debug log
         this.productContainer.innerHTML = `
             <div class="cart-notification__error">
                 Fehler beim Laden der Produktdetails
@@ -141,6 +185,8 @@ class CartNotification {
 
     open() {
         if (!this.notification || this.isOpen) return;
+
+        console.log('Opening cart notification'); // Debug log
 
         this.notification.classList.add('active');
         this.notification.setAttribute('aria-hidden', 'false');
@@ -159,6 +205,8 @@ class CartNotification {
 
     close() {
         if (!this.notification || !this.isOpen) return;
+
+        console.log('Closing cart notification'); // Debug log
 
         this.notification.classList.remove('active');
         this.notification.setAttribute('aria-hidden', 'true');
@@ -205,10 +253,13 @@ class CartNotification {
     }
 }
 
+// Sicherstellen dass CartNotification verfügbar ist
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
+        console.log('Initializing CartNotification on DOMContentLoaded');
         window.cartNotification = new CartNotification();
     });
 } else {
+    console.log('Initializing CartNotification immediately');
     window.cartNotification = new CartNotification();
 }

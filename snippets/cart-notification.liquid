@@ -1,20 +1,17 @@
 <!-- snippets/cart-notification.liquid -->
 <div class="cart-notification" id="cart-notification" aria-hidden="true" role="dialog" aria-labelledby="cart-notification-title">
-    <div class="cart-notification__overlay" data-cart-notification-close></div>
-
     <div class="cart-notification__content">
         <!-- Header -->
         <div class="cart-notification__header">
             <div class="cart-notification__header-title">
-                <svg class="cart-notification__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="2"/>
-                    <path d="M6 10L8.5 12.5L14 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 17 16" fill="none">
+                    <path d="M8.6665 -0.000488281C13.0846 -0.000488281 16.6665 3.58137 16.6665 7.99951C16.6665 12.4177 13.0846 15.9995 8.6665 15.9995C4.24836 15.9995 0.666504 12.4177 0.666504 7.99951C0.666504 3.58137 4.24836 -0.000488152 8.6665 -0.000488281ZM8.6665 0.999512C4.80065 0.999512 1.6665 4.13365 1.6665 7.99951C1.6665 11.8654 4.80065 14.9995 8.6665 14.9995C12.5324 14.9995 15.6665 11.8654 15.6665 7.99951C15.6665 4.13365 12.5324 0.999512 8.6665 0.999512ZM12.2739 4.2417C12.4451 4.0253 12.7595 3.98884 12.9761 4.15967C13.173 4.31533 13.2216 4.58997 13.1001 4.80127L13.0591 4.86182L7.83545 11.4702C7.75611 11.5745 7.65954 11.6654 7.54834 11.7407C7.0272 12.0896 6.33091 11.9757 5.95166 11.5034L5.89111 11.4214L4.25732 9.10303C4.09874 8.87735 4.15289 8.56568 4.37842 8.40674C4.58355 8.2622 4.85974 8.29388 5.02783 8.47021L5.07568 8.52783L6.71533 10.855C6.77636 10.9461 6.9007 10.9712 6.98975 10.9116L7.01807 10.8882L7.04541 10.8579L12.2739 4.2417Z" fill="#2F4027"/>
                 </svg>
                 <span id="cart-notification-title">Artikel wurde in den Warenkorb gelegt</span>
             </div>
-            <button type="button" class="cart-notification__close" aria-label="Schließen" data-cart-notification-close>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <button type="button" class="cart-notification__close button-secondary icon icon-empty" aria-label="Schließen" data-cart-notification-close>
+                <svg xmlns="http://www.w3.org/2000/svg" width="41" height="40" viewBox="0 0 41 40" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M18.9451 20L10.7012 11.7561C10.2995 11.3544 10.2995 10.703 10.7012 10.3013C11.103 9.89957 11.7543 9.89957 12.156 10.3013L20.3999 18.5452L28.6438 10.3013C29.0455 9.8996 29.6969 9.8996 30.0986 10.3013C30.5003 10.7031 30.5003 11.3544 30.0986 11.7561L21.8547 20L30.0986 28.2439C30.5004 28.6456 30.5004 29.297 30.0986 29.6987C29.6969 30.1004 29.0455 30.1004 28.6438 29.6987L20.3999 21.4548L12.156 29.6987C11.7543 30.1005 11.1029 30.1005 10.7012 29.6987C10.2995 29.297 10.2995 28.6457 10.7012 28.2439L18.9451 20Z" fill="black"/>
                 </svg>
             </button>
         </div>

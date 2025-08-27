@@ -102,6 +102,7 @@
 /* Content */
 .product-card__content {
     display: flex;
+    justify-content: flex-end;
     flex-direction: column;
     flex: 1;
 }

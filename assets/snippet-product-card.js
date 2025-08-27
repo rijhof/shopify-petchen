@@ -1,8 +1,3 @@
-/**
- * Product Card JavaScript - Updated for Cart Notification
- * Handles wishlist functionality, quick add, and recently viewed tracking
- */
-
 class ProductCard {
     constructor() {
         this.init();
@@ -14,14 +9,10 @@ class ProductCard {
         this.trackRecentlyViewed();
     }
 
-    /**
-     * Wishlist Functionality
-     */
     initWishlist() {
         const wishlistButtons = document.querySelectorAll('.product-card__wishlist');
 
         wishlistButtons.forEach(button => {
-            // Check if product is in wishlist on page load
             const productId = button.dataset.productId;
             const wishlist = this.getWishlist();
 
@@ -29,7 +20,6 @@ class ProductCard {
                 button.classList.add('active');
             }
 
-            // Handle click event
             button.addEventListener('click', (e) => {
                 e.preventDefault();
                 e.stopPropagation();
@@ -42,21 +32,17 @@ class ProductCard {
         let wishlist = this.getWishlist();
 
         if (wishlist.includes(productId)) {
-            // Remove from wishlist
             wishlist = wishlist.filter(id => id !== productId);
             button.classList.remove('active');
             this.showNotification('Produkt von der Wunschliste entfernt');
         } else {
-            // Add to wishlist
             wishlist.push(productId);
             button.classList.add('active');
             this.showNotification('Produkt zur Wunschliste hinzugefügt');
         }
 
-        // Save to localStorage
         localStorage.setItem('wishlist', JSON.stringify(wishlist));
 
-        // Trigger custom event
         window.dispatchEvent(new CustomEvent('wishlist:updated', {
             detail: { productId, wishlist }
         }));
@@ -67,9 +53,6 @@ class ProductCard {
         return wishlist ? JSON.parse(wishlist) : [];
     }
 
-    /**
-     * Quick Add Functionality
-     */
     initQuickAdd() {
         const quickAddButtons = document.querySelectorAll('.quick-add-trigger');
 
@@ -78,7 +61,6 @@ class ProductCard {
                 e.preventDefault();
                 const productHandle = button.dataset.productHandle;
 
-                // Set trigger element for focus management
                 if (window.cartNotification) {
                     window.cartNotification.setTriggerElement(button);
                 }
@@ -87,14 +69,12 @@ class ProductCard {
             });
         });
 
-        // Handle direct add to cart for single variant products
         const quickAddForms = document.querySelectorAll('.product-card__form');
 
         quickAddForms.forEach(form => {
             form.addEventListener('submit', (e) => {
                 e.preventDefault();
 
-                // Set trigger element for focus management
                 const submitButton = form.querySelector('button[type="submit"]');
                 if (window.cartNotification && submitButton) {
                     window.cartNotification.setTriggerElement(submitButton);
@@ -107,11 +87,9 @@ class ProductCard {
 
     async openQuickAdd(productHandle) {
         try {
-            // Fetch product data
             const response = await fetch(`/products/${productHandle}.js`);
             const product = await response.json();
 
-            // Create and show modal with product variants
             this.showQuickAddModal(product);
         } catch (error) {
             console.error('Error loading product:', error);
@@ -120,7 +98,6 @@ class ProductCard {
     }
 
     showQuickAddModal(product) {
-        // Create modal HTML
         const modalHTML = `
             <div class="quick-add-modal" data-product-id="${product.id}">
                 <div class="quick-add-modal__overlay"></div>
@@ -147,23 +124,22 @@ class ProductCard {
                         <input type="number" id="quick-add-quantity" min="1" value="1">
                     </div>
                     
-                    <button class="button-primary quick-add-modal__submit" data-variant-id="${product.variants[0].id}" data-product='${JSON.stringify(product).replace(/'/g, "&apos;")}'>
+                    <button class="button-primary quick-add-modal__submit" data-variant-id="${product.variants[0].id}">
                         In den Warenkorb
                     </button>
                 </div>
             </div>
         `;
 
-        // Add modal to body
         document.body.insertAdjacentHTML('beforeend', modalHTML);
 
-        // Initialize modal events
         const modal = document.querySelector('.quick-add-modal');
+        modal._productData = product;
+
         const closeBtn = modal.querySelector('.quick-add-modal__close');
         const overlay = modal.querySelector('.quick-add-modal__overlay');
         const submitBtn = modal.querySelector('.quick-add-modal__submit');
 
-        // Close modal
         const closeModal = () => {
             modal.remove();
         };
@@ -171,29 +147,48 @@ class ProductCard {
         closeBtn.addEventListener('click', closeModal);
         overlay.addEventListener('click', closeModal);
 
-        // Handle variant selection
         if (product.variants.length > 1) {
             this.initVariantSelector(modal, product);
         }
 
-        // Handle add to cart
-        submitBtn.addEventListener('click', () => {
+        submitBtn.addEventListener('click', async () => {
             const variantId = submitBtn.dataset.variantId;
             const quantity = modal.querySelector('#quick-add-quantity').value;
-            const productData = JSON.parse(submitBtn.dataset.product);
+            const productData = modal._productData;
 
-            this.addToCartById(variantId, quantity, productData);
-            closeModal();
+            try {
+                const response = await fetch('/cart/add.js', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        id: variantId,
+                        quantity: parseInt(quantity)
+                    })
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    this.triggerCartNotification(result, productData);
+                    this.updateCartCount();
+                    closeModal();
+                } else {
+                    throw new Error(result.description || 'Fehler beim Hinzufügen zum Warenkorb');
+                }
+            } catch (error) {
+                console.error('Add to cart error:', error);
+                this.showNotification(error.message, 'error');
+            }
         });
 
-        // Show modal with animation
         setTimeout(() => {
             modal.classList.add('active');
         }, 10);
     }
 
     createVariantSelector(product) {
-        // Group variants by options
         let optionsHTML = '';
 
         product.options.forEach((option, index) => {
@@ -219,16 +214,13 @@ class ProductCard {
 
         selectors.forEach(selector => {
             selector.addEventListener('change', () => {
-                // Get selected options
                 const selectedOptions = Array.from(selectors).map(s => s.value);
 
-                // Find matching variant
                 const variant = product.variants.find(v => {
                     return v.options.every((opt, i) => opt === selectedOptions[i]);
                 });
 
                 if (variant) {
-                    // Update button and price
                     submitBtn.dataset.variantId = variant.id;
                     submitBtn.disabled = !variant.available;
                     submitBtn.textContent = variant.available ? 'In den Warenkorb' : 'Ausverkauft';
@@ -253,7 +245,6 @@ class ProductCard {
             const result = await response.json();
 
             if (response.ok) {
-                // Trigger cart notification instead of simple notification
                 this.triggerCartNotification(result);
                 this.updateCartCount();
             } else {
@@ -265,43 +256,28 @@ class ProductCard {
         }
     }
 
-    async addToCartById(variantId, quantity = 1, productData = null) {
-        try {
-            const response = await fetch('/cart/add.js', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    id: variantId,
-                    quantity: parseInt(quantity)
-                })
-            });
-
-            const result = await response.json();
-
-            if (response.ok) {
-                // Trigger cart notification with product data
-                this.triggerCartNotification(result, productData);
-                this.updateCartCount();
-            } else {
-                throw new Error(result.description || 'Fehler beim Hinzufügen zum Warenkorb');
-            }
-        } catch (error) {
-            console.error('Add to cart error:', error);
-            this.showNotification(error.message, 'error');
-        }
-    }
-
     triggerCartNotification(cartItem, productData = null) {
-        // Dispatch event for cart notification
-        window.dispatchEvent(new CustomEvent('cart:item-added', {
-            detail: {
-                variantId: cartItem.variant_id || cartItem.id,
-                quantity: cartItem.quantity,
-                product: productData || cartItem
-            }
-        }));
+        setTimeout(() => {
+            window.dispatchEvent(new CustomEvent('cart:item-added', {
+                detail: {
+                    variantId: cartItem.variant_id || cartItem.id,
+                    quantity: cartItem.quantity || 1,
+                    product: productData || {
+                        title: cartItem.product_title,
+                        product_title: cartItem.product_title,
+                        handle: cartItem.handle,
+                        product_handle: cartItem.handle,
+                        image: cartItem.image,
+                        featured_image: cartItem.image,
+                        price: cartItem.price,
+                        line_price: cartItem.line_price,
+                        vendor: cartItem.vendor,
+                        variant_title: cartItem.variant_title,
+                        url: cartItem.url
+                    }
+                }
+            }));
+        }, 100);
     }
 
     async updateCartCount() {
@@ -309,13 +285,11 @@ class ProductCard {
             const response = await fetch('/cart.js');
             const cart = await response.json();
 
-            // Update cart count in header (if exists)
             const cartCountElements = document.querySelectorAll('.cart-count');
             cartCountElements.forEach(el => {
                 el.textContent = cart.item_count;
             });
 
-            // Trigger custom event
             window.dispatchEvent(new CustomEvent('cart:updated', {
                 detail: cart
             }));
@@ -324,11 +298,7 @@ class ProductCard {
         }
     }
 
-    /**
-     * Recently Viewed Tracking
-     */
     trackRecentlyViewed() {
-        // Only track on product pages
         if (window.location.pathname.includes('/products/')) {
             const productCard = document.querySelector('.product-card');
             if (productCard) {
@@ -344,23 +314,14 @@ class ProductCard {
         let recentlyViewed = localStorage.getItem('recentlyViewed');
         recentlyViewed = recentlyViewed ? JSON.parse(recentlyViewed) : [];
 
-        // Remove if already exists
         recentlyViewed = recentlyViewed.filter(id => id !== productId);
-
-        // Add to beginning
         recentlyViewed.unshift(productId);
-
-        // Keep only last 10 items
         recentlyViewed = recentlyViewed.slice(0, 10);
 
         localStorage.setItem('recentlyViewed', JSON.stringify(recentlyViewed));
     }
 
-    /**
-     * Utility Functions
-     */
     formatMoney(cents) {
-        // Simple money formatting - adjust based on your currency
         return new Intl.NumberFormat('de-DE', {
             style: 'currency',
             currency: 'EUR'
@@ -368,28 +329,21 @@ class ProductCard {
     }
 
     showNotification(message, type = 'success') {
-        // Only show simple notifications for non-cart messages
-        // Cart additions are handled by CartNotification class
-
-        // Remove existing notification
         const existingNotification = document.querySelector('.product-notification');
         if (existingNotification) {
             existingNotification.remove();
         }
 
-        // Create notification
         const notification = document.createElement('div');
         notification.className = `product-notification product-notification--${type}`;
         notification.textContent = message;
 
         document.body.appendChild(notification);
 
-        // Show notification
         setTimeout(() => {
             notification.classList.add('active');
         }, 10);
 
-        // Remove after 3 seconds
         setTimeout(() => {
             notification.classList.remove('active');
             setTimeout(() => {
@@ -399,7 +353,6 @@ class ProductCard {
     }
 }
 
-// Initialize when DOM is ready
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
         new ProductCard();
