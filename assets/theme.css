@@ -137,5 +137,5 @@
     left: 8px;
     top: 48%;
     transform: translateY(-50%);
-    z-index: -1;
+    z-index: 0;
 }
