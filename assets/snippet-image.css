@@ -105,11 +105,6 @@
     right: 30px;
 }
 
-.image--decoration-heart-bottom-right-inside .image__decoration {
-    bottom: 18px;
-    right: 30px;
-}
-
 /* Mobile Styles */
 
 @media screen and (max-width: 1280px) {
@@ -129,8 +124,7 @@
         height: 60px;
     }
 
-    .image--decoration-heart-bottom-right-edge .image__decoration-icon,
-    .image--decoration-heart-bottom-right-inside .image__decoration-icon {
+    .image--decoration-heart-bottom-right-edge .image__decoration-icon {
         width: 42px;
         height: 52px;
     }
@@ -142,8 +136,7 @@
         left: unset;
     }
 
-    .image--decoration-heart-bottom-right-edge .image__decoration,
-    .image--decoration-heart-bottom-right-inside .image__decoration {
+    .image--decoration-heart-bottom-right-edge .image__decoration {
         bottom: -17px;
         right: 32px;
     }
