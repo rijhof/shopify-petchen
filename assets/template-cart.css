@@ -259,7 +259,7 @@
 
 .cart__actions .button-primary,
 .cart__checkout-button {
-    margin-bottom: calc(var(--baseline) * 4);
+    margin-bottom: calc(var(--baseline) * 3);
 }
 
 .cart__empty {
