@@ -275,7 +275,8 @@ class CartNotification {
         this.notification.setAttribute('aria-hidden', 'false');
         this.isOpen = true;
 
-        document.body.style.overflow = 'hidden';
+        // Body-Scroll NICHT blockieren - Benutzer kann weiter scrollen
+        // document.body.style.overflow = 'hidden'; // Entfernt!
 
         if (this.autoCloseTimeout) {
             clearTimeout(this.autoCloseTimeout);
@@ -295,7 +296,8 @@ class CartNotification {
         this.notification.setAttribute('aria-hidden', 'true');
         this.isOpen = false;
 
-        document.body.style.overflow = '';
+        // Body-Scroll nicht zurücksetzen, da wir ihn nie blockiert haben
+        // document.body.style.overflow = ''; // Entfernt!
 
         if (this.autoCloseTimeout) {
             clearTimeout(this.autoCloseTimeout);

@@ -162,6 +162,10 @@
     margin: 0;
 }
 
+.cart-notification__checkout-form button {
+    min-height: 58px;
+}
+
 .cart-notification__actions .button-secondary,
 .cart-notification__actions .button-primary {
     margin-bottom: 0;
