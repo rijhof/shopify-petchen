@@ -20,6 +20,13 @@
     margin-bottom: calc(var(--baseline) * 2);
 }
 
+#shopify-pc__banner__btn-manage-prefs,
+#shopify-pc__banner__btn-accept,
+#shopify-pc__banner__btn-decline {
+    margin-bottom: 0;
+}
+
+
 #shopify-pc__banner__btn-accept,
 #shopify-pc__prefs__header-accept {
     display: flex;
