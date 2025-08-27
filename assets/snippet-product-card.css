@@ -175,9 +175,9 @@
 /* Responsive adjustments */
 @media (max-width: 767px) {
     .product-card__header {
-        top: calc(var(--baseline) * 1.5);
-        left: calc(var(--baseline) * 1.5);
-        right: calc(var(--baseline) * 1.5);
+        top: calc(var(--baseline) * 3);
+        left: calc(var(--baseline) * 3);
+        right: calc(var(--baseline) * 3);
     }
 
     .product-card__tag {
@@ -190,16 +190,8 @@
         width: 36px;
         height: 36px;
     }
-
-    .product-card__content {
-        padding: calc(var(--baseline) * 1.5);
-    }
 }
 
-/* Sale Badge (optional) */
-.product-card--on-sale .product-card__price--current {
-    color: var(--color-error);
-}
 
 /* Out of Stock State */
 .product-card--sold-out {
