@@ -239,6 +239,12 @@
     font-weight: var(--font-weight-light);
     line-height: var(--line-height-lead);
     font-feature-settings: 'liga' off, 'clig' off;
+    display: flex;
+    align-items: center;
+}
+
+.shopify-pc__prefs__options .shopify-pc__prefs__option label svg path {
+    fill: var(--color-primary);
 }
 
 .shopify-pc__prefs__options .shopify-pc__prefs__option p {
@@ -250,4 +256,8 @@
     line-height: var(--line-height-paragraph);
     font-feature-settings: 'liga' off, 'clig' off;
     margin: 0 0 var(--font-paragraph-spacing);
+}
+
+.shopify-pc__prefs__options p {
+    padding-left: 0 !important;
 }
