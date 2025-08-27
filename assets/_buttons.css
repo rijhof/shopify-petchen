@@ -583,12 +583,11 @@ button:not([class]):hover {
 }
 
 .button-primary.fullwidth:hover {
-    background-image: url('icon-btn-bg--fullwidth-hollow.svg');
-    color: var(--color-primary);
+    background-image: url('icon-btn-bg--fullwidth-dark.svg');
 }
 
 .button-primary.fullwidth:focus {
-    background-image: url('icon-btn-bg--fullwidth.svg');
+    background-image: url('icon-btn-bg--fullwidth-dark.svg');
 }
 
 .button-primary.fullwidth::before {
