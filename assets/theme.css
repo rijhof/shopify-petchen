@@ -238,7 +238,7 @@
         flex-direction: column;
     }
 
-    button {
+    .shopify-pc__banner__btns button {
         margin-block: 0 calc(var(--button-gap) * 2) !important;
     }
 }
