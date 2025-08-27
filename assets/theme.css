@@ -121,3 +121,21 @@
     color: var(--button-font-color);
     outline: none;
 }
+
+#shopify-pc__banner__btn-accept::before {
+    content: '';
+    width: 30px;
+    height: 28px;
+    gap: 0;
+    background-image: url('icon-paw.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    flex-shrink: 0;
+    pointer-events: none;
+    position: absolute;
+    left: 8px;
+    top: 48%;
+    transform: translateY(-50%);
+    z-index: -1;
+}
