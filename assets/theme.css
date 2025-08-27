@@ -1,132 +1,7 @@
-/* Base CSS - Main import file for Minimal Shopify Theme */
-/* Imports all modular CSS files */
+/* Shopify Cookie Banner Button Overrides */
 
-@import url('_variables.css');
-@import url('_motion.css');
-@import url('_base.css');
-@import url('_typography.css');
-@import url('_buttons.css');
-@import url('_forms.css');
-@import url('_layout.css');
-@import url('_utilities.css');
-@import url('_background.css');
-
-#shopify-pc__banner__btn-manage-prefs {
-    display: flex;
-    align-items: center;
-    gap: var(--button-gap);
-    padding: 0;
-    background-color: transparent;
-    background-image: none;
-    border: none;
-    color: var(--color-link);
-    text-decoration-line: underline;
-    text-decoration-style: solid;
-    text-decoration-skip-ink: none;
-    text-decoration-thickness: auto;
-    text-underline-offset: auto;
-    text-underline-position: from-font;
-    cursor: pointer;
-    font-family: inherit;
-    font-size: var(--font-size-link);
-    font-weight: var(--font-weight-medium);
-    transition: all var(--transition-duration) ease;
-    appearance: none;
-    width: fit-content;
-}
-
-#shopify-pc__banner__btn-manage-prefs:hover {
-    color: var(--color-text);
-}
-
-#shopify-pc__banner__btn-decline {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: var(--button-gap);
-    padding: var(--button-padding-primary);
-    background-image: url('icon-btn-scndry-bg.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% 99%;
-    background-color: transparent;
-    color: var(--button-background-color);
-    border: none;
-    border-radius: var(--button-border-radius);
-    cursor: pointer;
-    font-family: inherit;
-    font-size: var(--button-font-size);
-    font-weight: var(--font-weight-medium);
-    transition: all var(--transition-duration) ease;
-    appearance: none;
-    width: fit-content;
-}
-
-#shopify-pc__banner__btn-decline:hover {
-    background-image: url('icon-btn-scndry-bg--hover.svg');
-    color: var(--button-font-color);
-}
-
-#shopify-pc__banner__btn-decline:focus {
-    background-image: url('icon-btn-scndry-bg--focused.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% 99%;
-    color: var(--button-font-color);
-    outline: none;
-}
-
-#shopify-pc__banner__btn-decline:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-    pointer-events: none;
-}
-
-
-
-#shopify-pc__banner__btn-accept {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: var(--button-padding-primary);
-    background-image: url('icon-btn-bg.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% 99%;
-    background-color: transparent;
-    color: var(--button-font-color);
-    border: none;
-    border-radius: var(--button-border-radius);
-    cursor: pointer;
-    font-family: inherit;
-    font-size: var(--button-font-size);
-    font-weight: var(--font-weight-medium);
-    transition: all var(--transition-duration) ease;
-    appearance: none;
-    width: fit-content;
-}
-
-#shopify-pc__banner__btn-accept:hover {
-    background-image: url('icon-btn-bg--hover.svg');
-}
-
-#shopify-pc__banner__btn-accept:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-    pointer-events: none;
-}
-
-#shopify-pc__banner__btn-accept:focus {
-    background-image: url('icon-btn-bg--focused.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% 99%;
-    color: var(--button-font-color);
-    outline: none;
-}
-
-
-
+/* Primary Button Styles */
+#shopify-pc__banner__btn-accept,
 #shopify-pc__prefs__header-accept {
     display: flex;
     align-items: center;
@@ -146,21 +21,17 @@
     font-weight: var(--font-weight-medium);
     transition: all var(--transition-duration) ease;
     appearance: none;
-    position: relative;
     width: fit-content;
+    position: relative;
     z-index: 1;
 }
 
+#shopify-pc__banner__btn-accept:hover,
 #shopify-pc__prefs__header-accept:hover {
     background-image: url('icon-btn-bg--hover.svg');
 }
 
-#shopify-pc__prefs__header-accept:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-    pointer-events: none;
-}
-
+#shopify-pc__banner__btn-accept:focus,
 #shopify-pc__prefs__header-accept:focus {
     background-image: url('icon-btn-bg--focused.svg');
     background-repeat: no-repeat;
@@ -168,6 +39,13 @@
     background-size: 100% 99%;
     color: var(--button-font-color);
     outline: none;
+}
+
+#shopify-pc__banner__btn-accept:disabled,
+#shopify-pc__prefs__header-accept:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
 }
 
 #shopify-pc__prefs__header-accept::before {
@@ -187,6 +65,8 @@
     z-index: -1;
 }
 
+/* Secondary Button Styles */
+#shopify-pc__banner__btn-decline,
 #shopify-pc__prefs__header-decline {
     display: flex;
     align-items: center;
@@ -212,11 +92,13 @@
     z-index: 1;
 }
 
+#shopify-pc__banner__btn-decline:hover,
 #shopify-pc__prefs__header-decline:hover {
     background-image: url('icon-btn-scndry-bg--hover.svg');
     color: var(--button-font-color);
 }
 
+#shopify-pc__banner__btn-decline:focus,
 #shopify-pc__prefs__header-decline:focus {
     background-image: url('icon-btn-scndry-bg--focused.svg');
     background-repeat: no-repeat;
@@ -226,6 +108,7 @@
     outline: none;
 }
 
+#shopify-pc__banner__btn-decline:disabled,
 #shopify-pc__prefs__header-decline:disabled {
     opacity: 0.5;
     cursor: not-allowed;
@@ -249,6 +132,8 @@
     z-index: -1;
 }
 
+/* Tertiary Button Styles */
+#shopify-pc__banner__btn-manage-prefs,
 #shopify-pc__prefs__header-save {
     display: flex;
     align-items: center;
@@ -273,10 +158,12 @@
     width: fit-content;
 }
 
+#shopify-pc__banner__btn-manage-prefs:hover,
 #shopify-pc__prefs__header-save:hover {
     color: var(--color-text);
 }
 
+/* Typography Overrides */
 #shopify-pc__banner__body-title,
 #shopify-pc__prefs__header-title {
     color: var(--color-text);
@@ -288,7 +175,8 @@
     font-feature-settings: 'liga' off, 'clig' off;
 }
 
-.shopify-pc__banner__dialog p {
+.shopify-pc__banner__dialog p,
+#shopify-pc__prefs__intro-main p {
     color: var(--color-text);
     font-family: var(--font-family-paragraph, "Helvetica Neue", "Arial", sans-serif);
     font-size: var(--font-size-paragraph);
@@ -330,18 +218,7 @@
     font-feature-settings: 'liga' off, 'clig' off;
 }
 
-#shopify-pc__prefs__intro-main p {
-    color: var(--color-text);
-    font-family: var(--font-family-paragraph, "Helvetica Neue", "Arial", sans-serif);
-    font-size: var(--font-size-paragraph);
-    font-style: normal;
-    font-weight: var(--font-weight-light);
-    line-height: var(--line-height-paragraph);
-    font-feature-settings: 'liga' off, 'clig' off;
-    margin: 0 0 var(--font-paragraph-spacing);
-}
-
-#shopify-pc__prefs__options label {
+.shopify-pc__prefs__options .shopify-pc__prefs__option label {
     color: var(--color-grey-dark);
     font-family: var(--font-family-paragraph, "Helvetica Neue", "Arial", sans-serif);
     font-size: var(--font-size-meta);
@@ -351,7 +228,7 @@
     font-feature-settings: 'liga' off, 'clig' off;
 }
 
-#shopify-pc__prefs__options p {
+.shopify-pc__prefs__options .shopify-pc__prefs__option p {
     color: var(--color-text);
     font-family: var(--font-family-paragraph, "Helvetica Neue", "Arial", sans-serif);
     font-size: var(--font-size-paragraph);
