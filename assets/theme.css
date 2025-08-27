@@ -157,7 +157,7 @@
 /* Typography Overrides */
 #shopify-pc__banner__body-title,
 #shopify-pc__prefs__header-title,
-#shopify-pc__prefs__intro-main h3 {
+.shopify-pc__prefs__intro-main h3 {
     color: var(--color-text);
     font-family: var(--font-family-paragraph, "Helvetica Neue", "Arial", sans-serif);
     font-size: var(--font-size-lead);
