@@ -574,3 +574,40 @@ button:not([class]):hover {
     background-image: url('icon-btn-bg--hover.svg');
     color: var(--button-font-color);
 }
+
+/* Fullwidth Button Styles */
+.button-primary.fullwidth {
+    width: 100%;
+    justify-content: center;
+    background-image: url('icon-btn-bg--fullwidth.svg');
+}
+
+.button-primary.fullwidth:hover {
+    background-image: url('icon-btn-bg--fullwidth-hollow.svg');
+    color: var(--color-primary);
+}
+
+.button-primary.fullwidth:focus {
+    background-image: url('icon-btn-bg--fullwidth.svg');
+}
+
+.button-primary.fullwidth::before {
+    display: none;
+}
+
+.button-secondary.fullwidth {
+    width: 100%;
+    justify-content: center;
+    background-image: url('icon-btn-bg--fullwidth-hollow.svg');
+    color: var(--color-primary);
+}
+
+.button-secondary.fullwidth:hover {
+    background-image: url('icon-btn-bg--fullwidth.svg');
+    color: var(--color-white);
+}
+
+.button-secondary.fullwidth:focus {
+    background-image: url('icon-btn-bg--fullwidth-hollow.svg');
+    color: var(--color-primary);
+}

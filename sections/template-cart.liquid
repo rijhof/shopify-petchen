@@ -6,7 +6,7 @@
   <div class="container">
     <div class="cart__header">
       <h1 id="cart-title" class="cart__title">Warenkorb</h1>
-      <a href="{{ routes.all_products_collection_url }}" class="button-secondary icon--right">
+      <a href="{{ routes.all_products_collection_url }}" class="button-tertiary">
         Weiter shoppen
       </a>
     </div>
@@ -23,82 +23,88 @@
           <div class="cart__items" role="region" aria-label="Warenkorb Artikel">
             {% for item in cart.items %}
               <div class="cart-item" data-line-item-key="{{ forloop.index }}">
-                <div class="cart-item__image">
-                  <a href="{{ item.url }}" aria-label="{{ item.product.title }}">
-                    {% if item.image %}
-                      {{ item.image | image_url: width: 160 | image_tag:
-                      loading: 'lazy',
-                      width: 80,
-                      height: 80,
-                      alt: item.title,
-                      class: 'cart-item__media'
-                      }}
-                    {% else %}
-                      {{ 'product-1' | placeholder_svg_tag: 'cart-item__media cart-item__media--placeholder' }}
+                <!-- Erste Zeile: Image + Details (für Mobile) -->
+                <div class="cart-item__image-details-row">
+                  <div class="cart-item__image">
+                    <a href="{{ item.url }}" aria-label="{{ item.product.title }}">
+                      {% if item.image %}
+                        {{ item.image | image_url: width: 160 | image_tag:
+                        loading: 'lazy',
+                        width: 80,
+                        height: 80,
+                        alt: item.title,
+                        class: 'cart-item__media'
+                        }}
+                      {% else %}
+                        {{ 'product-1' | placeholder_svg_tag: 'cart-item__media cart-item__media--placeholder' }}
+                      {% endif %}
+                    </a>
+                  </div>
+
+                  <div class="cart-item__details">
+                    <h3 class="cart-item__title h5">
+                      <a class="h5" href="{{ item.url }}">{{ item.product.title }}</a>
+                    </h3>
+                    {% if item.product.metafields.custom.haupt_usp != blank %}
+                      <p class="cart-item__usp meta">
+                        {{ item.product.metafields.custom.haupt_usp }}
+                      </p>
                     {% endif %}
-                  </a>
-                </div>
-
-                <div class="cart-item__details">
-                  <h3 class="cart-item__title h5">
-                    <a class="h5" href="{{ item.url }}">{{ item.product.title }}</a>
-                  </h3>
-                  {% if item.product.metafields.custom.haupt_usp != blank %}
-                    <p class="cart-item__usp meta">
-                      {{ item.product.metafields.custom.haupt_usp }}
+                    <p class="cart-item__unit-price meta">
+                      {{ item.price | money_without_currency }} EUR
                     </p>
-                  {% endif %}
-                  <p class="cart-item__unit-price meta">
-                    {{ item.price | money }}
-                  </p>
-                </div>
-
-                <div class="cart-item__quantity">
-                  <label for="quantity-{{ forloop.index }}" class="visually-hidden">
-                    Menge
-                  </label>
-                  <div class="cart-item__quantity-controls">
-                    <div class="cart-item__quantity-wrapper">
-                      <button type="button" class="cart-item__quantity-button cart-item__quantity-button--minus"
-                              aria-label="Verringern"
-                              data-action="decrease">
-                        <img src="{{ 'icon-btn-minus.svg' | asset_url }}" alt="" width="20" height="20" aria-hidden="true">
-                      </button>
-                      <input type="number"
-                             class="cart-item__quantity-input"
-                             name="updates[]"
-                             value="{{ item.quantity }}"
-                             min="0"
-                             aria-label="Menge"
-                             id="quantity-{{ forloop.index }}"
-                             data-line-key="{{ forloop.index }}">
-                      <button type="button" class="cart-item__quantity-button cart-item__quantity-button--plus"
-                              aria-label="Erhöhen"
-                              data-action="increase">
-                        <img src="{{ 'icon-btn-plus.svg' | asset_url }}" alt="" width="20" height="20" aria-hidden="true">
-                      </button>
-                    </div>
-                    <button type="button" class="button-secondary icon icon-empty cart-item__remove"
-                            aria-label="Entfernen {{ item.product.title }}"
-                            data-line-key="{{ forloop.index }}">
-                      <img src="{{ 'icon-btn-trashbin.svg' | asset_url }}" alt="" width="20" height="20" aria-hidden="true">
-                    </button>
                   </div>
                 </div>
 
-                <div class="cart-item__price">
-                  <div class="cart-item__price-total">
-                    {{ item.line_price | money }}
+                <!-- Zweite Zeile: Quantity Controls + Price (für Mobile) -->
+                <div class="cart-item__controls-price-row">
+                  <div class="cart-item__quantity">
+                    <label for="quantity-{{ forloop.index }}" class="visually-hidden">
+                      Menge
+                    </label>
+                    <div class="cart-item__quantity-controls">
+                      <div class="cart-item__quantity-wrapper">
+                        <button type="button" class="cart-item__quantity-button cart-item__quantity-button--minus"
+                                aria-label="Verringern"
+                                data-action="decrease">
+                          <img src="{{ 'icon-btn-minus.svg' | asset_url }}" alt="" width="20" height="20" aria-hidden="true">
+                        </button>
+                        <input type="number"
+                               class="cart-item__quantity-input"
+                               name="updates[]"
+                               value="{{ item.quantity }}"
+                               min="0"
+                               aria-label="Menge"
+                               id="quantity-{{ forloop.index }}"
+                               data-line-key="{{ forloop.index }}">
+                        <button type="button" class="cart-item__quantity-button cart-item__quantity-button--plus"
+                                aria-label="Erhöhen"
+                                data-action="increase">
+                          <img src="{{ 'icon-btn-plus.svg' | asset_url }}" alt="" width="20" height="20" aria-hidden="true">
+                        </button>
+                      </div>
+                      <button type="button" class="button-secondary icon icon-empty cart-item__remove"
+                              aria-label="Entfernen {{ item.product.title }}"
+                              data-line-key="{{ forloop.index }}">
+                        <img src="{{ 'icon-btn-trashbin.svg' | asset_url }}" alt="" width="20" height="20" aria-hidden="true">
+                      </button>
+                    </div>
                   </div>
-                  {% if item.variant.metafields.custom.price_per_ml %}
-                    <div class="cart-item__price-unit meta">
-                      {{ item.variant.metafields.custom.price_per_ml | money }}/ml
+
+                  <div class="cart-item__price">
+                    <div class="cart-item__price-total">
+                      {{ item.line_price | money_without_currency }} EUR
                     </div>
-                  {% elsif item.unit_price_measurement %}
-                    <div class="cart-item__price-unit meta">
-                      {{ item.unit_price | money }}/{{ item.unit_price_measurement.reference_unit }}
-                    </div>
-                  {% endif %}
+                    {% if item.variant.metafields.custom.price_per_ml %}
+                      <div class="cart-item__price-unit meta">
+                        {{ item.variant.metafields.custom.price_per_ml | money_without_currency }} EUR/ml
+                      </div>
+                    {% elsif item.unit_price_measurement %}
+                      <div class="cart-item__price-unit meta">
+                        {{ item.unit_price | money_without_currency }} EUR/{{ item.unit_price_measurement.reference_unit }}
+                      </div>
+                    {% endif %}
+                  </div>
                 </div>
               </div>
             {% endfor %}
@@ -120,7 +126,7 @@
         <div class="cart__summary">
           <div class="cart__subtotal">
             <span class="cart__subtotal-label">Zwischensumme</span>
-            <span class="cart__subtotal-price">{{ cart.total_price | money }}</span>
+            <span class="cart__subtotal-price">{{ cart.total_price | money_without_currency }} EUR</span>
           </div>
 
           <p class="cart__tax-note meta">
@@ -129,7 +135,7 @@
 
           <div class="cart__actions">
             <form action="{{ routes.cart_url }}" method="post" novalidate>
-              <button type="submit" name="checkout" class="button-primary cart__checkout-button">
+              <button type="submit" name="checkout" class="button-primary fullwidth cart__checkout-button">
                 Zur Kasse
               </button>
             </form>
