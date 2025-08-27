@@ -221,3 +221,14 @@
     font-feature-settings: 'liga' off, 'clig' off;
     margin: 0 0 var(--font-paragraph-spacing);
 }
+
+@media (max-width: 767px) {
+    .shopify-pc__banner__btns {
+        flex-direction: column;
+    }
+
+    button {
+        margin-top: 0;
+        margin-bottom: calc(var(--button-gap) * 2) !important;
+    }
+}
