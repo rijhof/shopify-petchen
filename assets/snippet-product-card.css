@@ -105,6 +105,7 @@
     justify-content: flex-end;
     flex-direction: column;
     flex: 1;
+    padding-top: calc(var(--baseline) * 3);
 }
 
 .product-card__title {
