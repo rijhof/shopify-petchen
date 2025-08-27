@@ -10,7 +10,6 @@
 @import url('_layout.css');
 @import url('_utilities.css');
 @import url('_background.css');
-
 #shopify-pc__banner__btn-manage-prefs {
     display: flex;
     align-items: center;
@@ -59,6 +58,8 @@
     transition: all var(--transition-duration) ease;
     appearance: none;
     width: fit-content;
+    position: relative;
+    z-index: 1;
 }
 
 #shopify-pc__banner__btn-decline:hover {
@@ -81,6 +82,24 @@
     pointer-events: none;
 }
 
+#shopify-pc__banner__btn-decline::before {
+    content: '';
+    width: 30px;
+    height: 28px;
+    gap: 0;
+    background-image: url('icon-paw.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    flex-shrink: 0;
+    pointer-events: none;
+    position: absolute;
+    left: 8px;
+    top: 48%;
+    transform: translateY(-50%);
+    z-index: 0;
+}
+
 #shopify-pc__banner__btn-accept {
     display: flex;
     align-items: center;
@@ -101,6 +120,7 @@
     appearance: none;
     position: relative;
     width: fit-content;
+    z-index: 1;
 }
 
 #shopify-pc__banner__btn-accept:hover {
