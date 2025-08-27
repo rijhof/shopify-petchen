@@ -1,0 +1,276 @@
+/* assets/cart-notification.css */
+
+/* Container and Overlay */
+.cart-notification {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-end;
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 0.3s, opacity 0.3s ease;
+}
+
+.cart-notification.active {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    transition-delay: 0s;
+}
+
+.cart-notification__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+/* Content Container */
+.cart-notification__content {
+    position: relative;
+    background-color: var(--color-white);
+    width: 400px;
+    max-width: 100%;
+    height: 100%;
+    box-shadow: -2px 0 20px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    pointer-events: auto;
+}
+
+.cart-notification.active .cart-notification__content {
+    transform: translateX(0);
+}
+
+/* Header */
+.cart-notification__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: calc(var(--baseline) * 3);
+    border-bottom: 1px solid var(--color-border);
+    position: sticky;
+    top: 0;
+    background-color: var(--color-white);
+    z-index: 1;
+}
+
+.cart-notification__header-title {
+    display: flex;
+    align-items: center;
+    gap: calc(var(--baseline) * 1.5);
+    font-size: var(--font-size-paragraph);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text);
+}
+
+.cart-notification__icon {
+    color: var(--color-success, #4BB543);
+    flex-shrink: 0;
+}
+
+.cart-notification__close {
+    background: transparent;
+    border: none;
+    padding: calc(var(--baseline) * 1);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity var(--transition-duration) ease;
+    color: var(--color-text);
+}
+
+.cart-notification__close:hover {
+    opacity: 0.7;
+}
+
+/* Product Section */
+.cart-notification__product {
+    padding: calc(var(--baseline) * 3);
+    flex: 1;
+    min-height: 120px;
+}
+
+.cart-notification__product-item {
+    display: flex;
+    gap: calc(var(--baseline) * 3);
+    align-items: flex-start;
+}
+
+.cart-notification__product-image {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+}
+
+.cart-notification__product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: calc(var(--border-radius) / 2);
+    background-color: var(--color-grey-light);
+}
+
+.cart-notification__product-details {
+    flex: 1;
+    min-width: 0;
+}
+
+.cart-notification__product-title {
+    margin-bottom: calc(var(--baseline) * 0.5);
+}
+
+.cart-notification__product-title a {
+    text-decoration: none;
+    color: var(--color-text);
+    transition: color var(--transition-duration) ease;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.cart-notification__product-title a:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+.cart-notification__product-usp {
+    color: var(--color-text);
+    margin-bottom: calc(var(--baseline) * 1);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.cart-notification__product-price-wrapper {
+    display: flex;
+    align-items: center;
+    gap: calc(var(--baseline) * 2);
+}
+
+.cart-notification__product-quantity {
+    color: var(--color-grey-dark);
+}
+
+.cart-notification__product-price {
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text);
+}
+
+/* Actions */
+.cart-notification__actions {
+    padding: calc(var(--baseline) * 3);
+    border-top: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--baseline) * 2);
+    background-color: var(--color-white);
+}
+
+.cart-notification__checkout-form {
+    margin: 0;
+}
+
+.cart-notification__actions .button-secondary,
+.cart-notification__actions .button-primary {
+    margin-bottom: 0;
+}
+
+.cart-notification__actions .button-tertiary {
+    margin: 0 auto;
+    width: auto;
+}
+
+/* Loading State */
+.cart-notification__product--loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 120px;
+}
+
+.cart-notification__spinner {
+    width: 30px;
+    height: 30px;
+    border: 3px solid var(--color-grey-light);
+    border-top-color: var(--color-primary);
+    border-radius: 50%;
+    animation: cart-notification-spin 0.8s linear infinite;
+}
+
+@keyframes cart-notification-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Error State */
+.cart-notification__error {
+    padding: calc(var(--baseline) * 3);
+    text-align: center;
+    color: var(--color-error);
+}
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+    .cart-notification__content {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .cart-notification__header {
+        padding: calc(var(--baseline) * 2);
+    }
+
+    .cart-notification__product {
+        padding: calc(var(--baseline) * 2);
+    }
+
+    .cart-notification__actions {
+        padding: calc(var(--baseline) * 2);
+        gap: calc(var(--baseline) * 1.5);
+    }
+
+    .cart-notification__header-title {
+        font-size: calc(var(--font-size-paragraph) * 0.9);
+    }
+}
+
+/* Tablet and up */
+@media (min-width: 768px) {
+    .cart-notification {
+        padding: calc(var(--baseline) * 2);
+    }
+
+    .cart-notification__content {
+        height: auto;
+        max-height: calc(100vh - var(--baseline) * 4);
+        border-radius: var(--border-radius);
+        margin-top: calc(var(--baseline) * 8); /* Space for header */
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .cart-notification,
+    .cart-notification__content {
+        transition-duration: 0.001ms;
+    }
+
+    .cart-notification__spinner {
+        animation-duration: 2s;
+    }
+}

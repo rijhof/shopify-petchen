@@ -1,5 +1,5 @@
 /**
- * Product Card JavaScript
+ * Product Card JavaScript - Updated for Cart Notification
  * Handles wishlist functionality, quick add, and recently viewed tracking
  */
 
@@ -77,6 +77,12 @@ class ProductCard {
             button.addEventListener('click', (e) => {
                 e.preventDefault();
                 const productHandle = button.dataset.productHandle;
+
+                // Set trigger element for focus management
+                if (window.cartNotification) {
+                    window.cartNotification.setTriggerElement(button);
+                }
+
                 this.openQuickAdd(productHandle);
             });
         });
@@ -87,6 +93,13 @@ class ProductCard {
         quickAddForms.forEach(form => {
             form.addEventListener('submit', (e) => {
                 e.preventDefault();
+
+                // Set trigger element for focus management
+                const submitButton = form.querySelector('button[type="submit"]');
+                if (window.cartNotification && submitButton) {
+                    window.cartNotification.setTriggerElement(submitButton);
+                }
+
                 this.addToCart(form);
             });
         });
@@ -134,7 +147,7 @@ class ProductCard {
                         <input type="number" id="quick-add-quantity" min="1" value="1">
                     </div>
                     
-                    <button class="button-primary quick-add-modal__submit" data-variant-id="${product.variants[0].id}">
+                    <button class="button-primary quick-add-modal__submit" data-variant-id="${product.variants[0].id}" data-product='${JSON.stringify(product).replace(/'/g, "&apos;")}'>
                         In den Warenkorb
                     </button>
                 </div>
@@ -167,8 +180,9 @@ class ProductCard {
         submitBtn.addEventListener('click', () => {
             const variantId = submitBtn.dataset.variantId;
             const quantity = modal.querySelector('#quick-add-quantity').value;
+            const productData = JSON.parse(submitBtn.dataset.product);
 
-            this.addToCartById(variantId, quantity);
+            this.addToCartById(variantId, quantity, productData);
             closeModal();
         });
 
@@ -239,7 +253,8 @@ class ProductCard {
             const result = await response.json();
 
             if (response.ok) {
-                this.showNotification('Produkt wurde zum Warenkorb hinzugefügt');
+                // Trigger cart notification instead of simple notification
+                this.triggerCartNotification(result);
                 this.updateCartCount();
             } else {
                 throw new Error(result.description || 'Fehler beim Hinzufügen zum Warenkorb');
@@ -250,7 +265,7 @@ class ProductCard {
         }
     }
 
-    async addToCartById(variantId, quantity = 1) {
+    async addToCartById(variantId, quantity = 1, productData = null) {
         try {
             const response = await fetch('/cart/add.js', {
                 method: 'POST',
@@ -266,7 +281,8 @@ class ProductCard {
             const result = await response.json();
 
             if (response.ok) {
-                this.showNotification('Produkt wurde zum Warenkorb hinzugefügt');
+                // Trigger cart notification with product data
+                this.triggerCartNotification(result, productData);
                 this.updateCartCount();
             } else {
                 throw new Error(result.description || 'Fehler beim Hinzufügen zum Warenkorb');
@@ -275,6 +291,17 @@ class ProductCard {
             console.error('Add to cart error:', error);
             this.showNotification(error.message, 'error');
         }
+    }
+
+    triggerCartNotification(cartItem, productData = null) {
+        // Dispatch event for cart notification
+        window.dispatchEvent(new CustomEvent('cart:item-added', {
+            detail: {
+                variantId: cartItem.variant_id || cartItem.id,
+                quantity: cartItem.quantity,
+                product: productData || cartItem
+            }
+        }));
     }
 
     async updateCartCount() {
@@ -341,6 +368,9 @@ class ProductCard {
     }
 
     showNotification(message, type = 'success') {
+        // Only show simple notifications for non-cart messages
+        // Cart additions are handled by CartNotification class
+
         // Remove existing notification
         const existingNotification = document.querySelector('.product-notification');
         if (existingNotification) {

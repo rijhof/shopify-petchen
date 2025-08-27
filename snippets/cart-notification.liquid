@@ -1,0 +1,63 @@
+<!-- snippets/cart-notification.liquid -->
+<div class="cart-notification" id="cart-notification" aria-hidden="true" role="dialog" aria-labelledby="cart-notification-title">
+    <div class="cart-notification__overlay" data-cart-notification-close></div>
+
+    <div class="cart-notification__content">
+        <!-- Header -->
+        <div class="cart-notification__header">
+            <div class="cart-notification__header-title">
+                <svg class="cart-notification__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="2"/>
+                    <path d="M6 10L8.5 12.5L14 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span id="cart-notification-title">Artikel wurde in den Warenkorb gelegt</span>
+            </div>
+            <button type="button" class="cart-notification__close" aria-label="Schließen" data-cart-notification-close>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Product Info -->
+        <div class="cart-notification__product" id="cart-notification-product">
+            <!-- This will be populated dynamically -->
+        </div>
+
+        <!-- Actions -->
+        <div class="cart-notification__actions">
+            <a href="{{ routes.cart_url }}" class="button-secondary fullwidth">
+                Warenkorb ansehen
+            </a>
+
+            <form action="{{ routes.cart_url }}" method="post" class="cart-notification__checkout-form">
+                <button type="submit" name="checkout" class="button-primary fullwidth">
+                    Zur Kasse
+                </button>
+            </form>
+
+            <button type="button" class="button-tertiary" data-cart-notification-close>
+                Weiter shoppen
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Template for product item (hidden, used for JS) -->
+<template id="cart-notification-product-template">
+    <div class="cart-notification__product-item">
+        <div class="cart-notification__product-image">
+            <img src="" alt="" loading="eager" width="80" height="80">
+        </div>
+        <div class="cart-notification__product-details">
+            <h3 class="cart-notification__product-title h5">
+                <a href=""></a>
+            </h3>
+            <p class="cart-notification__product-usp meta"></p>
+            <div class="cart-notification__product-price-wrapper">
+                <span class="cart-notification__product-quantity meta"></span>
+                <span class="cart-notification__product-price"></span>
+            </div>
+        </div>
+    </div>
+</template>
