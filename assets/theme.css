@@ -20,7 +20,7 @@
     align-items: center;
     justify-content: center;
     padding: var(--button-padding-primary);
-    background-image: url('icon-btn-bg.svg');
+    background-image: url('icon-btn-bg--fullwidth.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 99%;
@@ -34,19 +34,19 @@
     font-weight: var(--font-weight-medium);
     transition: all var(--transition-duration) ease;
     appearance: none;
-    width: fit-content;
+    width: 100%;
     position: relative;
     z-index: 1;
 }
 
 #shopify-pc__banner__btn-accept:hover,
 #shopify-pc__prefs__header-accept:hover {
-    background-image: url('icon-btn-bg--hover.svg');
+    background-image: url('icon-btn-bg--fullwidth-dark.svg');
 }
 
 #shopify-pc__banner__btn-accept:focus,
 #shopify-pc__prefs__header-accept:focus {
-    background-image: url('icon-btn-bg--focused.svg');
+    background-image: url('icon-btn-bg--fullwidth-dark.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 99%;
@@ -61,22 +61,7 @@
     pointer-events: none;
 }
 
-#shopify-pc__prefs__header-accept::before {
-    content: '';
-    width: 30px;
-    height: 28px;
-    background-image: url('icon-paw.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    flex-shrink: 0;
-    pointer-events: none;
-    position: absolute;
-    left: 8px;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: -1;
-}
+
 
 /* Secondary Button Styles */
 #shopify-pc__banner__btn-decline,
@@ -86,12 +71,12 @@
     justify-content: center;
     gap: var(--button-gap);
     padding: var(--button-padding-primary);
-    background-image: url('icon-btn-scndry-bg.svg');
+    background-image: url('icon-btn-bg--fullwidth-hollow.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 99%;
     background-color: transparent;
-    color: var(--button-background-color);
+    color: var(--color-primary);
     border: none;
     border-radius: var(--button-border-radius);
     cursor: pointer;
@@ -100,24 +85,24 @@
     font-weight: var(--font-weight-medium);
     transition: all var(--transition-duration) ease;
     appearance: none;
-    width: fit-content;
+    width: 100%;
     position: relative;
     z-index: 1;
 }
 
 #shopify-pc__banner__btn-decline:hover,
 #shopify-pc__prefs__header-decline:hover {
-    background-image: url('icon-btn-scndry-bg--hover.svg');
-    color: var(--button-font-color);
+    background-image: url('icon-btn-bg--fullwidth.svg');
+    color: var(--color-white);
 }
 
 #shopify-pc__banner__btn-decline:focus,
 #shopify-pc__prefs__header-decline:focus {
-    background-image: url('icon-btn-scndry-bg--focused.svg');
+    background-image: url('icon-btn-bg--fullwidth-hollow.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 99%;
-    color: var(--button-font-color);
+    color: var(--color-primary);
     outline: none;
 }
 
@@ -128,22 +113,7 @@
     pointer-events: none;
 }
 
-#shopify-pc__prefs__header-decline::before {
-    content: '';
-    width: 30px;
-    height: 28px;
-    background-image: url('icon-paw.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    flex-shrink: 0;
-    pointer-events: none;
-    position: absolute;
-    left: 8px;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: -1;
-}
+
 
 /* Tertiary Button Styles */
 #shopify-pc__banner__btn-manage-prefs,
@@ -239,12 +209,6 @@
     font-weight: var(--font-weight-light);
     line-height: var(--line-height-lead);
     font-feature-settings: 'liga' off, 'clig' off;
-    display: flex;
-    align-items: center;
-}
-
-.shopify-pc__prefs__options .shopify-pc__prefs__option label svg path {
-    fill: var(--color-primary);
 }
 
 .shopify-pc__prefs__options .shopify-pc__prefs__option p {
@@ -256,8 +220,4 @@
     line-height: var(--line-height-paragraph);
     font-feature-settings: 'liga' off, 'clig' off;
     margin: 0 0 var(--font-paragraph-spacing);
-}
-
-.shopify-pc__prefs__options p {
-    padding-left: 0 !important;
 }
