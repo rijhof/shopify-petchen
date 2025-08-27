@@ -12,5 +12,5 @@
 @import url('_background.css');
 
 .shopify-pc__banner__btn-accept {
-    display: none;
+    display: none !important;
 }
