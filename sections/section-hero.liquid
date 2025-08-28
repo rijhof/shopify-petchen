@@ -39,9 +39,9 @@
             {% endif %}
 
             {% if section.settings.button_text != blank and section.settings.button_link != blank %}
-                <button href="{{ section.settings.button_link }}" class="button-primary">
+                <a href="{{ section.settings.button_link }}" class="button-primary">
                     {{ section.settings.button_text }}
-                </button>
+                </a>
             {% endif %}
         </div>
 

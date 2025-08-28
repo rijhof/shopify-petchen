@@ -39,11 +39,9 @@
             {% endif %}
 
             {% if section.settings.button_text != blank %}
-                {% render 'button',
-                        button_text: section.settings.button_text,
-                        button_url: section.settings.button_link,
-                        button_type: section.settings.button_type,
-                %}
+                <a href="{{ section.settings.button_link }}" class="button-primary">
+                    {{ section.settings.button_text }}
+                </a>
             {% endif %}
         </div>
 
