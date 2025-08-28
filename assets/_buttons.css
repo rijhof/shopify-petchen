@@ -338,241 +338,243 @@ button:not([class]):hover {
     background-image: url('icon-btn-bg--hover.svg');
 }
 
+/* Setting !important because of theme editor styles */
+
 /* Contrast Background Styles */
 .background-contrast .button-primary {
-    background-image: url('icon-contrast-btn-bg.svg');
-    color: var(--color-text);
+    background-image: url('icon-contrast-btn-bg.svg') !important;
+    color: var(--color-text) !important;
 }
 
 .background-contrast .button-primary:not(.icon--left):not(.icon--right):not(.icon)::before {
-    background-image: url('icon-contrast-paw.svg');
+    background-image: url('icon-contrast-paw.svg') !important;
 }
 
 .background-contrast .button-primary:hover {
-    background-image: url('icon-contrast-btn-bg--hover.svg');
-    color: var(--color-text);
+    background-image: url('icon-contrast-btn-bg--hover.svg') !important;
+    color: var(--color-text) !important;
 }
 
 .background-contrast .button-primary:focus {
-    background-image: url('icon-contrast-btn-bg--focused.svg');
-    color: var(--color-text);
+    background-image: url('icon-contrast-btn-bg--focused.svg') !important;
+    color: var(--color-text) !important;
 }
 
 .background-contrast .button-primary.icon--right::after {
-    background-image: url('icon-contrast-chevron-right.svg');
+    background-image: url('icon-contrast-chevron-right.svg') !important;
 }
 
 .background-contrast .button-primary.icon--left::before {
-    background-image: url('icon-contrast-chevron-right.svg');
+    background-image: url('icon-contrast-chevron-right.svg') !important;
 }
 
 .background-contrast .button-primary.icon::after {
-    background-image: url('icon-contrast-chevron-right.svg');
+    background-image: url('icon-contrast-chevron-right.svg') !important;
 }
 
 .background-contrast .button-secondary {
-    background-image: url('icon-contrast-btn-scndry-bg.svg');
-    color: var(--button-font-color);
+    background-image: url('icon-contrast-btn-scndry-bg.svg') !important;
+    color: var(--button-font-color) !important;
 }
 
 .background-contrast .button-secondary:hover {
-    background-image: url('icon-contrast-btn-scndry-bg--hover.svg');
-    color: var(--color-text);
+    background-image: url('icon-contrast-btn-scndry-bg--hover.svg') !important;
+    color: var(--color-text) !important;
 }
 
 .background-contrast .button-secondary:focus {
-    background-image: url('icon-contrast-btn-scndry-bg--focused.svg');
-    color: var(--color-text);
+    background-image: url('icon-contrast-btn-scndry-bg--focused.svg') !important;
+    color: var(--color-text) !important;
 }
 
 .background-contrast .button-secondary.icon--right::after {
-    background-image: url('icon-chevron-right.svg');
+    background-image: url('icon-chevron-right.svg') !important;
 }
 
 .background-contrast .button-secondary.icon--right:hover::after,
 .background-contrast .button-secondary.icon--right:focus::after {
-    background-image: url('icon-contrast-chevron-right.svg');
+    background-image: url('icon-contrast-chevron-right.svg') !important;
 }
 
 .background-contrast .button-secondary.icon--left::before {
-    background-image: url('icon-chevron-right.svg');
+    background-image: url('icon-chevron-right.svg') !important;
 }
 
 .background-contrast .button-secondary.icon--left:hover::before,
 .background-contrast .button-secondary.icon--left:focus::before {
-    background-image: url('icon-contrast-chevron-right.svg');
+    background-image: url('icon-contrast-chevron-right.svg') !important;
 }
 
 .background-contrast .button-secondary.icon {
-    background-image: url('icon-contrast-btn-scndry-bg--icon-only.svg');
+    background-image: url('icon-contrast-btn-scndry-bg--icon-only.svg') !important;
 }
 
 .background-contrast .button-secondary.icon:hover {
-    background-image: url('icon-contrast-btn-scndry-bg--icon-only-hover.svg');
+    background-image: url('icon-contrast-btn-scndry-bg--icon-only-hover.svg') !important;
 }
 
 .background-contrast .button-secondary.icon:focus {
-    background-image: url('icon-contrast-btn-scndry-bg--icon-only-focused.svg');
+    background-image: url('icon-contrast-btn-scndry-bg--icon-only-focused.svg') !important;
 }
 
 .background-contrast .button-secondary.icon::after {
-    background-image: url('icon-chevron-right.svg');
+    background-image: url('icon-chevron-right.svg') !important;
 }
 
 .background-contrast .button-secondary.icon:hover::after,
 .background-contrast .button-secondary.icon:focus::after {
-    background-image: url('icon-contrast-chevron-right.svg');
+    background-image: url('icon-contrast-chevron-right.svg') !important;
 }
 
 .background-contrast .button-tertiary {
-    color: var(--button-font-color);
+    color: var(--button-font-color) !important;
 }
 
 .background-contrast .button-tertiary:not(.icon--left):not(.icon--right):hover {
-    color: var(--color-background-two);
+    color: var(--color-background-two) !important;
 }
 
 .background-contrast .button-tertiary.icon--right::after {
-    background-image: url('icon-chevron-right.svg');
+    background-image: url('icon-chevron-right.svg') !important;
 }
 
 .background-contrast .button-tertiary.icon--right:hover::after {
-    background-image: url('icon-chevron-right-hover.svg');
+    background-image: url('icon-chevron-right-hover.svg') !important;
 }
 
 .background-contrast .button-tertiary.icon--left::before {
-    background-image: url('icon-chevron-right.svg');
+    background-image: url('icon-chevron-right.svg') !important;
 }
 
 .background-contrast .button-tertiary.icon--left:hover::before {
-    background-image: url('icon-chevron-right-hover.svg');
+    background-image: url('icon-chevron-right-hover.svg') !important;
 }
 
 .background-contrast button:not([class]) {
-    background-image: url('icon-contrast-btn-bg.svg');
-    color: var(--color-text);
+    background-image: url('icon-contrast-btn-bg.svg') !important;
+    color: var(--color-text) !important;
 }
 
 .background-contrast button:not([class]):hover {
-    background-image: url('icon-contrast-btn-bg--hover.svg');
-    color: var(--color-text);
+    background-image: url('icon-contrast-btn-bg--hover.svg') !important;
+    color: var(--color-text) !important;
 }
 
 /* Background Reset Styles for Buttons */
 
 .background-reset .button-primary {
-    background-image: url('icon-btn-bg.svg');
-    color: var(--button-font-color);
+    background-image: url('icon-btn-bg.svg') !important;
+    color: var(--button-font-color) !important;
 }
 
 .background-reset .button-primary:not(.icon--left):not(.icon--right):not(.icon)::before {
-    background-image: url('icon-paw.svg');
+    background-image: url('icon-paw.svg') !important;
 }
 
 .background-reset .button-primary:hover {
-    background-image: url('icon-btn-bg--hover.svg');
-    color: var(--button-font-color);
+    background-image: url('icon-btn-bg--hover.svg') !important;
+    color: var(--button-font-color) !important;
 }
 
 .background-reset .button-primary:focus {
-    background-image: url('icon-btn-bg--focused.svg');
-    color: var(--button-font-color);
+    background-image: url('icon-btn-bg--focused.svg') !important;
+    color: var(--button-font-color) !important;
 }
 
 .background-reset .button-primary.icon--right::after {
-    background-image: url('icon-chevron-right.svg');
+    background-image: url('icon-chevron-right.svg') !important;
 }
 
 .background-reset .button-primary.icon--left::before {
-    background-image: url('icon-chevron-right.svg');
+    background-image: url('icon-chevron-right.svg') !important;
 }
 
 .background-reset .button-primary.icon::after {
-    background-image: url('icon-chevron-right.svg');
+    background-image: url('icon-chevron-right.svg') !important;
 }
 
 .background-reset .button-secondary {
-    background-image: url('icon-btn-scndry-bg.svg');
-    color: var(--button-background-color);
+    background-image: url('icon-btn-scndry-bg.svg') !important;
+    color: var(--button-background-color) !important;
 }
 
 .background-reset .button-secondary:hover {
-    background-image: url('icon-btn-scndry-bg--hover.svg');
-    color: var(--button-font-color);
+    background-image: url('icon-btn-scndry-bg--hover.svg') !important;
+    color: var(--button-font-color) !important;
 }
 
 .background-reset .button-secondary:focus {
-    background-image: url('icon-btn-scndry-bg--focused.svg');
-    color: var(--button-font-color);
+    background-image: url('icon-btn-scndry-bg--focused.svg') !important;
+    color: var(--button-font-color) !important;
 }
 
 .background-reset .button-secondary.icon--right::after {
-    background-image: url('icon-chevron-right--bg.svg');
+    background-image: url('icon-chevron-right--bg.svg') !important;
 }
 
 .background-reset .button-secondary.icon--right:hover::after,
 .background-reset .button-secondary.icon--right:focus::after {
-    background-image: url('icon-chevron-right.svg');
+    background-image: url('icon-chevron-right.svg') !important;
 }
 
 .background-reset .button-secondary.icon--left::before {
-    background-image: url('icon-chevron-right--bg.svg');
+    background-image: url('icon-chevron-right--bg.svg') !important;
 }
 
 .background-reset .button-secondary.icon--left:hover::before,
 .background-reset .button-secondary.icon--left:focus::before {
-    background-image: url('icon-chevron-right.svg');
+    background-image: url('icon-chevron-right.svg') !important;
 }
 
 .background-reset .button-secondary.icon {
-    background-image: url('icon-btn-scndry-bg--icon-only.svg');
+    background-image: url('icon-btn-scndry-bg--icon-only.svg') !important;
 }
 
 .background-reset .button-secondary.icon:hover {
-    background-image: url('icon-btn-scndry-bg--icon-only-hover.svg');
+    background-image: url('icon-btn-scndry-bg--icon-only-hover.svg') !important;
 }
 
 .background-reset .button-secondary.icon:focus {
-    background-image: url('icon-btn-scndry-bg--icon-only-focused.svg');
+    background-image: url('icon-btn-scndry-bg--icon-only-focused.svg') !important;
 }
 
 .background-reset .button-secondary.icon::after {
-    background-image: url('icon-chevron-right--bg.svg');
+    background-image: url('icon-chevron-right--bg.svg') !important;
 }
 
 .background-reset .button-secondary.icon:hover::after,
 .background-reset .button-secondary.icon:focus::after {
-    background-image: url('icon-chevron-right.svg');
+    background-image: url('icon-chevron-right.svg') !important;
 }
 
 .background-reset .button-tertiary {
-    color: var(--color-link);
+    color: var(--color-link) !important;
 }
 
 .background-reset .button-tertiary:not(.icon--left):not(.icon--right):hover {
-    color: var(--color-text);
+    color: var(--color-text) !important;
 }
 
 .background-reset .button-tertiary.icon--right::after {
-    background-image: url('icon-contrast-chevron-right.svg');
+    background-image: url('icon-contrast-chevron-right.svg') !important;
 }
 
 .background-reset .button-tertiary.icon--left::before {
-    background-image: url('icon-contrast-chevron-right.svg');
+    background-image: url('icon-contrast-chevron-right.svg') !important;
 }
 
 .background-reset .button-tertiary.icon::after {
-    background-image: url('icon-contrast-chevron-right.svg');
+    background-image: url('icon-contrast-chevron-right.svg') !important;
 }
 
 .background-reset button:not([class]) {
-    background-image: url('icon-btn-bg.svg');
-    color: var(--button-font-color);
+    background-image: url('icon-btn-bg.svg') !important;
+    color: var(--button-font-color) !important;
 }
 
 .background-reset button:not([class]):hover {
-    background-image: url('icon-btn-bg--hover.svg');
-    color: var(--button-font-color);
+    background-image: url('icon-btn-bg--hover.svg') !important;
+    color: var(--button-font-color) !important;
 }
 
 /* Fullwidth Button Styles */
