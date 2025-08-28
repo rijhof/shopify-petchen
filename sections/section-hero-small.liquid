@@ -47,7 +47,9 @@
 
     </div>
 
-    {% render 'hero-small-breadcrumbs', breadcrumb_text: section.settings.breadcrumb_current %}
+    {% if section.settings.show_breadcrumbs %}
+        {% render 'hero-small-breadcrumbs', breadcrumb_text: section.settings.breadcrumb_current %}
+    {% endif %}
 </section>
 
 {% schema %}
@@ -70,6 +72,12 @@
       "type": "text",
       "id": "image_alt",
       "label": "Bild Alt-Text"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_breadcrumbs",
+      "label": "Breadcrumbs anzeigen",
+      "default": true
     },
     {
       "type": "text",
