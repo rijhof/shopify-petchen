@@ -11,11 +11,11 @@
     </div>
 
     <div class="product-column product-column--info">
-      <div class="product-wishlist">
-        <button type="button" class="button-secondary icon icon-empty" aria-label="Add to wishlist">
-          <img src="{{ 'icon-header--heart.svg' | asset_url }}" alt="" aria-hidden="true">
-        </button>
-      </div>
+      {% comment %}<div class="product-wishlist">{% endcomment %}
+        {% comment %}<button type="button" class="button-secondary icon icon-empty" aria-label="Add to wishlist">{% endcomment %}
+          {% comment %}<img src="{{ 'icon-header--heart.svg' | asset_url }}" alt="" aria-hidden="true">{% endcomment %}
+        {% comment %}</button>{% endcomment %}
+      {% comment %}</div>{% endcomment %}
 
       {% render 'product-info', product: product %}
 
