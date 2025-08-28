@@ -4,68 +4,93 @@
 
 {% assign background_classes = '' %}
 {% case section.settings.background_color %}
-    {% when 'green' %}
-        {% assign background_classes = ' background-one background-contrast' %}
-    {% when 'dark_green' %}
-        {% assign background_classes = ' background-two background-contrast' %}
-    {% else %}
-        {% assign background_classes = '' %}
+  {% when 'green' %}
+    {% assign background_classes = ' background-one background-contrast' %}
+  {% when 'dark_green' %}
+    {% assign background_classes = ' background-two background-contrast' %}
+  {% else %}
+    {% assign background_classes = '' %}
 {% endcase %}
 
 {% assign layout_class = '' %}
 {% if section.settings.image_position == 'right' %}
-    {% assign layout_class = ' section-image-text--image-right' %}
+  {% assign layout_class = ' section-image-text--image-right' %}
 {% endif %}
 
 <div class="section-image-text section{{ background_classes }}{{ layout_class }}" aria-labelledby="section-image-text-{{ section.id }}">
-    <div class="container">
-        <div class="section-image-text__wrapper">
+  <div class="container">
 
-            <div class="section-image-text__media">
-                {% if section.settings.image %}
-                    {% render 'image',
-                            image: section.settings.image,
-                            aspect_ratio: '1-1',
-                            decoration_type: section.settings.decoration_type,
-                            alt: section.settings.image_alt,
-                            loading: 'lazy',
-                            sizes: '(min-width: 1280px) 700px, (min-width: 768px) 50vw, 100vw'
-                    %}
-                {% else %}
-                    <div class="section-image-text__placeholder">
-                        {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
-                    </div>
-                {% endif %}
+    {% if section.settings.precontent_heading != blank or section.settings.precontent_content != blank %}
+      <div class="section-image-text__precontent">
+        <div class="content-narrow">
+          {% if section.settings.precontent_heading != blank %}
+            <h2 class="section-image-text__precontent-title">
+              {{ section.settings.precontent_heading }}
+            </h2>
+          {% endif %}
+
+          {% if section.settings.precontent_content != blank %}
+            <div class="section-image-text__precontent-richtext">
+              {{ section.settings.precontent_content }}
             </div>
-
-            <div class="section-image-text__content">
-                <div class="section-image-text__header">
-                    <h2 id="section-image-text-{{ section.id }}" class="section-image-text__title">
-                        {{ section.settings.heading | default: 'Überschrift' }}
-                    </h2>
-                </div>
-
-                {% if section.settings.content != blank %}
-                    <div class="section-image-text__richtext">
-                        {{ section.settings.content }}
-                    </div>
-                {% endif %}
-
-                {% if section.settings.button_text != blank %}
-                    <div class="section-image-text__action">
-                        {% render 'button',
-                                button_text: section.settings.button_text,
-                                button_url: section.settings.button_link,
-                                button_type: section.settings.button_type,
-                                icon_position: section.settings.icon_position
-                        %}
-                    </div>
-                {% endif %}
-
-            </div>
-
+          {% endif %}
         </div>
+      </div>
+    {% endif %}
+
+    <div class="section-image-text__wrapper">
+
+      <div class="section-image-text__media">
+        {% if section.settings.image %}
+          {% render 'image',
+                  image: section.settings.image,
+                  aspect_ratio: '1-1',
+                  decoration_type: section.settings.decoration_type,
+                  alt: section.settings.image_alt,
+                  loading: 'lazy',
+                  sizes: '(min-width: 1280px) 700px, (min-width: 768px) 50vw, 100vw'
+          %}
+        {% else %}
+          <div class="section-image-text__placeholder">
+            {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+          </div>
+        {% endif %}
+      </div>
+
+      <div class="section-image-text__content">
+        <div class="section-image-text__header">
+          {% if section.settings.heading_level == 'h3' %}
+            <h3 id="section-image-text-{{ section.id }}" class="section-image-text__title">
+              {{ section.settings.heading | default: 'Überschrift' }}
+            </h3>
+          {% else %}
+            <h2 id="section-image-text-{{ section.id }}" class="section-image-text__title">
+              {{ section.settings.heading | default: 'Überschrift' }}
+            </h2>
+          {% endif %}
+        </div>
+
+        {% if section.settings.content != blank %}
+          <div class="section-image-text__richtext">
+            {{ section.settings.content }}
+          </div>
+        {% endif %}
+
+        {% if section.settings.button_text != blank %}
+          <div class="section-image-text__action">
+            {% render 'button',
+                    button_text: section.settings.button_text,
+                    button_url: section.settings.button_link,
+                    button_type: section.settings.button_type,
+                    icon_position: section.settings.icon_position
+            %}
+          </div>
+        {% endif %}
+
+      </div>
+
     </div>
+  </div>
 </div>
 
 {% schema %}
@@ -74,6 +99,20 @@
   "tag": "section",
   "class": "section-image-text-wrapper",
   "settings": [
+    {
+      "type": "header",
+      "content": "Precontent"
+    },
+    {
+      "type": "text",
+      "id": "precontent_heading",
+      "label": "Precontent Überschrift"
+    },
+    {
+      "type": "richtext",
+      "id": "precontent_content",
+      "label": "Precontent Inhalt"
+    },
     {
       "type": "header",
       "content": "Bild-Einstellungen"
@@ -138,6 +177,23 @@
       "id": "heading",
       "label": "Überschrift",
       "default": "Überschrift"
+    },
+    {
+      "type": "select",
+      "id": "heading_level",
+      "label": "Überschrift Level",
+      "options": [
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        }
+      ],
+      "default": "h2",
+      "info": "Bei Pre Content bitte h3 verwenden"
     },
     {
       "type": "richtext",

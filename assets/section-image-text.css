@@ -1,3 +1,25 @@
+.section-image-text__precontent {
+    margin-bottom: calc(var(--baseline) * 4);
+}
+
+.section-image-text__precontent-title {
+    margin: 0 0 calc(var(--baseline) * 3);
+}
+
+.section-image-text__precontent-richtext {
+    font-size: var(--font-size-paragraph);
+    line-height: var(--line-height-paragraph);
+}
+
+.section-image-text__precontent-richtext p {
+    margin-top: 0;
+    margin-bottom: calc(var(--baseline) * 2);
+}
+
+.section-image-text__precontent-richtext p:last-child {
+    margin-bottom: 0;
+}
+
 .section-image-text__wrapper {
     display: grid;
     grid-template-columns: 1fr;

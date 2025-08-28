@@ -164,7 +164,6 @@
 /* Content width utilities */
 .content-narrow {
     max-width: var(--content-max-width);
-    margin-left: auto;
     margin-right: auto;
 }
 
