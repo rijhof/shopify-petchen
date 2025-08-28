@@ -1,18 +1,18 @@
-<h1>{{ section.settings.title }}</h1>
-
-{% for collection in collections %}
-  {% if collection.all_products_count > 0 %}
-    <a href="{{ collection.url }}">
-      {% if collection.featured_image != blank %}
-        {% assign collection_image = collection.featured_image %}
-      {% else %}
-        {% assign collection_image = collection.products.first.image %}
-      {% endif %}
-      <img src="{{ collection_image | img_url: 'medium' }}" alt="{{ collection.title | escape }}">
-    </a>
-    {{ collection.title }}    
-  {% endif %}
-{% endfor %}
+{% comment %}<h1>{{ section.settings.title }}</h1>{% endcomment %}
+{% comment %}{% endcomment %}
+{% comment %}{% for collection in collections %}{% endcomment %}
+  {% comment %}{% if collection.all_products_count > 0 %}{% endcomment %}
+    {% comment %}<a href="{{ collection.url }}">{% endcomment %}
+      {% comment %}{% if collection.featured_image != blank %}{% endcomment %}
+        {% comment %}{% assign collection_image = collection.featured_image %}{% endcomment %}
+      {% comment %}{% else %}{% endcomment %}
+        {% comment %}{% assign collection_image = collection.products.first.image %}{% endcomment %}
+      {% comment %}{% endif %}{% endcomment %}
+      {% comment %}<img src="{{ collection_image | img_url: 'medium' }}" alt="{{ collection.title | escape }}">{% endcomment %}
+    {% comment %}</a>{% endcomment %}
+    {% comment %}{{ collection.title }}    {% endcomment %}
+  {% comment %}{% endif %}{% endcomment %}
+{% comment %}{% endfor %}{% endcomment %}
 
 
 {% schema %}

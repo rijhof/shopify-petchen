@@ -1,17 +1,17 @@
-<div>
-  <a href="{{ routes.collections_url }}">Go back to all collections</a>
-  {% paginate collection.products by section.settings.number_of_products_per_page %}
-    <h1>{{ collection.title }}</h1>
-    <div>
-      {% for product in collection.products %}
-        {% render 'product-card', product_product: product %}
-      {% else %}
-        <p>There are no products in this collection</p>
-      {% endfor %}
-    </div>
-    {% render 'pagination', pagination: paginate %}
-  {% endpaginate %}
-</div>
+{% comment %}<div>{% endcomment %}
+  {% comment %}<a href="{{ routes.collections_url }}">Go back to all collections</a>{% endcomment %}
+  {% comment %}{% paginate collection.products by section.settings.number_of_products_per_page %}{% endcomment %}
+    {% comment %}<h1>{{ collection.title }}</h1>{% endcomment %}
+    {% comment %}<div>{% endcomment %}
+      {% comment %}{% for product in collection.products %}{% endcomment %}
+        {% comment %}{% render 'product-card', product_product: product %}{% endcomment %}
+      {% comment %}{% else %}{% endcomment %}
+        {% comment %}<p>There are no products in this collection</p>{% endcomment %}
+      {% comment %}{% endfor %}{% endcomment %}
+    {% comment %}</div>{% endcomment %}
+    {% comment %}{% render 'pagination', pagination: paginate %}{% endcomment %}
+  {% comment %}{% endpaginate %}{% endcomment %}
+{% comment %}</div>{% endcomment %}
 
 
 {% schema %}

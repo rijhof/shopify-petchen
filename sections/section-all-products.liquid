@@ -3,7 +3,7 @@
 {{ 'snippet-image.css' | asset_url | stylesheet_tag }}
 {{ 'snippet-image.js' | asset_url | script_tag }}
 
-<section class="section-all-products section" aria-labelledby="section-all-products-{{ section.id }}">
+<div class="section-all-products section" aria-labelledby="section-all-products-{{ section.id }}">
     <div class="container">
 
         {% if section.settings.heading != blank %}
@@ -48,7 +48,7 @@
             </div>
         {% endif %}
     </div>
-</section>
+</div>
 
 {% schema %}
 {

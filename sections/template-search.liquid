@@ -1,18 +1,18 @@
-{% paginate search.results by 10 %}
-  <h1>Search Results</h1>
-  {% if search.performed %}
-    {% if search.results.size > 0 %}
-      <p>{{ search.results.size }} results for the search term {{ search.terms | escape }}</p>
-      {% for item in search.results %}
-          {% case item.object_type %}
-            {% when 'product' %}
-              {% render 'product-card', product_product: item %}
-            {% else %}    
-          {% endcase %}
-      {% endfor %}
-    {% else %}
-      <p>No results found for the search term: {{ search.terms | escape }}.</p>
-    {% endif %}
-  {% endif %}
-  {% render 'pagination', pagination: paginate %}
-{% endpaginate %}
+{% comment %}{% paginate search.results by 10 %}{% endcomment %}
+  {% comment %}<h1>Search Results</h1>{% endcomment %}
+  {% comment %}{% if search.performed %}{% endcomment %}
+    {% comment %}{% if search.results.size > 0 %}{% endcomment %}
+      {% comment %}<p>{{ search.results.size }} results for the search term {{ search.terms | escape }}</p>{% endcomment %}
+      {% comment %}{% for item in search.results %}{% endcomment %}
+          {% comment %}{% case item.object_type %}{% endcomment %}
+            {% comment %}{% when 'product' %}{% endcomment %}
+              {% comment %}{% render 'product-card', product_product: item %}{% endcomment %}
+            {% comment %}{% else %}    {% endcomment %}
+          {% comment %}{% endcase %}{% endcomment %}
+      {% comment %}{% endfor %}{% endcomment %}
+    {% comment %}{% else %}{% endcomment %}
+      {% comment %}<p>No results found for the search term: {{ search.terms | escape }}.</p>{% endcomment %}
+    {% comment %}{% endif %}{% endcomment %}
+  {% comment %}{% endif %}{% endcomment %}
+  {% comment %}{% render 'pagination', pagination: paginate %}{% endcomment %}
+{% comment %}{% endpaginate %}{% endcomment %}

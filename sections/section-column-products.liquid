@@ -13,7 +13,7 @@
         {% assign background_classes = '' %}
 {% endcase %}
 
-<section class="section-column-products section{{ background_classes }}" aria-labelledby="section-column-products-{{ section.id }}">
+<div class="section-column-products section{{ background_classes }}" aria-labelledby="section-column-products-{{ section.id }}">
     <div class="container">
 
         {% if section.settings.heading != blank or section.settings.content != blank %}

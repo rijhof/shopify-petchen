@@ -1,7 +1,7 @@
 {{ 'section-cta.css' | asset_url | stylesheet_tag }}
 
 {% assign background_classes = '' %}
-<section class="section-cta section background-two background-contrast" aria-labelledby="section-cta-{{ section.id }}">
+<div class="section-cta section background-two background-contrast" aria-labelledby="section-cta-{{ section.id }}">
   <div class="section-cta__decorations">
     <div class="section-cta__decoration section-cta__decoration--cloud-one section-cta__decoration--desktop">
       <img src="{{ 'illustration-cloud-one.svg' | asset_url }}" alt="" role="presentation">
@@ -55,7 +55,7 @@
       </div>
     </div>
   </div>
-</section>
+</div>
 
 {% schema %}
 {

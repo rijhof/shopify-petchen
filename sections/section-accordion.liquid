@@ -13,7 +13,7 @@
     {% assign background_classes = '' %}
 {% endcase %}
 
-<section class="section-accordion section{{ background_classes }}" aria-labelledby="section-accordion-{{ section.id }}">
+<div class="section-accordion section{{ background_classes }}" aria-labelledby="section-accordion-{{ section.id }}">
   <div class="container">
     <div class="section-accordion__wrapper">
       <div class="section-accordion__header">
@@ -44,7 +44,7 @@
       </div>
     </div>
   </div>
-</section>
+</div>
 
 {% schema %}
 {

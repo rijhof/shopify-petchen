@@ -18,7 +18,7 @@
   {% assign layout_class = ' section-products-image--products-right' %}
 {% endif %}
 
-<section class="section-products-image section{{ background_classes }}{{ layout_class }}" aria-labelledby="section-products-image-{{ section.id }}">
+<div class="section-products-image section{{ background_classes }}{{ layout_class }}" aria-labelledby="section-products-image-{{ section.id }}">
   <div class="container">
 
     {% if section.settings.heading != blank or section.settings.pre_content != blank %}
@@ -95,7 +95,7 @@
     {% endif %}
 
   </div>
-</section>
+</div>
 
 {% schema %}
 {

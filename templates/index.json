@@ -719,187 +719,12 @@
         "background_color": "dark_green"
       }
     },
-    "section_text_fgNMYM": {
+    "section_text_Kg8YpX": {
       "type": "section-text",
-      "blocks": {
-        "text_JzKQbK": {
-          "type": "text",
-          "settings": {
-            "text": "Wir lieben unsere Tiere"
-          }
-        },
-        "icon_WzGzGW": {
-          "type": "icon",
-          "settings": {
-            "icon": "heart_paw"
-          }
-        },
-        "text_n9VU7g": {
-          "type": "text",
-          "settings": {
-            "text": "und möchten ihnen nur das Beste geben."
-          }
-        },
-        "icon_QqJ7qU": {
-          "type": "icon",
-          "settings": {
-            "icon": "flower"
-          }
-        },
-        "text_4Q3qre": {
-          "type": "text",
-          "settings": {
-            "text": "Deshalb verwenden wir nur natürliche Zutaten"
-          }
-        },
-        "icon_G7HNNc": {
-          "type": "icon",
-          "settings": {
-            "icon": "butterfly"
-          }
-        },
-        "text_4L9Dj7": {
-          "type": "text",
-          "settings": {
-            "text": "für unsere Produkte."
-          }
-        }
-      },
-      "block_order": [
-        "text_JzKQbK",
-        "icon_WzGzGW",
-        "text_n9VU7g",
-        "icon_QqJ7qU",
-        "text_4Q3qre",
-        "icon_G7HNNc",
-        "text_4L9Dj7"
-      ],
-      "name": "Text mit Icons",
-      "settings": {
-        "background_color": "default",
-        "show_decoration": false
-      }
-    },
-    "section_text_iU6iFi": {
-      "type": "section-text",
-      "blocks": {
-        "text_tKCX7P": {
-          "type": "text",
-          "settings": {
-            "text": "Wir lieben unsere Tiere"
-          }
-        },
-        "icon_e3NXhB": {
-          "type": "icon",
-          "settings": {
-            "icon": "heart_paw"
-          }
-        },
-        "text_wmzxBC": {
-          "type": "text",
-          "settings": {
-            "text": "und möchten ihnen nur das Beste geben."
-          }
-        },
-        "icon_QQe8zg": {
-          "type": "icon",
-          "settings": {
-            "icon": "flower"
-          }
-        },
-        "text_GYpWgN": {
-          "type": "text",
-          "settings": {
-            "text": "Deshalb verwenden wir nur natürliche Zutaten"
-          }
-        },
-        "icon_BD4RGD": {
-          "type": "icon",
-          "settings": {
-            "icon": "butterfly"
-          }
-        },
-        "text_AHCq7m": {
-          "type": "text",
-          "settings": {
-            "text": "für unsere Produkte."
-          }
-        }
-      },
-      "block_order": [
-        "text_tKCX7P",
-        "icon_e3NXhB",
-        "text_wmzxBC",
-        "icon_QQe8zg",
-        "text_GYpWgN",
-        "icon_BD4RGD",
-        "text_AHCq7m"
-      ],
-      "name": "Text mit Icons",
+      "name": "Text mit Call to Action",
       "settings": {
         "background_color": "green",
         "show_decoration": true
-      }
-    },
-    "section_text_LXEW96": {
-      "type": "section-text",
-      "blocks": {
-        "text_HECDUd": {
-          "type": "text",
-          "settings": {
-            "text": "Wir lieben unsere Tiere"
-          }
-        },
-        "icon_ECzgpn": {
-          "type": "icon",
-          "settings": {
-            "icon": "heart_paw"
-          }
-        },
-        "text_NLjcJM": {
-          "type": "text",
-          "settings": {
-            "text": "und möchten ihnen nur das Beste geben."
-          }
-        },
-        "icon_dGDB74": {
-          "type": "icon",
-          "settings": {
-            "icon": "flower"
-          }
-        },
-        "text_VkYazc": {
-          "type": "text",
-          "settings": {
-            "text": "Deshalb verwenden wir nur natürliche Zutaten"
-          }
-        },
-        "icon_xqgn9t": {
-          "type": "icon",
-          "settings": {
-            "icon": "butterfly"
-          }
-        },
-        "text_cUrdXw": {
-          "type": "text",
-          "settings": {
-            "text": "für unsere Produkte."
-          }
-        }
-      },
-      "block_order": [
-        "text_HECDUd",
-        "icon_ECzgpn",
-        "text_NLjcJM",
-        "icon_dGDB74",
-        "text_VkYazc",
-        "icon_xqgn9t",
-        "text_cUrdXw"
-      ],
-      "name": "Text mit Icons",
-      "settings": {
-        "background_color": "dark_green",
-        "show_decoration": false
       }
     }
   },
@@ -925,8 +750,6 @@
     "section_accordion_DHLQhW",
     "section_accordion_EWhL39",
     "section_accordion_78VBD8",
-    "section_text_fgNMYM",
-    "section_text_iU6iFi",
-    "section_text_LXEW96"
+    "section_text_Kg8YpX"
   ]
 }

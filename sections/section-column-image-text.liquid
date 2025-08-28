@@ -12,7 +12,7 @@
         {% assign background_classes = '' %}
 {% endcase %}
 
-<section class="section-column-image-text section{{ background_classes }}" aria-labelledby="section-column-image-text-{{ section.id }}">
+<div class="section-column-image-text section{{ background_classes }}" aria-labelledby="section-column-image-text-{{ section.id }}">
     <div class="container">
 
         {% if section.settings.heading != blank or section.settings.content != blank %}
@@ -74,7 +74,7 @@
         {% endif %}
 
     </div>
-</section>
+</div>
 
 {% schema %}
 {

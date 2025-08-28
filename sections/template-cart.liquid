@@ -2,7 +2,7 @@
 {{ 'template-cart.css' | asset_url | stylesheet_tag }}
 {{ 'template-cart.js' | asset_url | script_tag }}
 
-<section class="cart section" aria-labelledby="cart-title">
+<div class="cart section" aria-labelledby="cart-title">
   <div class="container">
     <div class="cart__header">
       <h1 id="cart-title" class="cart__title">Warenkorb</h1>
@@ -156,7 +156,7 @@
       </div>
     {% endif %}
   </div>
-</section>
+</div>
 
 {% schema %}
 {

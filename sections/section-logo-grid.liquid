@@ -1,6 +1,6 @@
 {{ 'section-logo-grid.css' | asset_url | stylesheet_tag }}
 
-<section class="section-logo-grid section" aria-labelledby="section-logo-grid-{{ section.id }}">
+<div class="section-logo-grid section" aria-labelledby="section-logo-grid-{{ section.id }}">
     <div class="container">
         {% if section.settings.heading != blank %}
             <div class="section-logo-grid__header">
@@ -49,7 +49,7 @@
             </div>
         </div>
     </div>
-</section>
+</div>
 
 {% schema %}
 {
