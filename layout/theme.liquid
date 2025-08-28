@@ -36,7 +36,7 @@
   {{ 'section-header.css' | asset_url | stylesheet_tag }}
   {{ 'cart-notification.css' | asset_url | stylesheet_tag }}
 
-  {{ 'snippet-product-card.js' | asset_url | script_tag }}
+  <script src="{{ 'snippet-product-card.js' | asset_url }}" defer></script>
   {{ 'snippet-product-card-modal.css' | asset_url | stylesheet_tag }}
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
