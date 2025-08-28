@@ -13,26 +13,156 @@
       "type": "template-page",
       "settings": {}
     },
-    "section_all_products_bJ3pwt": {
-      "type": "section-all-products",
-      "name": "Alle Produkte",
+    "section_hero_small_B8xWCA": {
+      "type": "section-hero-small",
+      "name": "Hero Klein",
       "settings": {
-        "heading": "Alle Produkte",
-        "product_limit": 12,
-        "show_quick_add": true,
-        "show_wishlist": true,
-        "show_view_all": false,
-        "view_all_url": "",
-        "view_all_text": "Alle Produkte anzeigen",
+        "image_desktop": "shopify://shop_images/Hero__Bild_oder_Vi_deo_04e0d27b-f1f0-44e0-a33b-446121156a3c.png",
+        "image_mobile": "shopify://shop_images/Hero__Bild_oder_Vi_deo_14517e2b-daf6-4ae9-8c25-6ad1790946d1.png",
+        "image_alt": "",
+        "show_breadcrumbs": false,
+        "breadcrumb_current": "",
+        "heading_h1": "Petchen x Adoptieren statt Produzieren",
+        "heading_h2": "Mit jedem Kauf Gutes tun!",
+        "button_text": "",
+        "button_link": "",
+        "button_type": "primary"
+      }
+    },
+    "section_text_TCcdkC": {
+      "type": "section-text",
+      "blocks": {
+        "text_QQTnjH": {
+          "type": "text",
+          "settings": {
+            "text": "Unsere Pflege endet nicht in der Wanne"
+          }
+        },
+        "icon_DFzJAQ": {
+          "type": "icon",
+          "settings": {
+            "icon": "butterfly"
+          }
+        },
+        "text_7bwGxa": {
+          "type": "text",
+          "settings": {
+            "text": "– wir unterstützen aus Überzeugung und Liebe zu unseren Fellnasen den gemeinnützigen Tierschutzverein Adoptieren Statt Produzieren e.V."
+          }
+        },
+        "icon_37N9PA": {
+          "type": "icon",
+          "settings": {
+            "icon": "little_heart"
+          }
+        },
+        "text_3REcTa": {
+          "type": "text",
+          "settings": {
+            "text": "Für jedes verkaufte Produkt spenden wir 25 Cent an den gemeinnützigen Verein."
+          }
+        }
+      },
+      "block_order": [
+        "text_QQTnjH",
+        "icon_DFzJAQ",
+        "text_7bwGxa",
+        "icon_37N9PA",
+        "text_3REcTa"
+      ],
+      "name": "Text mit Icons",
+      "settings": {
+        "background_color": "default",
+        "show_decoration": true
+      }
+    },
+    "section_logo_grid_3meUWK": {
+      "type": "section-logo-grid",
+      "name": "Logo Grid",
+      "settings": {
+        "heading": "",
+        "logo_1": "shopify://shop_images/Certificate-eco-cert-1_1.png",
+        "logo_1_alt": "Cosmos Organic",
+        "logo_2": "shopify://shop_images/Certificate-recycled-packaging-2_1.png",
+        "logo_2_alt": "Recycled PET",
+        "logo_3": "shopify://shop_images/Certificate-plant-based-2_1.png",
+        "logo_3_alt": "Plant Based Plastic Tube",
+        "logo_4": "shopify://shop_images/Certificate-vegan-formula-3_1.png",
+        "logo_4_alt": "Vegan Formula"
+      }
+    },
+    "section_image_text_aFrcpz": {
+      "type": "section-image-text",
+      "name": "Bild mit Text",
+      "settings": {
+        "precontent_heading": "",
+        "precontent_content": "",
+        "image": "shopify://shop_images/martin-ruther-mit-hund.png",
+        "image_alt": "",
+        "decoration_type": "none",
+        "image_position": "right",
+        "heading": "Adoptieren statt Produzieren",
+        "heading_level": "h2",
+        "content": "<p>Gegründet 2025 von Hundeprofi Martin Rütter, der sich seit über 30 Jahren für artgerechte Hundehaltung und Tierschutz einsetzt. Mit der Botschaft „Adoptieren statt Produzieren!“ macht er sich stark gegen illegalen Welpenhandel und für Adoption aus dem Tierschutz.</p>",
+        "button_text": "Zur Website",
+        "button_link": "#",
+        "button_type": "secondary",
+        "icon_position": "none",
+        "background_color": "default"
+      }
+    },
+    "section_image_symbols_text_HT8CgA": {
+      "type": "section-image-symbols-text",
+      "blocks": {
+        "symbol_text_Ugp9GK": {
+          "type": "symbol_text",
+          "settings": {
+            "icon": "icon-decor-house-paw.svg",
+            "heading": "Überlastete Tierheime ",
+            "content": ""
+          }
+        },
+        "symbol_text_WtMnwk": {
+          "type": "symbol_text",
+          "settings": {
+            "icon": "icon-decor-broken-heart.svg",
+            "heading": "Qualzuchten & Auslandstierschutz",
+            "content": ""
+          }
+        },
+        "symbol_text_9U6BNU": {
+          "type": "symbol_text",
+          "settings": {
+            "icon": "icon-decor-business-card.svg",
+            "heading": "Hundeführerschein",
+            "content": ""
+          }
+        }
+      },
+      "block_order": [
+        "symbol_text_Ugp9GK",
+        "symbol_text_WtMnwk",
+        "symbol_text_9U6BNU"
+      ],
+      "name": "Bild mit Symbolen & Text",
+      "settings": {
+        "image": "shopify://shop_images/Hund_in_Kaefig.png",
+        "image_alt": "",
+        "image_position": "left",
+        "heading": "Doch es gibt noch mehr zu tun",
         "button_text": "",
         "button_link": "",
         "button_type": "primary",
-        "icon_position": "right"
+        "background_color": "default"
       }
     }
   },
   "order": [
     "template",
-    "section_all_products_bJ3pwt"
+    "section_hero_small_B8xWCA",
+    "section_text_TCcdkC",
+    "section_logo_grid_3meUWK",
+    "section_image_text_aFrcpz",
+    "section_image_symbols_text_HT8CgA"
   ]
 }
