@@ -571,7 +571,7 @@
             "product": "testprodukt-2"
           }
         },
-        "product_NhJigp": {
+        "product_r3RaRd": {
           "type": "product",
           "settings": {
             "product": "langhaar-hundeshampoo"
@@ -582,7 +582,7 @@
         "product_8KpVHN",
         "product_dYLMdC",
         "product_34fxTx",
-        "product_NhJigp"
+        "product_r3RaRd"
       ],
       "name": "Produkte mit Bild",
       "settings": {
@@ -598,6 +598,126 @@
         "button_type": "primary",
         "icon_position": "right",
         "background_color": "default"
+      }
+    },
+    "section_accordion_DHLQhW": {
+      "type": "section-accordion",
+      "blocks": {
+        "faq_item_AFP7mh": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Wie verwende ich dieses Produkt?",
+            "answer": "<p>Unser Produkt ist einfach in der Anwendung. Befolgen Sie die mitgelieferte Anleitung für beste Ergebnisse.</p>",
+            "open_by_default": false
+          }
+        },
+        "faq_item_A6BRpj": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Welche Inhaltsstoffe sind enthalten?",
+            "answer": "<p>Wir verwenden nur hochwertige, natürliche Inhaltsstoffe. Die vollständige Liste finden Sie auf der Produktverpackung.</p>",
+            "open_by_default": false
+          }
+        },
+        "faq_item_mtD4cY": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Wie lange ist die Lieferzeit?",
+            "answer": "<p>Die Standardlieferzeit beträgt 2-3 Werktage innerhalb Deutschlands.</p>",
+            "open_by_default": false
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_AFP7mh",
+        "faq_item_A6BRpj",
+        "faq_item_mtD4cY"
+      ],
+      "name": "FAQ Accordion",
+      "settings": {
+        "heading": "FAQ",
+        "description": "Häufig gestellte Fragen zu diesem Produkt.",
+        "background_color": "default"
+      }
+    },
+    "section_accordion_EWhL39": {
+      "type": "section-accordion",
+      "blocks": {
+        "faq_item_FM6DkT": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Wie verwende ich dieses Produkt?",
+            "answer": "<p>Unser Produkt ist einfach in der Anwendung. Befolgen Sie die mitgelieferte Anleitung für beste Ergebnisse.</p>",
+            "open_by_default": false
+          }
+        },
+        "faq_item_7zmkKA": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Welche Inhaltsstoffe sind enthalten?",
+            "answer": "<p>Wir verwenden nur hochwertige, natürliche Inhaltsstoffe. Die vollständige Liste finden Sie auf der Produktverpackung.</p>",
+            "open_by_default": false
+          }
+        },
+        "faq_item_MrgR3F": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Wie lange ist die Lieferzeit?",
+            "answer": "<p>Die Standardlieferzeit beträgt 2-3 Werktage innerhalb Deutschlands.</p>",
+            "open_by_default": false
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_FM6DkT",
+        "faq_item_7zmkKA",
+        "faq_item_MrgR3F"
+      ],
+      "name": "FAQ Accordion",
+      "settings": {
+        "heading": "FAQ",
+        "description": "Häufig gestellte Fragen zu diesem Produkt.",
+        "background_color": "green"
+      }
+    },
+    "section_accordion_78VBD8": {
+      "type": "section-accordion",
+      "blocks": {
+        "faq_item_y6FwkN": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Wie verwende ich dieses Produkt?",
+            "answer": "<p>Unser Produkt ist einfach in der Anwendung. Befolgen Sie die mitgelieferte Anleitung für beste Ergebnisse.</p>",
+            "open_by_default": false
+          }
+        },
+        "faq_item_xXdxjU": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Welche Inhaltsstoffe sind enthalten?",
+            "answer": "<p>Wir verwenden nur hochwertige, natürliche Inhaltsstoffe. Die vollständige Liste finden Sie auf der Produktverpackung.</p>",
+            "open_by_default": false
+          }
+        },
+        "faq_item_Q4LHDb": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Wie lange ist die Lieferzeit?",
+            "answer": "<p>Die Standardlieferzeit beträgt 2-3 Werktage innerhalb Deutschlands.</p>",
+            "open_by_default": false
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_y6FwkN",
+        "faq_item_xXdxjU",
+        "faq_item_Q4LHDb"
+      ],
+      "name": "FAQ Accordion",
+      "settings": {
+        "heading": "FAQ",
+        "description": "Häufig gestellte Fragen zu diesem Produkt.",
+        "background_color": "dark_green"
       }
     }
   },
@@ -619,6 +739,9 @@
     "section_column_image_text_t4qMgp",
     "section_cta_UxzWdt",
     "section_column_products_zB3fUC",
-    "section_products_with_image_j6AXYA"
+    "section_products_with_image_j6AXYA",
+    "section_accordion_DHLQhW",
+    "section_accordion_EWhL39",
+    "section_accordion_78VBD8"
   ]
 }
