@@ -1,5 +1,25 @@
 {{ 'section-hero.css' | asset_url | stylesheet_tag }}
 
+
+{% comment %} Theme Editor styles {% endcomment %}
+{% if request.design_mode %}
+    <style>
+        /* Theme Editor Fix - Higher Specificity */
+        .section-hero.background-contrast .hero-content h1,
+        .section-hero.background-contrast .hero-content h2,
+        .section-hero.background-contrast .hero-content h3,
+        .section-hero.background-contrast .hero-content h4,
+        .section-hero.background-contrast .hero-content h5,
+        .section-hero.background-contrast .hero-content h6,
+        .section-hero.background-contrast .hero-content p,
+        .section-hero.background-contrast .hero-content .lead,
+        .section-hero.background-contrast .hero-content .meta,
+        .section-hero.background-contrast .hero-content span {
+            color: var(--color-white) !important;
+        }
+    </style>
+{% endif %}
+
 <section class="background-contrast">
     <div class="hero-section container">
         <div class="hero-background">
