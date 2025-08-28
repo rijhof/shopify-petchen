@@ -191,7 +191,7 @@ figcaption {
 .background-contrast blockquote,
 .background-contrast figcaption,
 .background-contrast span {
-    color: var(--color-white);
+    color: var(--color-white) !important;
 }
 
 .background-contrast a:hover {
