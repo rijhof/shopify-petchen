@@ -24,6 +24,7 @@
     },
     "section_hero_small_gktcAQ": {
       "type": "section-hero-small",
+      "disabled": true,
       "name": "Hero Klein",
       "settings": {
         "image_desktop": "shopify://shop_images/Hero__Bild_oder_Vi_deo_d1cbb47e-9c3a-4d79-b18b-e2117b3334ed.png",
