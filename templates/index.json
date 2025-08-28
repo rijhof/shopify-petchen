@@ -719,6 +719,14 @@
         "description": "Häufig gestellte Fragen zu diesem Produkt.",
         "background_color": "dark_green"
       }
+    },
+    "section_text_Kg8YpX": {
+      "type": "section-text",
+      "name": "Text mit Call to Action",
+      "settings": {
+        "background_color": "green",
+        "show_decoration": true
+      }
     }
   },
   "order": [
@@ -742,6 +750,7 @@
     "section_products_with_image_j6AXYA",
     "section_accordion_DHLQhW",
     "section_accordion_EWhL39",
-    "section_accordion_78VBD8"
+    "section_accordion_78VBD8",
+    "section_text_Kg8YpX"
   ]
 }
