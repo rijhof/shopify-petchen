@@ -1,6 +1,6 @@
 {{ 'section-hero.css' | asset_url | stylesheet_tag }}
 
-<section class="background-contrast">
+<div class="background-contrast">
     <div class="hero-section container">
         <div class="hero-background">
             {% if section.settings.image_desktop != blank or section.settings.image_mobile != blank %}
@@ -39,14 +39,14 @@
             {% endif %}
 
             {% if section.settings.button_text != blank and section.settings.button_link != blank %}
-                <button href="{{ section.settings.button_link }}" class="button-primary">
+                <a href="{{ section.settings.button_link }}" class="button-primary">
                     {{ section.settings.button_text }}
-                </button>
+                </a>
             {% endif %}
         </div>
 
     </div>
-</section>
+</div>
 
 {% schema %}
 {
