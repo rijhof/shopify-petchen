@@ -171,6 +171,11 @@ figcaption {
     margin-top: calc(var(--baseline) * 1);
 }
 
+/*  !IMPORTANT - when you see this and ask urself, why is he
+    using !importants here? Its because the theme editor is not
+    displaying it right somehow. If you find a fix remove this :)
+*/
+
 .background-contrast h1,
 .background-contrast h2,
 .background-contrast h3,
@@ -195,7 +200,7 @@ figcaption {
 }
 
 .background-contrast a:hover {
-    color: var(--color-background-two);
+    color: var(--color-background-two) !important;
 }
 
 .background-reset h1,
@@ -212,23 +217,23 @@ figcaption {
 .background-reset .h6,
 .background-reset a,
 .background-reset span {
-    color: var(--color-primary);
+    color: var(--color-primary) !important;
 }
 
 .background-reset a:hover {
-    color: var(--color-text);
+    color: var(--color-text) !important;
 }
 
 .background-reset p,
 .background-reset .lead,
 .background-reset li {
-    color: var(--color-text);
+    color: var(--color-text) !important;
 }
 
 .background-reset .meta {
-    color: var(--color-text);
+    color: var(--color-text) !important;
 }
 
 .background-reset figcaption {
-    color: var(--color-text-secondary);
+    color: var(--color-text-secondary) !important;
 }
