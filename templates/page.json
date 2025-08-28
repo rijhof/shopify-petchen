@@ -13,26 +13,22 @@
       "type": "template-page",
       "settings": {}
     },
-    "section_all_products_bJ3pwt": {
-      "type": "section-all-products",
-      "name": "Alle Produkte",
+    "section_hero_small_KgeEfx": {
+      "type": "section-hero-small",
+      "name": "Hero Klein",
       "settings": {
-        "heading": "Alle Produkte",
-        "product_limit": 12,
-        "show_quick_add": true,
-        "show_wishlist": true,
-        "show_view_all": false,
-        "view_all_url": "",
-        "view_all_text": "Alle Produkte anzeigen",
+        "image_alt": "",
+        "breadcrumb_current": "",
+        "heading_h1": "Petchen x Adoptieren statt Produzieren",
+        "heading_h2": "Mit jedem Kauf Gutes tun!",
         "button_text": "",
         "button_link": "",
-        "button_type": "primary",
-        "icon_position": "right"
+        "button_type": "primary"
       }
     }
   },
   "order": [
     "template",
-    "section_all_products_bJ3pwt"
+    "section_hero_small_KgeEfx"
   ]
 }
