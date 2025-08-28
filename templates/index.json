@@ -37,10 +37,482 @@
         "button_type": "primary",
         "icon_position": "right"
       }
+    },
+    "section_logo_grid_CnM7jJ": {
+      "type": "section-logo-grid",
+      "name": "Logo Grid",
+      "settings": {
+        "heading": "",
+        "logo_1": "shopify://shop_images/Certificate-eco-cert-1_1.png",
+        "logo_1_alt": "",
+        "logo_2": "shopify://shop_images/Certificate-recycled-packaging-2_1.png",
+        "logo_2_alt": "",
+        "logo_3": "shopify://shop_images/Certificate-plant-based-2_1.png",
+        "logo_3_alt": "",
+        "logo_4": "shopify://shop_images/Certificate-vegan-formula-3_1.png",
+        "logo_4_alt": ""
+      }
+    },
+    "section_image_accordion_MyzdQF": {
+      "type": "section-image-accordion",
+      "blocks": {
+        "accordion_item_ahnfi3": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Hochwertige Materialien",
+            "content": "<p>Wir verwenden nur die besten Materialien für unsere Produkte.</p>",
+            "open_by_default": false
+          }
+        },
+        "accordion_item_QN6hVf": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Nachhaltige Produktion",
+            "content": "<p>Unsere Produkte werden umweltschonend und nachhaltig hergestellt.</p>",
+            "open_by_default": false
+          }
+        },
+        "accordion_item_y9M6CJ": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Garantie & Service",
+            "content": "<p>Wir bieten eine umfassende Garantie und exzellenten Kundenservice.</p>",
+            "open_by_default": false
+          }
+        }
+      },
+      "block_order": [
+        "accordion_item_ahnfi3",
+        "accordion_item_QN6hVf",
+        "accordion_item_y9M6CJ"
+      ],
+      "name": "Bild mit Accordion",
+      "settings": {
+        "image": "shopify://shop_images/img.png",
+        "image_alt": "",
+        "decoration_type": "none",
+        "image_position": "left",
+        "heading": "Überschrift",
+        "background_color": "default"
+      }
+    },
+    "section_image_accordion_aNVHXe": {
+      "type": "section-image-accordion",
+      "blocks": {
+        "accordion_item_mrfDN8": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Hochwertige Materialien",
+            "content": "<p>Wir verwenden nur die besten Materialien für unsere Produkte.</p>",
+            "open_by_default": false
+          }
+        },
+        "accordion_item_iWqP8E": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Nachhaltige Produktion",
+            "content": "<p>Unsere Produkte werden umweltschonend und nachhaltig hergestellt.</p>",
+            "open_by_default": false
+          }
+        },
+        "accordion_item_QNCiAi": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Garantie & Service",
+            "content": "<p>Wir bieten eine umfassende Garantie und exzellenten Kundenservice.</p>",
+            "open_by_default": false
+          }
+        }
+      },
+      "block_order": [
+        "accordion_item_mrfDN8",
+        "accordion_item_iWqP8E",
+        "accordion_item_QNCiAi"
+      ],
+      "name": "Bild mit Accordion",
+      "settings": {
+        "image": "shopify://shop_images/img.png",
+        "image_alt": "",
+        "decoration_type": "heart-bottom-right-edge",
+        "image_position": "right",
+        "heading": "Überschrift",
+        "background_color": "green"
+      }
+    },
+    "section_image_accordion_6twcjX": {
+      "type": "section-image-accordion",
+      "blocks": {
+        "accordion_item_NrfUkU": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Hochwertige Materialien",
+            "content": "<p>Wir verwenden nur die besten Materialien für unsere Produkte.</p>",
+            "open_by_default": false
+          }
+        },
+        "accordion_item_iUyhjy": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Nachhaltige Produktion",
+            "content": "<p>Unsere Produkte werden umweltschonend und nachhaltig hergestellt.</p>",
+            "open_by_default": false
+          }
+        },
+        "accordion_item_c8wQyz": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Garantie & Service",
+            "content": "<p>Wir bieten eine umfassende Garantie und exzellenten Kundenservice.</p>",
+            "open_by_default": false
+          }
+        }
+      },
+      "block_order": [
+        "accordion_item_NrfUkU",
+        "accordion_item_iUyhjy",
+        "accordion_item_c8wQyz"
+      ],
+      "name": "Bild mit Accordion",
+      "settings": {
+        "image": "shopify://shop_images/img.png",
+        "image_alt": "",
+        "decoration_type": "flower-grass-bottom-left",
+        "image_position": "left",
+        "heading": "Überschrift",
+        "background_color": "dark_green"
+      }
+    },
+    "section_image_symbols_text_Jndwci": {
+      "type": "section-image-symbols-text",
+      "blocks": {
+        "symbol_text_Vd7faz": {
+          "type": "symbol_text",
+          "settings": {
+            "icon": "icon-decor-heart-paw.svg",
+            "heading": "Liebevolle Betreuung",
+            "content": "<p>Wir kümmern uns mit viel Liebe und Aufmerksamkeit um Ihre Tiere.</p>"
+          }
+        },
+        "symbol_text_UytjdU": {
+          "type": "symbol_text",
+          "settings": {
+            "icon": "icon-decor-house-paw.svg",
+            "heading": "Sicheres Zuhause",
+            "content": "<p>Ein sicherer und gemütlicher Ort für Ihre Lieblinge.</p>"
+          }
+        },
+        "symbol_text_xGLwTq": {
+          "type": "symbol_text",
+          "settings": {
+            "icon": "icon-decor-paws.svg",
+            "heading": "Professionelle Pflege",
+            "content": "<p>Erfahrene Pfleger sorgen für das Wohlbefinden Ihrer Tiere.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "symbol_text_Vd7faz",
+        "symbol_text_UytjdU",
+        "symbol_text_xGLwTq"
+      ],
+      "name": "Bild mit Symbolen & Text",
+      "settings": {
+        "image": "shopify://shop_images/martin-ruther-mit-hund.png",
+        "image_alt": "",
+        "image_position": "left",
+        "heading": "Überschrift",
+        "button_text": "",
+        "button_link": "",
+        "button_type": "primary",
+        "background_color": "default"
+      }
+    },
+    "section_image_symbols_text_pxgcwN": {
+      "type": "section-image-symbols-text",
+      "blocks": {
+        "symbol_text_PhCTGt": {
+          "type": "symbol_text",
+          "settings": {
+            "icon": "icon-decor-heart-paw.svg",
+            "heading": "Liebevolle Betreuung",
+            "content": "<p>Wir kümmern uns mit viel Liebe und Aufmerksamkeit um Ihre Tiere.</p>"
+          }
+        },
+        "symbol_text_Q8Jjqp": {
+          "type": "symbol_text",
+          "settings": {
+            "icon": "icon-decor-house-paw.svg",
+            "heading": "Sicheres Zuhause",
+            "content": "<p>Ein sicherer und gemütlicher Ort für Ihre Lieblinge.</p>"
+          }
+        },
+        "symbol_text_yb7YA9": {
+          "type": "symbol_text",
+          "settings": {
+            "icon": "icon-decor-paws.svg",
+            "heading": "Professionelle Pflege",
+            "content": "<p>Erfahrene Pfleger sorgen für das Wohlbefinden Ihrer Tiere.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "symbol_text_PhCTGt",
+        "symbol_text_Q8Jjqp",
+        "symbol_text_yb7YA9"
+      ],
+      "name": "Bild mit Symbolen & Text",
+      "settings": {
+        "image": "shopify://shop_images/martin-ruther-mit-hund.png",
+        "image_alt": "",
+        "image_position": "right",
+        "heading": "Überschrift",
+        "button_text": "",
+        "button_link": "",
+        "button_type": "primary",
+        "background_color": "green"
+      }
+    },
+    "section_image_symbols_text_iYhBqP": {
+      "type": "section-image-symbols-text",
+      "blocks": {
+        "symbol_text_GG6b7r": {
+          "type": "symbol_text",
+          "settings": {
+            "icon": "icon-decor-heart-paw.svg",
+            "heading": "Liebevolle Betreuung",
+            "content": "<p>Wir kümmern uns mit viel Liebe und Aufmerksamkeit um Ihre Tiere.</p>"
+          }
+        },
+        "symbol_text_Fzt3GA": {
+          "type": "symbol_text",
+          "settings": {
+            "icon": "icon-decor-house-paw.svg",
+            "heading": "Sicheres Zuhause",
+            "content": "<p>Ein sicherer und gemütlicher Ort für Ihre Lieblinge.</p>"
+          }
+        },
+        "symbol_text_CncqJH": {
+          "type": "symbol_text",
+          "settings": {
+            "icon": "icon-decor-paws.svg",
+            "heading": "Professionelle Pflege",
+            "content": "<p>Erfahrene Pfleger sorgen für das Wohlbefinden Ihrer Tiere.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "symbol_text_GG6b7r",
+        "symbol_text_Fzt3GA",
+        "symbol_text_CncqJH"
+      ],
+      "name": "Bild mit Symbolen & Text",
+      "settings": {
+        "image": "shopify://shop_images/martin-ruther-mit-hund.png",
+        "image_alt": "",
+        "image_position": "left",
+        "heading": "Überschrift",
+        "button_text": "",
+        "button_link": "",
+        "button_type": "primary",
+        "background_color": "dark_green"
+      }
+    },
+    "section_image_text_DayWY4": {
+      "type": "section-image-text",
+      "name": "Bild mit Text",
+      "settings": {
+        "image": "shopify://shop_images/img.png",
+        "image_alt": "",
+        "decoration_type": "flower-grass-bottom-left",
+        "image_position": "left",
+        "heading": "Überschrift",
+        "content": "<p>Fügen Sie hier Ihren Text ein. Nutzen Sie die Formatierungsoptionen, um Ihren Inhalt zu strukturieren.</p>",
+        "button_text": "",
+        "button_link": "",
+        "button_type": "primary",
+        "icon_position": "right",
+        "background_color": "default"
+      }
+    },
+    "section_image_text_fneaKq": {
+      "type": "section-image-text",
+      "name": "Bild mit Text",
+      "settings": {
+        "image": "shopify://shop_images/img.png",
+        "image_alt": "",
+        "decoration_type": "heart-bottom-right-edge",
+        "image_position": "right",
+        "heading": "Überschrift",
+        "content": "<p>Fügen Sie hier Ihren Text ein. Nutzen Sie die Formatierungsoptionen, um Ihren Inhalt zu strukturieren.</p>",
+        "button_text": "",
+        "button_link": "",
+        "button_type": "primary",
+        "icon_position": "right",
+        "background_color": "green"
+      }
+    },
+    "section_image_text_E6PkK6": {
+      "type": "section-image-text",
+      "name": "Bild mit Text",
+      "settings": {
+        "image": "shopify://shop_images/img.png",
+        "image_alt": "",
+        "decoration_type": "flower-grass-bottom-left",
+        "image_position": "left",
+        "heading": "Überschrift",
+        "content": "<p>Fügen Sie hier Ihren Text ein. Nutzen Sie die Formatierungsoptionen, um Ihren Inhalt zu strukturieren.</p>",
+        "button_text": "",
+        "button_link": "",
+        "button_type": "primary",
+        "icon_position": "right",
+        "background_color": "dark_green"
+      }
+    },
+    "section_column_image_text_kihn8r": {
+      "type": "section-column-image-text",
+      "blocks": {
+        "column_ndhcQU": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Image1.png",
+            "image_alt": "",
+            "heading": "Lorem Ipsum",
+            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
+          }
+        },
+        "column_HFgqnN": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Image2.png",
+            "image_alt": "",
+            "heading": "Lorem Ipsum",
+            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
+          }
+        },
+        "column_eWpGrx": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Image3.png",
+            "image_alt": "",
+            "heading": "Lorem Ipsum",
+            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "column_ndhcQU",
+        "column_HFgqnN",
+        "column_eWpGrx"
+      ],
+      "name": "Column Image Text",
+      "settings": {
+        "heading": "Lorem Ipsum Dolor Sit",
+        "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>",
+        "background_color": "default"
+      }
+    },
+    "section_column_image_text_TrKmFC": {
+      "type": "section-column-image-text",
+      "blocks": {
+        "column_qXFVmm": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Image5.png",
+            "image_alt": "",
+            "heading": "Lorem Ipsum",
+            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
+          }
+        },
+        "column_yj46tM": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Image4.png",
+            "image_alt": "",
+            "heading": "Lorem Ipsum",
+            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
+          }
+        },
+        "column_rCjjey": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Image6.png",
+            "image_alt": "",
+            "heading": "Lorem Ipsum",
+            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "column_qXFVmm",
+        "column_yj46tM",
+        "column_rCjjey"
+      ],
+      "name": "Column Image Text",
+      "settings": {
+        "heading": "Lorem Ipsum Dolor Sit",
+        "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>",
+        "background_color": "green"
+      }
+    },
+    "section_column_image_text_t4qMgp": {
+      "type": "section-column-image-text",
+      "blocks": {
+        "column_fUqhMU": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Image5.png",
+            "image_alt": "",
+            "heading": "Lorem Ipsum",
+            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
+          }
+        },
+        "column_KBkFe4": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Image4.png",
+            "image_alt": "",
+            "heading": "Lorem Ipsum",
+            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
+          }
+        },
+        "column_HpNVyd": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Image6.png",
+            "image_alt": "",
+            "heading": "Lorem Ipsum",
+            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "column_fUqhMU",
+        "column_KBkFe4",
+        "column_HpNVyd"
+      ],
+      "name": "Column Image Text",
+      "settings": {
+        "heading": "Lorem Ipsum Dolor Sit",
+        "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>",
+        "background_color": "dark_green"
+      }
     }
   },
   "order": [
     "section_hero_A4FBMG",
-    "section_hero_small_gktcAQ"
+    "section_hero_small_gktcAQ",
+    "section_logo_grid_CnM7jJ",
+    "section_image_accordion_MyzdQF",
+    "section_image_accordion_aNVHXe",
+    "section_image_accordion_6twcjX",
+    "section_image_symbols_text_Jndwci",
+    "section_image_symbols_text_pxgcwN",
+    "section_image_symbols_text_iYhBqP",
+    "section_image_text_DayWY4",
+    "section_image_text_fneaKq",
+    "section_image_text_E6PkK6",
+    "section_column_image_text_kihn8r",
+    "section_column_image_text_TrKmFC",
+    "section_column_image_text_t4qMgp"
   ]
 }
