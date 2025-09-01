@@ -1,0 +1,19 @@
+<div class="mobile-navigation-header">
+    <a href="{{ routes.root_url }}" class="mobile-navigation-logo" aria-label="{{ shop.name }} - Home">
+        {% if section.settings.logo %}
+            <img src="{{ section.settings.logo | img_url: '120x' }}"
+                 alt="{{ shop.name }}"
+                 width="120"
+                 height="{{ 120 | divided_by: section.settings.logo.aspect_ratio | round }}"
+                 loading="eager">
+        {% else %}
+            <img src="{{ 'logo-petchen.svg' | asset_url }}" width="120" alt="{{ shop.name }}">
+        {% endif %}
+    </a>
+
+    <button class="mobile-navigation-close button-secondary icon icon-empty"
+            type="button"
+            aria-label="Menü schließen">
+        {{ 'icon-header--close.svg' | inline_asset_content }}
+    </button>
+</div>
