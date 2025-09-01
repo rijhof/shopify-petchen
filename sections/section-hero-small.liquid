@@ -43,13 +43,13 @@
             {% endif %}
         </div>
 
-        <div class="hero-decor--desktop" aria-hidden="true" preserveAspectRatio="none">
-            {{ 'decor-hero-small-background-desktop.svg' | inline_asset_content }}
-        </div>
-
-        <div class="hero-decor--mobile" aria-hidden="true" >
-            {{ 'decor-hero-background-mobile.svg' | inline_asset_content }}
-        </div>
+        {% comment %}<div class="hero-decor--desktop" aria-hidden="true" preserveAspectRatio="none">{% endcomment %}
+            {% comment %}{{ 'decor-hero-small-background-desktop.svg' | inline_asset_content }}{% endcomment %}
+        {% comment %}</div>{% endcomment %}
+{% comment %}{% endcomment %}
+        {% comment %}<div class="hero-decor--mobile" aria-hidden="true" >{% endcomment %}
+            {% comment %}{{ 'decor-hero-background-mobile.svg' | inline_asset_content }}{% endcomment %}
+        {% comment %}</div>{% endcomment %}
 
         <div class="hero-content">
             {% if section.settings.heading_h1 != blank %}
