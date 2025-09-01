@@ -1,0 +1,44 @@
+<div class="header-actions">
+    {% comment %}<button class="header-search-toggle hide-mobile button-secondary icon icon-empty"{% endcomment %}
+    {% comment %}type="button"{% endcomment %}
+    {% comment %}aria-expanded="false"{% endcomment %}
+    {% comment %}aria-controls="header-search"{% endcomment %}
+    {% comment %}aria-label="Open search">{% endcomment %}
+    {% comment %}<img src="{{ 'icon-header--magnifying-glas.svg' | asset_url }}" aria-hidden="true">{% endcomment %}
+    {% comment %}</button>{% endcomment %}
+
+    {% comment %}<a href="{{ routes.account_url }}"{% endcomment %}
+    {% comment %}class="header-action-link hide-mobile button-secondary icon icon-empty"{% endcomment %}
+    {% comment %}aria-label="Wishlist{% if customer %}{% else %} - Login required{% endif %}">{% endcomment %}
+    {% comment %}<img src="{{ 'icon-header--heart.svg' | asset_url }}" aria-hidden="true">{% endcomment %}
+    {% comment %}<span class="visually-hidden">Wishlist</span>{% endcomment %}
+    {% comment %}</a>{% endcomment %}
+
+    <a href="{% if customer %}{{ routes.account_url }}{% else %}{{ routes.account_login_url }}{% endif %}"
+       class="header-action-link button-secondary icon icon-empty"
+       aria-label="{% if customer %}Mein Account{% else %}Einloggen oder registrieren{% endif %}">
+        <img src="{{ 'icon-header--avatar.svg' | asset_url }}" aria-hidden="true">
+        <span class="visually-hidden">{% if customer %}Mein Account{% else %}Login{% endif %}</span>
+    </a>
+
+    <a href="{{ routes.cart_url }}"
+       class="header-action-link header-cart button-secondary icon icon-empty"
+       aria-label="Warenkorb mit {{ cart.item_count }} {% if cart.item_count == 1 %}Produkt{% else %}Produkten{% endif %}">
+        <img src="{{ 'icon-header--shopping-bag.svg' | asset_url }}" aria-hidden="true">
+        {% if cart.item_count > 0 %}
+            <span class="header-cart-count" aria-hidden="true">{{ cart.item_count }}</span>
+        {% endif %}
+        <span class="visually-hidden">Warenkorb</span>
+    </a>
+
+    <button class="header-mobile-menu-toggle hide-desktop button-secondary icon icon-empty"
+            type="button"
+            aria-expanded="false"
+            aria-controls="mobile-navigation"
+            aria-label="Open navigation menu">
+            <span class="header-mobile-menu-icon" aria-hidden="true">
+               <img src="{{ 'icon-header--burger-button.svg' | asset_url }}" aria-hidden="true">
+            </span>
+    </button>
+</div>
+</div>

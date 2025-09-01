@@ -1,0 +1,12 @@
+<a href="{{ routes.root_url }}" class="header-logo" aria-label="{{ shop.name }} - Home">
+    {% if section.settings.logo %}
+        <img src="{{ section.settings.logo | img_url: '200x' }}"
+             alt="{{ shop.name }}"
+             width="{{ section.settings.logo_width }}"
+             height="{{ section.settings.logo_width | divided_by: section.settings.logo.aspect_ratio | round }}"
+             loading="eager">
+    {% else %}
+        <img src="{{ 'logo-petchen.svg' | asset_url }}"
+             alt="{{ shop.name }}">
+    {% endif %}
+</a>

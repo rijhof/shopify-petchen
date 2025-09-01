@@ -1,0 +1,30 @@
+{% if section.blocks.size > 0 %}
+    <div class="header-usp-bar hide-mobile" role="complementary" aria-label="Shop benefits">
+        <div class="container">
+            <ul class="header-usp-list">
+                {% for block in section.blocks %}
+                    {% if block.type == 'usp' %}
+                        <li class="header-usp-item meta">
+                            {% if block.settings.icon_type == 'stars' %}
+                                <img src="{{ 'icon-header--five-stars.svg' | asset_url }}"
+                                     alt=""
+                                     width="72"
+                                     height="16"
+                                     class="header-usp-icon"
+                                     aria-hidden="true">
+                            {% elsif block.settings.icon_type == 'checkmark' %}
+                                <img src="{{ 'icon-header--checkmark-circle.svg' | asset_url }}"
+                                     alt=""
+                                     width="16"
+                                     height="16"
+                                     class="header-usp-icon"
+                                     aria-hidden="true">
+                            {% endif %}
+                            <span class="header-usp-text">{{ block.settings.text }}</span>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endif %}

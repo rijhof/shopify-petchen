@@ -1,0 +1,55 @@
+<div class="header-search" id="header-search" aria-hidden="true">
+    <form
+            action="{{ routes.search_url }}"
+            method="get"
+            role="search"
+            class="header-search-form"
+    >
+        <div class="form-group">
+            <input
+                    type="search"
+                    name="q"
+                    id="header-search-input"
+                    class="header-search-input"
+                    placeholder="Search for products..."
+                    autocomplete="off"
+                    aria-label="Search products"
+            />
+            <label for="header-search-input">Search for products...</label>
+        </div>
+        <button
+                type="submit"
+                class="header-search-submit"
+                aria-label="Submit search"
+        >
+            <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+            >
+                <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M16.297 17.1289C16.332..."
+                        fill="currentColor"
+                />
+                <path
+                        d="M7.70076 1.66892C8.40239..."
+                        fill="currentColor"
+                />
+                <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M22.4844 19.4525C22.2995..."
+                        fill="currentColor"
+                />
+                <path
+                        d="M17.6078 15.5742C17.7397..."
+                        fill="currentColor"
+                />
+            </svg>
+        </button>
+    </form>
+</div>
