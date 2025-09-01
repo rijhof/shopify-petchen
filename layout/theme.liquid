@@ -17,154 +17,6 @@
     <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
   {%- endunless -%}
 
-  <link rel="preload" href="{{ 'font-arlen--light.woff2' | asset_url }}" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="{{ 'font-arlen--regular.woff2' | asset_url }}" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="{{ 'font-arlen--semi-bold.woff2' | asset_url }}" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="{{ 'font-camera-obscura.woff2' | asset_url }}" as="font" type="font/woff2" crossorigin>
-
-  <style>
-    @font-face {
-      font-family: 'Arlen';
-      src: url('{{ 'font-arlen--light.woff2' | asset_url }}') format('woff2');
-      font-weight: 100 300;
-      font-style: normal;
-      font-display: swap;
-    }
-    @font-face {
-      font-family: 'Arlen';
-      src: url('{{ 'font-arlen--regular.woff2' | asset_url }}') format('woff2');
-      font-weight: 400;
-      font-style: normal;
-      font-display: swap;
-    }
-    @font-face {
-      font-family: 'Arlen';
-      src: url('{{ 'font-arlen--semi-bold.woff2' | asset_url }}') format('woff2');
-      font-weight: 600;
-      font-style: normal;
-      font-display: swap;
-    }
-    @font-face {
-      font-family: 'Camera Obscura';
-      src: url('{{ 'font-camera-obscura.woff2' | asset_url }}') format('woff2');
-      font-weight: 400;
-      font-style: normal;
-      font-display: swap;
-    }
-
-    :root {
-      --baseline: 8px;
-      --color-primary: #3F593F;
-      --color-secondary: #F4F2E4;
-      --color-background: #DFECDF;
-      --color-text: #2F4027;
-      --color-white: #FFFFFF;
-      --font-family-headlines: 'Camera Obscura';
-      --font-family-paragraph: 'Arlen';
-      --font-weight-light: 100;
-      --font-weight-normal: 400;
-      --font-weight-medium: 600;
-      --container-padding-mobile: 16px;
-      --container-padding-desktop: 64px;
-      --component-spacing-mobile: 64px;
-      --component-spacing-desktop: 120px;
-      --container-max-width: 1920px;
-      --transition-duration: 0.25s;
-    }
-
-    *, *::before, *::after {
-      box-sizing: border-box;
-    }
-
-    html {
-      font-size: 16px;
-      line-height: 1.5;
-    }
-
-    body {
-      background-color: var(--color-secondary);
-      color: var(--color-text);
-      font-family: var(--font-family-paragraph);
-      font-weight: var(--font-weight-light);
-      margin: 0;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    .container {
-      padding-left: var(--container-padding-mobile);
-      padding-right: var(--container-padding-mobile);
-      margin: 0 auto;
-      max-width: var(--container-max-width);
-    }
-
-    @media (min-width: 768px) {
-      .container {
-        padding-left: 24px;
-        padding-right: 24px;
-      }
-    }
-
-    @media (min-width: 1280px) {
-      .container {
-        padding-left: var(--container-padding-desktop);
-        padding-right: var(--container-padding-desktop);
-      }
-    }
-
-    .section {
-      padding-top: var(--component-spacing-mobile);
-      padding-bottom: var(--component-spacing-mobile);
-      position: relative;
-    }
-
-    @media (min-width: 768px) {
-      .section {
-        padding-top: 80px;
-        padding-bottom: 80px;
-      }
-    }
-
-    @media (min-width: 1280px) {
-      .section {
-        padding-top: var(--component-spacing-desktop);
-        padding-bottom: var(--component-spacing-desktop);
-      }
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-      color: var(--color-primary);
-      font-family: var(--font-family-headlines);
-      font-weight: 400;
-      margin: 0 0 24px;
-    }
-
-    p {
-      color: var(--color-text);
-      font-family: var(--font-family-paragraph);
-      font-size: 20px;
-      font-weight: var(--font-weight-light);
-      line-height: 1.5;
-      margin: 0 0 24px;
-    }
-
-    img {
-      display: block;
-      height: auto;
-      max-width: 100%;
-    }
-
-    .hero-section {
-      min-height: 750px;
-    }
-
-    @media (min-width: 768px) {
-      .hero-section {
-        min-height: 600px;
-      }
-    }
-  </style>
-
   <title>
     {{ page_title }}
     {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
@@ -180,42 +32,15 @@
 
   {{ content_for_header }}
 
-  <link rel="preload" href="{{ 'theme.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="{{ 'theme.css' | asset_url }}"></noscript>
+  {{ 'theme.css' | asset_url | stylesheet_tag }}
+  {{ 'section-header.css' | asset_url | stylesheet_tag }}
+  {{ 'cart-notification.css' | asset_url | stylesheet_tag }}
 
-  {% if template contains 'index' %}
-    <link rel="preload" href="{{ 'section-hero.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{ 'section-hero.css' | asset_url }}"></noscript>
-  {% endif %}
+  <script src="{{ 'snippet-product-card.js' | asset_url }}" defer></script>
+  {{ 'snippet-product-card-modal.css' | asset_url | stylesheet_tag }}
 
-  <link rel="preload" href="{{ 'section-header.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="{{ 'section-header.css' | asset_url }}"></noscript>
-
-  <script>
-    function loadScript(src, callback) {
-      const script = document.createElement('script');
-      script.src = src;
-      script.defer = true;
-      if (callback) script.onload = callback;
-      document.head.appendChild(script);
-    }
-
-    function loadStylesheet(href) {
-      const link = document.createElement('link');
-      link.rel = 'stylesheet';
-      link.href = href;
-      document.head.appendChild(link);
-    }
-
-    window.themeScripts = {
-      swiper: false,
-      productCard: false,
-      cartNotification: false
-    };
-  </script>
-
-  <script src="{{ 'js-section-header.js' | asset_url }}" defer></script>
-  <script src="{{ 'index.js' | asset_url }}" defer></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
 
 </head>
 <body>
@@ -227,78 +52,7 @@
 
 {% render 'cart-notification' %}
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    {% comment %} Load Swiper only if needed {% endcomment %}
-    {% assign needs_swiper = false %}
-    {% if template contains 'index' or template contains 'collection' or template contains 'product' %}
-    {% assign needs_swiper = true %}
-    {% endif %}
-
-    {% if needs_swiper %}
-    if (document.querySelector('.swiper') && !window.themeScripts.swiper) {
-      loadStylesheet('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
-      loadScript('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js');
-      window.themeScripts.swiper = true;
-    }
-    {% endif %}
-
-    {% comment %} Load product card scripts only on relevant pages {% endcomment %}
-    {% if template contains 'collection' or template contains 'search' or template contains 'index' %}
-    if (document.querySelector('.product-card') && !window.themeScripts.productCard) {
-      loadStylesheet('{{ 'snippet-product-card-modal.css' | asset_url }}');
-      loadScript('{{ 'snippet-product-card.js' | asset_url }}');
-      window.themeScripts.productCard = true;
-    }
-    {% endif %}
-
-    {% comment %} Cart notification - load on interaction {% endcomment %}
-    function loadCartNotification() {
-      if (!window.themeScripts.cartNotification) {
-        loadStylesheet('{{ 'cart-notification.css' | asset_url }}');
-        loadScript('{{ 'cart-notification.js' | asset_url }}');
-        window.themeScripts.cartNotification = true;
-      }
-    }
-
-    document.addEventListener('click', function(e) {
-      if (e.target.matches('[data-cart-add], .cart-button, .add-to-cart')) {
-        loadCartNotification();
-      }
-    });
-
-    {% comment %} Intersection Observer for lazy loading scripts {% endcomment %}
-    if ('IntersectionObserver' in window) {
-      const lazyScriptObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const element = entry.target;
-
-            if (element.classList.contains('swiper') && !window.themeScripts.swiper) {
-              loadStylesheet('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
-              loadScript('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js');
-              window.themeScripts.swiper = true;
-              lazyScriptObserver.unobserve(element);
-            }
-
-            if (element.classList.contains('product-card') && !window.themeScripts.productCard) {
-              loadStylesheet('{{ 'snippet-product-card-modal.css' | asset_url }}');
-              loadScript('{{ 'snippet-product-card.js' | asset_url }}');
-              window.themeScripts.productCard = true;
-              lazyScriptObserver.unobserve(element);
-            }
-          }
-        });
-      }, {
-        rootMargin: '50px'
-      });
-
-      document.querySelectorAll('.swiper, .product-card').forEach((el) => {
-        lazyScriptObserver.observe(el);
-      });
-    }
-  });
-</script>
-
+<script src="{{ 'cart-notification.js' | asset_url }}" defer></script>
+<script src="{{ 'index.js' | asset_url }}" defer="defer"></script>
 </body>
 </html>
