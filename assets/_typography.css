@@ -1,34 +1,3 @@
-/* Typography and text styles */
-
-/* Font Face Declarations */
-@font-face {
-    font-family: 'Arlen';
-    src: url('font-arlen--light.woff2') format('woff2');
-    font-weight: 100 300;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Arlen';
-    src: url('font-arlen--regular.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Arlen';
-    src: url('font-arlen--semi-bold.woff2') format('woff2');
-    font-weight: 600;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Camera Obscura';
-    src: url('font-camera-obscura.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
-}
-
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
     color: var(--color-primary);
