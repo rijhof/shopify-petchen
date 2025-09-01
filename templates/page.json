@@ -18,7 +18,7 @@
       "name": "Hero Klein",
       "settings": {
         "image_desktop": "shopify://shop_images/Hero__Bild_oder_Vi_deo_04e0d27b-f1f0-44e0-a33b-446121156a3c.png",
-        "image_mobile": "shopify://shop_images/Hero__Bild_oder_Vi_deo_14517e2b-daf6-4ae9-8c25-6ad1790946d1.png",
+        "image_mobile": "shopify://shop_images/4zu5.png",
         "image_alt": "",
         "show_breadcrumbs": false,
         "breadcrumb_current": "",
@@ -99,7 +99,7 @@
         "precontent_content": "",
         "image": "shopify://shop_images/martin-ruther-mit-hund.png",
         "image_alt": "",
-        "decoration_type": "none",
+        "decoration_type": "flower-grass-bottom-left",
         "image_position": "right",
         "heading": "Adoptieren statt Produzieren",
         "heading_level": "h2",
@@ -153,6 +153,7 @@
         "button_text": "",
         "button_link": "",
         "button_type": "primary",
+        "icon_position": "none",
         "background_color": "default"
       }
     },
@@ -180,7 +181,98 @@
         "button_text": "Zur Website",
         "button_link": "#",
         "button_type": "secondary",
+        "icon_position": "none",
         "background_color": "default"
+      }
+    },
+    "section_products_with_image_QdkGLK": {
+      "type": "section-products-with-image",
+      "blocks": {
+        "product_wXtmQT": {
+          "type": "product",
+          "settings": {
+            "product": "langhaar-hundeshampoo"
+          }
+        },
+        "product_gjRXhB": {
+          "type": "product",
+          "settings": {
+            "product": "langhaar-hundeshampoo"
+          }
+        },
+        "product_eYQ4Cq": {
+          "type": "product",
+          "settings": {
+            "product": "langhaar-hundeshampoo"
+          }
+        },
+        "product_xRTBwy": {
+          "type": "product",
+          "settings": {
+            "product": "langhaar-hundeshampoo"
+          }
+        }
+      },
+      "block_order": [
+        "product_wXtmQT",
+        "product_gjRXhB",
+        "product_eYQ4Cq",
+        "product_xRTBwy"
+      ],
+      "name": "Produkte mit Bild",
+      "settings": {
+        "heading": "Unsere Produkte",
+        "pre_content": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>",
+        "show_quick_add": true,
+        "show_wishlist": true,
+        "products_position": "left",
+        "background_image": "shopify://shop_images/Frame_763.png",
+        "image_alt": "Hund Illustration",
+        "button_text": "Alle Produkte entdecken",
+        "button_link": "#",
+        "button_type": "primary",
+        "icon_position": "none",
+        "background_color": "dark_green"
+      }
+    },
+    "section_image_text_n6UPNM": {
+      "type": "section-image-text",
+      "name": "Bild mit Text",
+      "settings": {
+        "precontent_heading": "Wofür werden unsere Spenden verwendet?",
+        "precontent_content": "<p>Der Kauf der Petchen Produkte unterstützt vor allem die beiden Hero-Partnerprojekte von Adoptieren statt Produzieren:</p>",
+        "image": "shopify://shop_images/Hund_mit_Rollstuhl.png",
+        "image_alt": "Hund mit Rollstuhl",
+        "decoration_type": "none",
+        "image_position": "left",
+        "heading": "Hun’nenhoff",
+        "heading_level": "h3",
+        "content": "<p>Der Hun’nenhoff in Schneverdingen ist ein Gnadenhof für Hunde mit Handicap – besonders für Rollihunde. Mit Physiotherapie, Rollwagen und Fürsorge schenkt das Team ihnen Lebensfreude und Bewegung. Gegründet 2018 von Tierärztin Dr. Usha Peters, die mit ihrem Team für jeden einzelnen Hund kämpft.</p>",
+        "button_text": "Mehr erfahren",
+        "button_link": "#",
+        "button_type": "primary",
+        "icon_position": "none",
+        "background_color": "green"
+      }
+    },
+    "section_image_text_3nkpdX": {
+      "type": "section-image-text",
+      "name": "Bild mit Text",
+      "settings": {
+        "precontent_heading": "",
+        "precontent_content": "",
+        "image": "shopify://shop_images/Hund_in_Kaefig.png",
+        "image_alt": "Underdog",
+        "decoration_type": "heart-bottom-right-edge",
+        "image_position": "right",
+        "heading": "Hun’nenhoff",
+        "heading_level": "h3",
+        "content": "<p>Das Projekt „Underdog“ bietet Haustieren obdachloser Menschen kostenlose medizinische Versorgung. Im Tierheim Darmstadt wird unbürokratisch geholfen – mit Herz und Verstand. Finanziert durch Spenden, getragen von einem engagierten Team.</p>",
+        "button_text": "Mehr erfahren",
+        "button_link": "#",
+        "button_type": "secondary",
+        "icon_position": "none",
+        "background_color": "green"
       }
     }
   },
@@ -191,6 +283,9 @@
     "section_logo_grid_3meUWK",
     "section_image_text_aFrcpz",
     "section_image_symbols_text_HT8CgA",
-    "section_image_symbols_text_fatcmm"
+    "section_image_symbols_text_fatcmm",
+    "section_products_with_image_QdkGLK",
+    "section_image_text_n6UPNM",
+    "section_image_text_3nkpdX"
   ]
 }
