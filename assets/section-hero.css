@@ -8,6 +8,7 @@
     overflow: hidden;
 }
 
+
 .hero-background {
     position: absolute;
     top: 0;
@@ -24,39 +25,8 @@
     object-position: center;
 }
 
-.hero-background-desktop,
-.hero-background-mobile {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.hero-background-mobile {
-    display: none;
-}
-
-.hero-background-desktop {
-    display: block;
-}
-
-.hero-background-image .image__wrapper {
-    border-radius: 0;
-    height: 100%;
-    width: 100%;
-}
-
-.hero-background-image .image__img {
-    object-position: center center;
-}
-
 @media (max-width: 1023px) {
     .hero-background-image {
-        object-position: center top;
-    }
-
-    .hero-background-image .image__img {
         object-position: center top;
     }
 }
@@ -99,18 +69,6 @@
         height: auto;
         max-height: 473px;
     }
-
-    .hero-background-desktop {
-        display: none;
-    }
-
-    .hero-background-mobile {
-        display: block;
-    }
-
-    .hero-background:not(:has(.hero-background-mobile .image)) .hero-background-desktop {
-        display: block;
-    }
 }
 
 .hero-content {
@@ -131,3 +89,4 @@
 .hero-subtitle {
     margin-bottom: 32px;
 }
+
