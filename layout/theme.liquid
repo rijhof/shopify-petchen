@@ -23,6 +23,41 @@
   <link rel="preload" href="{{ 'font-arlen--semi-bold.woff2' | asset_url }}" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="{{ 'font-camera-obscura.woff2' | asset_url }}" as="font" type="font/woff2" crossorigin>
 
+  <!-- Inline critical font-face declarations mit font-display: swap -->
+  <style>
+    @font-face {
+      font-family: 'Arlen';
+      src: url('{{ 'font-arlen--light.woff2' | asset_url }}') format('woff2');
+      font-weight: 100 300;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Arlen';
+      src: url('{{ 'font-arlen--regular.woff2' | asset_url }}') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Arlen';
+      src: url('{{ 'font-arlen--semi-bold.woff2' | asset_url }}') format('woff2');
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Camera Obscura';
+      src: url('{{ 'font-camera-obscura.woff2' | asset_url }}') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+  </style>
+
   <title>
     {{ page_title }}
     {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
