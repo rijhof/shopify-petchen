@@ -1,5 +1,13 @@
 {{ 'section-hero-small.css' | asset_url | stylesheet_tag }}
 
+{% comment %} Preload hero images for better performance {% endcomment %}
+{% if section.settings.image_desktop != blank %}
+    <link rel="preload" as="image" href="{{ section.settings.image_desktop | image_url: width: 1440 }}" media="(min-width: 768px)" fetchpriority="high">
+{% endif %}
+{% if section.settings.image_mobile != blank %}
+    <link rel="preload" as="image" href="{{ section.settings.image_mobile | image_url: width: 768 }}" media="(max-width: 767px)" fetchpriority="high">
+{% endif %}
+
 <section class="background-contrast">
     <div class="hero-section container component-padding-y">
         <div class="hero-background">
@@ -9,9 +17,9 @@
                         <source media="(min-width: 768px)" srcset="{{ section.settings.image_desktop | image_url: width: 1440 }}">
                     {% endif %}
                     {% if section.settings.image_mobile != blank %}
-                        <img src="{{ section.settings.image_mobile | image_url: width: 768 }}" alt="{{ section.settings.image_alt }}" class="hero-background-image">
+                        <img src="{{ section.settings.image_mobile | image_url: width: 768 }}" alt="{{ section.settings.image_alt }}" class="hero-background-image" fetchpriority="high">
                     {% elsif section.settings.image_desktop != blank %}
-                        <img src="{{ section.settings.image_desktop | image_url: width: 768 }}" alt="{{ section.settings.image_alt }}" class="hero-background-image">
+                        <img src="{{ section.settings.image_desktop | image_url: width: 768 }}" alt="{{ section.settings.image_alt }}" class="hero-background-image" fetchpriority="high">
                     {% endif %}
                 </picture>
             {% endif %}
