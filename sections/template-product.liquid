@@ -25,7 +25,7 @@
         <div class="product-accordions">
           {% if product.metafields.custom.anwendung != blank %}
             {% assign usage_html = product.metafields.custom.anwendung | metafield_tag %}
-            {% render 'accordion', title: 'AnwendungsfÃ¤lle', content: usage_html, open: true %}
+            {% render 'accordion', title: 'Anwendungsfälle', content: usage_html, open: true %}
           {% endif %}
 
           {% if product.metafields.custom.inhaltsstoffe != blank %}

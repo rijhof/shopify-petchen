@@ -23,7 +23,7 @@
           <div class="cart__items" role="region" aria-label="Warenkorb Artikel">
             {% for item in cart.items %}
               <div class="cart-item" data-line-item-key="{{ forloop.index }}">
-                <!-- Erste Zeile: Image + Details (für Mobile) -->
+
                 <div class="cart-item__image-details-row">
                   <div class="cart-item__image">
                     <a href="{{ item.url }}" aria-label="{{ item.product.title }}">
@@ -56,7 +56,6 @@
                   </div>
                 </div>
 
-                <!-- Zweite Zeile: Quantity Controls + Price (für Mobile) -->
                 <div class="cart-item__controls-price-row">
                   <div class="cart-item__quantity">
                     <label for="quantity-{{ forloop.index }}" class="visually-hidden">
@@ -110,7 +109,6 @@
             {% endfor %}
           </div>
 
-          <!-- Clear Cart Button inside cart content, bottom right -->
           <div class="cart__clear-section">
             <button type="button" class="button-secondary cart__clear-button" onclick="clearCart()">
               Warenkorb leeren
@@ -121,7 +119,6 @@
         </form>
       </div>
 
-      <!-- Cart Footer - ohne Hintergrund, max 528px, rechts ausgerichtet -->
       <div class="cart__footer">
         <div class="cart__summary">
           <div class="cart__subtotal">
@@ -141,7 +138,6 @@
             </form>
           </div>
 
-          <!-- Shopify Dynamic Checkout Buttons (PayPal, Google Pay, Apple Pay, etc.) -->
           <div class="cart__dynamic-checkout">
             {{ content_for_additional_checkout_buttons }}
           </div>

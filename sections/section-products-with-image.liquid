@@ -38,7 +38,6 @@
 
     <div class="section-products-image__wrapper">
 
-      <!-- Background Image (60% width) -->
       <div class="section-products-image__background-wrapper">
         {% if section.settings.background_image %}
           {% render 'image',
@@ -56,7 +55,6 @@
         {% endif %}
       </div>
 
-      <!-- Products Grid (50% width) -->
       <div class="section-products-image__products">
         <div class="section-products-image__grid">
           {% for block in section.blocks %}
