@@ -2,75 +2,77 @@
 
 <!-- Preload critical hero images -->
 {% if section.settings.image_desktop != blank %}
-    <link rel="preload" as="image" href="{{ section.settings.image_desktop | image_url: width: 1440 }}" media="(min-width: 768px)">
+  <link rel="preload" as="image" href="{{ section.settings.image_desktop | image_url: width: 1440 }}" media="(min-width: 768px)">
 {% endif %}
 {% if section.settings.image_mobile != blank %}
-    <link rel="preload" as="image" href="{{ section.settings.image_mobile | image_url: width: 768 }}" media="(max-width: 767px)">
+  <link rel="preload" as="image" href="{{ section.settings.image_mobile | image_url: width: 768 }}" media="(max-width: 767px)">
 {% endif %}
 
 <section class="background-contrast">
-    <div class="hero-section container component-padding-y">
-        <div class="hero-background">
-            {% if section.settings.image_desktop != blank or section.settings.image_mobile != blank %}
-                <picture>
-                    {% if section.settings.image_desktop != blank %}
-                        <source media="(min-width: 768px)" srcset="{{ section.settings.image_desktop | image_url: width: 1440 }}">
-                    {% endif %}
-                    {% if section.settings.image_mobile != blank %}
-                        <img src="{{ section.settings.image_mobile | image_url: width: 768 }}"
-                             srcset="{{ section.settings.image_mobile | image_url: width: 375 }} 375w,
+  <div class="hero-section container component-padding-y">
+    <div class="hero-background">
+      {% if section.settings.image_desktop != blank or section.settings.image_mobile != blank %}
+        <picture>
+          {% if section.settings.image_desktop != blank %}
+            <source media="(min-width: 768px)" srcset="{{ section.settings.image_desktop | image_url: width: 1440 }}">
+          {% endif %}
+          {% if section.settings.image_mobile != blank %}
+            <img src="{{ section.settings.image_mobile | image_url: width: 768 }}"
+                 srcset="{{ section.settings.image_mobile | image_url: width: 375 }} 375w,
                                      {{ section.settings.image_mobile | image_url: width: 768 }} 768w"
-                             sizes="100vw"
-                             alt="{{ section.settings.image_alt }}"
-                             class="hero-background-image"
-                             loading="eager"
-                             fetchpriority="high"
-                             decoding="async">
-                    {% elsif section.settings.image_desktop != blank %}
-                        <img src="{{ section.settings.image_desktop | image_url: width: 768 }}"
-                             srcset="{{ section.settings.image_desktop | image_url: width: 375 }} 375w,
+                 sizes="100vw"
+                 alt="{{ section.settings.image_alt }}"
+                 class="hero-background-image"
+                 loading="eager"
+                 fetchpriority="high"
+                 decoding="async">
+          {% elsif section.settings.image_desktop != blank %}
+            <img src="{{ section.settings.image_desktop | image_url: width: 768 }}"
+                 srcset="{{ section.settings.image_desktop | image_url: width: 375 }} 375w,
                                      {{ section.settings.image_desktop | image_url: width: 768 }} 768w,
                                      {{ section.settings.image_desktop | image_url: width: 1024 }} 1024w,
                                      {{ section.settings.image_desktop | image_url: width: 1440 }} 1440w"
-                             sizes="100vw"
-                             alt="{{ section.settings.image_alt }}"
-                             class="hero-background-image"
-                             loading="eager"
-                             fetchpriority="high"
-                             decoding="async">
-                    {% endif %}
-                </picture>
-            {% endif %}
-        </div>
-
-        {% comment %}<div class="hero-decor--desktop" aria-hidden="true" preserveAspectRatio="none">{% endcomment %}
-            {% comment %}{{ 'decor-hero-small-background-desktop.svg' | inline_asset_content }}{% endcomment %}
-        {% comment %}</div>{% endcomment %}
-{% comment %}{% endcomment %}
-        {% comment %}<div class="hero-decor--mobile" aria-hidden="true" >{% endcomment %}
-            {% comment %}{{ 'decor-hero-background-mobile.svg' | inline_asset_content }}{% endcomment %}
-        {% comment %}</div>{% endcomment %}
-
-        <div class="hero-content">
-            {% if section.settings.heading_h1 != blank %}
-                <h1 class="hero-title">{{ section.settings.heading_h1 }}</h1>
-            {% endif %}
-
-            {% if section.settings.heading_h2 != blank %}
-                <h2 class="hero-subtitle">{{ section.settings.heading_h2 }}</h2>
-            {% endif %}
-
-            {% if section.settings.button_text != blank %}
-                <a href="{{ section.settings.button_link }}" class="button-primary">
-                    {{ section.settings.button_text }}
-                </a>
-            {% endif %}
-        </div>
+                 sizes="100vw"
+                 alt="{{ section.settings.image_alt }}"
+                 class="hero-background-image"
+                 loading="eager"
+                 fetchpriority="high"
+                 decoding="async">
+          {% endif %}
+        </picture>
+      {% endif %}
     </div>
 
-    {% if section.settings.show_breadcrumbs %}
-        {% render 'hero-small-breadcrumbs', breadcrumb_text: section.settings.breadcrumb_current %}
-    {% endif %}
+    <!-- Temporarily disabled for LCP testing
+        <div class="hero-decor--desktop" aria-hidden="true" preserveAspectRatio="none">
+            {{ 'decor-hero-small-background-desktop.svg' | inline_asset_content }}
+        </div>
+
+        <div class="hero-decor--mobile" aria-hidden="true" >
+            {{ 'decor-hero-background-mobile.svg' | inline_asset_content }}
+        </div>
+        -->
+
+    <div class="hero-content">
+      {% if section.settings.heading_h1 != blank %}
+        <h1 class="hero-title">{{ section.settings.heading_h1 }}</h1>
+      {% endif %}
+
+      {% if section.settings.heading_h2 != blank %}
+        <h2 class="hero-subtitle">{{ section.settings.heading_h2 }}</h2>
+      {% endif %}
+
+      {% if section.settings.button_text != blank %}
+        <a href="{{ section.settings.button_link }}" class="button-primary">
+          {{ section.settings.button_text }}
+        </a>
+      {% endif %}
+    </div>
+  </div>
+
+  {% if section.settings.show_breadcrumbs %}
+    {% render 'hero-small-breadcrumbs', breadcrumb_text: section.settings.breadcrumb_current %}
+  {% endif %}
 </section>
 
 {% schema %}
