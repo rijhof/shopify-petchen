@@ -69,53 +69,6 @@
     object-position: center;
 }
 
-/* Hero Background Container für Desktop/Mobile */
-.hero-background-desktop,
-.hero-background-mobile {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.hero-background-mobile {
-    display: none;
-}
-
-.hero-background-desktop {
-    display: block;
-}
-
-/* Image Wrapper Styles für Hero */
-.image__wrapper {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    border-radius: 0;
-    height: 100%;
-}
-
-.image__aspect--1-1 {
-    aspect-ratio: 1 / 1;
-}
-
-.image__aspect--4-3 {
-    aspect-ratio: 4 / 3;
-}
-
-.image__aspect--16-9 {
-    aspect-ratio: 16 / 9;
-}
-
-.hero-background-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center center;
-    display: block;
-}
-
 @media (max-width: 1023px) {
     .hero-background-image {
         object-position: center top;
@@ -165,19 +118,6 @@
         width: 100%;
         height: auto;
         max-height: 472px;
-    }
-
-    /* Mobile Bild Logic */
-    .hero-background-desktop {
-        display: none;
-    }
-
-    .hero-background-mobile {
-        display: block;
-    }
-
-    .hero-background:not(:has(.hero-background-mobile .image)) .hero-background-desktop {
-        display: block;
     }
 }
 

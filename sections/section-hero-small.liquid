@@ -1,51 +1,35 @@
 {{ 'section-hero-small.css' | asset_url | stylesheet_tag }}
+{{ 'snippet-image.css' | asset_url | stylesheet_tag }}
+{{ 'snippet-image.js' | asset_url | script_tag }}
 
 <section class="background-contrast">
     <div class="hero-section container component-padding-y">
         <div class="hero-background">
             {% if section.settings.image_desktop != blank %}
                 <div class="hero-background-desktop">
-                    <div class="image__wrapper image__aspect--16-9">
-                        <img
-                                class="image__img hero-background-image"
-                                src="{{ section.settings.image_desktop | image_url: width: 1440 }}"
-                                srcset="
-                                {{ section.settings.image_desktop | image_url: width: 375 }} 375w,
-                                {{ section.settings.image_desktop | image_url: width: 750 }} 750w,
-                                {{ section.settings.image_desktop | image_url: width: 1100 }} 1100w,
-                                {{ section.settings.image_desktop | image_url: width: 1440 }} 1440w,
-                                {{ section.settings.image_desktop | image_url: width: 1920 }} 1920w
-                            "
-                                sizes="100vw"
-                                alt="{{ section.settings.image_alt | escape }}"
-                                width="{{ section.settings.image_desktop.width }}"
-                                height="{{ section.settings.image_desktop.height }}"
-                                loading="eager"
-                                fetchpriority="high"
-                        >
-                    </div>
+                    {% render 'image',
+                            image: section.settings.image_desktop,
+                            aspect_ratio: '16-9',
+                            decoration_type: 'none',
+                            alt: section.settings.image_alt,
+                            loading: 'eager',
+                            sizes: '100vw',
+                            class: 'hero-background-image'
+                    %}
                 </div>
             {% endif %}
 
             {% if section.settings.image_mobile != blank and section.settings.image_mobile != section.settings.image_desktop %}
                 <div class="hero-background-mobile">
-                    <div class="image__wrapper image__aspect--4-3">
-                        <img
-                                class="image__img hero-background-image"
-                                src="{{ section.settings.image_mobile | image_url: width: 768 }}"
-                                srcset="
-                                {{ section.settings.image_mobile | image_url: width: 375 }} 375w,
-                                {{ section.settings.image_mobile | image_url: width: 550 }} 550w,
-                                {{ section.settings.image_mobile | image_url: width: 768 }} 768w
-                            "
-                                sizes="100vw"
-                                alt="{{ section.settings.image_alt | escape }}"
-                                width="{{ section.settings.image_mobile.width }}"
-                                height="{{ section.settings.image_mobile.height }}"
-                                loading="eager"
-                                fetchpriority="high"
-                        >
-                    </div>
+                    {% render 'image',
+                            image: section.settings.image_mobile,
+                            aspect_ratio: '4-3',
+                            decoration_type: 'none',
+                            alt: section.settings.image_alt,
+                            loading: 'eager',
+                            sizes: '100vw',
+                            class: 'hero-background-image'
+                    %}
                 </div>
             {% endif %}
         </div>
