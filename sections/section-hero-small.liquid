@@ -1,5 +1,12 @@
 {{ 'section-hero-small.css' | asset_url | stylesheet_tag }}
 
+{% if section.settings.image_desktop != blank %}
+  <link rel="preload" as="image" href="{{ section.settings.image_desktop | image_url: width: 1440 }}" media="(min-width: 768px)">
+{% endif %}
+{% if section.settings.image_mobile != blank %}
+  <link rel="preload" as="image" href="{{ section.settings.image_mobile | image_url: width: 768 }}" media="(max-width: 767px)">
+{% endif %}
+
 <section class="background-contrast">
     <div class="hero-section container component-padding-y">
         <div class="hero-background">
