@@ -1,5 +1,9 @@
 {{ 'section-hero-small.css' | asset_url | stylesheet_tag }}
 
+{% comment %} Preload critical fonts first {% endcomment %}
+<link rel="preload" href="{{ 'font-camera-obscura.woff2' | asset_url }}" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="{{ 'font-arlen--regular.woff2' | asset_url }}" as="font" type="font/woff2" crossorigin="anonymous">
+
 {% comment %} Preload hero images for better performance {% endcomment %}
 {% if section.settings.image_desktop != blank %}
     <link rel="preload" as="image" href="{{ section.settings.image_desktop | image_url: width: 1440 }}" media="(min-width: 768px)" fetchpriority="high">
@@ -8,12 +12,35 @@
     <link rel="preload" as="image" href="{{ section.settings.image_mobile | image_url: width: 768 }}" media="(max-width: 767px)" fetchpriority="high">
 {% endif %}
 
-{% comment %} Critical CSS to prevent layout shifts {% endcomment %}
+{% comment %} Critical inline CSS to prevent rendering delays {% endcomment %}
 <style>
+    /* Critical hero styles - inline to prevent blocking */
+    .hero-section {
+        position: relative;
+        contain: layout style;
+        padding-top: var(--component-spacing-y, 64px);
+        padding-bottom: var(--component-spacing-y, 64px);
+    }
+
+    .hero-title {
+        font-family: 'Camera Obscura', serif;
+        font-size: clamp(32px, 5vw, 64px);
+        line-height: 1.1;
+        color: var(--color-primary, #3F593F);
+        margin: 0 0 24px;
+        font-display: swap;
+        contain: layout style;
+        transform: translateZ(0);
+        backface-visibility: hidden;
+        will-change: auto;
+        text-rendering: optimizeSpeed;
+    }
+
     .hero-background {
         position: relative;
         contain: layout style paint;
     }
+
     .hero-background-image {
         width: 100%;
         height: auto;
@@ -21,7 +48,55 @@
         will-change: auto;
         content-visibility: auto;
     }
+
+    .hero-content {
+        contain: layout style;
+        position: relative;
+        z-index: 2;
+    }
+
+    .background-contrast {
+        background-color: var(--color-primary, #3F593F);
+    }
+
+    .background-contrast .hero-title {
+        color: var(--color-white, #FFFFFF) !important;
+    }
+
+    /* Container and layout */
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
+        margin: 0 auto;
+        max-width: 1920px;
+    }
+
+    @media (min-width: 768px) {
+        .container {
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+        .hero-section {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+    }
+
+    @media (min-width: 1280px) {
+        .container {
+            padding-left: 64px;
+            padding-right: 64px;
+        }
+        .hero-section {
+            padding-top: 120px;
+            padding-bottom: 120px;
+        }
+    }
 </style>
+
+{% comment %} Load section CSS asynchronously after critical render {% endcomment %}
+<link rel="preload" href="{{ 'section-hero-small.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>{{ 'section-hero-small.css' | asset_url | stylesheet_tag }}</noscript>
 
 <section class="background-contrast">
     <div class="hero-section container component-padding-y">
@@ -64,7 +139,7 @@
 
         <div class="hero-content">
             {% if section.settings.heading_h1 != blank %}
-                <h1 class="hero-title">{{ section.settings.heading_h1 }}</h1>
+                <h1 class="hero-title" style="font-display: swap;">{{ section.settings.heading_h1 }}</h1>
             {% endif %}
 
             {% if section.settings.heading_h2 != blank %}
