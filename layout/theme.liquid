@@ -17,15 +17,12 @@
     <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
   {%- endunless -%}
 
-  <!-- Font Preloading für bessere Performance -->
   <link rel="preload" href="{{ 'font-arlen--light.woff2' | asset_url }}" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="{{ 'font-arlen--regular.woff2' | asset_url }}" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="{{ 'font-arlen--semi-bold.woff2' | asset_url }}" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="{{ 'font-camera-obscura.woff2' | asset_url }}" as="font" type="font/woff2" crossorigin>
 
-  <!-- CRITICAL CSS - Inline the most important styles -->
   <style>
-    /* Font-face declarations */
     @font-face {
       font-family: 'Arlen';
       src: url('{{ 'font-arlen--light.woff2' | asset_url }}') format('woff2');
@@ -55,7 +52,6 @@
       font-display: swap;
     }
 
-    /* Critical Variables */
     :root {
       --baseline: 8px;
       --color-primary: #3F593F;
@@ -76,7 +72,6 @@
       --transition-duration: 0.25s;
     }
 
-    /* Critical Base Styles */
     *, *::before, *::after {
       box-sizing: border-box;
     }
@@ -96,7 +91,6 @@
       -moz-osx-font-smoothing: grayscale;
     }
 
-    /* Critical Layout */
     .container {
       padding-left: var(--container-padding-mobile);
       padding-right: var(--container-padding-mobile);
@@ -138,7 +132,6 @@
       }
     }
 
-    /* Critical Typography */
     h1, h2, h3, h4, h5, h6 {
       color: var(--color-primary);
       font-family: var(--font-family-headlines);
@@ -155,14 +148,12 @@
       margin: 0 0 24px;
     }
 
-    /* Visibility for above-the-fold content */
     img {
       display: block;
       height: auto;
       max-width: 100%;
     }
 
-    /* Prevent layout shift */
     .hero-section {
       min-height: 750px;
     }
@@ -189,39 +180,42 @@
 
   {{ content_for_header }}
 
-  <!-- Load non-critical CSS asynchronously -->
   <link rel="preload" href="{{ 'theme.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="{{ 'theme.css' | asset_url }}"></noscript>
 
-  <!-- Preload critical section CSS if hero is present -->
   {% if template contains 'index' %}
     <link rel="preload" href="{{ 'section-hero.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="{{ 'section-hero.css' | asset_url }}"></noscript>
   {% endif %}
 
-  <!-- Load header CSS with higher priority but still async -->
   <link rel="preload" href="{{ 'section-header.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="{{ 'section-header.css' | asset_url }}"></noscript>
 
-  <!-- Cart notification can load later -->
-  <link rel="preload" href="{{ 'cart-notification.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="{{ 'cart-notification.css' | asset_url }}"></noscript>
-
-  <!-- Script to handle CSS loading -->
   <script>
-    /*! loadCSS. [c]2020 Filament Group, Inc. MIT License */
-    !function(n){"use strict";n.loadCSS||(n.loadCSS=function(){});var o=loadCSS.relpreload={};if(o.support=function(){var e;try{e=n.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),o.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.addEventListener?t.removeEventListener("load",a):t.attachEvent&&t.detachEvent("onload",a),t.setAttribute("onload",null),t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},o.poly=function(){if(!o.support())for(var t=n.document.getElementsByTagName("link"),e=0;e<t.length;e++){var a=t[e];"preload"!==a.rel||"style"!==a.getAttribute("as")||a.getAttribute("data-loadcss")||(a.setAttribute("data-loadcss",!0),o.bindMediaToggle(a))}},!o.support()){o.poly();var t=n.setInterval(o.poly,500);n.addEventListener?n.addEventListener("load",function(){o.poly(),n.clearInterval(t)}):n.attachEvent&&n.attachEvent("onload",function(){o.poly(),n.clearInterval(t)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:n.loadCSS=loadCSS}("undefined"!=typeof global?global:this);
+    function loadScript(src, callback) {
+      const script = document.createElement('script');
+      script.src = src;
+      script.defer = true;
+      if (callback) script.onload = callback;
+      document.head.appendChild(script);
+    }
+
+    function loadStylesheet(href) {
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = href;
+      document.head.appendChild(link);
+    }
+
+    window.themeScripts = {
+      swiper: false,
+      productCard: false,
+      cartNotification: false
+    };
   </script>
 
-  <!-- Defer JavaScript loading -->
-  <script src="{{ 'snippet-product-card.js' | asset_url }}" defer></script>
-  <link rel="stylesheet" href="{{ 'snippet-product-card-modal.css' | asset_url }}" media="print" onload="this.media='all'">
-
-  <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"></noscript>
-
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
   <script src="{{ 'js-section-header.js' | asset_url }}" defer></script>
+  <script src="{{ 'index.js' | asset_url }}" defer></script>
 
 </head>
 <body>
@@ -233,7 +227,78 @@
 
 {% render 'cart-notification' %}
 
-<script src="{{ 'cart-notification.js' | asset_url }}" defer></script>
-<script src="{{ 'index.js' | asset_url }}" defer="defer"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    {% comment %} Load Swiper only if needed {% endcomment %}
+    {% assign needs_swiper = false %}
+    {% if template contains 'index' or template contains 'collection' or template contains 'product' %}
+    {% assign needs_swiper = true %}
+    {% endif %}
+
+    {% if needs_swiper %}
+    if (document.querySelector('.swiper') && !window.themeScripts.swiper) {
+      loadStylesheet('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
+      loadScript('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js');
+      window.themeScripts.swiper = true;
+    }
+    {% endif %}
+
+    {% comment %} Load product card scripts only on relevant pages {% endcomment %}
+    {% if template contains 'collection' or template contains 'search' or template contains 'index' %}
+    if (document.querySelector('.product-card') && !window.themeScripts.productCard) {
+      loadStylesheet('{{ 'snippet-product-card-modal.css' | asset_url }}');
+      loadScript('{{ 'snippet-product-card.js' | asset_url }}');
+      window.themeScripts.productCard = true;
+    }
+    {% endif %}
+
+    {% comment %} Cart notification - load on interaction {% endcomment %}
+    function loadCartNotification() {
+      if (!window.themeScripts.cartNotification) {
+        loadStylesheet('{{ 'cart-notification.css' | asset_url }}');
+        loadScript('{{ 'cart-notification.js' | asset_url }}');
+        window.themeScripts.cartNotification = true;
+      }
+    }
+
+    document.addEventListener('click', function(e) {
+      if (e.target.matches('[data-cart-add], .cart-button, .add-to-cart')) {
+        loadCartNotification();
+      }
+    });
+
+    {% comment %} Intersection Observer for lazy loading scripts {% endcomment %}
+    if ('IntersectionObserver' in window) {
+      const lazyScriptObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const element = entry.target;
+
+            if (element.classList.contains('swiper') && !window.themeScripts.swiper) {
+              loadStylesheet('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
+              loadScript('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js');
+              window.themeScripts.swiper = true;
+              lazyScriptObserver.unobserve(element);
+            }
+
+            if (element.classList.contains('product-card') && !window.themeScripts.productCard) {
+              loadStylesheet('{{ 'snippet-product-card-modal.css' | asset_url }}');
+              loadScript('{{ 'snippet-product-card.js' | asset_url }}');
+              window.themeScripts.productCard = true;
+              lazyScriptObserver.unobserve(element);
+            }
+          }
+        });
+      }, {
+        rootMargin: '50px'
+      });
+
+      document.querySelectorAll('.swiper, .product-card').forEach((el) => {
+        lazyScriptObserver.observe(el);
+      });
+    }
+  });
+</script>
+
 </body>
 </html>
