@@ -73,8 +73,6 @@
 
   {{ content_for_header }}
 
-  {{ 'theme.css' | asset_url | stylesheet_tag }}
-  {{ 'section-header.css' | asset_url | stylesheet_tag }}
   {% comment %}{{ 'cart-notification.css' | asset_url | stylesheet_tag }}{% endcomment %}
 
   <script src="{{ 'snippet-product-card.js' | asset_url }}" defer></script>
@@ -85,6 +83,12 @@
 
 </head>
 <body>
+
+<style>
+  {{ 'theme.css' | asset_url | stylesheet_tag }}
+  {{ 'section-header.css' | asset_url | stylesheet_tag }}
+</style>
+
 {% section 'header' %}
 <main id="main" class="main" role="main" tabindex="-1">
   {{ content_for_layout }}
