@@ -1,32 +1,45 @@
 {{ 'section-hero-small.css' | asset_url | stylesheet_tag }}
+{{ 'snippet-image.css' | asset_url | stylesheet_tag }}
+{{ 'snippet-image.js' | asset_url | script_tag }}
 
 <section class="background-contrast">
     <div class="hero-section container component-padding-y">
         <div class="hero-background">
-            {% if section.settings.image_desktop != blank or section.settings.image_mobile != blank %}
-                <picture>
-                    {% if section.settings.image_desktop != blank %}
-                        <source media="(min-width: 768px)" srcset="{{ section.settings.image_desktop | image_url: width: 1440 }}">
-                    {% endif %}
-                    {% if section.settings.image_mobile != blank %}
-                        <img src="{{ section.settings.image_mobile | image_url: width: 768 }}" alt="{{ section.settings.image_alt }}" class="hero-background-image">
-                    {% elsif section.settings.image_desktop != blank %}
-                        <img src="{{ section.settings.image_desktop | image_url: width: 768 }}" alt="{{ section.settings.image_alt }}" class="hero-background-image">
-                    {% endif %}
-                </picture>
+            {% if section.settings.image_desktop != blank %}
+                <div class="hero-background-desktop">
+                    {% render 'image',
+                            image: section.settings.image_desktop,
+                            aspect_ratio: '16-9',
+                            decoration_type: 'none',
+                            alt: section.settings.image_alt,
+                            loading: 'eager',
+                            sizes: '100vw',
+                            class: 'hero-background-image'
+                    %}
+                </div>
+            {% endif %}
+
+            {% if section.settings.image_mobile != blank and section.settings.image_mobile != section.settings.image_desktop %}
+                <div class="hero-background-mobile">
+                    {% render 'image',
+                            image: section.settings.image_mobile,
+                            aspect_ratio: '4-3',
+                            decoration_type: 'none',
+                            alt: section.settings.image_alt,
+                            loading: 'eager',
+                            sizes: '100vw',
+                            class: 'hero-background-image'
+                    %}
+                </div>
             {% endif %}
         </div>
 
         <div class="hero-decor--desktop" aria-hidden="true" preserveAspectRatio="none">
-            <svg xmlns="http://www.w3.org/2000/svg" width="899" height="600" viewBox="0 0 899 600" fill="none">
-                <path d="M-27.3426 669.302L812.301 811.955L812.3 811.96C854.877 770.558 905.86 676.471 849.09 627.912C828.492 610.293 801.934 606.152 775.704 604.672C781.9 596.239 788.35 587.995 793.256 578.697C813.441 540.465 817.566 491.255 798.068 451.999C787.319 430.364 768.93 410.077 744.721 403.964C787.175 384.916 826.484 358.223 855.453 321.327C878.959 291.387 901.551 246.848 898.406 207.927C894.26 156.576 845.72 134.738 799.261 135.786C834.812 94.7847 852.064 35.9177 822.716 -16.7019C756.847 -134.802 263.316 -109.542 -27.3427 -30.3372L-27.3426 669.302Z" fill="#3F593F"/>
-            </svg>
+            {{ 'decor-hero-small-background-desktop.svg' | inline_asset_content }}
         </div>
 
         <div class="hero-decor--mobile" aria-hidden="true" >
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 473" fill="none" preserveAspectRatio="none">
-                <path d="M-2.90427 480.489L-12.3067 20.8303H-12.3095C11.5936 3.36231 62.0908 -13.8382 81.216 18.117C88.1551 29.7118 87.9729 43.1099 86.51 56.1247C91.172 53.7837 95.7621 51.3021 100.741 49.6669C121.216 42.9389 145.746 45.0208 163.411 57.8812C173.146 64.9704 181.581 75.7021 182.564 88.1103C195.471 68.8362 211.871 51.746 232.424 40.5896C249.101 31.5372 272.877 24.1529 291.742 28.948C316.634 35.2734 323.313 60.9529 318.919 83.6985C342.038 69.6496 372.41 66.0863 395.82 84.9035C448.362 127.137 451.156 348.613 387.96 484.849L-2.90427 480.489Z" fill="#3F593F"/>
-            </svg>
+            {{ 'decor-hero-background-mobile.svg' | inline_asset_content }}
         </div>
 
         <div class="hero-content">
@@ -39,7 +52,7 @@
             {% endif %}
 
             {% if section.settings.button_text != blank %}
-                <a href="{{ section.settings.button_link }}" class="button-primary">
+                <a href="{{ section.settings.button_link }}" class="button-{{ section.settings.button_type }}">
                     {{ section.settings.button_text }}
                 </a>
             {% endif %}
@@ -54,9 +67,9 @@
 
 {% schema %}
 {
-  "name": "Hero",
+  "name": "Hero Klein",
   "tag": "section",
-  "class": "section-hero",
+  "class": "section-hero-small",
   "settings": [
     {
       "type": "image_picker",
@@ -66,7 +79,8 @@
     {
       "type": "image_picker",
       "id": "image_mobile",
-      "label": "Hintergrundbild Mobile"
+      "label": "Hintergrundbild Mobile",
+      "info": "Optional: Separates Bild für Mobile. Wenn leer, wird das Desktop-Bild verwendet."
     },
     {
       "type": "text",
