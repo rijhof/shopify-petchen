@@ -17,6 +17,12 @@
     <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
   {%- endunless -%}
 
+  <!-- Font Preloading für bessere Performance -->
+  <link rel="preload" href="{{ 'font-arlen--light.woff2' | asset_url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ 'font-arlen--regular.woff2' | asset_url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ 'font-arlen--semi-bold.woff2' | asset_url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ 'font-camera-obscura.woff2' | asset_url }}" as="font" type="font/woff2" crossorigin>
+
   <title>
     {{ page_title }}
     {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
@@ -41,6 +47,7 @@
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+  <script src="{{ 'js-section-header.js' | asset_url }}" defer></script>
 
 </head>
 <body>
