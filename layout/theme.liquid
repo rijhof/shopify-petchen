@@ -74,7 +74,7 @@
   {{ content_for_header }}
 
   {{ 'theme.css' | asset_url | stylesheet_tag }}
-  {% comment %}{{ 'section-header.css' | asset_url | stylesheet_tag }}{% endcomment %}
+  {{ 'section-header.css' | asset_url | stylesheet_tag }}
   {% comment %}{{ 'cart-notification.css' | asset_url | stylesheet_tag }}{% endcomment %}
   {% comment %}{{ 'snippet-product-card-modal.css' | asset_url | stylesheet_tag }}{% endcomment %}
 {% comment %}{% endcomment %}
