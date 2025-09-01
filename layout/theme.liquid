@@ -17,20 +17,21 @@
     <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
   {%- endunless -%}
 
-  <!-- Font Preloading für bessere Performance -->
-  <link rel="preload" href="{{ 'font-arlen--light.woff2' | asset_url }}" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="{{ 'font-arlen--regular.woff2' | asset_url }}" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="{{ 'font-arlen--semi-bold.woff2' | asset_url }}" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="{{ 'font-camera-obscura.woff2' | asset_url }}" as="font" type="font/woff2" crossorigin>
-
-  <!-- Inline critical font-face declarations mit font-display: swap -->
+  <!-- Critical CSS inline -->
   <style>
-    @font-face {
-      font-family: 'Arlen';
-      src: url('{{ 'font-arlen--light.woff2' | asset_url }}') format('woff2');
-      font-weight: 100 300;
-      font-style: normal;
-      font-display: swap;
+    /* Critical CSS - nur das Nötigste für Above-the-Fold Content */
+    :root {
+      --baseline: 8px;
+      --color-primary: #3F593F;
+      --color-secondary: #F4F2E4;
+      --color-background: #DFECDF;
+      --color-text: #2F4027;
+      --color-white: #FFFFFF;
+      --font-family-default: 'Arlen', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+      --font-family-display: 'Camera Obscura', 'Arlen', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+      --container-padding-mobile: 16px;
+      --container-padding-desktop: 64px;
+      --transition-duration: 0.25s;
     }
 
     @font-face {
@@ -42,21 +43,66 @@
     }
 
     @font-face {
-      font-family: 'Arlen';
-      src: url('{{ 'font-arlen--semi-bold.woff2' | asset_url }}') format('woff2');
-      font-weight: 600;
-      font-style: normal;
-      font-display: swap;
-    }
-
-    @font-face {
       font-family: 'Camera Obscura';
       src: url('{{ 'font-camera-obscura.woff2' | asset_url }}') format('woff2');
       font-weight: 400;
       font-style: normal;
       font-display: swap;
     }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--color-secondary);
+      color: var(--color-text);
+      font-family: var(--font-family-default);
+      margin: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      padding: 0 var(--container-padding-mobile);
+      margin: 0 auto;
+      max-width: 1920px;
+    }
+
+    @media (min-width: 1280px) {
+      .container {
+        padding: 0 var(--container-padding-desktop);
+      }
+    }
+
+    /* Header Critical Styles */
+    header {
+      background-color: var(--color-secondary);
+      position: relative;
+    }
+
+    /* Prevent Layout Shift */
+    .main {
+      min-height: 50vh;
+    }
   </style>
+
+  <!-- Fonts mit höherer Priorität laden -->
+  <link rel="preload" href="{{ 'font-arlen--regular.woff2' | asset_url }}" as="font" type="font/woff2" crossorigin="anonymous" fetchpriority="high">
+  <link rel="preload" href="{{ 'font-camera-obscura.woff2' | asset_url }}" as="font" type="font/woff2" crossorigin="anonymous" fetchpriority="high">
+
+  <!-- CSS asynchron laden -->
+  <link rel="preload" href="{{ 'theme.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="{{ 'section-header.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+  <!-- Fallback für Browser ohne JavaScript -->
+  <noscript>
+    <link rel="stylesheet" href="{{ 'theme.css' | asset_url }}">
+    <link rel="stylesheet" href="{{ 'section-header.css' | asset_url }}">
+  </noscript>
+
+  <!-- Resource Hints für kritische Domains -->
+  <link rel="dns-prefetch" href="https://cdn.shopify.com">
+  <link rel="dns-prefetch" href="https://fonts.shopifycdn.com">
 
   <title>
     {{ page_title }}
@@ -73,15 +119,11 @@
 
   {{ content_for_header }}
 
-  {{ 'theme.css' | asset_url | stylesheet_tag }}
-  {{ 'section-header.css' | asset_url | stylesheet_tag }}
-  {% comment %}{{ 'cart-notification.css' | asset_url | stylesheet_tag }}{% endcomment %}
-
-  <script src="{{ 'snippet-product-card.js' | asset_url }}" defer></script>
-
-  {% comment %}<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">{% endcomment %}
-  {% comment %}<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>{% endcomment %}
-  <script src="{{ 'js-section-header.js' | asset_url }}" defer></script>
+  <!-- JavaScript für CSS-Loading -->
+  <script>
+    // Polyfill für rel=preload
+    !function(n){"use strict";n.loadCSS||(n.loadCSS=function(){});var o=loadCSS.relpreload={};if(o.support=function(){var e;try{e=n.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),o.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.addEventListener?t.removeEventListener("load",a):t.attachEvent&&t.detachEvent("onload",a),t.setAttribute("onload",null),t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},!o.support()){var t,d=n.document.getElementsByTagName("link");for(t=0;t<d.length;t++){var e=d[t];"preload"!==e.rel||"style"!==e.getAttribute("as")||e.getAttribute("data-loadcss")||(e.setAttribute("data-loadcss",!0),o.bindMediaToggle(e))}}}(window);
+  </script>
 
 </head>
 <body>
@@ -93,7 +135,10 @@
 
 {% render 'cart-notification' %}
 
+<!-- Scripts mit defer laden -->
 <script src="{{ 'cart-notification.js' | asset_url }}" defer></script>
-<script src="{{ 'index.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'snippet-product-card.js' | asset_url }}" defer></script>
+<script src="{{ 'js-section-header.js' | asset_url }}" defer></script>
+<script src="{{ 'index.js' | asset_url }}" defer></script>
 </body>
 </html>
