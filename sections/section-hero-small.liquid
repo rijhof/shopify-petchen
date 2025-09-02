@@ -10,20 +10,20 @@
 
 <section class="background-contrast">
     <div class="hero-section container component-padding-y">
-        {% comment %}<div class="hero-background">{% endcomment %}
-            {% comment %}{% if section.settings.image_desktop != blank or section.settings.image_mobile != blank %}{% endcomment %}
-                {% comment %}<picture>{% endcomment %}
-                    {% comment %}{% if section.settings.image_desktop != blank %}{% endcomment %}
-                        {% comment %}<source media="(min-width: 768px)" srcset="{{ section.settings.image_desktop | image_url: width: 1440 }}">{% endcomment %}
-                    {% comment %}{% endif %}{% endcomment %}
-                    {% comment %}{% if section.settings.image_mobile != blank %}{% endcomment %}
-                        {% comment %}<img src="{{ section.settings.image_mobile | image_url: width: 768 }}" alt="{{ section.settings.image_alt }}" class="hero-background-image" fetchpriority="high">{% endcomment %}
-                    {% comment %}{% elsif section.settings.image_desktop != blank %}{% endcomment %}
-                        {% comment %}<img src="{{ section.settings.image_desktop | image_url: width: 768 }}" alt="{{ section.settings.image_alt }}" class="hero-background-image" fetchpriority="high">{% endcomment %}
-                    {% comment %}{% endif %}{% endcomment %}
-                {% comment %}</picture>{% endcomment %}
-            {% comment %}{% endif %}{% endcomment %}
-        {% comment %}</div>{% endcomment %}
+        <div class="hero-background">
+            {% if section.settings.image_desktop != blank or section.settings.image_mobile != blank %}
+                <picture>
+                    {% if section.settings.image_desktop != blank %}
+                        <source media="(min-width: 768px)" srcset="{{ section.settings.image_desktop | image_url: width: 1440 }}">
+                    {% endif %}
+                    {% if section.settings.image_mobile != blank %}
+                        <img src="{{ section.settings.image_mobile | image_url: width: 768 }}" alt="{{ section.settings.image_alt }}" class="hero-background-image" fetchpriority="high">
+                    {% elsif section.settings.image_desktop != blank %}
+                        <img src="{{ section.settings.image_desktop | image_url: width: 768 }}" alt="{{ section.settings.image_alt }}" class="hero-background-image" fetchpriority="high">
+                    {% endif %}
+                </picture>
+            {% endif %}
+        </div>
 
         <div class="hero-decor--desktop" aria-hidden="true" preserveAspectRatio="none">
             {{ 'decor-hero-small-background-desktop.svg' | inline_asset_content }}

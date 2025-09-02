@@ -155,9 +155,9 @@
     text-decoration: line-through;
 }
 
-.product-card__quick-add {
-    flex-shrink: 0;
-}
+/*.product-card__quick-add {*/
+/*    flex-shrink: 0;*/
+/*}*/
 
 .product-card__quick-add .button-primary {
     margin-bottom: 0;
@@ -167,11 +167,11 @@
     margin: 0;
 }
 
-/* Quick Add Button Icon Override */
-.product-card__quick-add .button-primary.icon svg {
-    width: 20px;
-    height: 20px;
-}
+/*!* Quick Add Button Icon Override *!*/
+/*.product-card__quick-add .button-primary.icon svg {*/
+/*    width: 20px;*/
+/*    height: 20px;*/
+/*}*/
 
 /* Responsive adjustments */
 @media (max-width: 767px) {
