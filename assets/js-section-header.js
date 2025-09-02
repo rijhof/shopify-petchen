@@ -4,8 +4,13 @@ document.addEventListener('DOMContentLoaded', function() {
     let ticking = false;
 
     function setBodyPadding() {
-        const headerHeight = headerWrapper.offsetHeight;
-        document.body.style.paddingTop = headerHeight + 'px';
+        requestAnimationFrame(() => {
+            const rect = headerWrapper.getBoundingClientRect();
+            const headerHeight = rect.height;
+            if (headerHeight > 0) {
+                document.body.style.paddingTop = headerHeight + 'px';
+            }
+        });
     }
 
     setBodyPadding();
