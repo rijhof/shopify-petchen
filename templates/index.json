@@ -22,6 +22,21 @@
         "button_link": "shopify://collections/all"
       }
     },
+    "section_hero_small_gktcAQ": {
+      "type": "section-hero-small",
+      "name": "Hero Klein",
+      "settings": {
+        "image_desktop": "shopify://shop_images/Hero__Bild_oder_Vi_deo_d1cbb47e-9c3a-4d79-b18b-e2117b3334ed.png",
+        "image_mobile": "shopify://shop_images/Hero__Bild_oder_Vi_deo_14517e2b-daf6-4ae9-8c25-6ad1790946d1.png",
+        "image_alt": "",
+        "breadcrumb_current": "",
+        "heading_h1": "Petchen x Adoptieren statt Produzieren",
+        "heading_h2": "Mit jedem Kauf Gutes tun!",
+        "button_text": "Produkte entdecken",
+        "button_link": "#",
+        "button_type": "primary"
+      }
+    },
     "section_logo_grid_CnM7jJ": {
       "type": "section-logo-grid",
       "name": "Logo Grid",
@@ -208,7 +223,6 @@
         "button_text": "",
         "button_link": "",
         "button_type": "primary",
-        "icon_position": "none",
         "background_color": "default"
       }
     },
@@ -254,7 +268,6 @@
         "button_text": "",
         "button_link": "",
         "button_type": "primary",
-        "icon_position": "none",
         "background_color": "green"
       }
     },
@@ -300,7 +313,6 @@
         "button_text": "",
         "button_link": "",
         "button_type": "primary",
-        "icon_position": "none",
         "background_color": "dark_green"
       }
     },
@@ -308,14 +320,11 @@
       "type": "section-image-text",
       "name": "Bild mit Text",
       "settings": {
-        "precontent_heading": "",
-        "precontent_content": "",
         "image": "shopify://shop_images/img.png",
         "image_alt": "",
         "decoration_type": "flower-grass-bottom-left",
         "image_position": "left",
         "heading": "Überschrift",
-        "heading_level": "h2",
         "content": "<p>Fügen Sie hier Ihren Text ein. Nutzen Sie die Formatierungsoptionen, um Ihren Inhalt zu strukturieren.</p>",
         "button_text": "",
         "button_link": "",
@@ -328,14 +337,11 @@
       "type": "section-image-text",
       "name": "Bild mit Text",
       "settings": {
-        "precontent_heading": "",
-        "precontent_content": "",
         "image": "shopify://shop_images/img.png",
         "image_alt": "",
         "decoration_type": "heart-bottom-right-edge",
         "image_position": "right",
         "heading": "Überschrift",
-        "heading_level": "h2",
         "content": "<p>Fügen Sie hier Ihren Text ein. Nutzen Sie die Formatierungsoptionen, um Ihren Inhalt zu strukturieren.</p>",
         "button_text": "",
         "button_link": "",
@@ -348,14 +354,11 @@
       "type": "section-image-text",
       "name": "Bild mit Text",
       "settings": {
-        "precontent_heading": "",
-        "precontent_content": "",
         "image": "shopify://shop_images/img.png",
         "image_alt": "",
         "decoration_type": "flower-grass-bottom-left",
         "image_position": "left",
         "heading": "Überschrift",
-        "heading_level": "h2",
         "content": "<p>Fügen Sie hier Ihren Text ein. Nutzen Sie die Formatierungsoptionen, um Ihren Inhalt zu strukturieren.</p>",
         "button_text": "",
         "button_link": "",
@@ -727,6 +730,7 @@
   },
   "order": [
     "section_hero_A4FBMG",
+    "section_hero_small_gktcAQ",
     "section_logo_grid_CnM7jJ",
     "section_image_accordion_MyzdQF",
     "section_image_accordion_aNVHXe",
