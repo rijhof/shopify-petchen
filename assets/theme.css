@@ -711,21 +711,57 @@ figcaption {
  *
  */
 
-/* Button styles */
+.button-primary,
+.button-secondary,
+.button-tertiary,
+button:not([class]) {
+    transition-property: color, opacity, transform, box-shadow, text-decoration-color;
+    transition-duration: var(--transition-duration);
+    transition-timing-function: ease;
+    will-change: opacity, transform;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+}
+
+.button-primary,
+.button-primary:hover,
+.button-primary:focus,
+.button-secondary,
+.button-secondary:hover,
+.button-secondary:focus,
+button:not([class]),
+button:not([class]):hover,
+.background-contrast .button-primary,
+.background-contrast .button-primary:hover,
+.background-contrast .button-primary:focus,
+.background-contrast .button-secondary,
+.background-contrast .button-secondary:hover,
+.background-contrast .button-secondary:focus,
+.background-reset .button-primary,
+.background-reset .button-primary:hover,
+.background-reset .button-primary:focus,
+.background-reset .button-secondary,
+.background-reset .button-secondary:hover,
+.background-reset .button-secondary:focus {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
 
 button {
     margin-bottom: 32px;
 }
 
-/* Button Primary Styles */
+/* ---------------------------------------------------------
+   Button Primary
+--------------------------------------------------------- */
+
 .button-primary {
     display: flex;
     align-items: center;
     padding: var(--button-padding-primary);
     background-image: url('icon-btn-bg.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% 99%;
     background-color: transparent;
     color: var(--button-font-color);
     border: none;
@@ -734,7 +770,6 @@ button {
     font-family: inherit;
     font-size: var(--button-font-size);
     font-weight: var(--font-weight-medium);
-    transition: all var(--transition-duration) ease;
     appearance: none;
     position: relative;
     width: fit-content;
@@ -773,11 +808,9 @@ button {
     pointer-events: none;
 }
 
-.button-primary:focus {
+.button-primary:focus,
+.button-primary:focus-visible {
     background-image: url('icon-btn-bg--focused.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% 99%;
     color: var(--button-font-color);
     outline: none;
 }
@@ -833,16 +866,16 @@ button {
     flex-shrink: 0;
 }
 
-/* Button Secondary Styles */
+/* ---------------------------------------------------------
+   Button Secondary
+--------------------------------------------------------- */
+
 .button-secondary {
     display: flex;
     align-items: center;
     gap: var(--button-gap);
     padding: var(--button-padding-primary);
     background-image: url('icon-btn-scndry-bg.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% 99%;
     background-color: transparent;
     color: var(--button-background-color);
     border: none;
@@ -851,7 +884,6 @@ button {
     font-family: inherit;
     font-size: var(--button-font-size);
     font-weight: var(--font-weight-medium);
-    transition: all var(--transition-duration) ease;
     appearance: none;
     width: fit-content;
 }
@@ -861,11 +893,9 @@ button {
     color: var(--button-font-color);
 }
 
-.button-secondary:focus {
+.button-secondary:focus,
+.button-secondary:focus-visible {
     background-image: url('icon-btn-scndry-bg--focused.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% 99%;
     color: var(--button-font-color);
     outline: none;
 }
@@ -892,7 +922,8 @@ button {
 }
 
 .button-secondary.icon--right:hover::after,
-.button-secondary.icon--right:focus::after {
+.button-secondary.icon--right:focus::after,
+.button-secondary.icon--right:focus-visible::after {
     background-image: url('icon-chevron-right.svg');
 }
 
@@ -913,7 +944,8 @@ button {
 }
 
 .button-secondary.icon--left:hover::before,
-.button-secondary.icon--left:focus::before {
+.button-secondary.icon--left:focus::before,
+.button-secondary.icon--left:focus-visible::before {
     background-image: url('icon-chevron-right.svg');
 }
 
@@ -929,7 +961,8 @@ button {
     background-image: url('icon-btn-scndry-bg--icon-only-hover.svg');
 }
 
-.button-secondary.icon:focus {
+.button-secondary.icon:focus,
+.button-secondary.icon:focus-visible {
     background-image: url('icon-btn-scndry-bg--icon-only-focused.svg');
 }
 
@@ -944,7 +977,10 @@ button {
     flex-shrink: 0;
 }
 
-/* Button Tertiary Styles */
+/* ---------------------------------------------------------
+   Button Tertiary
+--------------------------------------------------------- */
+
 .button-tertiary {
     display: flex;
     align-items: center;
@@ -964,7 +1000,6 @@ button {
     font-family: inherit;
     font-size: var(--font-size-link);
     font-weight: var(--font-weight-medium);
-    transition: all var(--transition-duration) ease;
     appearance: none;
     width: fit-content;
 }
@@ -1024,7 +1059,10 @@ button {
     flex-shrink: 0;
 }
 
-/* Default button styles */
+/* ---------------------------------------------------------
+   Default button (no class)
+--------------------------------------------------------- */
+
 button:not([class]) {
     appearance: none;
     border: none;
@@ -1039,21 +1077,19 @@ button:not([class]) {
     min-height: var(--button-min-size);
     padding: var(--button-padding-vertical) var(--button-padding-horizontal);
     background-image: url('icon-btn-bg.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% 99%;
     background-color: transparent;
     color: var(--button-font-color);
-    transition: all var(--transition-duration) ease;
+    /* transition handled by shared block above */
 }
 
 button:not([class]):hover {
     background-image: url('icon-btn-bg--hover.svg');
 }
 
-/* Setting !important because of theme editor styles */
+/* ---------------------------------------------------------
+   Contrast Background Styles (with !important)
+--------------------------------------------------------- */
 
-/* Contrast Background Styles */
 .background-contrast .button-primary {
     background-image: url('icon-contrast-btn-bg.svg') !important;
     color: var(--color-text) !important;
@@ -1068,7 +1104,8 @@ button:not([class]):hover {
     color: var(--color-text) !important;
 }
 
-.background-contrast .button-primary:focus {
+.background-contrast .button-primary:focus,
+.background-contrast .button-primary:focus-visible {
     background-image: url('icon-contrast-btn-bg--focused.svg') !important;
     color: var(--color-text) !important;
 }
@@ -1095,7 +1132,8 @@ button:not([class]):hover {
     color: var(--color-text) !important;
 }
 
-.background-contrast .button-secondary:focus {
+.background-contrast .button-secondary:focus,
+.background-contrast .button-secondary:focus-visible {
     background-image: url('icon-contrast-btn-scndry-bg--focused.svg') !important;
     color: var(--color-text) !important;
 }
@@ -1105,7 +1143,8 @@ button:not([class]):hover {
 }
 
 .background-contrast .button-secondary.icon--right:hover::after,
-.background-contrast .button-secondary.icon--right:focus::after {
+.background-contrast .button-secondary.icon--right:focus::after,
+.background-contrast .button-secondary.icon--right:focus-visible::after {
     background-image: url('icon-contrast-chevron-right.svg') !important;
 }
 
@@ -1114,7 +1153,8 @@ button:not([class]):hover {
 }
 
 .background-contrast .button-secondary.icon--left:hover::before,
-.background-contrast .button-secondary.icon--left:focus::before {
+.background-contrast .button-secondary.icon--left:focus::before,
+.background-contrast .button-secondary.icon--left:focus-visible::before {
     background-image: url('icon-contrast-chevron-right.svg') !important;
 }
 
@@ -1126,7 +1166,8 @@ button:not([class]):hover {
     background-image: url('icon-contrast-btn-scndry-bg--icon-only-hover.svg') !important;
 }
 
-.background-contrast .button-secondary.icon:focus {
+.background-contrast .button-secondary.icon:focus,
+.background-contrast .button-secondary.icon:focus-visible {
     background-image: url('icon-contrast-btn-scndry-bg--icon-only-focused.svg') !important;
 }
 
@@ -1135,7 +1176,8 @@ button:not([class]):hover {
 }
 
 .background-contrast .button-secondary.icon:hover::after,
-.background-contrast .button-secondary.icon:focus::after {
+.background-contrast .button-secondary.icon:focus::after,
+.background-contrast .button-secondary.icon:focus-visible::after {
     background-image: url('icon-contrast-chevron-right.svg') !important;
 }
 
@@ -1173,7 +1215,9 @@ button:not([class]):hover {
     color: var(--color-text) !important;
 }
 
-/* Background Reset Styles for Buttons */
+/* ---------------------------------------------------------
+   Background Reset Styles (with !important)
+--------------------------------------------------------- */
 
 .background-reset .button-primary {
     background-image: url('icon-btn-bg.svg') !important;
@@ -1189,7 +1233,8 @@ button:not([class]):hover {
     color: var(--button-font-color) !important;
 }
 
-.background-reset .button-primary:focus {
+.background-reset .button-primary:focus,
+.background-reset .button-primary:focus-visible {
     background-image: url('icon-btn-bg--focused.svg') !important;
     color: var(--button-font-color) !important;
 }
@@ -1216,7 +1261,8 @@ button:not([class]):hover {
     color: var(--button-font-color) !important;
 }
 
-.background-reset .button-secondary:focus {
+.background-reset .button-secondary:focus,
+.background-reset .button-secondary:focus-visible {
     background-image: url('icon-btn-scndry-bg--focused.svg') !important;
     color: var(--button-font-color) !important;
 }
@@ -1226,7 +1272,8 @@ button:not([class]):hover {
 }
 
 .background-reset .button-secondary.icon--right:hover::after,
-.background-reset .button-secondary.icon--right:focus::after {
+.background-reset .button-secondary.icon--right:focus::after,
+.background-reset .button-secondary.icon--right:focus-visible::after {
     background-image: url('icon-chevron-right.svg') !important;
 }
 
@@ -1235,7 +1282,8 @@ button:not([class]):hover {
 }
 
 .background-reset .button-secondary.icon--left:hover::before,
-.background-reset .button-secondary.icon--left:focus::before {
+.background-reset .button-secondary.icon--left:focus::before,
+.background-reset .button-secondary.icon--left:focus-visible::before {
     background-image: url('icon-chevron-right.svg') !important;
 }
 
@@ -1247,7 +1295,8 @@ button:not([class]):hover {
     background-image: url('icon-btn-scndry-bg--icon-only-hover.svg') !important;
 }
 
-.background-reset .button-secondary.icon:focus {
+.background-reset .button-secondary.icon:focus,
+.background-reset .button-secondary.icon:focus-visible {
     background-image: url('icon-btn-scndry-bg--icon-only-focused.svg') !important;
 }
 
@@ -1256,7 +1305,8 @@ button:not([class]):hover {
 }
 
 .background-reset .button-secondary.icon:hover::after,
-.background-reset .button-secondary.icon:focus::after {
+.background-reset .button-secondary.icon:focus::after,
+.background-reset .button-secondary.icon:focus-visible::after {
     background-image: url('icon-chevron-right.svg') !important;
 }
 
@@ -1290,7 +1340,10 @@ button:not([class]):hover {
     color: var(--button-font-color) !important;
 }
 
-/* Fullwidth Button Styles */
+/* ---------------------------------------------------------
+   Fullwidth
+--------------------------------------------------------- */
+
 .button-primary.fullwidth {
     width: 100%;
     justify-content: center;
@@ -1301,7 +1354,8 @@ button:not([class]):hover {
     background-image: url('icon-btn-bg--fullwidth-dark.svg');
 }
 
-.button-primary.fullwidth:focus {
+.button-primary.fullwidth:focus,
+.button-primary.fullwidth:focus-visible {
     background-image: url('icon-btn-bg--fullwidth-dark.svg');
 }
 
@@ -1321,7 +1375,8 @@ button:not([class]):hover {
     color: var(--color-white);
 }
 
-.button-secondary.fullwidth:focus {
+.button-secondary.fullwidth:focus,
+.button-secondary.fullwidth:focus-visible {
     background-image: url('icon-btn-bg--fullwidth-hollow.svg');
     color: var(--color-primary);
 }
