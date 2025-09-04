@@ -50,6 +50,10 @@
                                                     sizes: '(min-width: 1280px) 400px, (min-width: 768px) 33vw, 100vw'
                                             %}
                                         </div>
+                                    {% else %}
+                                        <div class="section-column-image-text__media">
+                                            {{ 'image' | placeholder_svg_tag }}
+                                        </div>
                                     {% endif %}
 
                                     <div class="section-column-image-text__content">
@@ -172,7 +176,7 @@
   ],
   "presets": [
     {
-      "name": "Column Image Text",
+      "name": "Spalten: Bild + Text",
       "category": "Bild + Inhalt",
       "blocks": [
         {
