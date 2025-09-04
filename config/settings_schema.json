@@ -1,3 +1,21 @@
 [
-
+  {
+    "name": "theme_info",
+    "theme_name": "Petchen theme",
+    "theme_version": "1.0.0",
+    "theme_author": "Friendventure",
+    "theme_documentation_url": "https://example.com",
+    "theme_support_url": "https://example.com"
+  },
+  {
+    "name": "General",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "favicon",
+        "label": "Favicon",
+        "info": "Will be scaled down to 32x32px. PNG or ICO format recommended."
+      }
+    ]
+  }
 ]
