@@ -161,7 +161,7 @@
           "settings": {
             "icon": "icon-decor-house-paw.svg",
             "heading": "",
-            "content": "<p>Mehr Verantwortung. Weniger Leid. Und ein Zuhause für die, die keins haben.Mehr Infos auf unserer Website oder @adoptierenstattproduzieren bei Instagram.</p>"
+            "content": "<p>Mehr Verantwortung. Weniger Leid. Und ein Zuhause für die, die keins haben. Mehr Infos auf <a href=\"#\" title=\"#\">unserer Website</a> oder @adoptierenstattproduzieren bei <a href=\"#\" title=\"#\">Instagram</a>.</p>"
           }
         }
       },
