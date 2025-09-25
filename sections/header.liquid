@@ -16,7 +16,7 @@
 
         {% render 'header-logo' %}
 
-        {% render 'header-buttons' %}
+        {% comment %} {% render 'header-buttons' %} {% endcomment %}
 
         {% comment %}{% render 'header-searchbar' %}{% endcomment %}
 
@@ -26,7 +26,7 @@
 
         {% comment %}{% render 'header-mobile-search' %}{% endcomment %}
 
-        {% render 'header-mobile-nav', main_menu_linklist: linklists.main-menu %}
+        {% comment %} {% render 'header-mobile-nav', main_menu_linklist: linklists.main-menu %} {% endcomment %}
       </div>
 
       <div class="mobile-nav-footer">
