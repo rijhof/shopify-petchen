@@ -86,11 +86,108 @@
         "logo_4": "shopify://shop_images/Certificate-vegan-formula-3.png",
         "logo_4_alt": "Vegan Formula"
       }
+    },
+    "section_image_text_LpANfR": {
+      "type": "section-image-text",
+      "name": "Bild mit Text",
+      "settings": {
+        "precontent_heading": "",
+        "precontent_content": "",
+        "image": "shopify://shop_images/11_HighRes.jpg",
+        "image_alt": "",
+        "decoration_type": "none",
+        "image_position": "right",
+        "heading": "Adoptieren statt Produzieren",
+        "heading_level": "h2",
+        "content": "<p>Gegründet 2025 von Hundeprofi Martin Rütter, der sich seit über 30 Jahren für artgerechte Hundehaltung und Tierschutz einsetzt. Mit der Botschaft „Adoptieren statt Produzieren!“ macht er sich stark gegen illegalen Welpenhandel und für Adoption aus dem Tierschutz.</p>",
+        "button_text": "Zur Website",
+        "button_link": "#",
+        "button_type": "secondary",
+        "icon_position": "none",
+        "background_color": "default"
+      }
+    },
+    "section_image_symbols_text_tGRWpL": {
+      "type": "section-image-symbols-text",
+      "blocks": {
+        "symbol_text_Tzr6Y9": {
+          "type": "symbol_text",
+          "settings": {
+            "icon": "icon-decor-house-paw.svg",
+            "heading": "Überlastete Tierheime ",
+            "content": ""
+          }
+        },
+        "symbol_text_9FjXxh": {
+          "type": "symbol_text",
+          "settings": {
+            "icon": "icon-decor-broken-heart.svg",
+            "heading": "Qualzuchten & Auslandstierschutz",
+            "content": ""
+          }
+        },
+        "symbol_text_TAAiqA": {
+          "type": "symbol_text",
+          "settings": {
+            "icon": "icon-decor-business-card.svg",
+            "heading": "Hundeführerschein",
+            "content": ""
+          }
+        }
+      },
+      "block_order": [
+        "symbol_text_Tzr6Y9",
+        "symbol_text_9FjXxh",
+        "symbol_text_TAAiqA"
+      ],
+      "name": "Bild mit Symbolen & Text",
+      "settings": {
+        "image": "shopify://shop_images/Hund_in_Kaefig.png",
+        "image_alt": "Hund im Tierheim",
+        "image_position": "left",
+        "heading": "Doch es gibt noch mehr zu tun",
+        "button_text": "",
+        "button_link": "",
+        "button_type": "primary",
+        "icon_position": "none",
+        "background_color": "default"
+      }
+    },
+    "section_image_symbols_text_MJY4Jj": {
+      "type": "section-image-symbols-text",
+      "blocks": {
+        "symbol_text_JRwD7d": {
+          "type": "symbol_text",
+          "settings": {
+            "icon": "icon-decor-house-paw.svg",
+            "heading": "",
+            "content": "<p>Mehr Verantwortung. Weniger Leid. Und ein Zuhause für die, die keins haben.Mehr Infos auf unserer Website oder @adoptierenstattproduzieren bei Instagram.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "symbol_text_JRwD7d"
+      ],
+      "name": "Bild mit Symbolen & Text",
+      "settings": {
+        "image": "shopify://shop_images/Hund_Frontalansicht.png",
+        "image_alt": "Hund in Freiheit",
+        "image_position": "right",
+        "heading": "Das Ziel",
+        "button_text": "Zur Website",
+        "button_link": "#",
+        "button_type": "secondary",
+        "icon_position": "none",
+        "background_color": "default"
+      }
     }
   },
   "order": [
     "section_hero_small_gCWNJg",
     "section_text_xiqdPY",
-    "section_logo_grid_zpxcrQ"
+    "section_logo_grid_zpxcrQ",
+    "section_image_text_LpANfR",
+    "section_image_symbols_text_tGRWpL",
+    "section_image_symbols_text_MJY4Jj"
   ]
 }
