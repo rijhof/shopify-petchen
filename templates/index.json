@@ -16,7 +16,7 @@
         "image_desktop": "shopify://shop_images/Hero__Bild_oder_Vi_deo.png",
         "image_mobile": "shopify://shop_images/Hero__Bild_oder_Vi_deo_14517e2b-daf6-4ae9-8c25-6ad1790946d1.png",
         "image_alt": "",
-        "heading_h1": "Wasser marsch... nasses Fell, trockene Nase, wackelnde Ohren...",
+        "heading_h1": "Die Hundepflege mit Kosmetikstandard",
         "heading_h2": "Pflege, was du liebst",
         "button_text": "Produkte entdecken",
         "button_link": "shopify://collections/all"
@@ -35,6 +35,92 @@
         "logo_3_alt": "",
         "logo_4": "shopify://shop_images/Certificate-vegan-formula-3_1.png",
         "logo_4_alt": ""
+      }
+    },
+    "section_image_symbols_text_iYhBqP": {
+      "type": "section-image-symbols-text",
+      "blocks": {
+        "symbol_text_GG6b7r": {
+          "type": "symbol_text",
+          "settings": {
+            "icon": "icon-decor-heart-paw.svg",
+            "heading": "Liebevolle Betreuung",
+            "content": "<p>Wir kümmern uns mit viel Liebe und Aufmerksamkeit um Ihre Tiere.</p>"
+          }
+        },
+        "symbol_text_Fzt3GA": {
+          "type": "symbol_text",
+          "settings": {
+            "icon": "icon-decor-house-paw.svg",
+            "heading": "Sicheres Zuhause",
+            "content": "<p>Ein sicherer und gemütlicher Ort für Ihre Lieblinge.</p>"
+          }
+        },
+        "symbol_text_CncqJH": {
+          "type": "symbol_text",
+          "settings": {
+            "icon": "icon-decor-paws.svg",
+            "heading": "Professionelle Pflege",
+            "content": "<p>Erfahrene Pfleger sorgen für das Wohlbefinden Ihrer Tiere.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "symbol_text_GG6b7r",
+        "symbol_text_Fzt3GA",
+        "symbol_text_CncqJH"
+      ],
+      "name": "Bild mit Symbolen & Text",
+      "settings": {
+        "image": "shopify://shop_images/martin-ruther-mit-hund.png",
+        "image_alt": "",
+        "image_position": "left",
+        "heading": "Überschrift",
+        "button_text": "",
+        "button_link": "",
+        "button_type": "primary",
+        "icon_position": "none",
+        "background_color": "dark_green"
+      }
+    },
+    "section_image_text_DayWY4": {
+      "type": "section-image-text",
+      "name": "Bild mit Text",
+      "settings": {
+        "precontent_heading": "",
+        "precontent_content": "",
+        "image": "shopify://shop_images/martin-ruther-mit-hund.png",
+        "image_alt": "",
+        "decoration_type": "flower-grass-bottom-left",
+        "image_position": "left",
+        "heading": "Hundepflege entwickelt mit Martin Rütter",
+        "heading_level": "h2",
+        "content": "<p>Als Deutschlands bekanntester Hundeexperte weiß Martin<br/>Rütter, was Hunde wirklich brauchen. Mit Petchen hat er eine Pflegeserie mitentwickelt, die auf Haut, Fell und Alltag unserer Fellnasen abgestimmt ist - sanft, ehrlich und sinnvoll. Pflege wie sie sein muss, wenn sie sein muss.</p>",
+        "button_text": "mehr erfahren",
+        "button_link": "shopify://pages/spendenseite",
+        "button_type": "primary",
+        "icon_position": "right",
+        "background_color": "default"
+      }
+    },
+    "section_image_text_fneaKq": {
+      "type": "section-image-text",
+      "name": "Bild mit Text",
+      "settings": {
+        "precontent_heading": "",
+        "precontent_content": "",
+        "image": "shopify://shop_images/img.png",
+        "image_alt": "",
+        "decoration_type": "heart-bottom-right-edge",
+        "image_position": "right",
+        "heading": "Hundepflege ohne Allergene",
+        "heading_level": "h2",
+        "content": "<p>Viele Hunde reagieren sensibel auf Duftstoffe, Farbstoffe<br/>und Co. Sie können Haut reizen und allergische Reaktionen auslösen. Trotzdem stecken viele Produkte noch immer voller Stoffe, die schnell zu Juckreiz oder Irritationen führen können. Deshalb kommt Petchen ganz ohne deklarationspflichtige Allergene aus. </p><p>Damit dein Hund nur das bekommt, was ihm wirklich guttut.</p>",
+        "button_text": "mehr erfahren",
+        "button_link": "shopify://pages/spendenseite",
+        "button_type": "primary",
+        "icon_position": "right",
+        "background_color": "green"
       }
     },
     "section_image_accordion_MyzdQF": {
@@ -255,92 +341,6 @@
         "button_link": "",
         "button_type": "primary",
         "icon_position": "none",
-        "background_color": "green"
-      }
-    },
-    "section_image_symbols_text_iYhBqP": {
-      "type": "section-image-symbols-text",
-      "blocks": {
-        "symbol_text_GG6b7r": {
-          "type": "symbol_text",
-          "settings": {
-            "icon": "icon-decor-heart-paw.svg",
-            "heading": "Liebevolle Betreuung",
-            "content": "<p>Wir kümmern uns mit viel Liebe und Aufmerksamkeit um Ihre Tiere.</p>"
-          }
-        },
-        "symbol_text_Fzt3GA": {
-          "type": "symbol_text",
-          "settings": {
-            "icon": "icon-decor-house-paw.svg",
-            "heading": "Sicheres Zuhause",
-            "content": "<p>Ein sicherer und gemütlicher Ort für Ihre Lieblinge.</p>"
-          }
-        },
-        "symbol_text_CncqJH": {
-          "type": "symbol_text",
-          "settings": {
-            "icon": "icon-decor-paws.svg",
-            "heading": "Professionelle Pflege",
-            "content": "<p>Erfahrene Pfleger sorgen für das Wohlbefinden Ihrer Tiere.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "symbol_text_GG6b7r",
-        "symbol_text_Fzt3GA",
-        "symbol_text_CncqJH"
-      ],
-      "name": "Bild mit Symbolen & Text",
-      "settings": {
-        "image": "shopify://shop_images/martin-ruther-mit-hund.png",
-        "image_alt": "",
-        "image_position": "left",
-        "heading": "Überschrift",
-        "button_text": "",
-        "button_link": "",
-        "button_type": "primary",
-        "icon_position": "none",
-        "background_color": "dark_green"
-      }
-    },
-    "section_image_text_DayWY4": {
-      "type": "section-image-text",
-      "name": "Bild mit Text",
-      "settings": {
-        "precontent_heading": "",
-        "precontent_content": "",
-        "image": "shopify://shop_images/img.png",
-        "image_alt": "",
-        "decoration_type": "flower-grass-bottom-left",
-        "image_position": "left",
-        "heading": "Überschrift",
-        "heading_level": "h2",
-        "content": "<p>Fügen Sie hier Ihren Text ein. Nutzen Sie die Formatierungsoptionen, um Ihren Inhalt zu strukturieren.</p>",
-        "button_text": "",
-        "button_link": "",
-        "button_type": "primary",
-        "icon_position": "right",
-        "background_color": "default"
-      }
-    },
-    "section_image_text_fneaKq": {
-      "type": "section-image-text",
-      "name": "Bild mit Text",
-      "settings": {
-        "precontent_heading": "",
-        "precontent_content": "",
-        "image": "shopify://shop_images/img.png",
-        "image_alt": "",
-        "decoration_type": "heart-bottom-right-edge",
-        "image_position": "right",
-        "heading": "Überschrift",
-        "heading_level": "h2",
-        "content": "<p>Fügen Sie hier Ihren Text ein. Nutzen Sie die Formatierungsoptionen, um Ihren Inhalt zu strukturieren.</p>",
-        "button_text": "",
-        "button_link": "",
-        "button_type": "primary",
-        "icon_position": "right",
         "background_color": "green"
       }
     },
@@ -728,14 +728,14 @@
   "order": [
     "section_hero_A4FBMG",
     "section_logo_grid_CnM7jJ",
+    "section_image_symbols_text_iYhBqP",
+    "section_image_text_DayWY4",
+    "section_image_text_fneaKq",
     "section_image_accordion_MyzdQF",
     "section_image_accordion_aNVHXe",
     "section_image_accordion_6twcjX",
     "section_image_symbols_text_Jndwci",
     "section_image_symbols_text_pxgcwN",
-    "section_image_symbols_text_iYhBqP",
-    "section_image_text_DayWY4",
-    "section_image_text_fneaKq",
     "section_image_text_E6PkK6",
     "section_column_image_text_kihn8r",
     "section_column_image_text_TrKmFC",
