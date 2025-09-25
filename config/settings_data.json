@@ -13,42 +13,6 @@
     "sections": {
       "header": {
         "type": "header",
-        "blocks": {
-          "usp_3B6QFV": {
-            "type": "usp",
-            "settings": {
-              "icon_type": "stars",
-              "text": "Trusted Shops"
-            }
-          },
-          "usp_khQgwx": {
-            "type": "usp",
-            "settings": {
-              "icon_type": "checkmark",
-              "text": "Peta approved"
-            }
-          },
-          "usp_VUnV9e": {
-            "type": "usp",
-            "settings": {
-              "icon_type": "checkmark",
-              "text": "30 Tage Widerrufsrecht"
-            }
-          },
-          "usp_xiK3W7": {
-            "type": "usp",
-            "settings": {
-              "icon_type": "checkmark",
-              "text": "Free shipping from 79 EUR"
-            }
-          }
-        },
-        "block_order": [
-          "usp_3B6QFV",
-          "usp_khQgwx",
-          "usp_VUnV9e",
-          "usp_xiK3W7"
-        ],
         "settings": {
           "menu": "main-menu",
           "logo_width": 150
