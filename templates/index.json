@@ -95,7 +95,7 @@
         "precontent_content": "",
         "image": "shopify://shop_images/11_HighRes.jpg",
         "image_alt": "",
-        "decoration_type": "none",
+        "decoration_type": "flower-grass-bottom-left",
         "image_position": "right",
         "heading": "Adoptieren statt Produzieren",
         "heading_level": "h2",
@@ -180,6 +180,46 @@
         "icon_position": "none",
         "background_color": "default"
       }
+    },
+    "section_image_text_jG6gHp": {
+      "type": "section-image-text",
+      "name": "Bild mit Text",
+      "settings": {
+        "precontent_heading": "Wofür werden unsere Spenden verwendet?",
+        "precontent_content": "<p>Der Kauf der Petchen Produkte unterstützt vor allem die beiden Hero-Partnerprojekte von Adoptieren statt Produzieren:</p>",
+        "image": "shopify://shop_images/Hund_mit_Rollstuhl.png",
+        "image_alt": "",
+        "decoration_type": "none",
+        "image_position": "left",
+        "heading": "Hun’nenhoff",
+        "heading_level": "h2",
+        "content": "<p>Der Hun’nenhoff in Schneverdingen ist ein Gnadenhof für Hunde mit Handicap – besonders für Rollihunde. Mit Physiotherapie, Rollwagen und Fürsorge schenkt das Team ihnen Lebensfreude und Bewegung. Gegründet 2018 von Tierärztin Dr. Usha Peters, die mit ihrem Team für jeden einzelnen Hund kämpft.</p>",
+        "button_text": "Mehr erfahren",
+        "button_link": "#",
+        "button_type": "secondary",
+        "icon_position": "none",
+        "background_color": "green"
+      }
+    },
+    "section_image_text_zan7jn": {
+      "type": "section-image-text",
+      "name": "Bild mit Text",
+      "settings": {
+        "precontent_heading": "",
+        "precontent_content": "",
+        "image": "shopify://shop_images/Hund_in_Kaefig.png",
+        "image_alt": "",
+        "decoration_type": "heart-bottom-right-edge",
+        "image_position": "right",
+        "heading": "Underdog",
+        "heading_level": "h2",
+        "content": "<p>Das Projekt „Underdog“ bietet Haustieren obdachloser Menschen kostenlose medizinische Versorgung. Im Tierheim Darmstadt wird unbürokratisch geholfen – mit Herz und Verstand. Finanziert durch Spenden, getragen von einem engagierten Team.</p>",
+        "button_text": "Mehr erfahren",
+        "button_link": "#",
+        "button_type": "secondary",
+        "icon_position": "none",
+        "background_color": "green"
+      }
     }
   },
   "order": [
@@ -188,6 +228,8 @@
     "section_logo_grid_zpxcrQ",
     "section_image_text_LpANfR",
     "section_image_symbols_text_tGRWpL",
-    "section_image_symbols_text_MJY4Jj"
+    "section_image_symbols_text_MJY4Jj",
+    "section_image_text_jG6gHp",
+    "section_image_text_zan7jn"
   ]
 }
