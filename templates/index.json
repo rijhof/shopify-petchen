@@ -71,10 +71,26 @@
         "background_color": "default",
         "show_decoration": false
       }
+    },
+    "section_logo_grid_zpxcrQ": {
+      "type": "section-logo-grid",
+      "name": "Logo Raster",
+      "settings": {
+        "heading": "",
+        "logo_1": "shopify://shop_images/Certificate-eco-cert-1_1.png",
+        "logo_1_alt": "EcoCert CosmosOrganic",
+        "logo_2": "shopify://shop_images/Certificate-recycled-packaging-2.png",
+        "logo_2_alt": "Made of 100% Recycled PET",
+        "logo_3": "shopify://shop_images/Certificate-plant-based-2_1.png",
+        "logo_3_alt": "Plant-Based Plastic Tube",
+        "logo_4": "shopify://shop_images/Certificate-vegan-formula-3.png",
+        "logo_4_alt": "Vegan Formula"
+      }
     }
   },
   "order": [
     "section_hero_small_gCWNJg",
-    "section_text_xiqdPY"
+    "section_text_xiqdPY",
+    "section_logo_grid_zpxcrQ"
   ]
 }
