@@ -1,0 +1,109 @@
+{{ 'section-richtext.css' | asset_url | stylesheet_tag }}
+
+{% assign background_classes = '' %}
+{% case section.settings.background_color %}
+  {% when 'green' %}
+    {% assign background_classes = ' background-one background-contrast' %}
+  {% when 'dark_green' %}
+    {% assign background_classes = ' background-two background-contrast' %}
+  {% else %}
+    {% assign background_classes = '' %}
+{% endcase %}
+
+{% assign text_alignment = section.settings.text_alignment %}
+
+<div class="section-richtext section{{ background_classes }}" aria-labelledby="section-richtext-{{ section.id }}">
+  <div class="container">
+    <div class="section-richtext__wrapper">
+      <div class="section-richtext__content text-{{ text_alignment }}">
+        {% if section.settings.heading != blank %}
+          <h2 class="section-richtext__heading h2" id="section-richtext-{{ section.id }}">
+            {{ section.settings.heading }}
+          </h2>
+        {% endif %}
+        
+        {% if section.settings.richtext != blank %}
+          <div class="section-richtext__text rte">
+            {{ section.settings.richtext }}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Rich-Text",
+  "tag": "section",
+  "class": "section-richtext-wrapper",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Inhalt"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Überschrift",
+      "default": "Überschrift"
+    },
+    {
+      "type": "richtext",
+      "id": "richtext",
+      "label": "Text",
+      "default": "<p>Fügen Sie hier Ihren Text hinzu. Nutzen Sie die Formatierungsoptionen, um <strong>fett</strong>, <em>kursiv</em> oder Links hinzuzufügen.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Design"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Textausrichtung",
+      "options": [
+        {
+          "value": "left",
+          "label": "Links"
+        },
+        {
+          "value": "center",
+          "label": "Zentriert"
+        },
+        {
+          "value": "right",
+          "label": "Rechts"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "select",
+      "id": "background_color",
+      "label": "Hintergrundfarbe",
+      "options": [
+        {
+          "value": "default",
+          "label": "Standard"
+        },
+        {
+          "value": "green",
+          "label": "Grün"
+        },
+        {
+          "value": "dark_green",
+          "label": "Dunkelgrün"
+        }
+      ],
+      "default": "default"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Rich-Text",
+      "category": "Text"
+    }
+  ]
+}
+{% endschema %}
