@@ -1,12 +1,12 @@
 
 <div class="section-richtext section" aria-labelledby="section-richtext-{{ section.id }}">
-  <div class="container-narrow">
+  <div class="container">
     <div class="section-richtext__wrapper">
       <div class="section-richtext__content">
         {% if section.settings.heading != blank %}
-          <h2 class="section-richtext__heading h2" id="section-richtext-{{ section.id }}">
+          <h1 class="section-richtext__heading h2" id="section-richtext-{{ section.id }}">
             {{ section.settings.heading }}
-          </h2>
+          </h1>
         {% endif %}
         
         {% if section.settings.richtext != blank %}
