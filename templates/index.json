@@ -16,6 +16,7 @@
         "image_desktop": "shopify://shop_images/Hero__Bild_oder_Vi_deo_04e0d27b-f1f0-44e0-a33b-446121156a3c.png",
         "image_mobile": "shopify://shop_images/4zu5.png",
         "image_alt": "",
+        "show_decor": true,
         "show_breadcrumbs": false,
         "breadcrumb_current": "",
         "heading_h1": "Petchen x Adoptieren statt Produzieren",
@@ -43,7 +44,7 @@
         "text_gmTALn": {
           "type": "text",
           "settings": {
-            "text": "– wir unterstützen aus Überzeugung und Liebe zu unseren Fellnasen den gemeinnützigen Tierschutzverein Adoptieren Statt Produzieren e.V."
+            "text": "– wir unterstützen aus Überzeugung und Liebe zu unseren Vierbeinern den gemeinnützigen Tierschutzverein Adoptieren Statt Produzieren e.V."
           }
         },
         "icon_nE4aHe": {
@@ -70,21 +71,6 @@
       "settings": {
         "background_color": "default",
         "show_decoration": false
-      }
-    },
-    "section_logo_grid_zpxcrQ": {
-      "type": "section-logo-grid",
-      "name": "Logo Raster",
-      "settings": {
-        "heading": "",
-        "logo_1": "shopify://shop_images/Certificate-eco-cert-1_1.png",
-        "logo_1_alt": "EcoCert CosmosOrganic",
-        "logo_2": "shopify://shop_images/Certificate-recycled-packaging-2.png",
-        "logo_2_alt": "Made of 100% Recycled PET",
-        "logo_3": "shopify://shop_images/Certificate-plant-based-2_1.png",
-        "logo_3_alt": "Plant-Based Plastic Tube",
-        "logo_4": "shopify://shop_images/Certificate-vegan-formula-3.png",
-        "logo_4_alt": "Vegan Formula"
       }
     },
     "section_image_text_LpANfR": {
@@ -225,7 +211,6 @@
   "order": [
     "section_hero_small_gCWNJg",
     "section_text_xiqdPY",
-    "section_logo_grid_zpxcrQ",
     "section_image_text_LpANfR",
     "section_image_symbols_text_tGRWpL",
     "section_image_symbols_text_MJY4Jj",
