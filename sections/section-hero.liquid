@@ -17,13 +17,15 @@
             {% endif %}
         </div>
 
-        <div class="hero-decor--desktop" aria-hidden="true" >
-            {{ 'decor-hero-background-desktop.svg' | inline_asset_content }}
-        </div>
+        {% if section.settings.show_decor %}
+            <div class="hero-decor--desktop" aria-hidden="true" >
+                {{ 'decor-hero-background-desktop.svg' | inline_asset_content }}
+            </div>
 
-        <div class="hero-decor--mobile" aria-hidden="true" >
-            {{ 'decor-hero-background-mobile.svg' | inline_asset_content }}
-        </div>
+            <div class="hero-decor--mobile" aria-hidden="true" >
+                {{ 'decor-hero-background-mobile.svg' | inline_asset_content }}
+            </div>
+        {% endif %}
 
         <div class="hero-content">
             {% if section.settings.heading_h1 != blank %}
@@ -76,6 +78,12 @@
       "type": "text",
       "id": "image_alt",
       "label": "Bild Alt-Text"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_decor",
+      "label": "Dekoration anzeigen",
+      "default": true
     },
     {
       "type": "text",
