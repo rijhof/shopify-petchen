@@ -1,19 +1,85 @@
 {{ 'section-hero.css' | asset_url | stylesheet_tag }}
 
+{% if section.settings.media_type == 'image' %}
+    {% if section.settings.image_desktop != blank %}
+        <link rel="preload" as="image" href="{{ section.settings.image_desktop | image_url: width: 1440 }}" media="(min-width: 768px)" fetchpriority="high">
+    {% endif %}
+    {% if section.settings.image_mobile != blank %}
+        <link rel="preload" as="image" href="{{ section.settings.image_mobile | image_url: width: 768 }}" media="(max-width: 767px)" fetchpriority="high">
+    {% endif %}
+{% endif %}
+
 <section class="background-contrast">
     <div class="hero-section container">
         <div class="hero-background">
-            {% if section.settings.image_desktop != blank or section.settings.image_mobile != blank %}
-                <picture>
-                    {% if section.settings.image_desktop != blank %}
-                        <source media="(min-width: 768px)" srcset="{{ section.settings.image_desktop | image_url: width: 1440 }}">
-                    {% endif %}
-                    {% if section.settings.image_mobile != blank %}
-                        <img src="{{ section.settings.image_mobile | image_url: width: 768 }}" alt="{{ section.settings.image_alt }}" class="hero-background-image">
-                    {% elsif section.settings.image_desktop != blank %}
-                        <img src="{{ section.settings.image_desktop | image_url: width: 768 }}" alt="{{ section.settings.image_alt }}" class="hero-background-image">
-                    {% endif %}
-                </picture>
+            {% if section.settings.media_type == 'image' %}
+                {% if section.settings.image_desktop != blank or section.settings.image_mobile != blank %}
+                    <picture>
+                        {% if section.settings.image_desktop != blank %}
+                            <source media="(min-width: 768px)" srcset="{{ section.settings.image_desktop | image_url: width: 1440 }}">
+                        {% endif %}
+                        {% if section.settings.image_mobile != blank %}
+                            <img src="{{ section.settings.image_mobile | image_url: width: 768 }}" alt="{{ section.settings.image_alt }}" class="hero-background-image">
+                        {% elsif section.settings.image_desktop != blank %}
+                            <img src="{{ section.settings.image_desktop | image_url: width: 768 }}" alt="{{ section.settings.image_alt }}" class="hero-background-image">
+                        {% endif %}
+                    </picture>
+                {% endif %}
+            {% elsif section.settings.media_type == 'video' %}
+                {% if section.settings.video_desktop != blank %}
+                    <video 
+                        class="hero-background-image hero-background-video hero-background-video--desktop" 
+                        autoplay="autoplay"
+                        muted="muted"
+                        loop="loop"
+                        playsinline="playsinline"
+                        preload="auto"
+                        {% if section.settings.video_poster != blank %}
+                            poster="{{ section.settings.video_poster | image_url: width: 1440 }}"
+                        {% endif %}
+                    >
+                        {% for source in section.settings.video_desktop.sources %}
+                            <source src="{{ source.url }}" type="{{ source.mime_type }}">
+                        {% endfor %}
+                        Your browser does not support the video tag.
+                    </video>
+                {% endif %}
+                
+                {% if section.settings.video_mobile != blank %}
+                    <video 
+                        class="hero-background-image hero-background-video hero-background-video--mobile" 
+                        autoplay="autoplay"
+                        muted="muted"
+                        loop="loop"
+                        playsinline="playsinline"
+                        preload="auto"
+                        {% if section.settings.video_poster != blank %}
+                            poster="{{ section.settings.video_poster | image_url: width: 768 }}"
+                        {% endif %}
+                    >
+                        {% for source in section.settings.video_mobile.sources %}
+                            <source src="{{ source.url }}" type="{{ source.mime_type }}">
+                        {% endfor %}
+                        Your browser does not support the video tag.
+                    </video>
+                {% elsif section.settings.video_desktop != blank %}
+                    <video 
+                        class="hero-background-image hero-background-video hero-background-video--mobile" 
+                        autoplay="autoplay"
+                        muted="muted"
+                        loop="loop"
+                        playsinline="playsinline"
+                        preload="auto"
+                        {% if section.settings.video_poster != blank %}
+                            poster="{{ section.settings.video_poster | image_url: width: 768 }}"
+                        {% endif %}
+                    >
+                        {% for source in section.settings.video_desktop.sources %}
+                            <source src="{{ source.url }}" type="{{ source.mime_type }}">
+                        {% endfor %}
+                        Your browser does not support the video tag.
+                    </video>
+                {% endif %}
             {% endif %}
         </div>
 
@@ -37,7 +103,7 @@
             {% endif %}
 
             {% if section.settings.button_text != blank and section.settings.button_link != blank %}
-                <a href="{{ section.settings.button_link }}" class="button-primary">
+                <a href="{{ section.settings.button_link }}" class="button-{{ section.settings.button_type }}">
                     {{ section.settings.button_text }}
                 </a>
             {% endif %}
@@ -46,12 +112,66 @@
     </div>
 </section>
 
+<style>
+    .hero-background-video--desktop {
+        display: block !important;
+    }
+    
+    .hero-background-video--mobile {
+        display: none !important;
+    }
+    
+    @media (max-width: 767px) {
+        .hero-background-video--desktop {
+            display: none !important;
+        }
+        
+        .hero-background-video--mobile {
+            display: block !important;
+        }
+    }
+</style>
+
+{% if section.settings.media_type == 'video' %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const videos = document.querySelectorAll('.hero-background-video');
+        videos.forEach(function(video) {
+            video.muted = true;
+            video.play().catch(function(error) {
+                console.log('Video autoplay failed:', error);
+            });
+        });
+    });
+</script>
+{% endif %}
+
 {% schema %}
 {
   "name": "Hero",
   "tag": "section",
   "class": "section-hero",
   "settings": [
+    {
+      "type": "select",
+      "id": "media_type",
+      "label": "Medientyp",
+      "options": [
+        {
+          "value": "image",
+          "label": "Bild"
+        },
+        {
+          "value": "video",
+          "label": "Video"
+        }
+      ],
+      "default": "image"
+    },
+    {
+      "type": "header",
+      "content": "Bilder"
+    },
     {
       "type": "image_picker",
       "id": "image_desktop",
@@ -71,19 +191,49 @@
       "content": "Optimale Bildgröße: 767x750px"
     },
     {
-      "type": "paragraph",
-      "content": "Für eine optimale Performance sollten Bilder nicht größer als 1MB sein. Für eine optimale Verlustfreie Optimierung kann man die Bilder mit dem folgenden Tool optimieren: https://tinypng.com/"
-    },
-    {
       "type": "text",
       "id": "image_alt",
       "label": "Bild Alt-Text"
+    },
+    {
+      "type": "header",
+      "content": "Videos"
+    },
+    {
+      "type": "video",
+      "id": "video_desktop",
+      "label": "Hintergrundvideo Desktop",
+      "info": "MP4 Format empfohlen. Max 20MB."
+    },
+    {
+      "type": "video",
+      "id": "video_mobile",
+      "label": "Hintergrundvideo Mobile",
+      "info": "MP4 Format empfohlen. Max 10MB."
+    },
+    {
+      "type": "image_picker",
+      "id": "video_poster",
+      "label": "Video Poster (Vorschaubild)",
+      "info": "Wird angezeigt während das Video lädt"
+    },
+    {
+      "type": "header",
+      "content": "Allgemeine Einstellungen"
+    },
+    {
+      "type": "paragraph",
+      "content": "Für eine optimale Performance sollten Bilder nicht größer als 1MB sein. Für eine optimale Verlustfreie Optimierung kann man die Bilder mit dem folgenden Tool optimieren: https://tinypng.com/"
     },
     {
       "type": "checkbox",
       "id": "show_decor",
       "label": "Dekoration anzeigen",
       "default": true
+    },
+    {
+      "type": "header",
+      "content": "Inhalte"
     },
     {
       "type": "text",
@@ -107,6 +257,26 @@
       "type": "url",
       "id": "button_link",
       "label": "Button Link"
+    },
+    {
+      "type": "select",
+      "id": "button_type",
+      "label": "Button Type",
+      "options": [
+        {
+          "value": "primary",
+          "label": "Primary"
+        },
+        {
+          "value": "secondary",
+          "label": "Secondary"
+        },
+        {
+          "value": "tertiary",
+          "label": "Tertiary"
+        }
+      ],
+      "default": "primary"
     }
   ],
   "presets": [
