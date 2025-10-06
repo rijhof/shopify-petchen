@@ -18,17 +18,71 @@
       "name": "Hero Klein",
       "settings": {
         "media_type": "image",
-        "image_desktop": "shopify://shop_images/Hero__Bild_oder_Vi_deo_04e0d27b-f1f0-44e0-a33b-446121156a3c.png",
+        "image_desktop": "shopify://shop_images/Kaufen_20_HighRes.jpg",
         "image_mobile": "shopify://shop_images/4zu5.png",
         "image_alt": "",
-        "show_decor": true,
+        "show_decor": false,
         "show_breadcrumbs": false,
         "breadcrumb_current": "",
-        "heading_h1": "Petchen x Adoptieren statt Produzieren",
-        "heading_h2": "Mit jedem Kauf Gutes tun!",
+        "heading_h1": "Unser Rudel",
+        "heading_h2": "",
         "button_text": "",
         "button_link": "",
         "button_type": "primary"
+      }
+    },
+    "section_image_symbols_text_rQy384": {
+      "type": "section-image-symbols-text",
+      "blocks": {
+        "symbol_text_EbTUmJ": {
+          "type": "symbol_text",
+          "settings": {
+            "icon": "icon-decor-heart-paw.svg",
+            "heading": "Entwickelt mit Martin Rütter & Tierärztin",
+            "content": "<p>Weil nur das Beste gut genug ist: Gemeinsam mit Hundeprofi Martin Rütter entwickelt – mit viel Wissen und Herz für Hunde. <br/></p>"
+          }
+        },
+        "symbol_text_GKR4E8": {
+          "type": "symbol_text",
+          "settings": {
+            "icon": "icon-decor-heart-paw.svg",
+            "heading": "Jedes verkaufte Produkt spendet an den Tierschutz",
+            "content": "<p>Pflege, die Gutes tut: Mit jedem Kauf unterstützt du den Tierschutz und hilfst, Hunden in Not ein besseres Leben zu schenken. </p>"
+          }
+        },
+        "symbol_text_xkeyUY": {
+          "type": "symbol_text",
+          "settings": {
+            "icon": "icon-decor-clouds.svg",
+            "heading": "Gemäß EU-Kosmetikverordnung formuliert",
+            "content": "<p>Geprüft und sicher: Unser Shampoo erfüllt die strengen Vorgaben der EU-Kosmetikverordnung – für höchste Qualität und Vertrauen. <br/></p>"
+          }
+        },
+        "symbol_text_tej6Df": {
+          "type": "symbol_text",
+          "settings": {
+            "icon": "icon-decor-flower.svg",
+            "heading": "Ohne Allergene",
+            "content": "<p>Viele Hunde reagieren empfindlich auf bestimmte Inhaltsstoffe. Deshalb verzichten wir bewusst auf bekannte Allergene – für besonders sanfte und verträgliche Fellpflege.<br/></p>"
+          }
+        }
+      },
+      "block_order": [
+        "symbol_text_EbTUmJ",
+        "symbol_text_GKR4E8",
+        "symbol_text_xkeyUY",
+        "symbol_text_tej6Df"
+      ],
+      "name": "Bild mit Symbolen & Text",
+      "settings": {
+        "image_alt": "",
+        "image_position": "left",
+        "heading": "Was uns besonders macht",
+        "button_text": "",
+        "button_link": "",
+        "button_type": "primary",
+        "icon_position": "none",
+        "background_color": "default"
       }
     },
     "section_text_TCcdkC": {
@@ -76,21 +130,6 @@
       "settings": {
         "background_color": "default",
         "show_decoration": true
-      }
-    },
-    "section_logo_grid_3meUWK": {
-      "type": "section-logo-grid",
-      "name": "Logo Grid",
-      "settings": {
-        "heading": "",
-        "logo_1": "shopify://shop_images/Certificate-eco-cert-1_1.png",
-        "logo_1_alt": "Cosmos Organic",
-        "logo_2": "shopify://shop_images/Certificate-recycled-packaging-2_1.png",
-        "logo_2_alt": "Recycled PET",
-        "logo_3": "shopify://shop_images/Certificate-plant-based-2_1.png",
-        "logo_3_alt": "Plant Based Plastic Tube",
-        "logo_4": "shopify://shop_images/Certificate-vegan-formula-3_1.png",
-        "logo_4_alt": "Vegan Formula"
       }
     },
     "section_image_text_aFrcpz": {
@@ -281,8 +320,8 @@
   "order": [
     "template",
     "section_hero_small_B8xWCA",
+    "section_image_symbols_text_rQy384",
     "section_text_TCcdkC",
-    "section_logo_grid_3meUWK",
     "section_image_text_aFrcpz",
     "section_image_symbols_text_HT8CgA",
     "section_image_symbols_text_fatcmm",
