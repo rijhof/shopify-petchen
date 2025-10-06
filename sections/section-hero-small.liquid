@@ -31,15 +31,18 @@
                 {% if section.settings.video_desktop != blank %}
                     <video 
                         class="hero-background-image hero-background-video hero-background-video--desktop" 
-                        autoplay 
-                        muted 
-                        loop 
-                        playsinline
+                        autoplay="autoplay"
+                        muted="muted"
+                        loop="loop"
+                        playsinline="playsinline"
+                        preload="auto"
                         {% if section.settings.video_poster != blank %}
                             poster="{{ section.settings.video_poster | image_url: width: 1440 }}"
                         {% endif %}
                     >
-                        <source src="{{ section.settings.video_desktop | file_url }}" type="video/mp4">
+                        {% for source in section.settings.video_desktop.sources %}
+                            <source src="{{ source.url }}" type="{{ source.mime_type }}">
+                        {% endfor %}
                         Your browser does not support the video tag.
                     </video>
                 {% endif %}
@@ -47,29 +50,35 @@
                 {% if section.settings.video_mobile != blank %}
                     <video 
                         class="hero-background-image hero-background-video hero-background-video--mobile" 
-                        autoplay 
-                        muted 
-                        loop 
-                        playsinline
+                        autoplay="autoplay"
+                        muted="muted"
+                        loop="loop"
+                        playsinline="playsinline"
+                        preload="auto"
                         {% if section.settings.video_poster != blank %}
                             poster="{{ section.settings.video_poster | image_url: width: 768 }}"
                         {% endif %}
                     >
-                        <source src="{{ section.settings.video_mobile | file_url }}" type="video/mp4">
+                        {% for source in section.settings.video_mobile.sources %}
+                            <source src="{{ source.url }}" type="{{ source.mime_type }}">
+                        {% endfor %}
                         Your browser does not support the video tag.
                     </video>
                 {% elsif section.settings.video_desktop != blank %}
                     <video 
                         class="hero-background-image hero-background-video hero-background-video--mobile" 
-                        autoplay 
-                        muted 
-                        loop 
-                        playsinline
+                        autoplay="autoplay"
+                        muted="muted"
+                        loop="loop"
+                        playsinline="playsinline"
+                        preload="auto"
                         {% if section.settings.video_poster != blank %}
                             poster="{{ section.settings.video_poster | image_url: width: 768 }}"
                         {% endif %}
                     >
-                        <source src="{{ section.settings.video_desktop | file_url }}" type="video/mp4">
+                        {% for source in section.settings.video_desktop.sources %}
+                            <source src="{{ source.url }}" type="{{ source.mime_type }}">
+                        {% endfor %}
                         Your browser does not support the video tag.
                     </video>
                 {% endif %}
@@ -128,6 +137,20 @@
         }
     }
 </style>
+
+{% if section.settings.media_type == 'video' %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const videos = document.querySelectorAll('.hero-background-video');
+        videos.forEach(function(video) {
+            video.muted = true;
+            video.play().catch(function(error) {
+                console.log('Video autoplay failed:', error);
+            });
+        });
+    });
+</script>
+{% endif %}
 
 {% schema %}
 {
