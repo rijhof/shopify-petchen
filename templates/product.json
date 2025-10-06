@@ -31,10 +31,63 @@
         "info_box_1",
         "info_box_2"
       ],
-      "settings": {}
+      "settings": {
+        "add_to_cart_text": "Add to cart",
+        "sold_out_text": "Sold out"
+      }
+    },
+    "section_accordion_x7kVt7": {
+      "type": "section-accordion",
+      "blocks": {
+        "faq_item_Hwhgbf": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Für welche Hunde ist das Langhaarshampoo geeignet?",
+            "answer": "<p>Das Langhaarshampoo ist perfekt<br/>für alle Hunderassen mit mittellangem bis langem Fell – also für alle, bei<br/>denen es gern mal knöttert, verfilzt oder trocken wird. <br/><br/>Wenn du dir trotzdem unsicher bist: Mach den Felllängen-Check!</p><p>Wenn das Fell deines Hundes länger als 3–4 cm ist, gehört er offiziell zur<br/>Langhaar-Fraktion. Du bist unsicher? Dann greif zu Dingen, die du garantiert zu Hause hast:</p><p>– Kopf eines Esslöffels<br/><br/>– Korken<br/><br/>– große Knoblauchzehe<br/><br/>– oder ganz klassisch: ein Lineal 😊</p><p>Reicht das Fell locker bis<br/>dorthin?<br/><br/>Dann ist unser <strong>Langhaar-Shampoo</strong> wie gemacht für euch – für extra Pflege,<br/>die entwirrt, beruhigt und schön geschmeidig macht.</p>",
+            "open_by_default": true
+          }
+        },
+        "faq_item_gBNcKr": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Wie verwende ich dieses Produkt?",
+            "answer": "<p>Fügen Sie hier die Antwort auf die Frage ein.</p>",
+            "open_by_default": false
+          }
+        },
+        "faq_item_CpdMHW": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Welche Inhaltsstoffe sind enthalten?",
+            "answer": "<p>Wir verwenden nur hochwertige, natürliche Inhaltsstoffe. Die vollständige Liste finden Sie auf der Produktverpackung.</p>",
+            "open_by_default": false
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_Hwhgbf",
+        "faq_item_gBNcKr",
+        "faq_item_CpdMHW"
+      ],
+      "name": "FAQ Accordion",
+      "settings": {
+        "heading": "FAQ",
+        "description": "Häufig gestellte Fragen zu diesem Produkt.",
+        "background_color": "default"
+      }
+    },
+    "section_richt_text_gcJxyX": {
+      "type": "section-richt-text",
+      "name": "Rich-Text",
+      "settings": {
+        "heading": "Überschrift",
+        "richtext": "<p>Fügen Sie hier Ihren Text hinzu. Nutzen Sie die Formatierungsoptionen, um <strong>fett</strong>, <em>kursiv</em> oder Links hinzuzufügen.</p>"
+      }
     }
   },
   "order": [
-    "template"
+    "template",
+    "section_accordion_x7kVt7",
+    "section_richt_text_gcJxyX"
   ]
 }
