@@ -85,46 +85,32 @@
         "background_color": "default"
       }
     },
-    "section_text_TCcdkC": {
+    "section_text_NwYP9y": {
       "type": "section-text",
       "blocks": {
-        "text_QQTnjH": {
+        "text_mUqzJU": {
           "type": "text",
           "settings": {
-            "text": "Unsere Pflege endet nicht in der Wanne"
+            "text": "Es sollen ja wirklich nur Dinge in die Flasche, die dem Hund guttun."
           }
         },
-        "icon_DFzJAQ": {
+        "icon_fXt3nT": {
           "type": "icon",
           "settings": {
             "icon": "butterfly"
           }
         },
-        "text_7bwGxa": {
+        "text_ChCdUj": {
           "type": "text",
           "settings": {
-            "text": "– wir unterstützen aus Überzeugung und Liebe zu unseren Fellnasen den gemeinnützigen Tierschutzverein Adoptieren Statt Produzieren e.V."
-          }
-        },
-        "icon_37N9PA": {
-          "type": "icon",
-          "settings": {
-            "icon": "little_heart"
-          }
-        },
-        "text_3REcTa": {
-          "type": "text",
-          "settings": {
-            "text": "Für jedes verkaufte Produkt spenden wir 25 Cent an den gemeinnützigen Verein."
+            "text": "- Martin Rütter"
           }
         }
       },
       "block_order": [
-        "text_QQTnjH",
-        "icon_DFzJAQ",
-        "text_7bwGxa",
-        "icon_37N9PA",
-        "text_3REcTa"
+        "text_mUqzJU",
+        "icon_fXt3nT",
+        "text_ChCdUj"
       ],
       "name": "Text mit Icons",
       "settings": {
@@ -335,19 +321,63 @@
         "icon_position": "none",
         "background_color": "green"
       }
+    },
+    "section_image_accordion_LFfJbi": {
+      "type": "section-image-accordion",
+      "blocks": {
+        "accordion_item_U3ddBd": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Unsere Werte",
+            "content": "<p>Wir verwenden nur die besten Materialien für unsere Produkte.</p>",
+            "open_by_default": false
+          }
+        },
+        "accordion_item_LXhMmD": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Unsere Inhaltsstoffe",
+            "content": "",
+            "open_by_default": false
+          }
+        },
+        "accordion_item_D8wJ8d": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Unser kleiner Pfotenabdruck",
+            "content": "<p>Unser Verpackungen sind aus 100% recyceltem Plastik</p>",
+            "open_by_default": false
+          }
+        }
+      },
+      "block_order": [
+        "accordion_item_U3ddBd",
+        "accordion_item_LXhMmD",
+        "accordion_item_D8wJ8d"
+      ],
+      "name": "Über Uns",
+      "settings": {
+        "image": "shopify://shop_images/08_HighRes.jpg",
+        "image_alt": "",
+        "decoration_type": "none",
+        "image_position": "left",
+        "heading": "Über uns",
+        "background_color": "default"
+      }
     }
   },
   "order": [
     "template",
     "section_hero_small_B8xWCA",
     "section_image_symbols_text_rQy384",
-    "section_text_TCcdkC",
+    "section_text_NwYP9y",
     "section_image_text_aFrcpz",
     "section_image_text_QEd6bp",
     "section_image_symbols_text_HT8CgA",
     "section_image_symbols_text_fatcmm",
     "section_products_with_image_QdkGLK",
     "section_image_text_n6UPNM",
-    "section_image_text_3nkpdX"
+    "section_image_text_3nkpdX",
+    "section_image_accordion_LFfJbi"
   ]
 }
