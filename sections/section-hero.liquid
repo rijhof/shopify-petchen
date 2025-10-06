@@ -1,5 +1,6 @@
 {{ 'section-hero.css' | asset_url | stylesheet_tag }}
 
+{% comment %} Preload hero images for better performance {% endcomment %}
 {% if section.settings.media_type == 'image' %}
     {% if section.settings.image_desktop != blank %}
         <link rel="preload" as="image" href="{{ section.settings.image_desktop | image_url: width: 1440 }}" media="(min-width: 768px)" fetchpriority="high">
@@ -7,6 +8,8 @@
     {% if section.settings.image_mobile != blank %}
         <link rel="preload" as="image" href="{{ section.settings.image_mobile | image_url: width: 768 }}" media="(max-width: 767px)" fetchpriority="high">
     {% endif %}
+{% elsif section.settings.media_type == 'video' %}
+    {% comment %} Video preloading is handled by browser with autoplay {% endcomment %}
 {% endif %}
 
 <section class="background-contrast">
@@ -19,9 +22,9 @@
                             <source media="(min-width: 768px)" srcset="{{ section.settings.image_desktop | image_url: width: 1440 }}">
                         {% endif %}
                         {% if section.settings.image_mobile != blank %}
-                            <img src="{{ section.settings.image_mobile | image_url: width: 768 }}" alt="{{ section.settings.image_alt }}" class="hero-background-image">
+                            <img src="{{ section.settings.image_mobile | image_url: width: 768 }}" alt="{{ section.settings.image_alt }}" class="hero-background-image" fetchpriority="high">
                         {% elsif section.settings.image_desktop != blank %}
-                            <img src="{{ section.settings.image_desktop | image_url: width: 768 }}" alt="{{ section.settings.image_alt }}" class="hero-background-image">
+                            <img src="{{ section.settings.image_desktop | image_url: width: 768 }}" alt="{{ section.settings.image_alt }}" class="hero-background-image" fetchpriority="high">
                         {% endif %}
                     </picture>
                 {% endif %}
@@ -29,11 +32,10 @@
                 {% if section.settings.video_desktop != blank %}
                     <video 
                         class="hero-background-image hero-background-video hero-background-video--desktop" 
-                        autoplay="autoplay"
-                        muted="muted"
-                        loop="loop"
-                        playsinline="playsinline"
-                        preload="auto"
+                        autoplay 
+                        muted 
+                        loop 
+                        playsinline
                         {% if section.settings.video_poster != blank %}
                             poster="{{ section.settings.video_poster | image_url: width: 1440 }}"
                         {% endif %}
@@ -41,18 +43,16 @@
                         {% for source in section.settings.video_desktop.sources %}
                             <source src="{{ source.url }}" type="{{ source.mime_type }}">
                         {% endfor %}
-                        Your browser does not support the video tag.
                     </video>
                 {% endif %}
                 
                 {% if section.settings.video_mobile != blank %}
                     <video 
                         class="hero-background-image hero-background-video hero-background-video--mobile" 
-                        autoplay="autoplay"
-                        muted="muted"
-                        loop="loop"
-                        playsinline="playsinline"
-                        preload="auto"
+                        autoplay 
+                        muted 
+                        loop 
+                        playsinline
                         {% if section.settings.video_poster != blank %}
                             poster="{{ section.settings.video_poster | image_url: width: 768 }}"
                         {% endif %}
@@ -60,16 +60,14 @@
                         {% for source in section.settings.video_mobile.sources %}
                             <source src="{{ source.url }}" type="{{ source.mime_type }}">
                         {% endfor %}
-                        Your browser does not support the video tag.
                     </video>
                 {% elsif section.settings.video_desktop != blank %}
                     <video 
                         class="hero-background-image hero-background-video hero-background-video--mobile" 
-                        autoplay="autoplay"
-                        muted="muted"
-                        loop="loop"
-                        playsinline="playsinline"
-                        preload="auto"
+                        autoplay 
+                        muted 
+                        loop 
+                        playsinline
                         {% if section.settings.video_poster != blank %}
                             poster="{{ section.settings.video_poster | image_url: width: 768 }}"
                         {% endif %}
@@ -77,14 +75,13 @@
                         {% for source in section.settings.video_desktop.sources %}
                             <source src="{{ source.url }}" type="{{ source.mime_type }}">
                         {% endfor %}
-                        Your browser does not support the video tag.
                     </video>
                 {% endif %}
             {% endif %}
         </div>
 
         {% if section.settings.show_decor %}
-            <div class="hero-decor--desktop" aria-hidden="true" >
+            <div class="hero-decor--desktop" aria-hidden="true" preserveAspectRatio="none">
                 {{ 'decor-hero-background-desktop.svg' | inline_asset_content }}
             </div>
 
@@ -102,7 +99,7 @@
                 <h2 class="hero-subtitle">{{ section.settings.heading_h2 }}</h2>
             {% endif %}
 
-            {% if section.settings.button_text != blank and section.settings.button_link != blank %}
+            {% if section.settings.button_text != blank %}
                 <a href="{{ section.settings.button_link }}" class="button-{{ section.settings.button_type }}">
                     {{ section.settings.button_text }}
                 </a>
