@@ -134,15 +134,15 @@
     },
     "section_image_text_aFrcpz": {
       "type": "section-image-text",
-      "name": "Bild mit Text",
+      "name": "Martin x Bübchen",
       "settings": {
         "precontent_heading": "",
         "precontent_content": "",
-        "image": "shopify://shop_images/martin-ruther-mit-hund.png",
+        "image": "shopify://shop_images/31_HighRes.jpg",
         "image_alt": "",
         "decoration_type": "flower-grass-bottom-left",
         "image_position": "right",
-        "heading": "Adoptieren statt Produzieren",
+        "heading": "Martin x Bübchen",
         "heading_level": "h2",
         "content": "<p>Gegründet 2025 von Hundeprofi Martin Rütter, der sich seit über 30 Jahren für artgerechte Hundehaltung und Tierschutz einsetzt. Mit der Botschaft „Adoptieren statt Produzieren!“ macht er sich stark gegen illegalen Welpenhandel und für Adoption aus dem Tierschutz.</p>",
         "button_text": "Zur Website",
@@ -150,6 +150,26 @@
         "button_type": "secondary",
         "icon_position": "none",
         "background_color": "default"
+      }
+    },
+    "section_image_text_QEd6bp": {
+      "type": "section-image-text",
+      "name": "ohne Allergene",
+      "settings": {
+        "precontent_heading": "",
+        "precontent_content": "",
+        "image": "shopify://shop_images/31_HighRes.jpg",
+        "image_alt": "",
+        "decoration_type": "flower-grass-bottom-left",
+        "image_position": "left",
+        "heading": "ohne Allergene",
+        "heading_level": "h2",
+        "content": "<p>Gegründet 2025 von Hundeprofi Martin Rütter, der sich seit über 30 Jahren für artgerechte Hundehaltung und Tierschutz einsetzt. Mit der Botschaft „Adoptieren statt Produzieren!“ macht er sich stark gegen illegalen Welpenhandel und für Adoption aus dem Tierschutz.</p>",
+        "button_text": "Zur Website",
+        "button_link": "#",
+        "button_type": "secondary",
+        "icon_position": "none",
+        "background_color": "green"
       }
     },
     "section_image_symbols_text_HT8CgA": {
@@ -323,6 +343,7 @@
     "section_image_symbols_text_rQy384",
     "section_text_TCcdkC",
     "section_image_text_aFrcpz",
+    "section_image_text_QEd6bp",
     "section_image_symbols_text_HT8CgA",
     "section_image_symbols_text_fatcmm",
     "section_products_with_image_QdkGLK",
