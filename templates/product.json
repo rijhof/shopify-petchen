@@ -39,18 +39,45 @@
     "section_accordion_x7kVt7": {
       "type": "section-accordion",
       "blocks": {
+        "faq_item_Jq6kbf": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Wie verwende ich dieses Produkt?",
+            "answer": "<p>Fügen Sie hier die Antwort auf die Frage ein.</p>",
+            "open_by_default": false
+          }
+        },
         "faq_item_Hwhgbf": {
           "type": "faq_item",
           "name": "Natürlichen Ursprungs",
           "settings": {
-            "question": "Was bedeutet Inhaltsstoffe natürlichen Ursprungs?",
+            "question": "Was bedeutet Inhaltsstoffe natürlichen Ursprungs",
             "answer": "<p>Unser Pfotenbalsam besteht zu 100% aus Inhaltsstoffen natürlichen Ursprungs. <br/></p><p>Das heißt: Jeder einzelne Inhaltsstoff im Pfotenbalsam stammt aus einer natürlichen Quelle - also z. B. aus Pflanzen, Mineralien oder natürlichen Fettsäuren.<br/><br/>Es werden keine synthetischen Zusätze eingesetzt, sondern nur solche, die so naturbelassen wie möglich sind und gleichzeitig wirksam pflegen.<br/><br/>So bekommt dein Hund eine sanfte, verträgliche Pflege - ganz ohne unnötigen Schnickschnack. <br/><br/></p>",
             "open_by_default": true
+          }
+        },
+        "faq_item_a7PWLx": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Wie verwende ich dieses Produkt?",
+            "answer": "<p>Fügen Sie hier die Antwort auf die Frage ein.</p>",
+            "open_by_default": false
+          }
+        },
+        "faq_item_dLCdmh": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Wie verwende ich dieses Produkt?",
+            "answer": "<p>Fügen Sie hier die Antwort auf die Frage ein.</p>",
+            "open_by_default": false
           }
         }
       },
       "block_order": [
-        "faq_item_Hwhgbf"
+        "faq_item_Jq6kbf",
+        "faq_item_Hwhgbf",
+        "faq_item_a7PWLx",
+        "faq_item_dLCdmh"
       ],
       "name": "FAQ Accordion",
       "settings": {
