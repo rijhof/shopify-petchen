@@ -41,10 +41,10 @@
       "blocks": {
         "faq_item_Hwhgbf": {
           "type": "faq_item",
-          "name": "naturbasierte Inhaltsstoffe?",
+          "name": "Natürlichen Ursprungs",
           "settings": {
-            "question": "Was bedeutet naturbasierte Inhaltsstoffe?",
-            "answer": "<p>Unser Pfotenbalsam besteht zu 100% aus Inhaltsstoffen naturlasierter Inhaltsttoffe</p>",
+            "question": "Was bedeutet Inhaltsstoffe natürlichen Ursprungs?",
+            "answer": "<p>Unser Pfotenbalsam besteht zu 100% aus Inhaltsstoffen natürlichen Ursprungs.</p>",
             "open_by_default": true
           }
         }
