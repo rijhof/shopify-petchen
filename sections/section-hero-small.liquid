@@ -8,27 +8,12 @@
         <link rel="preload" as="image" href="{{ section.settings.image_mobile | image_url: width: 768 }}" media="(max-width: 767px)" fetchpriority="high">
     {% endif %}
 {% elsif section.settings.media_type == 'video' %}
-    {% if section.settings.video_desktop != blank %}
-        {% for source in section.settings.video_desktop.sources %}
-            {% if source.format == 'mp4' %}
-                <link rel="preload" as="video" href="{{ source.url }}" type="{{ source.mime_type }}" media="(min-width: 768px)">
-                {% break %}
-            {% endif %}
-        {% endfor %}
-    {% endif %}
-    {% if section.settings.video_mobile != blank %}
-        {% for source in section.settings.video_mobile.sources %}
-            {% if source.format == 'mp4' %}
-                <link rel="preload" as="video" href="{{ source.url }}" type="{{ source.mime_type }}" media="(max-width: 767px)">
-                {% break %}
-            {% endif %}
-        {% endfor %}
-    {% endif %}
+    {% comment %} Video preloading is handled by browser with autoplay {% endcomment %}
 {% endif %}
 
 <section class="background-contrast">
     <div class="hero-section container component-padding-y">
-        <div class="hero-background{% if section.settings.media_type == 'video' %} hero-background--video{% endif %}">
+        <div class="hero-background">
             {% if section.settings.media_type == 'image' %}
                 {% if section.settings.image_desktop != blank or section.settings.image_mobile != blank %}
                     <picture>
@@ -43,44 +28,50 @@
                     </picture>
                 {% endif %}
             {% elsif section.settings.media_type == 'video' %}
-                {% assign video_desktop = section.settings.video_desktop %}
-                {% assign video_mobile = section.settings.video_mobile %}
+                {% if section.settings.video_desktop != blank %}
+                    <video 
+                        class="hero-background-image hero-background-video hero-background-video--desktop" 
+                        autoplay 
+                        muted 
+                        loop 
+                        playsinline
+                        {% if section.settings.video_poster != blank %}
+                            poster="{{ section.settings.video_poster | image_url: width: 1440 }}"
+                        {% endif %}
+                    >
+                        <source src="{{ section.settings.video_desktop | file_url }}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                {% endif %}
                 
-                {% if video_desktop != blank or video_mobile != blank %}
-                    {% if video_desktop != blank and video_mobile == blank %}
-                        {{ video_desktop | video_tag: autoplay: true, loop: true, muted: true, controls: false, class: 'hero-background-video' }}
-                    {% elsif video_mobile != blank and video_desktop == blank %}
-                        {{ video_mobile | video_tag: autoplay: true, loop: true, muted: true, controls: false, class: 'hero-background-video' }}
-                    {% else %}
-                        <video 
-                            class="hero-background-video hero-background-video--desktop" 
-                            autoplay 
-                            muted 
-                            loop 
-                            playsinline
-                            {% if section.settings.video_poster != blank %}
-                                poster="{{ section.settings.video_poster | image_url: width: 1440 }}"
-                            {% endif %}
-                        >
-                            {% for source in video_desktop.sources %}
-                                <source src="{{ source.url }}" type="{{ source.mime_type }}">
-                            {% endfor %}
-                        </video>
-                        <video 
-                            class="hero-background-video hero-background-video--mobile" 
-                            autoplay 
-                            muted 
-                            loop 
-                            playsinline
-                            {% if section.settings.video_poster != blank %}
-                                poster="{{ section.settings.video_poster | image_url: width: 768 }}"
-                            {% endif %}
-                        >
-                            {% for source in video_mobile.sources %}
-                                <source src="{{ source.url }}" type="{{ source.mime_type }}">
-                            {% endfor %}
-                        </video>
-                    {% endif %}
+                {% if section.settings.video_mobile != blank %}
+                    <video 
+                        class="hero-background-image hero-background-video hero-background-video--mobile" 
+                        autoplay 
+                        muted 
+                        loop 
+                        playsinline
+                        {% if section.settings.video_poster != blank %}
+                            poster="{{ section.settings.video_poster | image_url: width: 768 }}"
+                        {% endif %}
+                    >
+                        <source src="{{ section.settings.video_mobile | file_url }}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                {% elsif section.settings.video_desktop != blank %}
+                    <video 
+                        class="hero-background-image hero-background-video hero-background-video--mobile" 
+                        autoplay 
+                        muted 
+                        loop 
+                        playsinline
+                        {% if section.settings.video_poster != blank %}
+                            poster="{{ section.settings.video_poster | image_url: width: 768 }}"
+                        {% endif %}
+                    >
+                        <source src="{{ section.settings.video_desktop | file_url }}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 {% endif %}
             {% endif %}
         </div>
@@ -119,35 +110,21 @@
 </section>
 
 <style>
-    .hero-background--video {
-        position: relative;
-        overflow: hidden;
-    }
-    
-    .hero-background-video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    
     .hero-background-video--desktop {
-        display: block;
+        display: block !important;
     }
     
     .hero-background-video--mobile {
-        display: none;
+        display: none !important;
     }
     
     @media (max-width: 767px) {
         .hero-background-video--desktop {
-            display: none;
+            display: none !important;
         }
         
         .hero-background-video--mobile {
-            display: block;
+            display: block !important;
         }
     }
 </style>
