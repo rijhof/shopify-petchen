@@ -13,23 +13,6 @@
       "type": "template-page",
       "settings": {}
     },
-    "section_hero_VRVMB9": {
-      "type": "section-hero",
-      "name": "Hero",
-      "settings": {
-        "media_type": "video",
-        "image_alt": "",
-        "video_desktop": "shopify://files/videos/Bueb25A01_Balsam_9x16_E009G01ON03_Webmix.mp4",
-        "video_mobile": "shopify://files/videos/Bueb25A01_Kurzhaar_9x16_E010G01ON03_Webmix.mp4",
-        "video_poster": "shopify://shop_images/Website_Tuch_06705cf5-d3f4-40ca-8ea6-50dfc3aac739.png",
-        "show_decor": true,
-        "heading_h1": "Lorem Ipsum",
-        "heading_h2": "Entdecken Sie unsere Produkte",
-        "button_text": "Jetzt entdecken",
-        "button_link": "",
-        "button_type": "primary"
-      }
-    },
     "section_hero_small_B8xWCA": {
       "type": "section-hero-small",
       "name": "Hero Klein",
@@ -297,7 +280,6 @@
   },
   "order": [
     "template",
-    "section_hero_VRVMB9",
     "section_hero_small_B8xWCA",
     "section_text_TCcdkC",
     "section_logo_grid_3meUWK",
