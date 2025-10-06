@@ -17,7 +17,7 @@
       "type": "section-hero",
       "name": "Hero",
       "settings": {
-        "media_type": "image",
+        "media_type": "video",
         "image_alt": "",
         "video_desktop": "shopify://files/videos/Bueb25A01_Balsam_9x16_E009G01ON03_Webmix.mp4",
         "video_mobile": "shopify://files/videos/Bueb25A01_Kurzhaar_9x16_E010G01ON03_Webmix.mp4",
