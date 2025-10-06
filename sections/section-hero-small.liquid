@@ -18,7 +18,7 @@
 
 <section class="background-contrast">
     <div class="hero-section container component-padding-y">
-        <div class="hero-background">
+        <div class="hero-background{% if section.settings.media_type == 'video' %} hero-background--video{% endif %}">
             {% if section.settings.media_type == 'image' %}
                 {% if section.settings.image_desktop != blank or section.settings.image_mobile != blank %}
                     <picture>
@@ -91,6 +91,11 @@
 </section>
 
 <style>
+    .hero-background--video {
+        position: relative;
+        overflow: hidden;
+    }
+    
     .hero-background-video {
         position: absolute;
         top: 0;
@@ -98,11 +103,6 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-    }
-    
-    .hero-background {
-        position: relative;
-        overflow: hidden;
     }
 </style>
 
