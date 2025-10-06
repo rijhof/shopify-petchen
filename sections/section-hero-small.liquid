@@ -1,27 +1,59 @@
 {{ 'section-hero-small.css' | asset_url | stylesheet_tag }}
 
-{% comment %} Preload hero images for better performance {% endcomment %}
-{% if section.settings.image_desktop != blank %}
-    <link rel="preload" as="image" href="{{ section.settings.image_desktop | image_url: width: 1440 }}" media="(min-width: 768px)" fetchpriority="high">
-{% endif %}
-{% if section.settings.image_mobile != blank %}
-    <link rel="preload" as="image" href="{{ section.settings.image_mobile | image_url: width: 768 }}" media="(max-width: 767px)" fetchpriority="high">
+{% if section.settings.media_type == 'image' %}
+    {% if section.settings.image_desktop != blank %}
+        <link rel="preload" as="image" href="{{ section.settings.image_desktop | image_url: width: 1440 }}" media="(min-width: 768px)" fetchpriority="high">
+    {% endif %}
+    {% if section.settings.image_mobile != blank %}
+        <link rel="preload" as="image" href="{{ section.settings.image_mobile | image_url: width: 768 }}" media="(max-width: 767px)" fetchpriority="high">
+    {% endif %}
+{% elsif section.settings.media_type == 'video' %}
+    {% if section.settings.video_desktop != blank %}
+        <link rel="preload" as="video" href="{{ section.settings.video_desktop | file_url }}" media="(min-width: 768px)">
+    {% endif %}
+    {% if section.settings.video_mobile != blank %}
+        <link rel="preload" as="video" href="{{ section.settings.video_mobile | file_url }}" media="(max-width: 767px)">
+    {% endif %}
 {% endif %}
 
 <section class="background-contrast">
     <div class="hero-section container component-padding-y">
         <div class="hero-background">
-            {% if section.settings.image_desktop != blank or section.settings.image_mobile != blank %}
-                <picture>
-                    {% if section.settings.image_desktop != blank %}
-                        <source media="(min-width: 768px)" srcset="{{ section.settings.image_desktop | image_url: width: 1440 }}">
-                    {% endif %}
-                    {% if section.settings.image_mobile != blank %}
-                        <img src="{{ section.settings.image_mobile | image_url: width: 768 }}" alt="{{ section.settings.image_alt }}" class="hero-background-image" fetchpriority="high">
-                    {% elsif section.settings.image_desktop != blank %}
-                        <img src="{{ section.settings.image_desktop | image_url: width: 768 }}" alt="{{ section.settings.image_alt }}" class="hero-background-image" fetchpriority="high">
-                    {% endif %}
-                </picture>
+            {% if section.settings.media_type == 'image' %}
+                {% if section.settings.image_desktop != blank or section.settings.image_mobile != blank %}
+                    <picture>
+                        {% if section.settings.image_desktop != blank %}
+                            <source media="(min-width: 768px)" srcset="{{ section.settings.image_desktop | image_url: width: 1440 }}">
+                        {% endif %}
+                        {% if section.settings.image_mobile != blank %}
+                            <img src="{{ section.settings.image_mobile | image_url: width: 768 }}" alt="{{ section.settings.image_alt }}" class="hero-background-image" fetchpriority="high">
+                        {% elsif section.settings.image_desktop != blank %}
+                            <img src="{{ section.settings.image_desktop | image_url: width: 768 }}" alt="{{ section.settings.image_alt }}" class="hero-background-image" fetchpriority="high">
+                        {% endif %}
+                    </picture>
+                {% endif %}
+            {% elsif section.settings.media_type == 'video' %}
+                {% if section.settings.video_desktop != blank or section.settings.video_mobile != blank %}
+                    <video 
+                        class="hero-background-video" 
+                        autoplay 
+                        muted 
+                        loop 
+                        playsinline
+                        {% if section.settings.video_poster != blank %}
+                            poster="{{ section.settings.video_poster | image_url: width: 1440 }}"
+                        {% endif %}
+                    >
+                        {% if section.settings.video_desktop != blank %}
+                            <source src="{{ section.settings.video_desktop | file_url }}" type="video/mp4" media="(min-width: 768px)">
+                        {% endif %}
+                        {% if section.settings.video_mobile != blank %}
+                            <source src="{{ section.settings.video_mobile | file_url }}" type="video/mp4" media="(max-width: 767px)">
+                        {% elsif section.settings.video_desktop != blank %}
+                            <source src="{{ section.settings.video_desktop | file_url }}" type="video/mp4">
+                        {% endif %}
+                    </video>
+                {% endif %}
             {% endif %}
         </div>
 
@@ -45,7 +77,7 @@
             {% endif %}
 
             {% if section.settings.button_text != blank %}
-                <a href="{{ section.settings.button_link }}" class="button-primary">
+                <a href="{{ section.settings.button_link }}" class="button-{{ section.settings.button_type }}">
                     {{ section.settings.button_text }}
                 </a>
             {% endif %}
@@ -58,12 +90,48 @@
     {% endif %}
 </section>
 
+<style>
+    .hero-background-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .hero-background {
+        position: relative;
+        overflow: hidden;
+    }
+</style>
+
 {% schema %}
 {
   "name": "Hero",
   "tag": "section",
   "class": "section-hero",
   "settings": [
+    {
+      "type": "select",
+      "id": "media_type",
+      "label": "Medientyp",
+      "options": [
+        {
+          "value": "image",
+          "label": "Bild"
+        },
+        {
+          "value": "video",
+          "label": "Video"
+        }
+      ],
+      "default": "image"
+    },
+    {
+      "type": "header",
+      "content": "Bilder"
+    },
     {
       "type": "image_picker",
       "id": "image_desktop",
@@ -83,13 +151,39 @@
       "content": "Optimale Bildgröße: 767x750px"
     },
     {
-      "type": "paragraph",
-      "content": "Für eine optimale Performance sollten Bilder nicht größer als 1MB sein. Für eine optimale Verlustfreie Optimierung kann man die Bilder mit dem folgenden Tool optimieren: https://tinypng.com/"
-    },
-    {
       "type": "text",
       "id": "image_alt",
       "label": "Bild Alt-Text"
+    },
+    {
+      "type": "header",
+      "content": "Videos"
+    },
+    {
+      "type": "video",
+      "id": "video_desktop",
+      "label": "Hintergrundvideo Desktop",
+      "info": "MP4 Format empfohlen. Max 20MB."
+    },
+    {
+      "type": "video",
+      "id": "video_mobile",
+      "label": "Hintergrundvideo Mobile",
+      "info": "MP4 Format empfohlen. Max 10MB."
+    },
+    {
+      "type": "image_picker",
+      "id": "video_poster",
+      "label": "Video Poster (Vorschaubild)",
+      "info": "Wird angezeigt während das Video lädt"
+    },
+    {
+      "type": "header",
+      "content": "Allgemeine Einstellungen"
+    },
+    {
+      "type": "paragraph",
+      "content": "Für eine optimale Performance sollten Bilder nicht größer als 1MB sein. Für eine optimale Verlustfreie Optimierung kann man die Bilder mit dem folgenden Tool optimieren: https://tinypng.com/"
     },
     {
       "type": "checkbox",
@@ -108,6 +202,10 @@
       "id": "breadcrumb_current",
       "label": "Aktueller Breadcrumb Text (optional)",
       "info": "Leer lassen für automatische Erkennung"
+    },
+    {
+      "type": "header",
+      "content": "Inhalte"
     },
     {
       "type": "text",
