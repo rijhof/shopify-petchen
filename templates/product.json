@@ -51,7 +51,7 @@
           "type": "faq_item",
           "name": "Natürlichen Ursprungs",
           "settings": {
-            "question": "Was bedeutet Inhaltsstoffe natürlichen Ursprungs",
+            "question": "Was bedeutet Inhaltsstoffe natürlichen Ursprungs?",
             "answer": "<p>Unser Pfotenbalsam besteht zu 100% aus Inhaltsstoffen natürlichen Ursprungs. <br/></p><p>Das heißt: Jeder einzelne Inhaltsstoff im Pfotenbalsam stammt aus einer natürlichen Quelle - also z. B. aus Pflanzen, Mineralien oder natürlichen Fettsäuren.<br/><br/>Es werden keine synthetischen Zusätze eingesetzt, sondern nur solche, die so naturbelassen wie möglich sind und gleichzeitig wirksam pflegen.<br/><br/>So bekommt dein Hund eine sanfte, verträgliche Pflege - ganz ohne unnötigen Schnickschnack. <br/><br/></p>",
             "open_by_default": true
           }
@@ -102,7 +102,7 @@
       "name": "Rich-Text",
       "settings": {
         "heading": "",
-        "richtext": "<p><br/><strong>Hersteller: </strong></p><p>Petchen GmbH, Bremer Str. 67, 40221 Düsseldorf </p><p>hall@petchen,com<br/><br/></p>"
+        "richtext": "<p><strong>Hersteller: <br/></strong>Petchen GmbH, Bremer Str. 67, 40221 Düsseldorf <br/>hallo@petchen.com<br/><br/></p>"
       }
     }
   },
