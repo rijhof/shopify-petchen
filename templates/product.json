@@ -16,7 +16,7 @@
           "type": "info_box",
           "settings": {
             "icon": "checkmark",
-            "text": "Free shipping from $50"
+            "text": "Kostenloser Versand ab 20€"
           }
         },
         "info_box_2": {
@@ -32,8 +32,8 @@
         "info_box_2"
       ],
       "settings": {
-        "add_to_cart_text": "Add to cart",
-        "sold_out_text": "Sold out"
+        "add_to_cart_text": "In den Warenkorb",
+        "sold_out_text": "Ausverkauft"
       }
     },
     "section_accordion_x7kVt7": {
