@@ -93,7 +93,7 @@
     {% endif %}
 
     <div class="product-payment-methods">
-        <p class="product-payment-methods__title meta">Zahlungsmethoden</p>
+        <p class="product-payment-methods__title meta">{{ section.settings.payment_methods_title | default: 'Zahlungsmethoden' }}</p>
         <div class="product-payment-methods__icons">
             <img src="{{ 'icon-payment-visa.svg' | asset_url }}" alt="Visa" width="40" height="24">
             <img src="{{ 'icon-payment-mastercard.svg' | asset_url }}" alt="Mastercard" width="40" height="24">
