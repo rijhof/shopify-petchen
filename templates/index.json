@@ -611,6 +611,147 @@
         "button_type": "primary",
         "icon_position": "right"
       }
+    },
+    "section_column_products_tjnzEF": {
+      "type": "section-column-products",
+      "blocks": {
+        "product_itxFgM": {
+          "type": "product",
+          "settings": {
+            "product": ""
+          }
+        },
+        "product_KijM9E": {
+          "type": "product",
+          "settings": {
+            "product": ""
+          }
+        },
+        "product_LppK7Q": {
+          "type": "product",
+          "settings": {
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_itxFgM",
+        "product_KijM9E",
+        "product_LppK7Q"
+      ],
+      "name": "Produkte Spalten",
+      "settings": {
+        "heading": "Neuste Produkte",
+        "product_source": "newest",
+        "collection": "",
+        "product_limit": 3,
+        "show_quick_add": true,
+        "show_wishlist": true,
+        "show_view_all": false,
+        "view_all_url": "",
+        "view_all_text": "Alle Produkte anzeigen",
+        "background_color": "default"
+      }
+    },
+    "section_products_with_image_FVfkFB": {
+      "type": "section-products-with-image",
+      "blocks": {
+        "product_3JJEFK": {
+          "type": "product",
+          "settings": {
+            "product": "kurzhaar-hundeshampoo"
+          }
+        },
+        "product_86tbXj": {
+          "type": "product",
+          "settings": {
+            "product": "kurzhaar-hundeshampoo"
+          }
+        },
+        "product_hkHXzF": {
+          "type": "product",
+          "settings": {
+            "product": "kurzhaar-hundeshampoo"
+          }
+        },
+        "product_chakAd": {
+          "type": "product",
+          "settings": {
+            "product": "kurzhaar-hundeshampoo"
+          }
+        }
+      },
+      "block_order": [
+        "product_3JJEFK",
+        "product_86tbXj",
+        "product_hkHXzF",
+        "product_chakAd"
+      ],
+      "name": "Produkte mit Bild",
+      "settings": {
+        "heading": "Unsere Empfehlungen",
+        "pre_content": "<p>Entdecken Sie unsere handverlesenen Produkte für Ihr Haustier.</p>",
+        "show_quick_add": true,
+        "show_wishlist": true,
+        "products_position": "left",
+        "background_image": "shopify://shop_images/Frame_763.png",
+        "image_alt": "",
+        "button_text": "",
+        "button_link": "",
+        "button_type": "primary",
+        "icon_position": "right",
+        "background_color": "default"
+      }
+    },
+    "section_products_with_image_RzniJy": {
+      "type": "section-products-with-image",
+      "blocks": {
+        "product_z3nRfr": {
+          "type": "product",
+          "settings": {
+            "product": "kurzhaar-hundeshampoo"
+          }
+        },
+        "product_6AYqt9": {
+          "type": "product",
+          "settings": {
+            "product": "kurzhaar-hundeshampoo"
+          }
+        },
+        "product_iFbR66": {
+          "type": "product",
+          "settings": {
+            "product": "kurzhaar-hundeshampoo"
+          }
+        },
+        "product_NEFrqe": {
+          "type": "product",
+          "settings": {
+            "product": "kurzhaar-hundeshampoo"
+          }
+        }
+      },
+      "block_order": [
+        "product_z3nRfr",
+        "product_6AYqt9",
+        "product_iFbR66",
+        "product_NEFrqe"
+      ],
+      "name": "Produkte mit Bild",
+      "settings": {
+        "heading": "Unsere Empfehlungen",
+        "pre_content": "<p>Entdecken Sie unsere handverlesenen Produkte für Ihr Haustier.</p>",
+        "show_quick_add": true,
+        "show_wishlist": true,
+        "products_position": "right",
+        "background_image": "shopify://shop_images/Frame_763.png",
+        "image_alt": "",
+        "button_text": "",
+        "button_link": "",
+        "button_type": "primary",
+        "icon_position": "right",
+        "background_color": "default"
+      }
     }
   },
   "order": [
@@ -632,6 +773,9 @@
     "section_accordion_FDJWQT",
     "section_accordion_Kqm7FD",
     "section_accordion_bmyMip",
-    "section_all_products_wph7UE"
+    "section_all_products_wph7UE",
+    "section_column_products_tjnzEF",
+    "section_products_with_image_FVfkFB",
+    "section_products_with_image_RzniJy"
   ]
 }
