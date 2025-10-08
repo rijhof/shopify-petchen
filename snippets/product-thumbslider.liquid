@@ -383,6 +383,8 @@
             if (activeVideo && activeVideo.hasAttribute('autoplay')) {
                 activeVideo.play();
             }
+            
+            thumbsSwiper.slideTo(mainSwiper.activeIndex);
         });
 
         setTimeout(() => {
