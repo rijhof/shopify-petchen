@@ -25,12 +25,12 @@
         <div class="product-accordions">
           {% if product.metafields.custom.anwendung != blank %}
             {% assign usage_html = product.metafields.custom.anwendung | metafield_tag %}
-            {% render 'accordion', title: 'Anwendungsfälle', content: usage_html, open: true %}
+            {% render 'accordion', title: section.settings.usage_title, content: usage_html, open: true %}
           {% endif %}
 
           {% if product.metafields.custom.inhaltsstoffe != blank %}
             {% assign ingredients_content = product.metafields.custom.inhaltsstoffe | metafield_tag %}
-            {% render 'accordion', title: 'Ingredients', content: ingredients_content %}
+            {% render 'accordion', title: section.settings.ingredients_title, content: ingredients_content %}
           {% endif %}
         </div>
       {% endif %}
@@ -159,7 +159,6 @@
   }
   customElements.define("variant-selector", VariantSelector);
 </script>
-<script src="{{ 'snippet-accordion.js' | asset_url }}" defer></script>
 
 {% schema %}
 {
@@ -176,6 +175,18 @@
       "id": "sold_out_text",
       "label": "Sold Out Button Text",
       "default": "Sold out"
+    },
+    {
+      "type": "text",
+      "id": "usage_title",
+      "label": "Usage Accordion Title",
+      "default": "Anwendung"
+    },
+    {
+      "type": "text",
+      "id": "ingredients_title",
+      "label": "Ingredients Accordion Title",
+      "default": "Ingredients"
     }
   ],
   "blocks": [
