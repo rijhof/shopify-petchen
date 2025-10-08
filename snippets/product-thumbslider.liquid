@@ -384,7 +384,18 @@
                 activeVideo.play();
             }
             
-            thumbsSwiper.slideTo(mainSwiper.activeIndex);
+            thumbsSwiper.slideTo(Math.max(0, mainSwiper.activeIndex - 1));
+        });
+
+        // Zusätzlicher Event-Handler für Thumbnail-Klicks
+        thumbsSwiper.on('click', function(swiper) {
+            const clickedIndex = swiper.clickedIndex;
+            if (clickedIndex !== undefined) {
+                mainSwiper.slideTo(clickedIndex);
+                setTimeout(() => {
+                    thumbsSwiper.slideTo(Math.max(0, clickedIndex - 1));
+                }, 50);
+            }
         });
 
         setTimeout(() => {
