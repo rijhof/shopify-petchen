@@ -9,133 +9,145 @@
  */
 {
   "sections": {
-    "section_hero_small_gCWNJg": {
-      "type": "section-hero-small",
-      "name": "Hero Klein",
+    "section_hero_T4EfBa": {
+      "type": "section-hero",
+      "name": "Hero",
       "settings": {
-        "media_type": "image",
-        "image_desktop": "shopify://shop_images/Hero__Bild_oder_Vi_deo_04e0d27b-f1f0-44e0-a33b-446121156a3c.png",
-        "image_mobile": "shopify://shop_images/4zu5.png",
+        "media_type": "video",
         "image_alt": "",
         "video_desktop": "shopify://files/videos/Bueb25A01_Kurzhaar_9x16_E010G01ON03_Webmix.mp4",
         "video_mobile": "shopify://files/videos/Bueb25A01_Balsam_9x16_E009G01ON03_Webmix.mp4",
-        "video_poster": "shopify://shop_images/Website_Tuch_e87b4563-2015-4023-a824-39d4769b7615.png",
+        "video_poster": "shopify://shop_images/martin-ruther-mit-hund.png",
         "show_decor": true,
-        "show_breadcrumbs": false,
-        "breadcrumb_current": "",
-        "heading_h1": "Petchen x Adoptieren statt Produzieren",
-        "heading_h2": "Mit jedem Kauf Gutes tun!",
-        "button_text": "",
+        "heading_h1": "Lorem Ipsum",
+        "heading_h2": "Entdecken Sie unsere Produkte",
+        "button_text": "Jetzt entdecken",
         "button_link": "",
         "button_type": "primary"
       }
     },
-    "section_text_xiqdPY": {
-      "type": "section-text",
+    "section_image_accordion_mkBMK7": {
+      "type": "section-image-accordion",
       "blocks": {
-        "text_eKkGCx": {
-          "type": "text",
+        "accordion_item_qiW7UX": {
+          "type": "accordion_item",
           "settings": {
-            "text": "Unsere Pflege endet nicht in der Wanne"
+            "title": "Hochwertige Materialien",
+            "content": "<p>Wir verwenden nur die besten Materialien für unsere Produkte.</p>",
+            "open_by_default": false
           }
         },
-        "icon_BayNr3": {
-          "type": "icon",
+        "accordion_item_h94D6K": {
+          "type": "accordion_item",
           "settings": {
-            "icon": "butterfly"
+            "title": "Nachhaltige Produktion",
+            "content": "<p>Unsere Produkte werden umweltschonend und nachhaltig hergestellt.</p>",
+            "open_by_default": false
           }
         },
-        "text_gmTALn": {
-          "type": "text",
+        "accordion_item_g3eCUL": {
+          "type": "accordion_item",
           "settings": {
-            "text": "– wir unterstützen aus Überzeugung und Liebe zu unseren Vierbeinern den gemeinnützigen Tierschutzverein Adoptieren Statt Produzieren e.V."
-          }
-        },
-        "icon_nE4aHe": {
-          "type": "icon",
-          "settings": {
-            "icon": "little_heart"
-          }
-        },
-        "text_JcVm7x": {
-          "type": "text",
-          "settings": {
-            "text": "Für jedes verkaufte Produkt spenden wir 25 Cent an den gemeinnützigen Verein."
+            "title": "Garantie & Service",
+            "content": "<p>Wir bieten eine umfassende Garantie und exzellenten Kundenservice.</p>",
+            "open_by_default": false
           }
         }
       },
       "block_order": [
-        "text_eKkGCx",
-        "icon_BayNr3",
-        "text_gmTALn",
-        "icon_nE4aHe",
-        "text_JcVm7x"
+        "accordion_item_qiW7UX",
+        "accordion_item_h94D6K",
+        "accordion_item_g3eCUL"
       ],
-      "name": "Text mit Icons",
+      "name": "Bild mit Accordion",
       "settings": {
-        "background_color": "default",
-        "show_decoration": false
-      }
-    },
-    "section_image_text_LpANfR": {
-      "type": "section-image-text",
-      "name": "Bild mit Text",
-      "settings": {
-        "precontent_heading": "",
-        "precontent_content": "",
-        "image": "shopify://shop_images/11_HighRes.jpg",
         "image_alt": "",
-        "decoration_type": "flower-grass-bottom-left",
-        "image_position": "right",
-        "heading": "Adoptieren statt Produzieren",
-        "heading_level": "h2",
-        "content": "<p>Gegründet 2025 von Hundeprofi Martin Rütter, der sich seit über 30 Jahren für artgerechte Hundehaltung und Tierschutz einsetzt. Mit der Botschaft „Adoptieren statt Produzieren!“ macht er sich stark gegen illegalen Welpenhandel und für Adoption aus dem Tierschutz.</p>",
-        "button_text": "",
-        "button_link": "#",
-        "button_type": "secondary",
-        "icon_position": "none",
+        "decoration_type": "none",
+        "image_position": "left",
+        "heading": "Überschrift",
         "background_color": "default"
       }
     },
-    "section_image_symbols_text_tGRWpL": {
-      "type": "section-image-symbols-text",
+    "section_image_accordion_pTV3Y4": {
+      "type": "section-image-accordion",
       "blocks": {
-        "symbol_text_Tzr6Y9": {
-          "type": "symbol_text",
+        "accordion_item_RY6dEe": {
+          "type": "accordion_item",
           "settings": {
-            "icon": "icon-decor-house-paw.svg",
-            "heading": "Überlastete Tierheime ",
-            "content": ""
+            "title": "Hochwertige Materialien",
+            "content": "<p>Wir verwenden nur die besten Materialien für unsere Produkte.</p>",
+            "open_by_default": false
           }
         },
-        "symbol_text_9FjXxh": {
-          "type": "symbol_text",
+        "accordion_item_hEyVND": {
+          "type": "accordion_item",
           "settings": {
-            "icon": "icon-decor-broken-heart.svg",
-            "heading": "Qualzuchten & Auslandstierschutz",
-            "content": ""
+            "title": "Nachhaltige Produktion",
+            "content": "<p>Unsere Produkte werden umweltschonend und nachhaltig hergestellt.</p>",
+            "open_by_default": false
           }
         },
-        "symbol_text_TAAiqA": {
-          "type": "symbol_text",
+        "accordion_item_pFdy4x": {
+          "type": "accordion_item",
           "settings": {
-            "icon": "icon-decor-business-card.svg",
-            "heading": "Hundeführerschein",
-            "content": ""
+            "title": "Garantie & Service",
+            "content": "<p>Wir bieten eine umfassende Garantie und exzellenten Kundenservice.</p>",
+            "open_by_default": false
           }
         }
       },
       "block_order": [
-        "symbol_text_Tzr6Y9",
-        "symbol_text_9FjXxh",
-        "symbol_text_TAAiqA"
+        "accordion_item_RY6dEe",
+        "accordion_item_hEyVND",
+        "accordion_item_pFdy4x"
+      ],
+      "name": "Bild mit Accordion",
+      "settings": {
+        "image_alt": "",
+        "decoration_type": "none",
+        "image_position": "right",
+        "heading": "Überschrift",
+        "background_color": "default"
+      }
+    },
+    "section_image_symbols_text_YeEiFG": {
+      "type": "section-image-symbols-text",
+      "blocks": {
+        "symbol_text_WMJcWF": {
+          "type": "symbol_text",
+          "settings": {
+            "icon": "icon-decor-heart-paw.svg",
+            "heading": "Liebevolle Betreuung",
+            "content": "<p>Wir kümmern uns mit viel Liebe und Aufmerksamkeit um Ihre Tiere.</p>"
+          }
+        },
+        "symbol_text_tDbAVi": {
+          "type": "symbol_text",
+          "settings": {
+            "icon": "icon-decor-house-paw.svg",
+            "heading": "Sicheres Zuhause",
+            "content": "<p>Ein sicherer und gemütlicher Ort für Ihre Lieblinge.</p>"
+          }
+        },
+        "symbol_text_TkVmQ6": {
+          "type": "symbol_text",
+          "settings": {
+            "icon": "icon-decor-paws.svg",
+            "heading": "Professionelle Pflege",
+            "content": "<p>Erfahrene Pfleger sorgen für das Wohlbefinden Ihrer Tiere.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "symbol_text_WMJcWF",
+        "symbol_text_tDbAVi",
+        "symbol_text_TkVmQ6"
       ],
       "name": "Bild mit Symbolen & Text",
       "settings": {
-        "image": "shopify://shop_images/Hund_in_Kaefig.png",
-        "image_alt": "Hund im Tierheim",
+        "image_alt": "",
         "image_position": "left",
-        "heading": "Doch es gibt noch mehr zu tun",
+        "heading": "Überschrift",
         "button_text": "",
         "button_link": "",
         "button_type": "primary",
@@ -143,82 +155,483 @@
         "background_color": "default"
       }
     },
-    "section_image_symbols_text_MJY4Jj": {
+    "section_image_symbols_text_QirxNU": {
       "type": "section-image-symbols-text",
       "blocks": {
-        "symbol_text_JRwD7d": {
+        "symbol_text_mzT8mG": {
+          "type": "symbol_text",
+          "settings": {
+            "icon": "icon-decor-heart-paw.svg",
+            "heading": "Liebevolle Betreuung",
+            "content": "<p>Wir kümmern uns mit viel Liebe und Aufmerksamkeit um Ihre Tiere.</p>"
+          }
+        },
+        "symbol_text_k6gLtw": {
           "type": "symbol_text",
           "settings": {
             "icon": "icon-decor-house-paw.svg",
-            "heading": "",
-            "content": "<p>Mehr Verantwortung. Weniger Leid. Und ein Zuhause für die, die keins haben. Mehr Infos auf <a href=\"#\" title=\"#\">unserer Website</a> oder @adoptierenstattproduzieren bei <a href=\"#\" title=\"#\">Instagram</a>.</p>"
+            "heading": "Sicheres Zuhause",
+            "content": "<p>Ein sicherer und gemütlicher Ort für Ihre Lieblinge.</p>"
+          }
+        },
+        "symbol_text_By7Urf": {
+          "type": "symbol_text",
+          "settings": {
+            "icon": "icon-decor-paws.svg",
+            "heading": "Professionelle Pflege",
+            "content": "<p>Erfahrene Pfleger sorgen für das Wohlbefinden Ihrer Tiere.</p>"
           }
         }
       },
       "block_order": [
-        "symbol_text_JRwD7d"
+        "symbol_text_mzT8mG",
+        "symbol_text_k6gLtw",
+        "symbol_text_By7Urf"
       ],
       "name": "Bild mit Symbolen & Text",
       "settings": {
-        "image": "shopify://shop_images/Hund_Frontalansicht.png",
-        "image_alt": "Hund in Freiheit",
-        "image_position": "right",
-        "heading": "Das Ziel",
-        "button_text": "",
-        "button_link": "#",
-        "button_type": "secondary",
-        "icon_position": "none",
-        "background_color": "default"
-      }
-    },
-    "section_image_text_jG6gHp": {
-      "type": "section-image-text",
-      "name": "Bild mit Text",
-      "settings": {
-        "precontent_heading": "Wofür werden unsere Spenden verwendet?",
-        "precontent_content": "<p>Der Kauf der Petchen Produkte unterstützt vor allem die beiden Hero-Partnerprojekte von Adoptieren statt Produzieren:</p>",
-        "image": "shopify://shop_images/Hund_mit_Rollstuhl.png",
         "image_alt": "",
-        "decoration_type": "none",
-        "image_position": "left",
-        "heading": "Hun’nenhoff",
-        "heading_level": "h2",
-        "content": "<p>Der Hun’nenhoff in Schneverdingen ist ein Gnadenhof für Hunde mit Handicap – besonders für Rollihunde. Mit Physiotherapie, Rollwagen und Fürsorge schenkt das Team ihnen Lebensfreude und Bewegung. Gegründet 2018 von Tierärztin Dr. Usha Peters, die mit ihrem Team für jeden einzelnen Hund kämpft.</p>",
+        "image_position": "right",
+        "heading": "Überschrift",
         "button_text": "",
-        "button_link": "#",
-        "button_type": "secondary",
+        "button_link": "",
+        "button_type": "primary",
         "icon_position": "none",
         "background_color": "green"
       }
     },
-    "section_image_text_zan7jn": {
+    "section_image_symbols_text_P6FNWP": {
+      "type": "section-image-symbols-text",
+      "blocks": {
+        "symbol_text_kED6Tk": {
+          "type": "symbol_text",
+          "settings": {
+            "icon": "icon-decor-heart-paw.svg",
+            "heading": "Liebevolle Betreuung",
+            "content": "<p>Wir kümmern uns mit viel Liebe und Aufmerksamkeit um Ihre Tiere.</p>"
+          }
+        },
+        "symbol_text_96hKAf": {
+          "type": "symbol_text",
+          "settings": {
+            "icon": "icon-decor-house-paw.svg",
+            "heading": "Sicheres Zuhause",
+            "content": "<p>Ein sicherer und gemütlicher Ort für Ihre Lieblinge.</p>"
+          }
+        },
+        "symbol_text_AnMWQH": {
+          "type": "symbol_text",
+          "settings": {
+            "icon": "icon-decor-paws.svg",
+            "heading": "Professionelle Pflege",
+            "content": "<p>Erfahrene Pfleger sorgen für das Wohlbefinden Ihrer Tiere.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "symbol_text_kED6Tk",
+        "symbol_text_96hKAf",
+        "symbol_text_AnMWQH"
+      ],
+      "name": "Bild mit Symbolen & Text",
+      "settings": {
+        "image_alt": "",
+        "image_position": "left",
+        "heading": "Überschrift",
+        "button_text": "",
+        "button_link": "",
+        "button_type": "primary",
+        "icon_position": "none",
+        "background_color": "dark_green"
+      }
+    },
+    "section_image_text_jBdXTY": {
       "type": "section-image-text",
       "name": "Bild mit Text",
       "settings": {
         "precontent_heading": "",
         "precontent_content": "",
-        "image": "shopify://shop_images/Hund_in_Kaefig.png",
         "image_alt": "",
-        "decoration_type": "heart-bottom-right-edge",
-        "image_position": "right",
-        "heading": "Underdog",
+        "decoration_type": "none",
+        "image_position": "left",
+        "heading": "Überschrift",
         "heading_level": "h2",
-        "content": "<p>Das Projekt „Underdog“ bietet Haustieren obdachloser Menschen kostenlose medizinische Versorgung. Im Tierheim Darmstadt wird unbürokratisch geholfen – mit Herz und Verstand. Finanziert durch Spenden, getragen von einem engagierten Team.</p>",
+        "content": "<p>Fügen Sie hier Ihren Text ein. Nutzen Sie die Formatierungsoptionen, um Ihren Inhalt zu strukturieren.</p>",
         "button_text": "",
-        "button_link": "#",
-        "button_type": "secondary",
+        "button_link": "",
+        "button_type": "primary",
+        "icon_position": "none",
+        "background_color": "default"
+      }
+    },
+    "section_image_text_BaEHeX": {
+      "type": "section-image-text",
+      "name": "Bild mit Text",
+      "settings": {
+        "precontent_heading": "",
+        "precontent_content": "",
+        "image_alt": "",
+        "decoration_type": "none",
+        "image_position": "right",
+        "heading": "Überschrift",
+        "heading_level": "h2",
+        "content": "<p>Fügen Sie hier Ihren Text ein. Nutzen Sie die Formatierungsoptionen, um Ihren Inhalt zu strukturieren.</p>",
+        "button_text": "",
+        "button_link": "",
+        "button_type": "primary",
         "icon_position": "none",
         "background_color": "green"
+      }
+    },
+    "section_image_text_JRDhkL": {
+      "type": "section-image-text",
+      "name": "Bild mit Text",
+      "settings": {
+        "precontent_heading": "",
+        "precontent_content": "",
+        "image_alt": "",
+        "decoration_type": "none",
+        "image_position": "left",
+        "heading": "Überschrift",
+        "heading_level": "h2",
+        "content": "<p>Fügen Sie hier Ihren Text ein. Nutzen Sie die Formatierungsoptionen, um Ihren Inhalt zu strukturieren.</p>",
+        "button_text": "",
+        "button_link": "",
+        "button_type": "primary",
+        "icon_position": "none",
+        "background_color": "dark_green"
+      }
+    },
+    "section_logo_grid_e7WCrR": {
+      "type": "section-logo-grid",
+      "name": "Logo Raster",
+      "settings": {
+        "heading": "",
+        "logo_1": "shopify://shop_images/Certificate-eco-cert-1_1.png",
+        "logo_1_alt": "",
+        "logo_2": "shopify://shop_images/Certificate-recycled-packaging-2.png",
+        "logo_2_alt": "",
+        "logo_3": "shopify://shop_images/Certificate-plant-based-2_1.png",
+        "logo_3_alt": "",
+        "logo_4": "shopify://shop_images/Certificate-vegan-formula-3.png",
+        "logo_4_alt": ""
+      }
+    },
+    "section_column_image_text_mXhJ8p": {
+      "type": "section-column-image-text",
+      "blocks": {
+        "column_GWLtCN": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Image1.png",
+            "image_alt": "",
+            "heading": "Lorem Ipsum",
+            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
+          }
+        },
+        "column_ap7EKw": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Image2.png",
+            "image_alt": "",
+            "heading": "Lorem Ipsum",
+            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
+          }
+        },
+        "column_69hzxe": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Image3.png",
+            "image_alt": "",
+            "heading": "Lorem Ipsum",
+            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "column_GWLtCN",
+        "column_ap7EKw",
+        "column_69hzxe"
+      ],
+      "name": "Spalten: Bild + Text",
+      "settings": {
+        "heading": "Lorem Ipsum Dolor Sit",
+        "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>",
+        "background_color": "default"
+      }
+    },
+    "section_column_image_text_4k69qX": {
+      "type": "section-column-image-text",
+      "blocks": {
+        "column_tmgFQw": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Image1.png",
+            "image_alt": "",
+            "heading": "Lorem Ipsum",
+            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
+          }
+        },
+        "column_UxTCg4": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Image2.png",
+            "image_alt": "",
+            "heading": "Lorem Ipsum",
+            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
+          }
+        },
+        "column_Wq44NV": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Image3.png",
+            "image_alt": "",
+            "heading": "Lorem Ipsum",
+            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "column_tmgFQw",
+        "column_UxTCg4",
+        "column_Wq44NV"
+      ],
+      "name": "Spalten: Bild + Text",
+      "settings": {
+        "heading": "Lorem Ipsum Dolor Sit",
+        "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>",
+        "background_color": "green"
+      }
+    },
+    "section_column_image_text_Dr8Uyp": {
+      "type": "section-column-image-text",
+      "blocks": {
+        "column_R4mHim": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Image1.png",
+            "image_alt": "",
+            "heading": "Lorem Ipsum",
+            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
+          }
+        },
+        "column_HVGVgy": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Image2.png",
+            "image_alt": "",
+            "heading": "Lorem Ipsum",
+            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
+          }
+        },
+        "column_yenW7V": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Image3.png",
+            "image_alt": "",
+            "heading": "Lorem Ipsum",
+            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "column_R4mHim",
+        "column_HVGVgy",
+        "column_yenW7V"
+      ],
+      "name": "Spalten: Bild + Text",
+      "settings": {
+        "heading": "Lorem Ipsum Dolor Sit",
+        "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>",
+        "background_color": "dark_green"
+      }
+    },
+    "section_hero_small_UgJnWr": {
+      "type": "section-hero-small",
+      "name": "Hero Klein",
+      "settings": {
+        "media_type": "image",
+        "image_desktop": "shopify://shop_images/Kaufen_15_HighRes.jpg",
+        "image_mobile": "shopify://shop_images/DSC06434_HighRes.jpg",
+        "image_alt": "",
+        "show_decor": true,
+        "show_breadcrumbs": true,
+        "breadcrumb_current": "",
+        "heading_h1": "Lorem Ipsum",
+        "heading_h2": "Entdecken Sie unsere Produkte",
+        "button_text": "Jetzt entdecken",
+        "button_link": "",
+        "button_type": "primary"
+      }
+    },
+    "section_cta_3f3LGn": {
+      "type": "section-cta",
+      "name": "Call to Action",
+      "settings": {
+        "heading": "Lorem ipsum dolor sit amet consetetur sit amet sadipscin",
+        "content": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>",
+        "button_text": "",
+        "button_link": "",
+        "button_type": "primary",
+        "icon_position": "right"
+      }
+    },
+    "section_accordion_FDJWQT": {
+      "type": "section-accordion",
+      "blocks": {
+        "faq_item_NBdbgk": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Wie verwende ich dieses Produkt?",
+            "answer": "<p>Unser Produkt ist einfach in der Anwendung. Befolgen Sie die mitgelieferte Anleitung für beste Ergebnisse.</p>",
+            "open_by_default": false
+          }
+        },
+        "faq_item_mxNKnb": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Welche Inhaltsstoffe sind enthalten?",
+            "answer": "<p>Wir verwenden nur hochwertige, natürliche Inhaltsstoffe. Die vollständige Liste finden Sie auf der Produktverpackung.</p>",
+            "open_by_default": false
+          }
+        },
+        "faq_item_i3BQec": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Wie lange ist die Lieferzeit?",
+            "answer": "<p>Die Standardlieferzeit beträgt 2-3 Werktage innerhalb Deutschlands.</p>",
+            "open_by_default": false
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_NBdbgk",
+        "faq_item_mxNKnb",
+        "faq_item_i3BQec"
+      ],
+      "name": "FAQ Accordion",
+      "settings": {
+        "heading": "FAQ",
+        "description": "Häufig gestellte Fragen zu diesem Produkt.",
+        "background_color": "default"
+      }
+    },
+    "section_accordion_Kqm7FD": {
+      "type": "section-accordion",
+      "blocks": {
+        "faq_item_87JKrm": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Wie verwende ich dieses Produkt?",
+            "answer": "<p>Unser Produkt ist einfach in der Anwendung. Befolgen Sie die mitgelieferte Anleitung für beste Ergebnisse.</p>",
+            "open_by_default": false
+          }
+        },
+        "faq_item_cywBHG": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Welche Inhaltsstoffe sind enthalten?",
+            "answer": "<p>Wir verwenden nur hochwertige, natürliche Inhaltsstoffe. Die vollständige Liste finden Sie auf der Produktverpackung.</p>",
+            "open_by_default": false
+          }
+        },
+        "faq_item_RUk9ad": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Wie lange ist die Lieferzeit?",
+            "answer": "<p>Die Standardlieferzeit beträgt 2-3 Werktage innerhalb Deutschlands.</p>",
+            "open_by_default": false
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_87JKrm",
+        "faq_item_cywBHG",
+        "faq_item_RUk9ad"
+      ],
+      "name": "FAQ Accordion",
+      "settings": {
+        "heading": "FAQ",
+        "description": "Häufig gestellte Fragen zu diesem Produkt.",
+        "background_color": "green"
+      }
+    },
+    "section_accordion_bmyMip": {
+      "type": "section-accordion",
+      "blocks": {
+        "faq_item_8VRXrH": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Wie verwende ich dieses Produkt?",
+            "answer": "<p>Unser Produkt ist einfach in der Anwendung. Befolgen Sie die mitgelieferte Anleitung für beste Ergebnisse.</p>",
+            "open_by_default": false
+          }
+        },
+        "faq_item_Myimiy": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Welche Inhaltsstoffe sind enthalten?",
+            "answer": "<p>Wir verwenden nur hochwertige, natürliche Inhaltsstoffe. Die vollständige Liste finden Sie auf der Produktverpackung.</p>",
+            "open_by_default": false
+          }
+        },
+        "faq_item_UTtHMc": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Wie lange ist die Lieferzeit?",
+            "answer": "<p>Die Standardlieferzeit beträgt 2-3 Werktage innerhalb Deutschlands.</p>",
+            "open_by_default": false
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_8VRXrH",
+        "faq_item_Myimiy",
+        "faq_item_UTtHMc"
+      ],
+      "name": "FAQ Accordion",
+      "settings": {
+        "heading": "FAQ",
+        "description": "Häufig gestellte Fragen zu diesem Produkt.",
+        "background_color": "dark_green"
+      }
+    },
+    "section_all_products_wph7UE": {
+      "type": "section-all-products",
+      "name": "Alle Produkte",
+      "settings": {
+        "heading": "Alle Produkte",
+        "product_limit": 12,
+        "show_quick_add": true,
+        "show_view_all": false,
+        "view_all_url": "",
+        "view_all_text": "Alle Produkte anzeigen",
+        "button_text": "",
+        "button_link": "",
+        "button_type": "primary",
+        "icon_position": "right"
       }
     }
   },
   "order": [
-    "section_hero_small_gCWNJg",
-    "section_text_xiqdPY",
-    "section_image_text_LpANfR",
-    "section_image_symbols_text_tGRWpL",
-    "section_image_symbols_text_MJY4Jj",
-    "section_image_text_jG6gHp",
-    "section_image_text_zan7jn"
+    "section_hero_T4EfBa",
+    "section_image_accordion_mkBMK7",
+    "section_image_accordion_pTV3Y4",
+    "section_image_symbols_text_YeEiFG",
+    "section_image_symbols_text_QirxNU",
+    "section_image_symbols_text_P6FNWP",
+    "section_image_text_jBdXTY",
+    "section_image_text_BaEHeX",
+    "section_image_text_JRDhkL",
+    "section_logo_grid_e7WCrR",
+    "section_column_image_text_mXhJ8p",
+    "section_column_image_text_4k69qX",
+    "section_column_image_text_Dr8Uyp",
+    "section_hero_small_UgJnWr",
+    "section_cta_3f3LGn",
+    "section_accordion_FDJWQT",
+    "section_accordion_Kqm7FD",
+    "section_accordion_bmyMip",
+    "section_all_products_wph7UE"
   ]
 }
