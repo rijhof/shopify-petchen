@@ -118,26 +118,6 @@
         "show_decoration": true
       }
     },
-    "section_image_text_aFrcpz": {
-      "type": "section-image-text",
-      "name": "Martin x Bübchen",
-      "settings": {
-        "precontent_heading": "",
-        "precontent_content": "",
-        "image": "shopify://shop_images/31_HighRes.jpg",
-        "image_alt": "",
-        "decoration_type": "flower-grass-bottom-left",
-        "image_position": "right",
-        "heading": "Martin x Bübchen",
-        "heading_level": "h2",
-        "content": "<p>Gegründet 2025 von Hundeprofi Martin Rütter, der sich seit über 30 Jahren für artgerechte Hundehaltung und Tierschutz einsetzt. Mit der Botschaft „Adoptieren statt Produzieren!“ macht er sich stark gegen illegalen Welpenhandel und für Adoption aus dem Tierschutz.</p>",
-        "button_text": "Zur Website",
-        "button_link": "#",
-        "button_type": "secondary",
-        "icon_position": "none",
-        "background_color": "default"
-      }
-    },
     "section_image_text_QEd6bp": {
       "type": "section-image-text",
       "name": "ohne Allergene",
@@ -271,7 +251,6 @@
         "heading": "Unsere Produkte",
         "pre_content": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>",
         "show_quick_add": true,
-        "show_wishlist": true,
         "products_position": "left",
         "background_image": "shopify://shop_images/Frame_763.png",
         "image_alt": "Hund Illustration",
@@ -364,20 +343,102 @@
         "heading": "Über uns",
         "background_color": "default"
       }
+    },
+    "section_column_products_K7nCK9": {
+      "type": "section-column-products",
+      "blocks": {
+        "product_GWTNGb": {
+          "type": "product",
+          "settings": {
+            "product": ""
+          }
+        },
+        "product_jE4cdK": {
+          "type": "product",
+          "settings": {
+            "product": ""
+          }
+        },
+        "product_aCLGwJ": {
+          "type": "product",
+          "settings": {
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_GWTNGb",
+        "product_jE4cdK",
+        "product_aCLGwJ"
+      ],
+      "name": "Produkte Spalten",
+      "settings": {
+        "heading": "Unsere Bestseller",
+        "product_source": "manual",
+        "collection": "",
+        "product_limit": 3,
+        "show_quick_add": true,
+        "show_wishlist": true,
+        "show_view_all": false,
+        "view_all_url": "",
+        "view_all_text": "Alle Produkte anzeigen",
+        "background_color": "default"
+      }
+    },
+    "section_image_text_aFrcpz": {
+      "type": "section-image-text",
+      "name": "Martin x Bübchen",
+      "settings": {
+        "precontent_heading": "",
+        "precontent_content": "",
+        "image": "shopify://shop_images/31_HighRes.jpg",
+        "image_alt": "",
+        "decoration_type": "flower-grass-bottom-left",
+        "image_position": "right",
+        "heading": "Martin x Bübchen",
+        "heading_level": "h2",
+        "content": "<p>Gegründet 2025 von Hundeprofi Martin Rütter, der sich seit über 30 Jahren für artgerechte Hundehaltung und Tierschutz einsetzt. Mit der Botschaft „Adoptieren statt Produzieren!“ macht er sich stark gegen illegalen Welpenhandel und für Adoption aus dem Tierschutz.</p>",
+        "button_text": "Zur Website",
+        "button_link": "#",
+        "button_type": "secondary",
+        "icon_position": "none",
+        "background_color": "default"
+      }
+    },
+    "section_image_text_LfNxfP": {
+      "type": "section-image-text",
+      "name": "Bild mit Text",
+      "settings": {
+        "precontent_heading": "",
+        "precontent_content": "",
+        "image_alt": "",
+        "decoration_type": "none",
+        "image_position": "left",
+        "heading": "Überschrift",
+        "heading_level": "h2",
+        "content": "<p>Fügen Sie hier Ihren Text ein. Nutzen Sie die Formatierungsoptionen, um Ihren Inhalt zu strukturieren.</p>",
+        "button_text": "",
+        "button_link": "",
+        "button_type": "primary",
+        "icon_position": "none",
+        "background_color": "default"
+      }
     }
   },
   "order": [
     "template",
     "section_hero_small_B8xWCA",
+    "section_image_text_LfNxfP",
     "section_image_symbols_text_rQy384",
     "section_text_NwYP9y",
-    "section_image_text_aFrcpz",
     "section_image_text_QEd6bp",
     "section_image_symbols_text_HT8CgA",
     "section_image_symbols_text_fatcmm",
     "section_products_with_image_QdkGLK",
     "section_image_text_n6UPNM",
     "section_image_text_3nkpdX",
-    "section_image_accordion_LFfJbi"
+    "section_image_accordion_LFfJbi",
+    "section_column_products_K7nCK9",
+    "section_image_text_aFrcpz"
   ]
 }
