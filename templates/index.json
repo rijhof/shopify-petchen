@@ -26,6 +26,26 @@
         "button_type": "primary"
       }
     },
+    "section_image_text_jBdXTY": {
+      "type": "section-image-text",
+      "name": "Martin ",
+      "settings": {
+        "precontent_heading": "",
+        "precontent_content": "",
+        "image": "shopify://shop_images/Kaufen_15_HighRes.jpg",
+        "image_alt": "",
+        "decoration_type": "none",
+        "image_position": "left",
+        "heading": "Entwickelt mit Hundeexperte Martin Rütter",
+        "heading_level": "h2",
+        "content": "<p>Als Deutschlands bekanntester Hundeexperte weiß Martin<br/>Rütter, was Hunde wirklich brauchen. Mit Petchen hat er eine Pflegeserie mitentwickelt, die auf Haut, Fell und Alltag unserer Vierbeiner abgestimmt ist – sanft, ehrlich und sinnvoll. </p><p>Pflege wie sie sein muss, wenn sie sein muss.</p>",
+        "button_text": "Über Uns",
+        "button_link": "",
+        "button_type": "primary",
+        "icon_position": "none",
+        "background_color": "default"
+      }
+    },
     "section_text_HA8TPE": {
       "type": "section-text",
       "blocks": {
@@ -108,32 +128,13 @@
         "background_color": "default"
       }
     },
-    "section_image_text_jBdXTY": {
-      "type": "section-image-text",
-      "name": "Martin ",
-      "settings": {
-        "precontent_heading": "",
-        "precontent_content": "",
-        "image": "shopify://shop_images/Kaufen_15_HighRes.jpg",
-        "image_alt": "",
-        "decoration_type": "none",
-        "image_position": "left",
-        "heading": "Entwickelt mit Hundeexperte Martin Rütter",
-        "heading_level": "h2",
-        "content": "<p>Als Deutschlands bekanntester Hundeexperte weiß Martin<br/>Rütter, was Hunde wirklich brauchen. Mit Petchen hat er eine Pflegeserie mitentwickelt, die auf Haut, Fell und Alltag unserer Vierbeiner abgestimmt ist – sanft, ehrlich und sinnvoll. </p><p>Pflege wie sie sein muss, wenn sie sein muss.</p>",
-        "button_text": "Über Uns",
-        "button_link": "",
-        "button_type": "primary",
-        "icon_position": "none",
-        "background_color": "default"
-      }
-    },
     "section_image_text_JRDhkL": {
       "type": "section-image-text",
       "name": "ohne Allergene",
       "settings": {
         "precontent_heading": "",
         "precontent_content": "",
+        "image": "shopify://shop_images/Hero__Bild_oder_Vi_deo.png",
         "image_alt": "",
         "decoration_type": "none",
         "image_position": "right",
@@ -309,8 +310,8 @@
     "section_image_text_jBdXTY",
     "section_text_HA8TPE",
     "section_products_with_image_FVfkFB",
-    "section_image_text_JRDhkL",
     "section_image_text_BaEHeX",
+    "section_image_text_JRDhkL",
     "section_image_text_ThBWN4",
     "section_cta_3f3LGn",
     "section_column_image_text_mXhJ8p",
