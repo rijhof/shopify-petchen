@@ -54,7 +54,7 @@
         "image_alt": "",
         "decoration_type": "none",
         "image_position": "left",
-        "heading": "Jeder Kauf spendet",
+        "heading": "Jeder Kauf tut Gutes",
         "heading_level": "h2",
         "content": "<p><strong>JEDES Produkt spendet beim Kauf 0,25€ an den Tierschutzverein </strong><span style=\"text-decoration:underline\"><strong>Adoptieren statt Produzieren</strong></span></p><p><span style=\"text-decoration:underline\"><strong>Beim Kauf einer unserer Pflegesets legen wir noch einen drauf und Spenden  pro Box 1€ an den Tierschutzverein. ♥️</strong></span></p>",
         "button_text": "Hier gehts zum Pflegeset",
@@ -125,10 +125,10 @@
         "heading_level": "h2",
         "content": "<p>Gegründet 2025 von Hundeprofi Martin Rütter, der sich seit über 30 Jahren für artgerechte Hundehaltung und Tierschutz einsetzt. Mit der Botschaft „Adoptieren statt Produzieren!“ macht er sich stark gegen illegalen Welpenhandel und für Adoption aus dem Tierschutz.</p>",
         "button_text": "Zur Website",
-        "button_link": "#",
+        "button_link": "#https://adoptieren-statt-produzieren.org/",
         "button_type": "secondary",
         "icon_position": "none",
-        "background_color": "default"
+        "background_color": "green"
       }
     },
     "section_image_symbols_text_HT8CgA": {
