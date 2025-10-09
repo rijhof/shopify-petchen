@@ -199,6 +199,25 @@
         "background_color": "green"
       }
     },
+    "section_image_text_rNcXqw": {
+      "type": "section-image-text",
+      "name": "Bild mit Text",
+      "settings": {
+        "precontent_heading": "",
+        "precontent_content": "",
+        "image_alt": "",
+        "decoration_type": "none",
+        "image_position": "right",
+        "heading": "Formuliert nach EU-Kosmetikverdnung",
+        "heading_level": "h2",
+        "content": "<p>Hunde sind Familie! <br/>Auch wenn Pflegeprodukte für Hunde rechtlich noch unter die Detergenzienverordnung (Reinigungsmittelgesetz) fallen, sehen wir das anders: Für uns sind Hunde Familienmitglieder. Deshalb legen wir bei unseren Produkten die gleichen hohen Standards an wie bei Pflegeprodukten für Menschen und formulieren sie nach den Vorgaben der <strong>EU-Kosmetikverordnung</strong>.<br/><br/>Weil wir für Tiere keine geringeren Standards akzeptieren als für uns selbst! ♥️</p>",
+        "button_text": "",
+        "button_link": "",
+        "button_type": "primary",
+        "icon_position": "none",
+        "background_color": "default"
+      }
+    },
     "section_image_symbols_text_HT8CgA": {
       "type": "section-image-symbols-text",
       "blocks": {
@@ -232,7 +251,7 @@
         "symbol_text_WtMnwk",
         "symbol_text_9U6BNU"
       ],
-      "name": "Bild mit Symbolen & Text",
+      "name": "EU-Kosmetikverordnung",
       "settings": {
         "image": "shopify://shop_images/Hund_in_Kaefig.png",
         "image_alt": "",
@@ -320,46 +339,6 @@
         "button_type": "primary",
         "icon_position": "none",
         "background_color": "dark_green"
-      }
-    },
-    "section_image_text_n6UPNM": {
-      "type": "section-image-text",
-      "name": "Bild mit Text",
-      "settings": {
-        "precontent_heading": "Wofür werden unsere Spenden verwendet?",
-        "precontent_content": "<p>Der Kauf der Petchen Produkte unterstützt vor allem die beiden Hero-Partnerprojekte von Adoptieren statt Produzieren:</p>",
-        "image": "shopify://shop_images/Hund_mit_Rollstuhl.png",
-        "image_alt": "Hund mit Rollstuhl",
-        "decoration_type": "none",
-        "image_position": "left",
-        "heading": "Hun’nenhoff",
-        "heading_level": "h3",
-        "content": "<p>Der Hun’nenhoff in Schneverdingen ist ein Gnadenhof für Hunde mit Handicap – besonders für Rollihunde. Mit Physiotherapie, Rollwagen und Fürsorge schenkt das Team ihnen Lebensfreude und Bewegung. Gegründet 2018 von Tierärztin Dr. Usha Peters, die mit ihrem Team für jeden einzelnen Hund kämpft.</p>",
-        "button_text": "Mehr erfahren",
-        "button_link": "#",
-        "button_type": "primary",
-        "icon_position": "none",
-        "background_color": "green"
-      }
-    },
-    "section_image_text_3nkpdX": {
-      "type": "section-image-text",
-      "name": "Bild mit Text",
-      "settings": {
-        "precontent_heading": "",
-        "precontent_content": "",
-        "image": "shopify://shop_images/Hund_in_Kaefig.png",
-        "image_alt": "Underdog",
-        "decoration_type": "heart-bottom-right-edge",
-        "image_position": "right",
-        "heading": "Hun’nenhoff",
-        "heading_level": "h3",
-        "content": "<p>Das Projekt „Underdog“ bietet Haustieren obdachloser Menschen kostenlose medizinische Versorgung. Im Tierheim Darmstadt wird unbürokratisch geholfen – mit Herz und Verstand. Finanziert durch Spenden, getragen von einem engagierten Team.</p>",
-        "button_text": "Mehr erfahren",
-        "button_link": "#",
-        "button_type": "secondary",
-        "icon_position": "none",
-        "background_color": "green"
       }
     },
     "section_image_accordion_LFfJbi": {
@@ -475,11 +454,10 @@
     "section_image_symbols_text_rQy384",
     "section_text_NwYP9y",
     "section_image_text_QEd6bp",
+    "section_image_text_rNcXqw",
     "section_image_symbols_text_HT8CgA",
     "section_image_symbols_text_fatcmm",
     "section_products_with_image_QdkGLK",
-    "section_image_text_n6UPNM",
-    "section_image_text_3nkpdX",
     "section_image_accordion_LFfJbi",
     "section_column_products_K7nCK9",
     "section_image_text_aFrcpz"
