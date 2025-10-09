@@ -24,11 +24,24 @@
         "show_decor": true,
         "show_breadcrumbs": false,
         "breadcrumb_current": "",
-        "heading_h1": "Petchen x Adoptieren statt Produzieren",
+        "heading_h1": "Petchen spendet an den Tierschutz ♥️",
         "heading_h2": "Mit jedem Kauf Gutes tun!",
         "button_text": "",
         "button_link": "",
         "button_type": "primary"
+      }
+    },
+    "section_logo_grid_49B9pc": {
+      "type": "section-logo-grid",
+      "name": "Logo Raster",
+      "settings": {
+        "heading": "Petchen  Produkte spenden an:",
+        "logo_1_alt": "",
+        "logo_2": "shopify://shop_images/A-P_Logo_Rahmen_freigestellt.png",
+        "logo_2_alt": "",
+        "logo_3": "shopify://shop_images/A-P_Logo_Schriftzug_freigestellt.png",
+        "logo_3_alt": "",
+        "logo_4_alt": ""
       }
     },
     "section_image_text_mQg9wJ": {
@@ -47,7 +60,7 @@
         "button_text": "",
         "button_link": "",
         "button_type": "primary",
-        "icon_position": "none",
+        "icon_position": "left",
         "background_color": "green"
       }
     },
@@ -144,21 +157,12 @@
             "heading": "Hundeführerschein",
             "content": ""
           }
-        },
-        "symbol_text_y3HabN": {
-          "type": "symbol_text",
-          "settings": {
-            "icon": "icon-decor-flower.svg",
-            "heading": "",
-            "content": "<p>Fügen Sie hier Ihren Text ein.</p>"
-          }
         }
       },
       "block_order": [
         "symbol_text_Ugp9GK",
         "symbol_text_WtMnwk",
-        "symbol_text_9U6BNU",
-        "symbol_text_y3HabN"
+        "symbol_text_9U6BNU"
       ],
       "name": "AP Es gibt noch viel zu tun",
       "settings": {
@@ -181,14 +185,14 @@
           "settings": {
             "icon": "icon-decor-heart-paw.svg",
             "heading": "",
-            "content": "<p>Mehr Verantwortung. Weniger Leid. Und ein Zuhause für die, </p><p>die keins haben.</p><p></p><p>Mehr Infos auf <a href=\"#\" title=\"#\"><strong>Adoptieren statt Produzieren</strong></a> oder @adoptierenstattproduzieren bei <a href=\"#\" title=\"#\"><strong>Instagram</strong></a>.</p>"
+            "content": "<p>Mehr Verantwortung. Weniger Leid. </p><p>Und ein Zuhause für die, die keins haben.</p><p></p><p>Mehr Infos auf <a href=\"#\" title=\"#\"><strong>Adoptieren statt Produzieren</strong></a> oder @adoptierenstattproduzieren bei <a href=\"#\" title=\"#\"><strong>Instagram</strong></a>.</p>"
           }
         }
       },
       "block_order": [
         "symbol_text_Hgpnxn"
       ],
-      "name": "Bild mit Symbolen & Text",
+      "name": "Wir stehen für",
       "settings": {
         "image": "shopify://shop_images/Hund_Frontalansicht.png",
         "image_alt": "",
@@ -198,7 +202,7 @@
         "button_link": "#",
         "button_type": "secondary",
         "icon_position": "none",
-        "background_color": "default"
+        "background_color": "dark_green"
       }
     },
     "section_products_with_image_QdkGLK": {
@@ -213,19 +217,19 @@
         "product_gjRXhB": {
           "type": "product",
           "settings": {
-            "product": "langhaar-hundeshampoo"
+            "product": "kurzhaar-hundeshampoo"
           }
         },
         "product_eYQ4Cq": {
           "type": "product",
           "settings": {
-            "product": "langhaar-hundeshampoo"
+            "product": "feuchttuecher"
           }
         },
         "product_xRTBwy": {
           "type": "product",
           "settings": {
-            "product": "langhaar-hundeshampoo"
+            "product": "pfotenbalsam"
           }
         }
       },
@@ -294,6 +298,7 @@
   "order": [
     "template",
     "section_hero_small_B8xWCA",
+    "section_logo_grid_49B9pc",
     "section_image_text_mQg9wJ",
     "section_text_TCcdkC",
     "section_image_text_aFrcpz",
