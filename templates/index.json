@@ -19,31 +19,11 @@
         "video_mobile": "shopify://files/videos/Bueb25A01_Balsam_9x16_E009G01ON03_Webmix.mp4",
         "video_poster": "shopify://shop_images/martin-ruther-mit-hund.png",
         "show_decor": true,
-        "heading_h1": "Lorem Ipsum",
-        "heading_h2": "Entdecken Sie unsere Produkte",
+        "heading_h1": "Die neue Hundepflege",
+        "heading_h2": "Entwickelt mit Martin Rütter",
         "button_text": "Jetzt entdecken",
         "button_link": "",
         "button_type": "primary"
-      }
-    },
-    "section_image_text_jBdXTY": {
-      "type": "section-image-text",
-      "name": "Martin ",
-      "settings": {
-        "precontent_heading": "",
-        "precontent_content": "",
-        "image": "shopify://shop_images/Kaufen_15_HighRes.jpg",
-        "image_alt": "",
-        "decoration_type": "none",
-        "image_position": "left",
-        "heading": "Hundepflege entwickelt mit Hundeexperte Martin Rütter",
-        "heading_level": "h2",
-        "content": "<p>Als Deutschlands bekanntester Hundeexperte weiß Martin<br/>Rütter, was Hunde wirklich brauchen. Mit Petchen hat er eine Pflegeserie mitentwickelt, die auf Haut, Fell und Alltag unserer Vierbeiner abgestimmt ist – sanft, ehrlich und sinnvoll. </p><p>Pflege wie sie sein muss, wenn sie sein muss.<br/><br/><br/></p>",
-        "button_text": "Über Uns",
-        "button_link": "",
-        "button_type": "primary",
-        "icon_position": "none",
-        "background_color": "default"
       }
     },
     "section_text_HA8TPE": {
@@ -125,6 +105,26 @@
         "button_link": "",
         "button_type": "primary",
         "icon_position": "right",
+        "background_color": "default"
+      }
+    },
+    "section_image_text_jBdXTY": {
+      "type": "section-image-text",
+      "name": "Martin ",
+      "settings": {
+        "precontent_heading": "",
+        "precontent_content": "",
+        "image": "shopify://shop_images/Kaufen_15_HighRes.jpg",
+        "image_alt": "",
+        "decoration_type": "none",
+        "image_position": "left",
+        "heading": "Entwickelt mit Hundeexperte Martin Rütter",
+        "heading_level": "h2",
+        "content": "<p>Als Deutschlands bekanntester Hundeexperte weiß Martin<br/>Rütter, was Hunde wirklich brauchen. Mit Petchen hat er eine Pflegeserie mitentwickelt, die auf Haut, Fell und Alltag unserer Vierbeiner abgestimmt ist – sanft, ehrlich und sinnvoll. </p><p>Pflege wie sie sein muss, wenn sie sein muss.</p>",
+        "button_text": "Über Uns",
+        "button_link": "",
+        "button_type": "primary",
+        "icon_position": "none",
         "background_color": "default"
       }
     },
