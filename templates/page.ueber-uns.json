@@ -31,25 +31,6 @@
         "button_type": "primary"
       }
     },
-    "section_image_text_LfNxfP": {
-      "type": "section-image-text",
-      "name": "Bild mit Text",
-      "settings": {
-        "precontent_heading": "",
-        "precontent_content": "",
-        "image_alt": "",
-        "decoration_type": "none",
-        "image_position": "left",
-        "heading": "Überschrift",
-        "heading_level": "h2",
-        "content": "<p>Fügen Sie hier Ihren Text ein. Nutzen Sie die Formatierungsoptionen, um Ihren Inhalt zu strukturieren.</p>",
-        "button_text": "",
-        "button_link": "",
-        "button_type": "primary",
-        "icon_position": "none",
-        "background_color": "default"
-      }
-    },
     "section_image_accordion_rY7mqn": {
       "type": "section-image-accordion",
       "blocks": {
@@ -196,6 +177,7 @@
       "settings": {
         "precontent_heading": "",
         "precontent_content": "",
+        "image": "shopify://shop_images/Kosmetikverordnung_Infos.png",
         "image_alt": "",
         "decoration_type": "none",
         "image_position": "right",
@@ -440,7 +422,6 @@
   "order": [
     "template",
     "section_hero_small_B8xWCA",
-    "section_image_text_LfNxfP",
     "section_image_accordion_rY7mqn",
     "section_image_symbols_text_rQy384",
     "section_text_NwYP9y",
