@@ -99,7 +99,7 @@
           "type": "symbol_text",
           "settings": {
             "icon": "icon-decor-heart-paw.svg",
-            "heading": "Entwickelt mit Martin Rütter & Tierärztin",
+            "heading": "Entwickelt mit Martin Rütter",
             "content": "<p>Weil nur das Beste gut genug ist: Gemeinsam mit Hundeprofi Martin Rütter entwickelt – mit viel Wissen und Herz für Hunde. <br/></p>"
           }
         },
@@ -107,7 +107,7 @@
           "type": "symbol_text",
           "settings": {
             "icon": "icon-decor-heart-paw.svg",
-            "heading": "Jedes verkaufte Produkt spendet an den Tierschutz",
+            "heading": "Spende an den Tierschutz",
             "content": "<p>Pflege, die Gutes tut: Mit jedem Kauf unterstützt du den Tierschutz und hilfst, Hunden in Not ein besseres Leben zu schenken. </p>"
           }
         },
@@ -115,24 +115,15 @@
           "type": "symbol_text",
           "settings": {
             "icon": "icon-decor-clouds.svg",
-            "heading": "Gemäß EU-Kosmetikverordnung formuliert",
+            "heading": "Gemäß EU-Kosmetikverordnung",
             "content": "<p>Geprüft und sicher: Unser Shampoo erfüllt die strengen Vorgaben der EU-Kosmetikverordnung – für höchste Qualität und Vertrauen. <br/></p>"
-          }
-        },
-        "symbol_text_tej6Df": {
-          "type": "symbol_text",
-          "settings": {
-            "icon": "icon-decor-flower.svg",
-            "heading": "Ohne Allergene",
-            "content": "<p>Viele Hunde reagieren empfindlich auf bestimmte Inhaltsstoffe. Deshalb verzichten wir bewusst auf bekannte Allergene – für besonders sanfte und verträgliche Fellpflege.<br/></p>"
           }
         }
       },
       "block_order": [
         "symbol_text_EbTUmJ",
         "symbol_text_GKR4E8",
-        "symbol_text_xkeyUY",
-        "symbol_text_tej6Df"
+        "symbol_text_xkeyUY"
       ],
       "name": "Bild mit Symbolen & Text",
       "settings": {
