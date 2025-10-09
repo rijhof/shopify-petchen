@@ -31,6 +31,67 @@
         "button_type": "primary"
       }
     },
+    "section_image_text_LfNxfP": {
+      "type": "section-image-text",
+      "name": "Bild mit Text",
+      "settings": {
+        "precontent_heading": "",
+        "precontent_content": "",
+        "image_alt": "",
+        "decoration_type": "none",
+        "image_position": "left",
+        "heading": "Überschrift",
+        "heading_level": "h2",
+        "content": "<p>Fügen Sie hier Ihren Text ein. Nutzen Sie die Formatierungsoptionen, um Ihren Inhalt zu strukturieren.</p>",
+        "button_text": "",
+        "button_link": "",
+        "button_type": "primary",
+        "icon_position": "none",
+        "background_color": "default"
+      }
+    },
+    "section_image_accordion_rY7mqn": {
+      "type": "section-image-accordion",
+      "blocks": {
+        "accordion_item_nK7ckb": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Mit Expertise entwickelt",
+            "content": "<p>Unsere Produkte werden umweltschonend und nachhaltig hergestellt.</p>",
+            "open_by_default": false
+          }
+        },
+        "accordion_item_X7kzQd": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Tierschutz",
+            "content": "<p>Fügen Sie hier den Inhalt ein.</p>",
+            "open_by_default": false
+          }
+        },
+        "accordion_item_9xX4RV": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Rezepturen",
+            "content": "<p>Fügen Sie hier den Inhalt ein.</p>",
+            "open_by_default": false
+          }
+        }
+      },
+      "block_order": [
+        "accordion_item_nK7ckb",
+        "accordion_item_X7kzQd",
+        "accordion_item_9xX4RV"
+      ],
+      "name": "Bild mit Accordion",
+      "settings": {
+        "image_alt": "",
+        "decoration_type": "none",
+        "image_position": "left",
+        "heading": "Was uns besonders macht",
+        "background_color": "default"
+      }
+    },
     "section_image_symbols_text_rQy384": {
       "type": "section-image-symbols-text",
       "blocks": {
@@ -130,7 +191,7 @@
         "image_position": "left",
         "heading": "ohne Allergene",
         "heading_level": "h2",
-        "content": "<p>Gegründet 2025 von Hundeprofi Martin Rütter, der sich seit über 30 Jahren für artgerechte Hundehaltung und Tierschutz einsetzt. Mit der Botschaft „Adoptieren statt Produzieren!“ macht er sich stark gegen illegalen Welpenhandel und für Adoption aus dem Tierschutz.</p>",
+        "content": "<p>Viele Hunde reagieren sensibel auf bestimmte Inhaltsstoffe.<br/>Deshalb verzichten wir konsequent auf bekannte Allergene – für besonders sanfte, verträgliche Hundepflege.</p><p>Je häufiger ein Hund mit Allergenen in Kontakt kommt, desto<br/>größer ist das Risiko, eine Unverträglichkeit zu entwickeln. Unser Anspruch: allergenfreie Pflege nicht als Nischenprodukt, sondern als neuen Standard – damit auch Hunde ohne Allergien langfristig geschützt bleiben.</p><p>Mindestens jeder 5. Hund ist Allergiker. </p><p>Wir finden: </p><p>Pflege ohne Allergene sollte für alle selbstverständlich sein. 🐾</p>",
         "button_text": "Zur Website",
         "button_link": "#",
         "button_type": "secondary",
@@ -404,31 +465,13 @@
         "icon_position": "none",
         "background_color": "default"
       }
-    },
-    "section_image_text_LfNxfP": {
-      "type": "section-image-text",
-      "name": "Bild mit Text",
-      "settings": {
-        "precontent_heading": "",
-        "precontent_content": "",
-        "image_alt": "",
-        "decoration_type": "none",
-        "image_position": "left",
-        "heading": "Überschrift",
-        "heading_level": "h2",
-        "content": "<p>Fügen Sie hier Ihren Text ein. Nutzen Sie die Formatierungsoptionen, um Ihren Inhalt zu strukturieren.</p>",
-        "button_text": "",
-        "button_link": "",
-        "button_type": "primary",
-        "icon_position": "none",
-        "background_color": "default"
-      }
     }
   },
   "order": [
     "template",
     "section_hero_small_B8xWCA",
     "section_image_text_LfNxfP",
+    "section_image_accordion_rY7mqn",
     "section_image_symbols_text_rQy384",
     "section_text_NwYP9y",
     "section_image_text_QEd6bp",
