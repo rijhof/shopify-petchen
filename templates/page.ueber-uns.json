@@ -31,6 +31,26 @@
         "button_type": "primary"
       }
     },
+    "section_image_text_aFrcpz": {
+      "type": "section-image-text",
+      "name": "Martin x Bübchen",
+      "settings": {
+        "precontent_heading": "",
+        "precontent_content": "",
+        "image": "shopify://shop_images/31_HighRes.jpg",
+        "image_alt": "",
+        "decoration_type": "flower-grass-bottom-left",
+        "image_position": "right",
+        "heading": "Martin x Bübchen",
+        "heading_level": "h2",
+        "content": "<p>Gegründet 2025 von Hundeprofi Martin Rütter, der sich seit über 30 Jahren für artgerechte Hundehaltung und Tierschutz einsetzt. Mit der Botschaft „Adoptieren statt Produzieren!“ macht er sich stark gegen illegalen Welpenhandel und für Adoption aus dem Tierschutz.</p>",
+        "button_text": "Zur Website",
+        "button_link": "#",
+        "button_type": "secondary",
+        "icon_position": "none",
+        "background_color": "default"
+      }
+    },
     "section_image_accordion_rY7mqn": {
       "type": "section-image-accordion",
       "blocks": {
@@ -64,7 +84,8 @@
         "accordion_item_X7kzQd",
         "accordion_item_9xX4RV"
       ],
-      "name": "Bild mit Accordion",
+      "disabled": true,
+      "name": "Was uns besonders macht 1",
       "settings": {
         "image_alt": "",
         "decoration_type": "none",
@@ -106,7 +127,7 @@
         "symbol_text_GKR4E8",
         "symbol_text_xkeyUY"
       ],
-      "name": "Bild mit Symbolen & Text",
+      "name": "Was uns besonders macht 2",
       "settings": {
         "image_alt": "",
         "image_position": "left",
@@ -115,7 +136,7 @@
         "button_link": "",
         "button_type": "primary",
         "icon_position": "none",
-        "background_color": "default"
+        "background_color": "dark_green"
       }
     },
     "section_text_NwYP9y": {
@@ -191,78 +212,45 @@
         "background_color": "default"
       }
     },
-    "section_image_symbols_text_HT8CgA": {
-      "type": "section-image-symbols-text",
+    "section_column_products_K7nCK9": {
+      "type": "section-column-products",
       "blocks": {
-        "symbol_text_Ugp9GK": {
-          "type": "symbol_text",
+        "product_GWTNGb": {
+          "type": "product",
           "settings": {
-            "icon": "icon-decor-house-paw.svg",
-            "heading": "Überlastete Tierheime ",
-            "content": ""
+            "product": ""
           }
         },
-        "symbol_text_WtMnwk": {
-          "type": "symbol_text",
+        "product_jE4cdK": {
+          "type": "product",
           "settings": {
-            "icon": "icon-decor-broken-heart.svg",
-            "heading": "Qualzuchten & Auslandstierschutz",
-            "content": ""
+            "product": ""
           }
         },
-        "symbol_text_9U6BNU": {
-          "type": "symbol_text",
+        "product_aCLGwJ": {
+          "type": "product",
           "settings": {
-            "icon": "icon-decor-business-card.svg",
-            "heading": "Hundeführerschein",
-            "content": ""
+            "product": ""
           }
         }
       },
       "block_order": [
-        "symbol_text_Ugp9GK",
-        "symbol_text_WtMnwk",
-        "symbol_text_9U6BNU"
+        "product_GWTNGb",
+        "product_jE4cdK",
+        "product_aCLGwJ"
       ],
-      "name": "Es gibt noch mehr zu tun Spende",
+      "name": "Produkte Spalten",
       "settings": {
-        "image": "shopify://shop_images/Hund_in_Kaefig.png",
-        "image_alt": "",
-        "image_position": "left",
-        "heading": "Doch es gibt noch mehr zu tun",
-        "button_text": "",
-        "button_link": "",
-        "button_type": "primary",
-        "icon_position": "none",
-        "background_color": "default"
-      }
-    },
-    "section_image_symbols_text_fatcmm": {
-      "type": "section-image-symbols-text",
-      "blocks": {
-        "symbol_text_Hgpnxn": {
-          "type": "symbol_text",
-          "settings": {
-            "icon": "icon-decor-heart-paw.svg",
-            "heading": "",
-            "content": "<p>Mehr Verantwortung. Weniger Leid. Und ein Zuhause für die, die keins haben.Mehr Infos auf <a href=\"#\" title=\"#\"><strong>unserer Website</strong></a> oder @adoptierenstattproduzieren bei <a href=\"#\" title=\"#\"><strong>Instagram</strong></a>.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "symbol_text_Hgpnxn"
-      ],
-      "name": "Bild mit Symbolen & Text",
-      "settings": {
-        "image": "shopify://shop_images/Hund_Frontalansicht.png",
-        "image_alt": "",
-        "image_position": "right",
-        "heading": "Doch es gibt noch mehr zu tun",
-        "button_text": "Zur Website",
-        "button_link": "#",
-        "button_type": "secondary",
-        "icon_position": "none",
-        "background_color": "default"
+        "heading": "Schnupper mal rein:",
+        "product_source": "newest",
+        "collection": "frontpage",
+        "product_limit": 3,
+        "show_quick_add": true,
+        "show_wishlist": true,
+        "show_view_all": false,
+        "view_all_url": "",
+        "view_all_text": "Alle Produkte anzeigen",
+        "background_color": "green"
       }
     },
     "section_products_with_image_QdkGLK": {
@@ -299,6 +287,7 @@
         "product_eYQ4Cq",
         "product_xRTBwy"
       ],
+      "disabled": true,
       "name": "Produkte mit Bild",
       "settings": {
         "heading": "Unsere Produkte",
@@ -357,63 +346,49 @@
         "background_color": "default"
       }
     },
-    "section_column_products_K7nCK9": {
-      "type": "section-column-products",
+    "section_image_symbols_text_HT8CgA": {
+      "type": "section-image-symbols-text",
       "blocks": {
-        "product_GWTNGb": {
-          "type": "product",
+        "symbol_text_Ugp9GK": {
+          "type": "symbol_text",
           "settings": {
-            "product": ""
+            "icon": "icon-decor-house-paw.svg",
+            "heading": "Überlastete Tierheime ",
+            "content": ""
           }
         },
-        "product_jE4cdK": {
-          "type": "product",
+        "symbol_text_WtMnwk": {
+          "type": "symbol_text",
           "settings": {
-            "product": ""
+            "icon": "icon-decor-broken-heart.svg",
+            "heading": "Qualzuchten & Auslandstierschutz",
+            "content": ""
           }
         },
-        "product_aCLGwJ": {
-          "type": "product",
+        "symbol_text_9U6BNU": {
+          "type": "symbol_text",
           "settings": {
-            "product": ""
+            "icon": "icon-decor-business-card.svg",
+            "heading": "Hundeführerschein",
+            "content": ""
           }
         }
       },
       "block_order": [
-        "product_GWTNGb",
-        "product_jE4cdK",
-        "product_aCLGwJ"
+        "symbol_text_Ugp9GK",
+        "symbol_text_WtMnwk",
+        "symbol_text_9U6BNU"
       ],
-      "name": "Produkte Spalten",
+      "disabled": true,
+      "name": "Es gibt noch mehr zu tun Spende",
       "settings": {
-        "heading": "Unsere Bestseller",
-        "product_source": "manual",
-        "collection": "",
-        "product_limit": 3,
-        "show_quick_add": true,
-        "show_wishlist": true,
-        "show_view_all": false,
-        "view_all_url": "",
-        "view_all_text": "Alle Produkte anzeigen",
-        "background_color": "default"
-      }
-    },
-    "section_image_text_aFrcpz": {
-      "type": "section-image-text",
-      "name": "Martin x Bübchen",
-      "settings": {
-        "precontent_heading": "",
-        "precontent_content": "",
-        "image": "shopify://shop_images/31_HighRes.jpg",
+        "image": "shopify://shop_images/Hund_in_Kaefig.png",
         "image_alt": "",
-        "decoration_type": "flower-grass-bottom-left",
-        "image_position": "right",
-        "heading": "Martin x Bübchen",
-        "heading_level": "h2",
-        "content": "<p>Gegründet 2025 von Hundeprofi Martin Rütter, der sich seit über 30 Jahren für artgerechte Hundehaltung und Tierschutz einsetzt. Mit der Botschaft „Adoptieren statt Produzieren!“ macht er sich stark gegen illegalen Welpenhandel und für Adoption aus dem Tierschutz.</p>",
-        "button_text": "Zur Website",
-        "button_link": "#",
-        "button_type": "secondary",
+        "image_position": "left",
+        "heading": "Doch es gibt noch mehr zu tun",
+        "button_text": "",
+        "button_link": "",
+        "button_type": "primary",
         "icon_position": "none",
         "background_color": "default"
       }
@@ -422,16 +397,15 @@
   "order": [
     "template",
     "section_hero_small_B8xWCA",
+    "section_image_text_aFrcpz",
     "section_image_accordion_rY7mqn",
     "section_image_symbols_text_rQy384",
     "section_text_NwYP9y",
     "section_image_text_QEd6bp",
     "section_image_text_rNcXqw",
-    "section_image_symbols_text_HT8CgA",
-    "section_image_symbols_text_fatcmm",
+    "section_column_products_K7nCK9",
     "section_products_with_image_QdkGLK",
     "section_image_accordion_LFfJbi",
-    "section_column_products_K7nCK9",
-    "section_image_text_aFrcpz"
+    "section_image_symbols_text_HT8CgA"
   ]
 }
