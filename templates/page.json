@@ -15,7 +15,7 @@
     },
     "section_hero_small_B8xWCA": {
       "type": "section-hero-small",
-      "name": "Hero Klein",
+      "name": "Hero AP",
       "settings": {
         "media_type": "image",
         "image_desktop": "shopify://shop_images/Hero__Bild_oder_Vi_deo_04e0d27b-f1f0-44e0-a33b-446121156a3c.png",
@@ -29,6 +29,25 @@
         "button_text": "",
         "button_link": "",
         "button_type": "primary"
+      }
+    },
+    "section_image_text_mQg9wJ": {
+      "type": "section-image-text",
+      "name": "Spende au Produkt",
+      "settings": {
+        "precontent_heading": "",
+        "precontent_content": "",
+        "image_alt": "",
+        "decoration_type": "none",
+        "image_position": "left",
+        "heading": "Jeder Kauf spendet",
+        "heading_level": "h2",
+        "content": "<p><strong>JEDES Produkt spendet beim Kauf 0,25€ an den Tierschutzverein </strong><span style=\"text-decoration:underline\"><strong>Adoptieren statt Produzieren</strong></span></p>",
+        "button_text": "",
+        "button_link": "",
+        "button_type": "primary",
+        "icon_position": "none",
+        "background_color": "default"
       }
     },
     "section_text_TCcdkC": {
@@ -49,7 +68,7 @@
         "text_7bwGxa": {
           "type": "text",
           "settings": {
-            "text": "– wir unterstützen aus Überzeugung und Liebe zu unseren Fellnasen den gemeinnützigen Tierschutzverein Adoptieren Statt Produzieren e.V."
+            "text": "– wir unterstützen aus Überzeugung und Liebe zum Tier den gemeinnützigen Tierschutzverein Adoptieren Statt Produzieren e.V."
           }
         },
         "icon_37N9PA": {
@@ -265,6 +284,7 @@
   "order": [
     "template",
     "section_hero_small_B8xWCA",
+    "section_image_text_mQg9wJ",
     "section_text_TCcdkC",
     "section_image_text_aFrcpz",
     "section_image_symbols_text_HT8CgA",
