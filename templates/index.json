@@ -26,22 +26,283 @@
         "button_type": "primary"
       }
     },
+    "section_image_text_jBdXTY": {
+      "type": "section-image-text",
+      "name": "Martin ",
+      "settings": {
+        "precontent_heading": "",
+        "precontent_content": "",
+        "image": "shopify://shop_images/Kaufen_15_HighRes.jpg",
+        "image_alt": "",
+        "decoration_type": "none",
+        "image_position": "left",
+        "heading": "Hundepflege entwickelt mit Hundeexperte Martin Rütter",
+        "heading_level": "h2",
+        "content": "<p>Als Deutschlands bekanntester Hundeexperte weiß Martin<br/>Rütter, was Hunde wirklich brauchen. Mit Petchen hat er eine Pflegeserie mitentwickelt, die auf Haut, Fell und Alltag unserer Vierbeiner abgestimmt ist – sanft, ehrlich und sinnvoll. </p><p>Pflege wie sie sein muss, wenn sie sein muss.<br/><br/><br/></p>",
+        "button_text": "Über Uns",
+        "button_link": "",
+        "button_type": "primary",
+        "icon_position": "none",
+        "background_color": "default"
+      }
+    },
+    "section_text_HA8TPE": {
+      "type": "section-text",
+      "blocks": {
+        "text_Jcn9hm": {
+          "type": "text",
+          "settings": {
+            "text": "Was den tierärztlichen Check nicht besteht, kommt nicht in die Flasche. Punkt."
+          }
+        },
+        "icon_QCxHwa": {
+          "type": "icon",
+          "settings": {
+            "icon": "heart_paw"
+          }
+        },
+        "text_XBAXdy": {
+          "type": "text",
+          "settings": {
+            "text": "- Martin Rütter"
+          }
+        }
+      },
+      "block_order": [
+        "text_Jcn9hm",
+        "icon_QCxHwa",
+        "text_XBAXdy"
+      ],
+      "name": "Zitat Martin",
+      "settings": {
+        "background_color": "dark_green",
+        "show_decoration": false
+      }
+    },
+    "section_products_with_image_FVfkFB": {
+      "type": "section-products-with-image",
+      "blocks": {
+        "product_3JJEFK": {
+          "type": "product",
+          "settings": {
+            "product": "kurzhaar-hundeshampoo"
+          }
+        },
+        "product_86tbXj": {
+          "type": "product",
+          "settings": {
+            "product": "langhaar-hundeshampoo"
+          }
+        },
+        "product_hkHXzF": {
+          "type": "product",
+          "settings": {
+            "product": "pfotenbalsam"
+          }
+        },
+        "product_chakAd": {
+          "type": "product",
+          "settings": {
+            "product": "feuchttuecher"
+          }
+        }
+      },
+      "block_order": [
+        "product_3JJEFK",
+        "product_86tbXj",
+        "product_hkHXzF",
+        "product_chakAd"
+      ],
+      "name": "Produkte mit Bild",
+      "settings": {
+        "heading": "Entdecke unsere Pflegeprodukte",
+        "pre_content": "<p>Entdecken Sie unsere handverlesenen Produkte für Ihr Haustier.</p>",
+        "show_quick_add": true,
+        "products_position": "left",
+        "background_image": "shopify://shop_images/Frame_763.png",
+        "image_alt": "",
+        "button_text": "",
+        "button_link": "",
+        "button_type": "primary",
+        "icon_position": "right",
+        "background_color": "default"
+      }
+    },
+    "section_image_text_JRDhkL": {
+      "type": "section-image-text",
+      "name": "ohne Allergene",
+      "settings": {
+        "precontent_heading": "",
+        "precontent_content": "",
+        "image_alt": "",
+        "decoration_type": "none",
+        "image_position": "right",
+        "heading": "Hundepflege ohne Allergene",
+        "heading_level": "h2",
+        "content": "<p>Viele Hunde reagieren sensibel auf Duftstoffe, Farbstoffe und Co. – sie können Haut reizen und allergische Reaktionen auslösen. Trotzdem stecken viele Produkte noch immer voller Stoffe, die schnell zu Juckreiz oder Irritationen führen können. Deshalb kommt Petchen ganz ohne deklarationspflichtige Allergene aus – damit dein Hund nur das bekommt, was ihm wirklich guttut.</p>",
+        "button_text": "Mehr erfahren",
+        "button_link": "",
+        "button_type": "primary",
+        "icon_position": "none",
+        "background_color": "default"
+      }
+    },
+    "section_image_text_BaEHeX": {
+      "type": "section-image-text",
+      "name": "EU-Kosmetikverordnung",
+      "settings": {
+        "precontent_heading": "",
+        "precontent_content": "",
+        "image_alt": "",
+        "decoration_type": "none",
+        "image_position": "left",
+        "heading": "Formuliert wie Kosmetik – nur für Hunde",
+        "heading_level": "h2",
+        "content": "<p>Unsere Rezepturen sind gemäß EU-Kosmetikverordnung formuliert – mit Einhaltung strengster Grenzwerte (z.B. für Konservierungsmittel), INCI-konforme Deklaration aller Inhaltsstoffe und maximalem Anspruch an Verträglichkeit. Qualität, wie du sie aus deiner eigenen Pflege kennst. Weil für unsere Vierbeiner nur das Beste gut genug ist. </p>",
+        "button_text": "",
+        "button_link": "",
+        "button_type": "primary",
+        "icon_position": "none",
+        "background_color": "green"
+      }
+    },
+    "section_image_text_ThBWN4": {
+      "type": "section-image-text",
+      "name": "Spende",
+      "settings": {
+        "precontent_heading": "",
+        "precontent_content": "",
+        "image": "shopify://shop_images/Hund_in_Kaefig.png",
+        "image_alt": "",
+        "decoration_type": "none",
+        "image_position": "right",
+        "heading": "Drin ist was Gut(es) tut",
+        "heading_level": "h2",
+        "content": "<p>Mit dem Kauf jedes Petchen-Produkts tust du doppelt Gutes:<br/><br/>Für deinen eigenen Vierbeiner – und für viele, die noch auf ein Zuhause warten.<br/><br/>Pro Kauf spenden wir an den gemeinnützigen Tierschutzverein <strong>‚Adoptieren statt Produzieren‘</strong> – gegründet von Martin Rütter.</p>",
+        "button_text": "Mehr erfahren",
+        "button_link": "shopify://pages/spendenseite",
+        "button_type": "primary",
+        "icon_position": "none",
+        "background_color": "default"
+      }
+    },
+    "section_cta_3f3LGn": {
+      "type": "section-cta",
+      "name": "Call to Action",
+      "settings": {
+        "heading": "Weil dein Hund zur Familie gehört ♥️",
+        "content": "<p>Unsere Hunde sind Familienmitglieder. Sie schlafen auf dem Sofa, begleiten uns durchs Leben und verdienen Pflege, die ihnen wirklich guttut. Sanft, minimal<br/>formuliert und gemacht für unsere Vierbeiner.<br/><br/><br/></p>",
+        "button_text": "Produkte entdecken",
+        "button_link": "shopify://collections/all",
+        "button_type": "primary",
+        "icon_position": "right"
+      }
+    },
+    "section_column_image_text_mXhJ8p": {
+      "type": "section-column-image-text",
+      "blocks": {
+        "column_GWLtCN": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Website_Pfoten_03.png",
+            "image_alt": "",
+            "heading": "Pfotenpflege",
+            "content": ""
+          }
+        },
+        "column_ap7EKw": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Website_Tuch_02.png",
+            "image_alt": "",
+            "heading": "Feuchttücher",
+            "content": ""
+          }
+        },
+        "column_69hzxe": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Website_Fell.png",
+            "image_alt": "",
+            "heading": "Fellpflege",
+            "content": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_GWLtCN",
+        "column_ap7EKw",
+        "column_69hzxe"
+      ],
+      "name": "Kategorien",
+      "settings": {
+        "heading": "Entdecke unsere Pflegeprodukte",
+        "content": "<p>Milde Pflege von Kopf bis Pfote:</p>",
+        "background_color": "default"
+      }
+    },
+    "section_image_symbols_text_P6FNWP": {
+      "type": "section-image-symbols-text",
+      "blocks": {
+        "symbol_text_kED6Tk": {
+          "type": "symbol_text",
+          "settings": {
+            "icon": "icon-decor-heart-paw.svg",
+            "heading": "Liebevolle Betreuung",
+            "content": "<p>Wir kümmern uns mit viel Liebe und Aufmerksamkeit um Ihre Tiere.</p>"
+          }
+        },
+        "symbol_text_96hKAf": {
+          "type": "symbol_text",
+          "settings": {
+            "icon": "icon-decor-house-paw.svg",
+            "heading": "Sicheres Zuhause",
+            "content": "<p>Ein sicherer und gemütlicher Ort für Ihre Lieblinge.</p>"
+          }
+        },
+        "symbol_text_AnMWQH": {
+          "type": "symbol_text",
+          "settings": {
+            "icon": "icon-decor-paws.svg",
+            "heading": "Professionelle Pflege",
+            "content": "<p>Erfahrene Pfleger sorgen für das Wohlbefinden Ihrer Tiere.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "symbol_text_kED6Tk",
+        "symbol_text_96hKAf",
+        "symbol_text_AnMWQH"
+      ],
+      "name": "Bild mit Symbolen & Text",
+      "settings": {
+        "image_alt": "",
+        "image_position": "left",
+        "heading": "Überschrift",
+        "button_text": "",
+        "button_link": "",
+        "button_type": "primary",
+        "icon_position": "none",
+        "background_color": "dark_green"
+      }
+    },
     "section_image_accordion_mkBMK7": {
       "type": "section-image-accordion",
       "blocks": {
         "accordion_item_qiW7UX": {
           "type": "accordion_item",
           "settings": {
-            "title": "Hochwertige Materialien",
-            "content": "<p>Wir verwenden nur die besten Materialien für unsere Produkte.</p>",
+            "title": "Hundepflege ohne Allergene",
+            "content": "<p>Viele Hunde reagieren sensibel auf Duftstoffe, Farbstoffe und Co. – sie können Haut reizen und allergische Reaktionen auslösen. Trotzdem stecken viele Produkte noch immer voller Stoffe, die schnell zu Juckreiz oder Irritationen führen können. Deshalb kommt Petchen ganz ohne deklarationspflichtige Allergene aus – damit dein Hund nur das bekommt, was ihm wirklich guttut.</p>",
             "open_by_default": false
           }
         },
         "accordion_item_h94D6K": {
           "type": "accordion_item",
+          "name": "Kosmetikverordnung",
           "settings": {
-            "title": "Nachhaltige Produktion",
-            "content": "<p>Unsere Produkte werden umweltschonend und nachhaltig hergestellt.</p>",
+            "title": "Formuliert wie Kosmetik – nur für Hunde",
+            "content": "<p>Unsere Rezepturen sind gemäß EU-Kosmetikverordnung<br/>formuliert – mit Einhaltung strengster Grenzwerte (z.B. für Konservierungsmittel), INCI-konforme<br/>Deklaration aller Inhaltsstoffe und maximalem Anspruch an Verträglichkeit. Qualität,<br/>wie du sie aus deiner eigenen Pflege kennst. Weil für unsere Vierbeiner nur das<br/>Beste gut genug ist.  </p>",
             "open_by_default": false
           }
         },
@@ -59,7 +320,7 @@
         "accordion_item_h94D6K",
         "accordion_item_g3eCUL"
       ],
-      "name": "Bild mit Accordion",
+      "name": "Brand Values",
       "settings": {
         "image_alt": "",
         "decoration_type": "none",
@@ -200,108 +461,6 @@
         "background_color": "green"
       }
     },
-    "section_image_symbols_text_P6FNWP": {
-      "type": "section-image-symbols-text",
-      "blocks": {
-        "symbol_text_kED6Tk": {
-          "type": "symbol_text",
-          "settings": {
-            "icon": "icon-decor-heart-paw.svg",
-            "heading": "Liebevolle Betreuung",
-            "content": "<p>Wir kümmern uns mit viel Liebe und Aufmerksamkeit um Ihre Tiere.</p>"
-          }
-        },
-        "symbol_text_96hKAf": {
-          "type": "symbol_text",
-          "settings": {
-            "icon": "icon-decor-house-paw.svg",
-            "heading": "Sicheres Zuhause",
-            "content": "<p>Ein sicherer und gemütlicher Ort für Ihre Lieblinge.</p>"
-          }
-        },
-        "symbol_text_AnMWQH": {
-          "type": "symbol_text",
-          "settings": {
-            "icon": "icon-decor-paws.svg",
-            "heading": "Professionelle Pflege",
-            "content": "<p>Erfahrene Pfleger sorgen für das Wohlbefinden Ihrer Tiere.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "symbol_text_kED6Tk",
-        "symbol_text_96hKAf",
-        "symbol_text_AnMWQH"
-      ],
-      "name": "Bild mit Symbolen & Text",
-      "settings": {
-        "image_alt": "",
-        "image_position": "left",
-        "heading": "Überschrift",
-        "button_text": "",
-        "button_link": "",
-        "button_type": "primary",
-        "icon_position": "none",
-        "background_color": "dark_green"
-      }
-    },
-    "section_image_text_jBdXTY": {
-      "type": "section-image-text",
-      "name": "Bild mit Text",
-      "settings": {
-        "precontent_heading": "",
-        "precontent_content": "",
-        "image_alt": "",
-        "decoration_type": "none",
-        "image_position": "left",
-        "heading": "Überschrift",
-        "heading_level": "h2",
-        "content": "<p>Fügen Sie hier Ihren Text ein. Nutzen Sie die Formatierungsoptionen, um Ihren Inhalt zu strukturieren.</p>",
-        "button_text": "",
-        "button_link": "",
-        "button_type": "primary",
-        "icon_position": "none",
-        "background_color": "default"
-      }
-    },
-    "section_image_text_BaEHeX": {
-      "type": "section-image-text",
-      "name": "Bild mit Text",
-      "settings": {
-        "precontent_heading": "",
-        "precontent_content": "",
-        "image_alt": "",
-        "decoration_type": "none",
-        "image_position": "right",
-        "heading": "Überschrift",
-        "heading_level": "h2",
-        "content": "<p>Fügen Sie hier Ihren Text ein. Nutzen Sie die Formatierungsoptionen, um Ihren Inhalt zu strukturieren.</p>",
-        "button_text": "",
-        "button_link": "",
-        "button_type": "primary",
-        "icon_position": "none",
-        "background_color": "green"
-      }
-    },
-    "section_image_text_JRDhkL": {
-      "type": "section-image-text",
-      "name": "Bild mit Text",
-      "settings": {
-        "precontent_heading": "",
-        "precontent_content": "",
-        "image_alt": "",
-        "decoration_type": "none",
-        "image_position": "left",
-        "heading": "Überschrift",
-        "heading_level": "h2",
-        "content": "<p>Fügen Sie hier Ihren Text ein. Nutzen Sie die Formatierungsoptionen, um Ihren Inhalt zu strukturieren.</p>",
-        "button_text": "",
-        "button_link": "",
-        "button_type": "primary",
-        "icon_position": "none",
-        "background_color": "dark_green"
-      }
-    },
     "section_logo_grid_e7WCrR": {
       "type": "section-logo-grid",
       "name": "Logo Raster",
@@ -315,49 +474,6 @@
         "logo_3_alt": "",
         "logo_4": "shopify://shop_images/Certificate-vegan-formula-3.png",
         "logo_4_alt": ""
-      }
-    },
-    "section_column_image_text_mXhJ8p": {
-      "type": "section-column-image-text",
-      "blocks": {
-        "column_GWLtCN": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Image1.png",
-            "image_alt": "",
-            "heading": "Lorem Ipsum",
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
-          }
-        },
-        "column_ap7EKw": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Image2.png",
-            "image_alt": "",
-            "heading": "Lorem Ipsum",
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
-          }
-        },
-        "column_69hzxe": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Image3.png",
-            "image_alt": "",
-            "heading": "Lorem Ipsum",
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "column_GWLtCN",
-        "column_ap7EKw",
-        "column_69hzxe"
-      ],
-      "name": "Spalten: Bild + Text",
-      "settings": {
-        "heading": "Lorem Ipsum Dolor Sit",
-        "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>",
-        "background_color": "default"
       }
     },
     "section_column_image_text_4k69qX": {
@@ -462,18 +578,6 @@
         "button_text": "Jetzt entdecken",
         "button_link": "",
         "button_type": "primary"
-      }
-    },
-    "section_cta_3f3LGn": {
-      "type": "section-cta",
-      "name": "Call to Action",
-      "settings": {
-        "heading": "Lorem ipsum dolor sit amet consetetur sit amet sadipscin",
-        "content": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>",
-        "button_text": "",
-        "button_link": "",
-        "button_type": "primary",
-        "icon_position": "right"
       }
     },
     "section_accordion_FDJWQT": {
@@ -653,55 +757,6 @@
         "background_color": "green"
       }
     },
-    "section_products_with_image_FVfkFB": {
-      "type": "section-products-with-image",
-      "blocks": {
-        "product_3JJEFK": {
-          "type": "product",
-          "settings": {
-            "product": "kurzhaar-hundeshampoo"
-          }
-        },
-        "product_86tbXj": {
-          "type": "product",
-          "settings": {
-            "product": "kurzhaar-hundeshampoo"
-          }
-        },
-        "product_hkHXzF": {
-          "type": "product",
-          "settings": {
-            "product": "kurzhaar-hundeshampoo"
-          }
-        },
-        "product_chakAd": {
-          "type": "product",
-          "settings": {
-            "product": "kurzhaar-hundeshampoo"
-          }
-        }
-      },
-      "block_order": [
-        "product_3JJEFK",
-        "product_86tbXj",
-        "product_hkHXzF",
-        "product_chakAd"
-      ],
-      "name": "Produkte mit Bild",
-      "settings": {
-        "heading": "Unsere Empfehlungen",
-        "pre_content": "<p>Entdecken Sie unsere handverlesenen Produkte für Ihr Haustier.</p>",
-        "show_quick_add": true,
-        "products_position": "left",
-        "background_image": "shopify://shop_images/Frame_763.png",
-        "image_alt": "",
-        "button_text": "",
-        "button_link": "",
-        "button_type": "primary",
-        "icon_position": "right",
-        "background_color": "default"
-      }
-    },
     "section_products_with_image_RzniJy": {
       "type": "section-products-with-image",
       "blocks": {
@@ -811,155 +866,33 @@
         "background_color": "default",
         "show_decoration": false
       }
-    },
-    "section_text_HA8TPE": {
-      "type": "section-text",
-      "blocks": {
-        "text_Jcn9hm": {
-          "type": "text",
-          "settings": {
-            "text": "Wir lieben unsere Tiere"
-          }
-        },
-        "icon_QCxHwa": {
-          "type": "icon",
-          "settings": {
-            "icon": "heart_paw"
-          }
-        },
-        "text_wFza7T": {
-          "type": "text",
-          "settings": {
-            "text": "und möchten ihnen nur das Beste geben."
-          }
-        },
-        "icon_b8WWY6": {
-          "type": "icon",
-          "settings": {
-            "icon": "flower"
-          }
-        },
-        "text_thKViD": {
-          "type": "text",
-          "settings": {
-            "text": "Deshalb verwenden wir nur natürliche Zutaten"
-          }
-        },
-        "icon_XCanff": {
-          "type": "icon",
-          "settings": {
-            "icon": "butterfly"
-          }
-        },
-        "text_EcggbE": {
-          "type": "text",
-          "settings": {
-            "text": "für unsere Produkte."
-          }
-        }
-      },
-      "block_order": [
-        "text_Jcn9hm",
-        "icon_QCxHwa",
-        "text_wFza7T",
-        "icon_b8WWY6",
-        "text_thKViD",
-        "icon_XCanff",
-        "text_EcggbE"
-      ],
-      "name": "Text mit Icons",
-      "settings": {
-        "background_color": "dark_green",
-        "show_decoration": false
-      }
-    },
-    "section_text_FqP4XX": {
-      "type": "section-text",
-      "blocks": {
-        "text_mKxz3x": {
-          "type": "text",
-          "settings": {
-            "text": "Wir lieben unsere Tiere"
-          }
-        },
-        "icon_Xhe9YH": {
-          "type": "icon",
-          "settings": {
-            "icon": "heart_paw"
-          }
-        },
-        "text_kJTcMc": {
-          "type": "text",
-          "settings": {
-            "text": "und möchten ihnen nur das Beste geben."
-          }
-        },
-        "icon_JrUWRy": {
-          "type": "icon",
-          "settings": {
-            "icon": "flower"
-          }
-        },
-        "text_Jn79XK": {
-          "type": "text",
-          "settings": {
-            "text": "Deshalb verwenden wir nur natürliche Zutaten"
-          }
-        },
-        "icon_4Uanzf": {
-          "type": "icon",
-          "settings": {
-            "icon": "butterfly"
-          }
-        },
-        "text_dmTrxX": {
-          "type": "text",
-          "settings": {
-            "text": "für unsere Produkte."
-          }
-        }
-      },
-      "block_order": [
-        "text_mKxz3x",
-        "icon_Xhe9YH",
-        "text_kJTcMc",
-        "icon_JrUWRy",
-        "text_Jn79XK",
-        "icon_4Uanzf",
-        "text_dmTrxX"
-      ],
-      "name": "Text mit Icons",
-      "settings": {
-        "background_color": "green",
-        "show_decoration": false
-      }
     }
   },
   "order": [
     "section_hero_T4EfBa",
+    "section_image_text_jBdXTY",
+    "section_text_HA8TPE",
+    "section_products_with_image_FVfkFB",
+    "section_image_text_JRDhkL",
+    "section_image_text_BaEHeX",
+    "section_image_text_ThBWN4",
+    "section_cta_3f3LGn",
+    "section_column_image_text_mXhJ8p",
+    "section_image_symbols_text_P6FNWP",
     "section_image_accordion_mkBMK7",
     "section_image_accordion_pTV3Y4",
     "section_image_symbols_text_YeEiFG",
     "section_image_symbols_text_QirxNU",
-    "section_image_symbols_text_P6FNWP",
-    "section_image_text_jBdXTY",
-    "section_image_text_BaEHeX",
-    "section_image_text_JRDhkL",
     "section_logo_grid_e7WCrR",
-    "section_column_image_text_mXhJ8p",
     "section_column_image_text_4k69qX",
     "section_column_image_text_Dr8Uyp",
     "section_hero_small_UgJnWr",
-    "section_cta_3f3LGn",
     "section_accordion_FDJWQT",
     "section_accordion_Kqm7FD",
     "section_accordion_bmyMip",
     "section_all_products_wph7UE",
     "section_column_products_tjnzEF",
-    "section_products_with_image_FVfkFB",
     "section_products_with_image_RzniJy",
-    "section_text_Gh38fy",
-    "section_text_HA8TPE",
-    "section_text_FqP4XX"
+    "section_text_Gh38fy"
   ]
 }
