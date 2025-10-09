@@ -37,6 +37,7 @@
       "settings": {
         "precontent_heading": "",
         "precontent_content": "",
+        "image": "shopify://shop_images/Spende.png",
         "image_alt": "",
         "decoration_type": "none",
         "image_position": "left",
@@ -47,7 +48,7 @@
         "button_link": "",
         "button_type": "primary",
         "icon_position": "none",
-        "background_color": "default"
+        "background_color": "green"
       }
     },
     "section_text_TCcdkC": {
@@ -143,14 +144,23 @@
             "heading": "Hundeführerschein",
             "content": ""
           }
+        },
+        "symbol_text_y3HabN": {
+          "type": "symbol_text",
+          "settings": {
+            "icon": "icon-decor-flower.svg",
+            "heading": "",
+            "content": "<p>Fügen Sie hier Ihren Text ein.</p>"
+          }
         }
       },
       "block_order": [
         "symbol_text_Ugp9GK",
         "symbol_text_WtMnwk",
-        "symbol_text_9U6BNU"
+        "symbol_text_9U6BNU",
+        "symbol_text_y3HabN"
       ],
-      "name": "Bild mit Symbolen & Text",
+      "name": "AP Es gibt noch viel zu tun",
       "settings": {
         "image": "shopify://shop_images/Hund_in_Kaefig.png",
         "image_alt": "",
@@ -171,7 +181,7 @@
           "settings": {
             "icon": "icon-decor-heart-paw.svg",
             "heading": "",
-            "content": "<ul><li>Mehr Verantwortung</li><li>Weniger Leid</li><li>Ein Zuhause für die, die keins haben</li></ul><p>Mehr Infos auf <a href=\"#\" title=\"#\"><strong>Adoptieren statt Produzieren</strong></a> oder @adoptierenstattproduzieren bei <a href=\"#\" title=\"#\"><strong>Instagram</strong></a>.</p>"
+            "content": "<p>Mehr Verantwortung. Weniger Leid. Und ein Zuhause für die, </p><p>die keins haben.</p><p></p><p>Mehr Infos auf <a href=\"#\" title=\"#\"><strong>Adoptieren statt Produzieren</strong></a> oder @adoptierenstattproduzieren bei <a href=\"#\" title=\"#\"><strong>Instagram</strong></a>.</p>"
           }
         }
       },
