@@ -1,8 +1,39 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "template": {
-      "type": "template-collection"
+      "type": "template-collection",
+      "settings": {
+        "number_of_products_per_page": 6
+      }
+    },
+    "section_all_products_Kdefpd": {
+      "type": "section-all-products",
+      "name": "Alle Produkte",
+      "settings": {
+        "heading": "Alle Produkte",
+        "product_limit": 12,
+        "show_quick_add": true,
+        "show_view_all": false,
+        "view_all_url": "",
+        "view_all_text": "Alle Produkte anzeigen",
+        "button_text": "",
+        "button_link": "",
+        "button_type": "primary",
+        "icon_position": "right"
+      }
     }
   },
-  "order": ["template"]
+  "order": [
+    "template",
+    "section_all_products_Kdefpd"
+  ]
 }
