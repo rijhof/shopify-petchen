@@ -18,7 +18,7 @@
       "name": "Rich-Text",
       "settings": {
         "heading": "Impressum",
-        "richtext": "<p>Kontaktdaten</p><p>Petchen GmbH</p><p>Bremer Str. 67</p><p>40221 Düsseldorf</p><p>E-Mail: shop@petchen.com</p>"
+        "richtext": "<h5>Kontaktdaten</h5><p></p><p>Petchen GmbH<br/>Bremer Str. 67<br/>40221 Düsseldorf</p><p>E-Mail: shop@petchen.com</p><p></p><h5>Gesellschaftsform</h5><p></p><p>GmbH<br/>Amtsgericht Düsseldorf: HRB XXX<br/>Umsatzsteueridentifikations-Nr.: XXX<br/>Geschäftsführer: Martin Rütter, Martin Kemper </p>"
       }
     }
   },
