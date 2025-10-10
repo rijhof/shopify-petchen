@@ -14,7 +14,8 @@
       "name": "Hero",
       "settings": {
         "media_type": "image",
-        "image_desktop": "shopify://shop_images/0290_Base_SHAMPOO_WF04.jpg",
+        "image_desktop": "shopify://shop_images/0290_Base_SHAMPOO_WF04_neu_02.jpg",
+        "image_mobile": "shopify://shop_images/0290_Base_SHAMPOO_WF04.jpg",
         "image_alt": "",
         "video_poster": "shopify://shop_images/martin-ruther-mit-hund.png",
         "show_decor": false,
