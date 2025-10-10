@@ -26,59 +26,6 @@
         "button_type": "primary"
       }
     },
-    "section_image_text_jBdXTY": {
-      "type": "section-image-text",
-      "name": "Martin ",
-      "settings": {
-        "precontent_heading": "",
-        "precontent_content": "",
-        "image": "shopify://shop_images/Kaufen_15_HighRes.jpg",
-        "image_alt": "",
-        "decoration_type": "none",
-        "image_position": "left",
-        "heading": "Entwickelt mit Hundeexperte Martin Rütter",
-        "heading_level": "h2",
-        "content": "<p>Als Deutschlands bekanntester Hundeexperte weiß Martin<br/>Rütter, was Hunde wirklich brauchen. Mit Petchen hat er eine Pflegeserie mitentwickelt, die auf Haut, Fell und Alltag unserer Vierbeiner abgestimmt ist – sanft, ehrlich und sinnvoll. </p><p>Pflege wie sie sein muss, wenn sie sein muss.</p>",
-        "button_text": "Über Uns",
-        "button_link": "",
-        "button_type": "primary",
-        "icon_position": "none",
-        "background_color": "default"
-      }
-    },
-    "section_text_HA8TPE": {
-      "type": "section-text",
-      "blocks": {
-        "text_Jcn9hm": {
-          "type": "text",
-          "settings": {
-            "text": "Was den tierärztlichen Check nicht besteht, kommt nicht in die Flasche. Punkt."
-          }
-        },
-        "icon_QCxHwa": {
-          "type": "icon",
-          "settings": {
-            "icon": "heart_paw"
-          }
-        },
-        "text_XBAXdy": {
-          "type": "text",
-          "settings": {
-            "text": "- Martin Rütter"
-          }
-        }
-      },
-      "block_order": [
-        "text_Jcn9hm",
-        "icon_QCxHwa",
-        "text_XBAXdy"
-      ],
-      "name": "Zitat Martin",
-      "settings": {
-        "background_color": "dark_green",
-        "show_decoration": false
-      }
-    },
     "section_products_with_image_FVfkFB": {
       "type": "section-products-with-image",
       "blocks": {
@@ -128,6 +75,59 @@
         "background_color": "default"
       }
     },
+    "section_text_HA8TPE": {
+      "type": "section-text",
+      "blocks": {
+        "text_Jcn9hm": {
+          "type": "text",
+          "settings": {
+            "text": "Was den tierärztlichen Check nicht besteht, kommt nicht in die Flasche. Punkt."
+          }
+        },
+        "icon_QCxHwa": {
+          "type": "icon",
+          "settings": {
+            "icon": "heart_paw"
+          }
+        },
+        "text_XBAXdy": {
+          "type": "text",
+          "settings": {
+            "text": "- Martin Rütter"
+          }
+        }
+      },
+      "block_order": [
+        "text_Jcn9hm",
+        "icon_QCxHwa",
+        "text_XBAXdy"
+      ],
+      "name": "Zitat Martin",
+      "settings": {
+        "background_color": "dark_green",
+        "show_decoration": false
+      }
+    },
+    "section_image_text_jBdXTY": {
+      "type": "section-image-text",
+      "name": "Martin ",
+      "settings": {
+        "precontent_heading": "",
+        "precontent_content": "",
+        "image": "shopify://shop_images/Kaufen_15_HighRes.jpg",
+        "image_alt": "",
+        "decoration_type": "none",
+        "image_position": "left",
+        "heading": "Entwickelt mit Hundeexperte Martin Rütter",
+        "heading_level": "h2",
+        "content": "<p>Als Deutschlands bekanntester Hundeexperte weiß Martin<br/>Rütter, was Hunde wirklich brauchen. Mit Petchen hat er eine Pflegeserie mitentwickelt, die auf Haut, Fell und Alltag unserer Vierbeiner abgestimmt ist – sanft, ehrlich und sinnvoll. </p><p>Pflege wie sie sein muss, wenn sie sein muss.</p>",
+        "button_text": "Über Uns",
+        "button_link": "",
+        "button_type": "primary",
+        "icon_position": "none",
+        "background_color": "default"
+      }
+    },
     "section_image_text_BaEHeX": {
       "type": "section-image-text",
       "name": "EU-Kosmetikverordnung",
@@ -137,11 +137,11 @@
         "image": "shopify://shop_images/DSC06217_HighRes.jpg",
         "image_alt": "",
         "decoration_type": "none",
-        "image_position": "left",
+        "image_position": "right",
         "heading": "Formuliert wie Kosmetik – nur für Hunde",
         "heading_level": "h2",
         "content": "<p>Unsere Rezepturen sind gemäß EU-Kosmetikverordnung formuliert – mit Einhaltung strengster Grenzwerte (z.B. für Konservierungsmittel), INCI-konforme Deklaration aller Inhaltsstoffe und maximalem Anspruch an Verträglichkeit. Qualität, wie du sie aus deiner eigenen Pflege kennst. Weil für unsere Vierbeiner nur das Beste gut genug ist. </p>",
-        "button_text": "",
+        "button_text": "Mehr erfahren",
         "button_link": "",
         "button_type": "primary",
         "icon_position": "none",
@@ -157,7 +157,7 @@
         "image": "shopify://shop_images/Hero__Bild_oder_Vi_deo.png",
         "image_alt": "",
         "decoration_type": "none",
-        "image_position": "right",
+        "image_position": "left",
         "heading": "Hundepflege ohne Allergene",
         "heading_level": "h2",
         "content": "<p>Viele Hunde reagieren sensibel auf Duftstoffe, Farbstoffe und Co. – sie können Haut reizen und allergische Reaktionen auslösen. Trotzdem stecken viele Produkte noch immer voller Stoffe, die schnell zu Juckreiz oder Irritationen führen können. Deshalb kommt Petchen ganz ohne deklarationspflichtige Allergene aus – damit dein Hund nur das bekommt, was ihm wirklich guttut.</p>",
@@ -308,9 +308,9 @@
   },
   "order": [
     "section_hero_T4EfBa",
-    "section_image_text_jBdXTY",
-    "section_text_HA8TPE",
     "section_products_with_image_FVfkFB",
+    "section_text_HA8TPE",
+    "section_image_text_jBdXTY",
     "section_image_text_BaEHeX",
     "section_image_text_JRDhkL",
     "section_image_text_ThBWN4",
