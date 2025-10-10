@@ -42,38 +42,22 @@
     "section_accordion_x7kVt7": {
       "type": "section-accordion",
       "blocks": {
-        "faq_item_Jq6kbf": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Wie verwende ich dieses Produkt?",
-            "answer": "<p>Fügen Sie hier die Antwort auf die Frage ein.</p>",
-            "open_by_default": false
-          }
-        },
         "faq_item_Hwhgbf": {
           "type": "faq_item",
-          "name": "Natürlichen Ursprungs",
+          "name": "Natürlichen Ursprungs Shampoos",
+          "settings": {
+            "question": "Was bedeutet Inhaltsstoffe natürlichen Ursprungs?",
+            "answer": "<p>Unsere Hundeshampoos bestehen zu 95% aus Inhaltsstoffen natürlichen Ursprungs. <br/></p><p>Das heißt: 95% der Inhaltsstoffe stammen aus einer natürlichen Quelle - also z. B. aus Pflanzen, Mineralien oder natürlichen Fettsäuren.<br/><br/>Die anderen 5% sind notwendig </p><p>Es werden keine synthetischen Zusätze eingesetzt, sondern nur solche, die so naturbelassen wie möglich sind und gleichzeitig wirksam pflegen.<br/><br/>So bekommt dein Hund eine sanfte, verträgliche Pflege - ganz ohne unnötigen Schnickschnack. <br/><br/></p>",
+            "open_by_default": true
+          }
+        },
+        "faq_item_8YjhfD": {
+          "type": "faq_item",
+          "name": "Natürlichen Ursprungs Balsam",
           "settings": {
             "question": "Was bedeutet Inhaltsstoffe natürlichen Ursprungs?",
             "answer": "<p>Unser Pfotenbalsam besteht zu 100% aus Inhaltsstoffen natürlichen Ursprungs. <br/></p><p>Das heißt: Jeder einzelne Inhaltsstoff im Pfotenbalsam stammt aus einer natürlichen Quelle - also z. B. aus Pflanzen, Mineralien oder natürlichen Fettsäuren.<br/><br/>Es werden keine synthetischen Zusätze eingesetzt, sondern nur solche, die so naturbelassen wie möglich sind und gleichzeitig wirksam pflegen.<br/><br/>So bekommt dein Hund eine sanfte, verträgliche Pflege - ganz ohne unnötigen Schnickschnack. <br/><br/></p>",
             "open_by_default": true
-          }
-        },
-        "faq_item_a7PWLx": {
-          "type": "faq_item",
-          "name": "Fellängen Check Lang",
-          "settings": {
-            "question": "Für welche Hunde ist das Langhaarshampoo geeignet?",
-            "answer": "<p>Das Langhaarshampoo ist perfekt für alle Hunderassen mit mittellangem bis<br/>langem Fell – also für alle, bei denen es gern mal knöttert, verfilzt oder trocken wird.</p><p>Wenn du dir trotzdem unsicher bist: Mach den Felllängen-Check!</p><p><br/>Wenn das Fell deines Hundes länger als 3–4 cm ist, gehört er offiziell zur<br/>Langhaar-Fraktion. Kein Lineal zur Hand?<br/><br/>Dann greif zu Dingen, die du garantiert zu Hause hast:</p><ul><li>Kopf eines Esslöffels</li><li>Korken</li><li>große Knoblauchzehe</li></ul><p>Reicht das Fell locker bis dorthin?<br/><br/>Dann ist unser <strong>Langhaar-Shampoo</strong> wie gemacht für euch – für extra Pflege,<br/>die entwirrt, beruhigt und schön geschmeidig macht. :)</p>",
-            "open_by_default": false
-          }
-        },
-        "faq_item_dLCdmh": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Wie verwende ich dieses Produkt?",
-            "answer": "<p>Fügen Sie hier die Antwort auf die Frage ein.</p>",
-            "open_by_default": false
           }
         },
         "faq_item_RfcbTr": {
@@ -84,14 +68,22 @@
             "answer": "<p>Das Kurzhaarshampoo ist perfekt für alle Hunderassen mit kurzem Fell, das wenig Schutz vor Umwelteinflüssen bietet.</p><p>Wenn du dir trotzdem unsicher bist: Mach den Felllängen-Check!</p><p><br/>Wenn das Fell deines Hundes länger als 3–4 cm ist, gehört er offiziell zur<br/>Langhaar-Fraktion. Kein Lineal zur Hand?<br/><br/>Dann greif zu Dingen, die du garantiert zu Hause hast:</p><ul><li>Kopf eines Esslöffels</li><li>Korken</li><li>große Knoblauchzehe</li></ul><p>Reicht das Fell nicht bis dorthin?<br/><br/>Dann ist unser <strong>Kurzhaar-Shampoo</strong> wie gemacht für euch – für extra Pflege,<br/>die die empfindliche Hundehaut mit Feuchtigkeit versorgt und das Fell stärkt.</p>",
             "open_by_default": false
           }
+        },
+        "faq_item_a7PWLx": {
+          "type": "faq_item",
+          "name": "Fellängen Check Lang",
+          "settings": {
+            "question": "Für welche Hunde ist das Langhaarshampoo geeignet?",
+            "answer": "<p>Das Langhaarshampoo ist perfekt für alle Hunderassen mit mittellangem bis<br/>langem Fell – also für alle, bei denen es gern mal knöttert, verfilzt oder trocken wird.</p><p>Wenn du dir trotzdem unsicher bist: Mach den Felllängen-Check!</p><p><br/>Wenn das Fell deines Hundes länger als 3–4 cm ist, gehört er offiziell zur<br/>Langhaar-Fraktion. Kein Lineal zur Hand?<br/><br/>Dann greif zu Dingen, die du garantiert zu Hause hast:</p><ul><li>Kopf eines Esslöffels</li><li>Korken</li><li>große Knoblauchzehe</li></ul><p>Reicht das Fell locker bis dorthin?<br/><br/>Dann ist unser <strong>Langhaar-Shampoo</strong> wie gemacht für euch – für extra Pflege,<br/>die entwirrt, beruhigt und schön geschmeidig macht. :)</p>",
+            "open_by_default": false
+          }
         }
       },
       "block_order": [
-        "faq_item_Jq6kbf",
         "faq_item_Hwhgbf",
-        "faq_item_a7PWLx",
-        "faq_item_dLCdmh",
-        "faq_item_RfcbTr"
+        "faq_item_8YjhfD",
+        "faq_item_RfcbTr",
+        "faq_item_a7PWLx"
       ],
       "name": "FAQ Accordion",
       "settings": {
