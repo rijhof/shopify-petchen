@@ -19,21 +19,24 @@
             "text": "Kostenloser Versand ab 20€"
           }
         },
-        "info_box_2": {
+        "info_box_7nF787": {
           "type": "info_box",
           "settings": {
-            "icon": "heart",
-            "text": "Hundepflege mit Kosmetikstandard"
+            "icon": "shopping-bag",
+            "text": "Lieferung 3-5 Werktage"
           }
         }
       },
       "block_order": [
         "info_box_1",
-        "info_box_2"
+        "info_box_7nF787"
       ],
       "settings": {
         "add_to_cart_text": "In den Warenkorb",
-        "sold_out_text": "Ausverkauft"
+        "sold_out_text": "Ausverkauft",
+        "usage_title": "Anwendung",
+        "ingredients_title": "Inhaltsstoffe",
+        "payment_methods_title": "Zahlungsmethoden"
       }
     },
     "section_accordion_x7kVt7": {
