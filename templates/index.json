@@ -13,12 +13,11 @@
       "type": "section-hero",
       "name": "Hero",
       "settings": {
-        "media_type": "video",
+        "media_type": "image",
+        "image_desktop": "shopify://shop_images/0290_Base_SHAMPOO_WF04.jpg",
         "image_alt": "",
-        "video_desktop": "shopify://files/videos/Bueb25A01_Kurzhaar_9x16_E010G01ON03_Webmix.mp4",
-        "video_mobile": "shopify://files/videos/Bueb25A01_Balsam_9x16_E009G01ON03_Webmix.mp4",
         "video_poster": "shopify://shop_images/martin-ruther-mit-hund.png",
-        "show_decor": true,
+        "show_decor": false,
         "heading_h1": "Die neue Hundepflege",
         "heading_h2": "Entwickelt mit Martin Rütter",
         "button_text": "Jetzt entdecken",
@@ -128,6 +127,25 @@
         "background_color": "default"
       }
     },
+    "section_image_text_BaEHeX": {
+      "type": "section-image-text",
+      "name": "EU-Kosmetikverordnung",
+      "settings": {
+        "precontent_heading": "",
+        "precontent_content": "",
+        "image_alt": "",
+        "decoration_type": "none",
+        "image_position": "left",
+        "heading": "Formuliert wie Kosmetik – nur für Hunde",
+        "heading_level": "h2",
+        "content": "<p>Unsere Rezepturen sind gemäß EU-Kosmetikverordnung formuliert – mit Einhaltung strengster Grenzwerte (z.B. für Konservierungsmittel), INCI-konforme Deklaration aller Inhaltsstoffe und maximalem Anspruch an Verträglichkeit. Qualität, wie du sie aus deiner eigenen Pflege kennst. Weil für unsere Vierbeiner nur das Beste gut genug ist. </p>",
+        "button_text": "",
+        "button_link": "",
+        "button_type": "primary",
+        "icon_position": "none",
+        "background_color": "green"
+      }
+    },
     "section_image_text_JRDhkL": {
       "type": "section-image-text",
       "name": "ohne Allergene",
@@ -146,25 +164,6 @@
         "button_type": "primary",
         "icon_position": "none",
         "background_color": "default"
-      }
-    },
-    "section_image_text_BaEHeX": {
-      "type": "section-image-text",
-      "name": "EU-Kosmetikverordnung",
-      "settings": {
-        "precontent_heading": "",
-        "precontent_content": "",
-        "image_alt": "",
-        "decoration_type": "none",
-        "image_position": "left",
-        "heading": "Formuliert wie Kosmetik – nur für Hunde",
-        "heading_level": "h2",
-        "content": "<p>Unsere Rezepturen sind gemäß EU-Kosmetikverordnung formuliert – mit Einhaltung strengster Grenzwerte (z.B. für Konservierungsmittel), INCI-konforme Deklaration aller Inhaltsstoffe und maximalem Anspruch an Verträglichkeit. Qualität, wie du sie aus deiner eigenen Pflege kennst. Weil für unsere Vierbeiner nur das Beste gut genug ist. </p>",
-        "button_text": "",
-        "button_link": "",
-        "button_type": "primary",
-        "icon_position": "none",
-        "background_color": "green"
       }
     },
     "section_image_text_ThBWN4": {
