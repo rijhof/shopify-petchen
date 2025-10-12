@@ -128,6 +128,26 @@
         "background_color": "default"
       }
     },
+    "section_image_text_ThBWN4": {
+      "type": "section-image-text",
+      "name": "Spende",
+      "settings": {
+        "precontent_heading": "",
+        "precontent_content": "",
+        "image": "shopify://shop_images/Hund_in_Kaefig.png",
+        "image_alt": "",
+        "decoration_type": "none",
+        "image_position": "right",
+        "heading": "Jeder Kauf spendet an den Tierschutz ♥️",
+        "heading_level": "h2",
+        "content": "<p>Mit dem Kauf jedes Petchen Produkts tust du doppelt Gutes:<br/><br/>Für deinen eigenen Vierbeiner – und für viele, die noch auf ein Zuhause warten.<br/><br/>Pro Kauf spenden wir an den gemeinnützigen Tierschutzverein <strong>‚Adoptieren statt Produzieren‘</strong> – gegründet von Martin Rütter.</p>",
+        "button_text": "Mehr erfahren",
+        "button_link": "shopify://pages/spendenseite",
+        "button_type": "primary",
+        "icon_position": "none",
+        "background_color": "default"
+      }
+    },
     "section_image_text_BaEHeX": {
       "type": "section-image-text",
       "name": "EU-Kosmetikverordnung",
@@ -163,26 +183,6 @@
         "content": "<p>Viele Hunde reagieren sensibel auf Duftstoffe, Farbstoffe und Co. – sie können Haut reizen und allergische Reaktionen auslösen. Trotzdem stecken viele Produkte noch immer voller Stoffe, die schnell zu Juckreiz oder Irritationen führen können. Deshalb kommt Petchen ganz ohne deklarationspflichtige Allergene aus – damit dein Hund nur das bekommt, was ihm wirklich guttut.</p>",
         "button_text": "Mehr erfahren",
         "button_link": "",
-        "button_type": "primary",
-        "icon_position": "none",
-        "background_color": "default"
-      }
-    },
-    "section_image_text_ThBWN4": {
-      "type": "section-image-text",
-      "name": "Spende",
-      "settings": {
-        "precontent_heading": "",
-        "precontent_content": "",
-        "image": "shopify://shop_images/Hund_in_Kaefig.png",
-        "image_alt": "",
-        "decoration_type": "none",
-        "image_position": "right",
-        "heading": "Jeder Kauf spendet an den Tierschutz ♥️",
-        "heading_level": "h2",
-        "content": "<p>Mit dem Kauf jedes Petchen Produkts tust du doppelt Gutes:<br/><br/>Für deinen eigenen Vierbeiner – und für viele, die noch auf ein Zuhause warten.<br/><br/>Pro Kauf spenden wir an den gemeinnützigen Tierschutzverein <strong>‚Adoptieren statt Produzieren‘</strong> – gegründet von Martin Rütter.</p>",
-        "button_text": "Mehr erfahren",
-        "button_link": "shopify://pages/spendenseite",
         "button_type": "primary",
         "icon_position": "none",
         "background_color": "default"
@@ -304,6 +304,47 @@
         "background_color": "default",
         "show_decoration": false
       }
+    },
+    "section_column_products_ewa7qf": {
+      "type": "section-column-products",
+      "blocks": {
+        "product_Jptpwd": {
+          "type": "product",
+          "settings": {
+            "product": ""
+          }
+        },
+        "product_jhatrw": {
+          "type": "product",
+          "settings": {
+            "product": ""
+          }
+        },
+        "product_CctrAP": {
+          "type": "product",
+          "settings": {
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_Jptpwd",
+        "product_jhatrw",
+        "product_CctrAP"
+      ],
+      "name": "Produkte Spalten",
+      "settings": {
+        "heading": "Kaufe ein Pflegeset und spende 1€ an den Tierschutz",
+        "product_source": "newest",
+        "collection": "",
+        "product_limit": 2,
+        "show_quick_add": true,
+        "show_wishlist": true,
+        "show_view_all": false,
+        "view_all_url": "",
+        "view_all_text": "Alle Produkte anzeigen",
+        "background_color": "default"
+      }
     }
   },
   "order": [
@@ -317,6 +358,7 @@
     "section_cta_3f3LGn",
     "section_column_image_text_mXhJ8p",
     "section_image_accordion_mkBMK7",
-    "section_text_Gh38fy"
+    "section_text_Gh38fy",
+    "section_column_products_ewa7qf"
   ]
 }
