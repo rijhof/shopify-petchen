@@ -240,7 +240,7 @@
         "heading_level": "h3",
         "content": "<p>Der Hun’nenhoff in Schneverdingen ist ein Gnadenhof für Hunde mit Handicap – besonders für Rollihunde. Mit Physiotherapie, Rollwagen und Fürsorge schenkt das Team ihnen Lebensfreude und Bewegung. Gegründet 2018 von Tierärztin Dr. Usha Peters, die mit ihrem Team für jeden einzelnen Hund kämpft.</p>",
         "button_text": "Mehr erfahren",
-        "button_link": "#",
+        "button_link": "https://de-hunnenhoff.de/",
         "button_type": "primary",
         "icon_position": "none",
         "background_color": "green"
@@ -260,7 +260,7 @@
         "heading_level": "h3",
         "content": "<p>Das Projekt „Underdog“ bietet Haustieren obdachloser Menschen kostenlose medizinische Versorgung. Im Tierheim Darmstadt wird unbürokratisch geholfen – mit Herz und Verstand. Finanziert durch Spenden, getragen von einem engagierten Team.</p>",
         "button_text": "Mehr erfahren",
-        "button_link": "#",
+        "button_link": "https://www.tsv-darmstadt.de/projekte",
         "button_type": "secondary",
         "icon_position": "none",
         "background_color": "default"
