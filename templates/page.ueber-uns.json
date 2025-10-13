@@ -19,7 +19,7 @@
       "settings": {
         "media_type": "image",
         "image_desktop": "shopify://shop_images/Kaufen_20_HighRes.jpg",
-        "image_mobile": "shopify://shop_images/4zu5.png",
+        "image_mobile": "shopify://shop_images/Kaufen_20_HighRes.jpg",
         "image_alt": "",
         "show_decor": false,
         "show_breadcrumbs": false,
