@@ -117,6 +117,7 @@
         "accordion_item_X7kzQd",
         "accordion_item_9xX4RV"
       ],
+      "disabled": true,
       "name": "Was uns besonders macht 1",
       "settings": {
         "image_alt": "",
@@ -134,7 +135,7 @@
           "settings": {
             "icon": "icon-decor-heart-paw.svg",
             "heading": "Entwickelt mit Martin Rütter",
-            "content": "<p>Weil nur das Beste gut genug ist: Gemeinsam mit Hundeprofi Martin Rütter entwickelt – mit viel Wissen und Herz für Hunde. <br/></p>"
+            "content": "<p>Weil nur das Beste gut genug ist: Gemeinsam mit Hundeprofi Martin Rütter & seiner Tierärztin entwickelt – mit viel Wissen und Herz für Hunde. <br/></p>"
           }
         },
         "symbol_text_GKR4E8": {
@@ -164,7 +165,7 @@
         "image": "shopify://shop_images/teamoralcare_httpss.mj.runCUQMwGiUDKg_bright_warm_orangy_natu_e67c5df4-38c7-4e47-a3e3-598db3ff7939_1.png",
         "image_alt": "",
         "image_position": "left",
-        "heading": "Was uns besonders macht",
+        "heading": "Was uns besonders macht:",
         "button_text": "",
         "button_link": "",
         "button_type": "primary",
@@ -205,7 +206,7 @@
         "heading": "ohne Allergene",
         "heading_level": "h2",
         "content": "<p>Viele Hunde reagieren sensibel auf bestimmte Inhaltsstoffe.<br/>Deshalb verzichten wir konsequent auf bekannte Allergene – für besonders sanfte, verträgliche Hundepflege.</p><p>Je häufiger ein Hund mit Allergenen in Kontakt kommt, desto<br/>größer ist das Risiko, eine Unverträglichkeit zu entwickeln. Unser Anspruch: allergenfreie Pflege nicht als Nischenprodukt, sondern als neuen Standard – damit auch Hunde ohne Allergien langfristig geschützt bleiben.</p><p>Mindestens jeder 5. Hund ist Allergiker. </p><p>Wir finden: </p><p>Pflege ohne Allergene sollte für alle selbstverständlich sein. 🐾</p>",
-        "button_text": "Zur Website",
+        "button_text": "",
         "button_link": "#",
         "button_type": "secondary",
         "icon_position": "none",
@@ -336,6 +337,7 @@
         "accordion_item_LXhMmD",
         "accordion_item_D8wJ8d"
       ],
+      "disabled": true,
       "name": "Über Uns",
       "settings": {
         "image": "shopify://shop_images/08_HighRes.jpg",
