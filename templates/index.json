@@ -114,7 +114,7 @@
       "settings": {
         "precontent_heading": "",
         "precontent_content": "",
-        "image": "shopify://shop_images/Kaufen_15_HighRes.jpg",
+        "image": "shopify://shop_images/MR_mit_Stoerer_02.png",
         "image_alt": "",
         "decoration_type": "none",
         "image_position": "left",
@@ -174,7 +174,7 @@
       "settings": {
         "precontent_heading": "",
         "precontent_content": "",
-        "image": "shopify://shop_images/Hero__Bild_oder_Vi_deo.png",
+        "image": "shopify://shop_images/teamoralcare_bird_perspective_bright_warm_orangy_natural_ligh_4a6dcfc2-68e2-491b-803a-d0766078859d_0.png",
         "image_alt": "",
         "decoration_type": "none",
         "image_position": "left",
@@ -209,7 +209,7 @@
             "image": "shopify://shop_images/Website_Pfoten_03.png",
             "image_alt": "",
             "heading": "Pfotenpflege",
-            "content": ""
+            "content": "<p><br/>Entdecke unseren pflegenden & schützenden <a href=\"/products/pfotenbalsam\" title=\"Pfotenbalsam\">Pfotenbalsam.</a><br/><br/></p>"
           }
         },
         "column_ap7EKw": {
@@ -218,7 +218,7 @@
             "image": "shopify://shop_images/Website_Tuch_02.png",
             "image_alt": "",
             "heading": "Feuchttücher",
-            "content": ""
+            "content": "<p>Entdecke unsere sanften <a href=\"/products/feuchttuecher\" title=\"Feuchttücher\">Feuchttücher</a> für schnelle Reinigung wenn's mal schnell gehen muss.</p>"
           }
         },
         "column_69hzxe": {
@@ -227,7 +227,7 @@
             "image": "shopify://shop_images/Website_Fell.png",
             "image_alt": "",
             "heading": "Fellpflege",
-            "content": ""
+            "content": "<p>Entdecke unsere verschiedenen Shampoos die perfekt auf die Bedürfnisse deines Vierbeiners abgestimmt sind. </p>"
           }
         }
       },
