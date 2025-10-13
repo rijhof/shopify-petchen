@@ -183,6 +183,47 @@
         "heading": "",
         "richtext": "<p><strong>Hersteller: <br/></strong>Petchen GmbH, Bremer Str. 67, 40221 Düsseldorf <br/>hallo@petchen.com<br/><br/></p>"
       }
+    },
+    "section_column_products_EfKiYV": {
+      "type": "section-column-products",
+      "blocks": {
+        "product_JhrFx9": {
+          "type": "product",
+          "settings": {
+            "product": ""
+          }
+        },
+        "product_XFKp9F": {
+          "type": "product",
+          "settings": {
+            "product": ""
+          }
+        },
+        "product_dPXHR6": {
+          "type": "product",
+          "settings": {
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_JhrFx9",
+        "product_XFKp9F",
+        "product_dPXHR6"
+      ],
+      "name": "Produkte Spalten",
+      "settings": {
+        "heading": "Unsere Bestseller",
+        "product_source": "bestsellers",
+        "collection": "",
+        "product_limit": 3,
+        "show_quick_add": true,
+        "show_wishlist": true,
+        "show_view_all": false,
+        "view_all_url": "",
+        "view_all_text": "Alle Produkte anzeigen",
+        "background_color": "default"
+      }
     }
   },
   "order": [
@@ -191,6 +232,7 @@
     "section_image_text_7Qcmdw",
     "section_image_text_WaVYeL",
     "section_accordion_x7kVt7",
-    "section_richt_text_gcJxyX"
+    "section_richt_text_gcJxyX",
+    "section_column_products_EfKiYV"
   ]
 }
