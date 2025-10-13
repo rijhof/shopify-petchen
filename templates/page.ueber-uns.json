@@ -41,14 +41,47 @@
         "image_alt": "",
         "decoration_type": "flower-grass-bottom-left",
         "image_position": "right",
-        "heading": "Martin x Bübchen",
+        "heading": "Petchen by Martin",
         "heading_level": "h2",
-        "content": "<p>Gegründet 2025 von Hundeprofi Martin Rütter, der sich seit über 30 Jahren für artgerechte Hundehaltung und Tierschutz einsetzt. Mit der Botschaft „Adoptieren statt Produzieren!“ macht er sich stark gegen illegalen Welpenhandel und für Adoption aus dem Tierschutz.</p>",
-        "button_text": "Zur Website",
+        "content": "<p>Martin Rütter war von Beginn an tief in die Entwicklung der Produkte eingebunden. Gemeinsam mit einer erfahrenen Tierärztin haben wir unsere Rezepturen sorgfältig entwickelt – mit dem Ziel, Pflege zu schaffen, die wirklich zum Hund passt. Und weil uns nur das Beste gut genug ist, haben wir so lange gefeilt, bis alles perfekt auf die Bedürfnisse unserer Vierbeiner abgestimmt war.</p><p></p><p><br/>Pflege ist Verantwortung. Und weil Hunde für uns Familie sind, haben wir Petchen entwickelt – Pflegeprodukte, die so sorgfältig gemacht sind wie Kosmetik für uns selbst.<br/><br/></p>",
+        "button_text": "",
         "button_link": "#",
         "button_type": "secondary",
         "icon_position": "none",
         "background_color": "default"
+      }
+    },
+    "section_text_NwYP9y": {
+      "type": "section-text",
+      "blocks": {
+        "text_mUqzJU": {
+          "type": "text",
+          "settings": {
+            "text": "Es sollen ja wirklich nur Dinge in die Flasche, die dem Hund guttun."
+          }
+        },
+        "icon_fXt3nT": {
+          "type": "icon",
+          "settings": {
+            "icon": "butterfly"
+          }
+        },
+        "text_ChCdUj": {
+          "type": "text",
+          "settings": {
+            "text": "- Martin Rütter"
+          }
+        }
+      },
+      "block_order": [
+        "text_mUqzJU",
+        "icon_fXt3nT",
+        "text_ChCdUj"
+      ],
+      "name": "Text mit Icons",
+      "settings": {
+        "background_color": "default",
+        "show_decoration": true
       }
     },
     "section_image_accordion_rY7mqn": {
@@ -128,6 +161,7 @@
       ],
       "name": "Was uns besonders macht 2",
       "settings": {
+        "image": "shopify://shop_images/teamoralcare_httpss.mj.runCUQMwGiUDKg_bright_warm_orangy_natu_e67c5df4-38c7-4e47-a3e3-598db3ff7939_1.png",
         "image_alt": "",
         "image_position": "left",
         "heading": "Was uns besonders macht",
@@ -136,59 +170,6 @@
         "button_type": "primary",
         "icon_position": "none",
         "background_color": "dark_green"
-      }
-    },
-    "section_text_NwYP9y": {
-      "type": "section-text",
-      "blocks": {
-        "text_mUqzJU": {
-          "type": "text",
-          "settings": {
-            "text": "Es sollen ja wirklich nur Dinge in die Flasche, die dem Hund guttun."
-          }
-        },
-        "icon_fXt3nT": {
-          "type": "icon",
-          "settings": {
-            "icon": "butterfly"
-          }
-        },
-        "text_ChCdUj": {
-          "type": "text",
-          "settings": {
-            "text": "- Martin Rütter"
-          }
-        }
-      },
-      "block_order": [
-        "text_mUqzJU",
-        "icon_fXt3nT",
-        "text_ChCdUj"
-      ],
-      "name": "Text mit Icons",
-      "settings": {
-        "background_color": "default",
-        "show_decoration": true
-      }
-    },
-    "section_image_text_QEd6bp": {
-      "type": "section-image-text",
-      "name": "ohne Allergene",
-      "settings": {
-        "precontent_heading": "",
-        "precontent_content": "",
-        "image": "shopify://shop_images/31_HighRes.jpg",
-        "image_alt": "",
-        "decoration_type": "flower-grass-bottom-left",
-        "image_position": "left",
-        "heading": "ohne Allergene",
-        "heading_level": "h2",
-        "content": "<p>Viele Hunde reagieren sensibel auf bestimmte Inhaltsstoffe.<br/>Deshalb verzichten wir konsequent auf bekannte Allergene – für besonders sanfte, verträgliche Hundepflege.</p><p>Je häufiger ein Hund mit Allergenen in Kontakt kommt, desto<br/>größer ist das Risiko, eine Unverträglichkeit zu entwickeln. Unser Anspruch: allergenfreie Pflege nicht als Nischenprodukt, sondern als neuen Standard – damit auch Hunde ohne Allergien langfristig geschützt bleiben.</p><p>Mindestens jeder 5. Hund ist Allergiker. </p><p>Wir finden: </p><p>Pflege ohne Allergene sollte für alle selbstverständlich sein. 🐾</p>",
-        "button_text": "Zur Website",
-        "button_link": "#",
-        "button_type": "secondary",
-        "icon_position": "none",
-        "background_color": "green"
       }
     },
     "section_image_text_rNcXqw": {
@@ -209,6 +190,26 @@
         "button_type": "primary",
         "icon_position": "none",
         "background_color": "default"
+      }
+    },
+    "section_image_text_QEd6bp": {
+      "type": "section-image-text",
+      "name": "ohne Allergene",
+      "settings": {
+        "precontent_heading": "",
+        "precontent_content": "",
+        "image": "shopify://shop_images/31_HighRes.jpg",
+        "image_alt": "",
+        "decoration_type": "flower-grass-bottom-left",
+        "image_position": "left",
+        "heading": "ohne Allergene",
+        "heading_level": "h2",
+        "content": "<p>Viele Hunde reagieren sensibel auf bestimmte Inhaltsstoffe.<br/>Deshalb verzichten wir konsequent auf bekannte Allergene – für besonders sanfte, verträgliche Hundepflege.</p><p>Je häufiger ein Hund mit Allergenen in Kontakt kommt, desto<br/>größer ist das Risiko, eine Unverträglichkeit zu entwickeln. Unser Anspruch: allergenfreie Pflege nicht als Nischenprodukt, sondern als neuen Standard – damit auch Hunde ohne Allergien langfristig geschützt bleiben.</p><p>Mindestens jeder 5. Hund ist Allergiker. </p><p>Wir finden: </p><p>Pflege ohne Allergene sollte für alle selbstverständlich sein. 🐾</p>",
+        "button_text": "Zur Website",
+        "button_link": "#",
+        "button_type": "secondary",
+        "icon_position": "none",
+        "background_color": "green"
       }
     },
     "section_column_products_K7nCK9": {
