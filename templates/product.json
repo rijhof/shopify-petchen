@@ -41,7 +41,7 @@
     },
     "section_image_text_7Qcmdw": {
       "type": "section-image-text",
-      "name": "Bild mit Text",
+      "name": "Kurzhaarset",
       "settings": {
         "precontent_heading": "",
         "precontent_content": "",
@@ -56,6 +56,25 @@
         "button_link": "shopify://products/pflegeset",
         "button_type": "secondary",
         "icon_position": "right",
+        "background_color": "default"
+      }
+    },
+    "section_image_text_WaVYeL": {
+      "type": "section-image-text",
+      "name": "Bild mit Text",
+      "settings": {
+        "precontent_heading": "",
+        "precontent_content": "",
+        "image_alt": "",
+        "decoration_type": "none",
+        "image_position": "left",
+        "heading": "Überschrift",
+        "heading_level": "h2",
+        "content": "<p>Fügen Sie hier Ihren Text ein. Nutzen Sie die Formatierungsoptionen, um Ihren Inhalt zu strukturieren.</p>",
+        "button_text": "",
+        "button_link": "",
+        "button_type": "primary",
+        "icon_position": "none",
         "background_color": "default"
       }
     },
@@ -151,6 +170,7 @@
   "order": [
     "template",
     "section_image_text_7Qcmdw",
+    "section_image_text_WaVYeL",
     "section_products_with_image_dTKMKF",
     "section_accordion_x7kVt7",
     "section_richt_text_gcJxyX"
