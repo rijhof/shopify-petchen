@@ -69,8 +69,8 @@
       "name": "Produkte Spalten",
       "settings": {
         "heading": "Unsere Pflegesets",
-        "product_source": "newest",
-        "collection": "",
+        "product_source": "collection",
+        "collection": "set-kollektion",
         "product_limit": 2,
         "show_quick_add": true,
         "show_wishlist": true,
