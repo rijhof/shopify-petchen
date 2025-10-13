@@ -35,7 +35,7 @@
       "type": "section-logo-grid",
       "name": "Logo Raster",
       "settings": {
-        "heading": "Petchen  Produkte spenden an:",
+        "heading": "Petchen  Produkte spenden an den gemeinnützigen Tierschutzverein:",
         "logo_1_alt": "",
         "logo_2": "shopify://shop_images/A-P_Logo_Rahmen_freigestellt.png",
         "logo_2_alt": "",
@@ -111,72 +111,6 @@
         "show_decoration": true
       }
     },
-    "section_image_text_aFrcpz": {
-      "type": "section-image-text",
-      "name": "Bild mit Text",
-      "settings": {
-        "precontent_heading": "",
-        "precontent_content": "",
-        "image": "shopify://shop_images/martin-ruther-mit-hund.png",
-        "image_alt": "",
-        "decoration_type": "flower-grass-bottom-left",
-        "image_position": "right",
-        "heading": "Über Adoptieren statt Produzieren",
-        "heading_level": "h2",
-        "content": "<p>Gegründet 2025 von Hundeprofi Martin Rütter, der sich seit über 30 Jahren für artgerechte Hundehaltung und Tierschutz einsetzt. Mit der Botschaft „Adoptieren statt Produzieren!“ macht er sich stark gegen illegalen Welpenhandel und für Adoption aus dem Tierschutz.</p>",
-        "button_text": "Zur Website",
-        "button_link": "#https://adoptieren-statt-produzieren.org/",
-        "button_type": "secondary",
-        "icon_position": "none",
-        "background_color": "green"
-      }
-    },
-    "section_image_symbols_text_HT8CgA": {
-      "type": "section-image-symbols-text",
-      "blocks": {
-        "symbol_text_Ugp9GK": {
-          "type": "symbol_text",
-          "settings": {
-            "icon": "icon-decor-house-paw.svg",
-            "heading": "Überlastete Tierheime ",
-            "content": ""
-          }
-        },
-        "symbol_text_WtMnwk": {
-          "type": "symbol_text",
-          "settings": {
-            "icon": "icon-decor-broken-heart.svg",
-            "heading": "Qualzuchten & Auslandstierschutz",
-            "content": ""
-          }
-        },
-        "symbol_text_9U6BNU": {
-          "type": "symbol_text",
-          "settings": {
-            "icon": "icon-decor-business-card.svg",
-            "heading": "Hundeführerschein",
-            "content": ""
-          }
-        }
-      },
-      "block_order": [
-        "symbol_text_Ugp9GK",
-        "symbol_text_WtMnwk",
-        "symbol_text_9U6BNU"
-      ],
-      "name": "AP Es gibt noch viel zu tun",
-      "settings": {
-        "image": "shopify://shop_images/IMG_0612.heic",
-        "image_alt": "",
-        "image_position": "left",
-        "heading": "Es gibt noch viel zu tun:",
-        "button_text": "",
-        "button_link": "",
-        "button_type": "primary",
-        "icon_position": "none",
-        "background_color": "default"
-      }
-    },
     "section_products_with_image_QdkGLK": {
       "type": "section-products-with-image",
       "blocks": {
@@ -226,6 +160,72 @@
         "background_color": "dark_green"
       }
     },
+    "section_image_text_aFrcpz": {
+      "type": "section-image-text",
+      "name": "Bild mit Text",
+      "settings": {
+        "precontent_heading": "",
+        "precontent_content": "",
+        "image": "shopify://shop_images/martin-ruther-mit-hund.png",
+        "image_alt": "",
+        "decoration_type": "flower-grass-bottom-left",
+        "image_position": "right",
+        "heading": "Über Adoptieren statt Produzieren:",
+        "heading_level": "h3",
+        "content": "<p>Gegründet 2025 von Hundeprofi Martin Rütter, der sich seit über 30 Jahren für artgerechte Hundehaltung und Tierschutz einsetzt. Mit der Botschaft „Adoptieren statt Produzieren!“ macht er sich stark gegen illegalen Welpenhandel und für Adoption aus dem Tierschutz.</p>",
+        "button_text": "Zur Website",
+        "button_link": "#https://adoptieren-statt-produzieren.org/",
+        "button_type": "secondary",
+        "icon_position": "none",
+        "background_color": "default"
+      }
+    },
+    "section_image_symbols_text_HT8CgA": {
+      "type": "section-image-symbols-text",
+      "blocks": {
+        "symbol_text_Ugp9GK": {
+          "type": "symbol_text",
+          "settings": {
+            "icon": "icon-decor-house-paw.svg",
+            "heading": "Überlastete Tierheime ",
+            "content": ""
+          }
+        },
+        "symbol_text_WtMnwk": {
+          "type": "symbol_text",
+          "settings": {
+            "icon": "icon-decor-broken-heart.svg",
+            "heading": "Qualzuchten & Auslandstierschutz",
+            "content": ""
+          }
+        },
+        "symbol_text_9U6BNU": {
+          "type": "symbol_text",
+          "settings": {
+            "icon": "icon-decor-business-card.svg",
+            "heading": "Hundeführerschein",
+            "content": ""
+          }
+        }
+      },
+      "block_order": [
+        "symbol_text_Ugp9GK",
+        "symbol_text_WtMnwk",
+        "symbol_text_9U6BNU"
+      ],
+      "name": "AP Es gibt noch viel zu tun",
+      "settings": {
+        "image": "shopify://shop_images/IMG_0612.heic",
+        "image_alt": "",
+        "image_position": "left",
+        "heading": "Es gibt noch viel zu tun:",
+        "button_text": "",
+        "button_link": "",
+        "button_type": "primary",
+        "icon_position": "none",
+        "background_color": "default"
+      }
+    },
     "section_image_text_n6UPNM": {
       "type": "section-image-text",
       "name": "Bild mit Text",
@@ -243,7 +243,7 @@
         "button_link": "#",
         "button_type": "primary",
         "icon_position": "none",
-        "background_color": "default"
+        "background_color": "green"
       }
     },
     "section_image_text_3nkpdX": {
@@ -314,9 +314,9 @@
     "section_logo_grid_49B9pc",
     "section_image_text_mQg9wJ",
     "section_text_TCcdkC",
+    "section_products_with_image_QdkGLK",
     "section_image_text_aFrcpz",
     "section_image_symbols_text_HT8CgA",
-    "section_products_with_image_QdkGLK",
     "section_image_text_n6UPNM",
     "section_image_text_3nkpdX",
     "section_cta_pBdjxD",
