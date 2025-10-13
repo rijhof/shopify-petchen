@@ -154,7 +154,7 @@
         "background_image": "shopify://shop_images/Portfolio_Shot_19d5f93a-0682-42d5-8ebd-c52609e8f217.png",
         "image_alt": "Hund Illustration",
         "button_text": "Alle Produkte entdecken",
-        "button_link": "#",
+        "button_link": "shopify://collections/all",
         "button_type": "primary",
         "icon_position": "none",
         "background_color": "dark_green"
