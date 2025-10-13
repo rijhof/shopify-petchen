@@ -61,6 +61,7 @@
     },
     "section_image_text_WaVYeL": {
       "type": "section-image-text",
+      "disabled": true,
       "name": "Langhaarset",
       "settings": {
         "precontent_heading": "",
@@ -85,6 +86,7 @@
         "faq_item_Hwhgbf": {
           "type": "faq_item",
           "name": "Natürlichen Ursprungs Shampoos",
+          "disabled": true,
           "settings": {
             "question": "Was bedeutet Inhaltsstoffe natürlichen Ursprungs?",
             "answer": "<p>Unsere Shampoos bestehen zu 95 % aus Inhaltsstoffen natürlichen Ursprungs.<br/><br/>Das bedeutet: Der Großteil unserer Rezeptur stammt aus natürlichen Quellen – etwa Pflanzen, Mineralien oder natürlichen Fettsäuren.</p><p>Die übrigen 5 % sind bewusst gewählt, um die Stabilität, Sicherheit und Hautverträglichkeit zu gewährleisten – also z. B. den pH-Wert des Hundes zu erhalten und die Haltbarkeit sicherzustellen.</p><p>So bekommt dein Hund eine sanfte, hautfreundliche Pflege, die funktioniert – ohne unnötigen Schnickschnack.<br/></p>",
@@ -140,6 +142,47 @@
         "heading": "",
         "richtext": "<p><strong>Hersteller: <br/></strong>Petchen GmbH, Bremer Str. 67, 40221 Düsseldorf <br/>hallo@petchen.com<br/><br/></p>"
       }
+    },
+    "section_column_products_B6agDe": {
+      "type": "section-column-products",
+      "blocks": {
+        "product_6LEqPM": {
+          "type": "product",
+          "settings": {
+            "product": ""
+          }
+        },
+        "product_YQeBJp": {
+          "type": "product",
+          "settings": {
+            "product": ""
+          }
+        },
+        "product_c3cFfp": {
+          "type": "product",
+          "settings": {
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_6LEqPM",
+        "product_YQeBJp",
+        "product_c3cFfp"
+      ],
+      "name": "Produkte Spalten",
+      "settings": {
+        "heading": "Unsere Pflegesets",
+        "product_source": "newest",
+        "collection": "",
+        "product_limit": 2,
+        "show_quick_add": true,
+        "show_wishlist": true,
+        "show_view_all": false,
+        "view_all_url": "",
+        "view_all_text": "Alle Produkte anzeigen",
+        "background_color": "default"
+      }
     }
   },
   "order": [
@@ -147,6 +190,7 @@
     "section_image_text_7Qcmdw",
     "section_image_text_WaVYeL",
     "section_accordion_x7kVt7",
-    "section_richt_text_gcJxyX"
+    "section_richt_text_gcJxyX",
+    "section_column_products_B6agDe"
   ]
 }
