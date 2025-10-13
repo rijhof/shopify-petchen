@@ -163,8 +163,8 @@
         "heading_level": "h2",
         "content": "<p>Unsere Rezepturen sind gemäß EU-Kosmetikverordnung formuliert – mit Einhaltung strengster Grenzwerte (z.B. für Konservierungsmittel), INCI-konforme Deklaration aller Inhaltsstoffe und maximalem Anspruch an Verträglichkeit. Qualität, wie du sie aus deiner eigenen Pflege kennst. Weil für unsere Vierbeiner nur das Beste gut genug ist. </p>",
         "button_text": "Mehr erfahren",
-        "button_link": "",
-        "button_type": "primary",
+        "button_link": "shopify://pages/uber-uns",
+        "button_type": "tertiary",
         "icon_position": "none",
         "background_color": "green"
       }
@@ -183,8 +183,8 @@
         "heading_level": "h2",
         "content": "<p>Viele Hunde reagieren sensibel auf Duftstoffe, Farbstoffe und Co. – sie können Haut reizen und allergische Reaktionen auslösen. Trotzdem stecken viele Produkte noch immer voller Stoffe, die schnell zu Juckreiz oder Irritationen führen können. Deshalb kommt Petchen ganz ohne deklarationspflichtige Allergene aus – damit dein Hund nur das bekommt, was ihm wirklich guttut.</p>",
         "button_text": "Mehr erfahren",
-        "button_link": "",
-        "button_type": "primary",
+        "button_link": "shopify://pages/uber-uns",
+        "button_type": "tertiary",
         "icon_position": "none",
         "background_color": "default"
       }
