@@ -82,6 +82,7 @@
     },
     "section_image_text_7Qcmdw": {
       "type": "section-image-text",
+      "disabled": true,
       "name": "Kurzhaarset",
       "settings": {
         "precontent_heading": "",
