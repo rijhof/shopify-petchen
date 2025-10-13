@@ -271,7 +271,7 @@
       "name": "Call to Action",
       "settings": {
         "heading": "Wir stehen für:",
-        "content": "<p>Mehr Verantwortung. Weniger Leid. </p><p>Und ein Zuhause für die, die keins haben.</p><p></p><p>Mehr Infos auf <a href=\"#\" title=\"#\"><strong>Adoptieren statt Produzieren</strong></a> oder @adoptierenstattproduzieren bei <a href=\"#\" title=\"#\"><strong>Instagram</strong></a>.</p>",
+        "content": "<p>Mehr Verantwortung. Weniger Leid. </p><p>Und ein Zuhause für die, die keins haben.</p><p></p><p>Mehr Infos auf<a href=\"https://adoptieren-statt-produzieren.org/\" target=\"_blank\" title=\"https://adoptieren-statt-produzieren.org/\"> <strong>Adoptieren statt Produzieren</strong></a> oder @adoptierenstattproduzieren bei <a href=\"https://www.instagram.com/adoptieren.statt.produzieren/\" target=\"_blank\" title=\"https://www.instagram.com/adoptieren.statt.produzieren/\"><strong>Instagram</strong></a>.</p>",
         "button_text": "",
         "button_link": "",
         "button_type": "primary",
