@@ -79,33 +79,6 @@
         "background_color": "default"
       }
     },
-    "section_products_with_image_dTKMKF": {
-      "type": "section-products-with-image",
-      "blocks": {
-        "product_wtrxNb": {
-          "type": "product",
-          "settings": {
-            "product": "pflegeset"
-          }
-        }
-      },
-      "block_order": [
-        "product_wtrxNb"
-      ],
-      "name": "Produkte mit Bild",
-      "settings": {
-        "heading": "Unsere Empfehlungen",
-        "pre_content": "<p>Entdecken Sie unsere handverlesenen Produkte für Ihr Haustier.</p>",
-        "show_quick_add": true,
-        "products_position": "left",
-        "image_alt": "",
-        "button_text": "",
-        "button_link": "",
-        "button_type": "primary",
-        "icon_position": "right",
-        "background_color": "default"
-      }
-    },
     "section_accordion_x7kVt7": {
       "type": "section-accordion",
       "blocks": {
@@ -114,13 +87,14 @@
           "name": "Natürlichen Ursprungs Shampoos",
           "settings": {
             "question": "Was bedeutet Inhaltsstoffe natürlichen Ursprungs?",
-            "answer": "<p>Unsere Hundeshampoos bestehen zu 95% aus Inhaltsstoffen natürlichen Ursprungs. <br/></p><p>Das heißt: 95% der Inhaltsstoffe stammen aus einer natürlichen Quelle - also z. B. aus Pflanzen, Mineralien oder natürlichen Fettsäuren.<br/><br/>Die anderen 5% sind notwendig </p><p>Es werden keine synthetischen Zusätze eingesetzt, sondern nur solche, die so naturbelassen wie möglich sind und gleichzeitig wirksam pflegen.<br/><br/>So bekommt dein Hund eine sanfte, verträgliche Pflege - ganz ohne unnötigen Schnickschnack. <br/><br/></p>",
+            "answer": "<p>Unsere Shampoos bestehen zu 95 % aus Inhaltsstoffen natürlichen Ursprungs.<br/><br/>Das bedeutet: Der Großteil unserer Rezeptur stammt aus natürlichen Quellen – etwa Pflanzen, Mineralien oder natürlichen Fettsäuren.</p><p>Die übrigen 5 % sind bewusst gewählt, um die Stabilität, Sicherheit und Hautverträglichkeit zu gewährleisten – also z. B. den pH-Wert des Hundes zu erhalten und die Haltbarkeit sicherzustellen.</p><p>So bekommt dein Hund eine sanfte, hautfreundliche Pflege, die funktioniert – ohne unnötigen Schnickschnack.<br/></p>",
             "open_by_default": true
           }
         },
         "faq_item_8YjhfD": {
           "type": "faq_item",
           "name": "Natürlichen Ursprungs Balsam",
+          "disabled": true,
           "settings": {
             "question": "Was bedeutet Inhaltsstoffe natürlichen Ursprungs?",
             "answer": "<p>Unser Pfotenbalsam besteht zu 100% aus Inhaltsstoffen natürlichen Ursprungs. <br/></p><p>Das heißt: Jeder einzelne Inhaltsstoff im Pfotenbalsam stammt aus einer natürlichen Quelle - also z. B. aus Pflanzen, Mineralien oder natürlichen Fettsäuren.<br/><br/>Es werden keine synthetischen Zusätze eingesetzt, sondern nur solche, die so naturbelassen wie möglich sind und gleichzeitig wirksam pflegen.<br/><br/>So bekommt dein Hund eine sanfte, verträgliche Pflege - ganz ohne unnötigen Schnickschnack. <br/><br/></p>",
@@ -172,7 +146,6 @@
     "template",
     "section_image_text_7Qcmdw",
     "section_image_text_WaVYeL",
-    "section_products_with_image_dTKMKF",
     "section_accordion_x7kVt7",
     "section_richt_text_gcJxyX"
   ]

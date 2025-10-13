@@ -66,7 +66,7 @@
         "pre_content": "",
         "show_quick_add": true,
         "products_position": "left",
-        "background_image": "shopify://shop_images/Frame_763.png",
+        "background_image": "shopify://shop_images/Kaufen_07_HighRes.jpg",
         "image_alt": "",
         "button_text": "",
         "button_link": "",
@@ -227,7 +227,7 @@
             "image": "shopify://shop_images/Website_Fell.png",
             "image_alt": "",
             "heading": "Fellpflege",
-            "content": "<p>Entdecke unsere verschiedenen Shampoos die perfekt auf die Bedürfnisse deines Vierbeiners abgestimmt sind. </p>"
+            "content": "<p>Entdecke unsere verschiedenen <a href=\"/collections\" title=\"Alle Kollektionen\">Shampoos </a>die perfekt auf die Bedürfnisse deines Vierbeiners abgestimmt sind. </p>"
           }
         }
       },
