@@ -18,8 +18,8 @@
       "name": "Hero AP",
       "settings": {
         "media_type": "image",
-        "image_desktop": "shopify://shop_images/Hero__Bild_oder_Vi_deo_04e0d27b-f1f0-44e0-a33b-446121156a3c.png",
-        "image_mobile": "shopify://shop_images/4zu5.png",
+        "image_desktop": "shopify://shop_images/Rumaenien3.jpg",
+        "image_mobile": "shopify://shop_images/AP.png",
         "image_alt": "",
         "show_decor": true,
         "show_breadcrumbs": false,
@@ -166,7 +166,7 @@
       ],
       "name": "AP Es gibt noch viel zu tun",
       "settings": {
-        "image": "shopify://shop_images/Hund_in_Kaefig.png",
+        "image": "shopify://shop_images/IMG_0612.heic",
         "image_alt": "",
         "image_position": "left",
         "heading": "Es gibt noch viel zu tun:",

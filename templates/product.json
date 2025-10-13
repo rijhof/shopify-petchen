@@ -39,6 +39,53 @@
         "payment_methods_title": "Zahlungsmethoden"
       }
     },
+    "section_image_text_7Qcmdw": {
+      "type": "section-image-text",
+      "name": "Bild mit Text",
+      "settings": {
+        "precontent_heading": "",
+        "precontent_content": "",
+        "image": "shopify://shop_images/Buebchen_Petchen_Webshop_Box_Kurzhaar_RET-Kopie.jpg",
+        "image_alt": "Hier geht es zu unserem Kurzhaar Seit",
+        "decoration_type": "none",
+        "image_position": "left",
+        "heading": "Kurzhaar Set",
+        "heading_level": "h2",
+        "content": "<p>Dein Hund hat kurzes Fell, was nicht zum verknoten neigt und mehr Hautschutz und Pflege braucht? </p>",
+        "button_text": "Hier entlang",
+        "button_link": "shopify://products/pflegeset",
+        "button_type": "secondary",
+        "icon_position": "right",
+        "background_color": "default"
+      }
+    },
+    "section_products_with_image_dTKMKF": {
+      "type": "section-products-with-image",
+      "blocks": {
+        "product_wtrxNb": {
+          "type": "product",
+          "settings": {
+            "product": "pflegeset"
+          }
+        }
+      },
+      "block_order": [
+        "product_wtrxNb"
+      ],
+      "name": "Produkte mit Bild",
+      "settings": {
+        "heading": "Unsere Empfehlungen",
+        "pre_content": "<p>Entdecken Sie unsere handverlesenen Produkte für Ihr Haustier.</p>",
+        "show_quick_add": true,
+        "products_position": "left",
+        "image_alt": "",
+        "button_text": "",
+        "button_link": "",
+        "button_type": "primary",
+        "icon_position": "right",
+        "background_color": "default"
+      }
+    },
     "section_accordion_x7kVt7": {
       "type": "section-accordion",
       "blocks": {
@@ -103,6 +150,8 @@
   },
   "order": [
     "template",
+    "section_image_text_7Qcmdw",
+    "section_products_with_image_dTKMKF",
     "section_accordion_x7kVt7",
     "section_richt_text_gcJxyX"
   ]
