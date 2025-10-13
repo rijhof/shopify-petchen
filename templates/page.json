@@ -174,7 +174,7 @@
         "heading_level": "h3",
         "content": "<p>Gegründet 2025 von Hundeprofi Martin Rütter, der sich seit über 30 Jahren für artgerechte Hundehaltung und Tierschutz einsetzt. Mit der Botschaft „Adoptieren statt Produzieren!“ macht er sich stark gegen illegalen Welpenhandel und für Adoption aus dem Tierschutz.</p>",
         "button_text": "Zur Website",
-        "button_link": "#https://adoptieren-statt-produzieren.org/",
+        "button_link": "https://adoptieren-statt-produzieren.org/",
         "button_type": "secondary",
         "icon_position": "none",
         "background_color": "default"
