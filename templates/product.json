@@ -39,6 +39,47 @@
         "payment_methods_title": "Zahlungsmethoden"
       }
     },
+    "section_column_products_B6agDe": {
+      "type": "section-column-products",
+      "blocks": {
+        "product_6LEqPM": {
+          "type": "product",
+          "settings": {
+            "product": ""
+          }
+        },
+        "product_YQeBJp": {
+          "type": "product",
+          "settings": {
+            "product": ""
+          }
+        },
+        "product_c3cFfp": {
+          "type": "product",
+          "settings": {
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_6LEqPM",
+        "product_YQeBJp",
+        "product_c3cFfp"
+      ],
+      "name": "Produkte Spalten",
+      "settings": {
+        "heading": "Unsere Pflegesets",
+        "product_source": "newest",
+        "collection": "",
+        "product_limit": 2,
+        "show_quick_add": true,
+        "show_wishlist": true,
+        "show_view_all": false,
+        "view_all_url": "",
+        "view_all_text": "Alle Produkte anzeigen",
+        "background_color": "default"
+      }
+    },
     "section_image_text_7Qcmdw": {
       "type": "section-image-text",
       "name": "Kurzhaarset",
@@ -141,55 +182,14 @@
         "heading": "",
         "richtext": "<p><strong>Hersteller: <br/></strong>Petchen GmbH, Bremer Str. 67, 40221 Düsseldorf <br/>hallo@petchen.com<br/><br/></p>"
       }
-    },
-    "section_column_products_B6agDe": {
-      "type": "section-column-products",
-      "blocks": {
-        "product_6LEqPM": {
-          "type": "product",
-          "settings": {
-            "product": ""
-          }
-        },
-        "product_YQeBJp": {
-          "type": "product",
-          "settings": {
-            "product": ""
-          }
-        },
-        "product_c3cFfp": {
-          "type": "product",
-          "settings": {
-            "product": ""
-          }
-        }
-      },
-      "block_order": [
-        "product_6LEqPM",
-        "product_YQeBJp",
-        "product_c3cFfp"
-      ],
-      "name": "Produkte Spalten",
-      "settings": {
-        "heading": "Unsere Pflegesets",
-        "product_source": "newest",
-        "collection": "",
-        "product_limit": 2,
-        "show_quick_add": true,
-        "show_wishlist": true,
-        "show_view_all": false,
-        "view_all_url": "",
-        "view_all_text": "Alle Produkte anzeigen",
-        "background_color": "default"
-      }
     }
   },
   "order": [
     "template",
+    "section_column_products_B6agDe",
     "section_image_text_7Qcmdw",
     "section_image_text_WaVYeL",
     "section_accordion_x7kVt7",
-    "section_richt_text_gcJxyX",
-    "section_column_products_B6agDe"
+    "section_richt_text_gcJxyX"
   ]
 }
