@@ -301,6 +301,7 @@
       "block_order": [
         "text_Rb4EBh"
       ],
+      "disabled": true,
       "name": "Platzhalter VIDEO",
       "settings": {
         "background_color": "default",
