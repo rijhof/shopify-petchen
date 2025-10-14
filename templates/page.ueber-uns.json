@@ -46,6 +46,7 @@
         "content": "<p>Martin Rütter war von Beginn an tief in die Entwicklung der Produkte eingebunden. Gemeinsam mit einer erfahrenen Tierärztin haben wir unsere Rezepturen sorgfältig entwickelt – mit dem Ziel, Pflege zu schaffen, die wirklich zum Hund passt. Und weil uns nur das Beste gut genug ist, haben wir so lange gefeilt, bis alles perfekt auf die Bedürfnisse unserer Vierbeiner abgestimmt war.</p><p></p><p><br/>Pflege ist Verantwortung. Und weil Hunde für uns Familie sind, haben wir Petchen entwickelt – Pflegeprodukte, die sorgfältig formuliert sind – genau wie Kosmetik für uns selbst.<br/><br/></p>",
         "button_text": "",
         "button_link": "#",
+        "open_in_new_tab": false,
         "button_type": "secondary",
         "icon_position": "none",
         "background_color": "default"
@@ -168,6 +169,7 @@
         "heading": "Was uns besonders macht:",
         "button_text": "",
         "button_link": "",
+        "open_in_new_tab": false,
         "button_type": "primary",
         "icon_position": "none",
         "background_color": "dark_green"
@@ -179,7 +181,7 @@
       "settings": {
         "precontent_heading": "",
         "precontent_content": "",
-        "image": "shopify://shop_images/Kosmetikverordnung_Infos.png",
+        "image": "shopify://shop_images/Petchen_Visual_1-1_Hundefam_v01.jpg",
         "image_alt": "",
         "decoration_type": "none",
         "image_position": "right",
@@ -188,6 +190,7 @@
         "content": "<p>Hunde sind Familie! <br/>Auch wenn Pflegeprodukte für Hunde rechtlich noch unter die Detergenzienverordnung (Reinigungsmittelgesetz) fallen, sehen wir das anders: Für uns sind Hunde Familienmitglieder. Deshalb legen wir bei unseren Produkten die gleichen hohen Standards an wie bei Pflegeprodukten für Menschen und formulieren sie nach den Vorgaben der <strong>EU-Kosmetikverordnung</strong>.<br/><br/>Weil wir für Tiere keine geringeren Standards akzeptieren als für uns selbst! ♥️</p>",
         "button_text": "",
         "button_link": "",
+        "open_in_new_tab": false,
         "button_type": "primary",
         "icon_position": "none",
         "background_color": "default"
@@ -208,6 +211,7 @@
         "content": "<p>Viele Hunde reagieren sensibel auf bestimmte Inhaltsstoffe. Deshalb verzichten wir konsequent auf bekannte Allergene – für besonders sanfte, verträgliche Hundepflege.</p><p>Je häufiger ein Hund mit Allergenen in Kontakt kommt, desto größer ist das Risiko, eine Unverträglichkeit zu entwickeln. Unser Anspruch: Allergenfreie Pflege nicht als Nischenprodukt, sondern als neuen Standard – damit auch Hunde ohne Allergien langfristig geschützt bleiben.</p><p>Mindestens jeder 5. Hund ist Allergiker. </p><p>Wir finden: </p><p>Pflege ohne Allergene sollte für alle selbstverständlich sein. 🐾</p>",
         "button_text": "",
         "button_link": "#",
+        "open_in_new_tab": false,
         "button_type": "secondary",
         "icon_position": "none",
         "background_color": "green"
@@ -299,6 +303,7 @@
         "image_alt": "Hund Illustration",
         "button_text": "Alle Produkte entdecken",
         "button_link": "#",
+        "open_in_new_tab": false,
         "button_type": "primary",
         "icon_position": "none",
         "background_color": "dark_green"
@@ -390,6 +395,7 @@
         "heading": "Doch es gibt noch mehr zu tun",
         "button_text": "",
         "button_link": "",
+        "open_in_new_tab": false,
         "button_type": "primary",
         "icon_position": "none",
         "background_color": "default"
