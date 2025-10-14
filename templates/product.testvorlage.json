@@ -39,6 +39,48 @@
         "payment_methods_title": "Zahlungsmethoden"
       }
     },
+    "section_image_accordion_AXpgtD": {
+      "type": "section-image-accordion",
+      "blocks": {
+        "accordion_item_BXVrT6": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Test",
+            "content": "<p>Wir verwenden nur die besten Materialien für unsere Produkte.</p>",
+            "open_by_default": false
+          }
+        },
+        "accordion_item_GjGNH4": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Nachhaltige Produktion",
+            "content": "<p>Unsere Produkte werden umweltschonend und nachhaltig hergestellt.</p>",
+            "open_by_default": false
+          }
+        },
+        "accordion_item_MQRbji": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Garantie & Service",
+            "content": "<p>Wir bieten eine umfassende Garantie und exzellenten Kundenservice.</p>",
+            "open_by_default": false
+          }
+        }
+      },
+      "block_order": [
+        "accordion_item_BXVrT6",
+        "accordion_item_GjGNH4",
+        "accordion_item_MQRbji"
+      ],
+      "name": "Bild mit Accordion",
+      "settings": {
+        "image_alt": "",
+        "decoration_type": "none",
+        "image_position": "left",
+        "heading": "Überschrift",
+        "background_color": "default"
+      }
+    },
     "section_column_products_B6agDe": {
       "type": "section-column-products",
       "blocks": {
@@ -240,6 +282,7 @@
   },
   "order": [
     "template",
+    "section_image_accordion_AXpgtD",
     "section_column_products_B6agDe",
     "section_image_text_7Qcmdw",
     "section_image_text_WaVYeL",
