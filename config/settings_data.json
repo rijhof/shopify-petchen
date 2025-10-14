@@ -13,6 +13,18 @@
     "sections": {
       "header": {
         "type": "header",
+        "blocks": {
+          "usp_96KTkW": {
+            "type": "usp",
+            "settings": {
+              "icon_type": "checkmark",
+              "text": "Gratis Versand ab 20€"
+            }
+          }
+        },
+        "block_order": [
+          "usp_96KTkW"
+        ],
         "settings": {
           "menu": "main-menu",
           "logo_width": 150

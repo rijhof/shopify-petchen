@@ -9,6 +9,24 @@
  */
 {
   "sections": {
+    "section_hero_small_EAp7Mk": {
+      "type": "section-hero-small",
+      "name": "Hero Klein",
+      "settings": {
+        "media_type": "image",
+        "image_desktop": "shopify://shop_images/Portfolio_Shot_16x9_d105ff7a-434e-4d5b-a5c8-b6d1ef87f050.jpg",
+        "image_mobile": "shopify://shop_images/Portfolio_Shot_9x16_269fab89-7801-4aaa-959f-9f49e6348db2.jpg",
+        "image_alt": "",
+        "show_decor": false,
+        "show_breadcrumbs": true,
+        "breadcrumb_current": "",
+        "heading_h1": "Hundepflege",
+        "heading_h2": "ohne Allergene",
+        "button_text": "",
+        "button_link": "",
+        "button_type": "primary"
+      }
+    },
     "template": {
       "type": "template-collection",
       "settings": {
@@ -33,6 +51,7 @@
     }
   },
   "order": [
+    "section_hero_small_EAp7Mk",
     "template",
     "section_all_products_Kdefpd"
   ]
