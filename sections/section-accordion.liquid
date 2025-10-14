@@ -2,7 +2,6 @@
 {{ 'snippet-accordion.css' | asset_url | stylesheet_tag }}
 {{ 'snippet-accordion.js' | asset_url | script_tag }}
 
-{% comment %} Hintergrundklassen basierend auf Auswahl setzen {% endcomment %}
 {% assign background_classes = '' %}
 {% case section.settings.background_color %}
   {% when 'green' %}
