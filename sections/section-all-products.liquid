@@ -3,50 +3,103 @@
 {{ 'snippet-image.css' | asset_url | stylesheet_tag }}
 {{ 'snippet-image.js' | asset_url | script_tag }}
 
-<div class="section-all-products section" aria-labelledby="section-all-products-{{ section.id }}">
-    <div class="container">
+<div class="section container" is="all-products" aria-labelledby="section-all-products-{{ section.id }}">
+    {% if section.settings.heading != blank %}
+        <h2 id="section-all-products-{{ section.id }}" class="title">
+          {{ section.settings.heading }}
+        </h2>
+    {% endif %}
 
-        {% if section.settings.heading != blank %}
-            <div class="section-all-products__precontent">
-                <h2 id="section-all-products-{{ section.id }}" class="section-all-products__title">
-                    {{ section.settings.heading }}
-                </h2>
-            </div>
-        {% endif %}
+    <div class="wrapper">
+      <div class="grid">
+        {% comment %} Initialize tracking variables for duplicate prevention {% endcomment %}
+        {% assign displayed_product_ids = '' %}
+        {% assign products_count = 0 %}
 
-        <div class="section-all-products__wrapper">
-            <div class="section-all-products__grid">
-                {% for product in collections.all.products limit: section.settings.product_limit %}
-                    <div class="section-all-products__item">
-                        {% render 'product-card',
-                                product: product,
-                                aspect_ratio: '1-1',
-                                show_quick_add: section.settings.show_quick_add,
-                        %}
-                    </div>
-                {% endfor %}
-            </div>
-
-            {% if section.settings.show_view_all and section.settings.view_all_url != blank %}
-                <div class="section-all-products__footer">
-                    <a href="{{ section.settings.view_all_url }}" class="button-secondary icon--right">
-                        {{ section.settings.view_all_text | default: 'Alle Produkte anzeigen' }}
-                    </a>
-                </div>
+        {% comment %} Phase 1: Render manually selected products from blocks (prioritized) {% endcomment %}
+        {% if section.blocks.size > 0 %}
+          {% for block in section.blocks %}
+            {% if products_count >= section.settings.product_limit %}
+              {% break %}
             {% endif %}
-        </div>
 
-        {% if section.settings.button_text != blank %}
-            <div class="section-all-products__action">
-                {% render 'button',
-                        button_text: section.settings.button_text,
-                        button_url: section.settings.button_link,
-                        button_type: section.settings.button_type,
-                        icon_position: section.settings.icon_position
+            {% assign featured_product = block.settings.product %}
+
+            {% if featured_product != blank %}
+              <div class="item" {{ block.shopify_attributes }}>
+                {% render 'product-card',
+                        product: featured_product,
+                        aspect_ratio: '1-1',
+                        show_quick_add: section.settings.show_quick_add
                 %}
-            </div>
+              </div>
+
+              {% comment %} Build comma-separated ID string for duplicate checking {% endcomment %}
+              {% if displayed_product_ids == '' %}
+                {% assign displayed_product_ids = featured_product.id | append: '' %}
+              {% else %}
+                {% assign displayed_product_ids = displayed_product_ids | append: ',' | append: featured_product.id %}
+              {% endif %}
+
+              {% assign products_count = products_count | plus: 1 %}
+            {% endif %}
+          {% endfor %}
         {% endif %}
+
+        {% comment %} Phase 2: Auto-fill remaining slots from collections.all {% endcomment %}
+        {% if products_count < section.settings.product_limit %}
+          {% assign displayed_ids_array = displayed_product_ids | split: ',' %}
+
+          {% for product in collections.all.products %}
+            {% if products_count >= section.settings.product_limit %}
+              {% break %}
+            {% endif %}
+
+            {% comment %} Duplicate check: O(n×m) complexity due to nested loop {% endcomment %}
+            {% assign product_id_string = product.id | append: '' %}
+            {% assign is_already_displayed = false %}
+
+            {% for displayed_id in displayed_ids_array %}
+              {% if displayed_id == product_id_string %}
+                {% assign is_already_displayed = true %}
+                {% break %}
+              {% endif %}
+            {% endfor %}
+
+            {% comment %} Render only products not in Phase 1 {% endcomment %}
+            {% unless is_already_displayed %}
+              <div class="item">
+                {% render 'product-card',
+                        product: product,
+                        aspect_ratio: '1-1',
+                        show_quick_add: section.settings.show_quick_add
+                %}
+              </div>
+              {% assign products_count = products_count | plus: 1 %}
+            {% endunless %}
+          {% endfor %}
+        {% endif %}
+      </div>
+
+      {% if section.settings.show_view_all and section.settings.view_all_url != blank %}
+        <div class="footer">
+          <a href="{{ section.settings.view_all_url }}" class="button-secondary icon--right">
+            {{ section.settings.view_all_text | default: 'Alle Produkte anzeigen' }}
+          </a>
+        </div>
+      {% endif %}
     </div>
+
+    {% if section.settings.button_text != blank %}
+      <div class="action">
+        {% render 'button',
+                button_text: section.settings.button_text,
+                button_url: section.settings.button_link,
+                button_type: section.settings.button_type,
+                icon_position: section.settings.icon_position
+        %}
+      </div>
+    {% endif %}
 </div>
 
 {% schema %}
@@ -151,6 +204,20 @@
         }
       ],
       "default": "right"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "featured_product",
+      "name": "Hervorgehobenes Produkt",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Produkt auswählen",
+          "info": "Dieses Produkt wird am Anfang angezeigt"
+        }
+      ]
     }
   ],
   "presets": [

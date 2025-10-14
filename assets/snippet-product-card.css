@@ -126,6 +126,7 @@
 }
 
 .product-card__usp {
+    max-width: calc(100% - 56px);
     color: var(--color-text);
     margin: 0;
 }
