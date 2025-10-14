@@ -1,0 +1,176 @@
+{{ 'section-video-player.css' | asset_url | stylesheet_tag }}
+
+<div class="section container" aria-labelledby="section-video-{{ section.id }}" is="block-video">
+
+    {% if section.settings.heading != blank %}
+        <h2 class="h2" id="section-video-{{ section.id }}">
+            {{ section.settings.heading }}
+        </h2>
+    {% endif %}
+
+    {% if section.settings.subheading != blank %}
+        <div class="subheading">
+            {{ section.settings.subheading }}
+        </div>
+    {% endif %}
+
+    {% if section.settings.video_type == 'selfhosted' and section.settings.video != blank %}
+        <div class="video-wrapper">
+            {% if section.settings.cover_image != blank %}
+                <div class="cover-image">
+                    {% render 'image',
+                            image: section.settings.cover_image,
+                            aspect_ratio: '16-9',
+                            loading: 'eager',
+                            alt: section.settings.heading
+                    %}
+                </div>
+            {% endif %}
+            <div class="play-button" onclick="var wrapper = this.parentElement; var cover = wrapper.querySelector('.cover-image'); var video = wrapper.querySelector('video'); if(cover) cover.style.opacity = '0'; if(video) video.play(); this.style.opacity = '0';">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
+                    <circle cx="50" cy="50" r="49" fill="white" fill-opacity="0.1" stroke="#FAF9F3" stroke-width="2"/>
+                    <path d="M65.6085 46.2606L43.1399 34.5809C42.4061 34.1946 41.5744 33.9942 40.7293 34.0001C39.8842 34.0061 39.0558 34.2182 38.3286 34.6148C37.62 34.9882 37.0314 35.5277 36.6224 36.1786C36.2134 36.8294 35.9987 37.5684 36 38.3205V61.6798C35.9987 62.4319 36.2134 63.1709 36.6224 63.8217C37.0314 64.4726 37.62 65.0121 38.3286 65.3855C39.0559 65.7819 39.8842 65.9939 40.7293 65.9999C41.5744 66.0058 42.4061 65.8055 43.1399 65.4194L65.6085 53.7397C66.3332 53.3698 66.9371 52.828 67.3577 52.1704C67.7782 51.5128 68 50.7634 68 50.0001C68 49.2369 67.7782 48.4875 67.3577 47.8299C66.9371 47.1723 66.3332 46.6305 65.6085 46.2606Z" fill="#FAF9F3"/>
+                </svg>
+            </div>
+            {{
+            section.settings.video |
+            video_tag:
+            loop: section.settings.loop,
+            controls: section.settings.show_controls,
+            muted: section.settings.muted,
+            preload: 'none'
+            }}
+        </div>
+    {% elsif section.settings.video_type == 'external' and section.settings.video_url != blank %}
+        <div class="video-wrapper video-wrapper--external">
+            {% if section.settings.video_url contains 'youtube.com' or section.settings.video_url contains 'youtu.be' %}
+                <iframe
+                        src="https://www.youtube.com/embed/{{ section.settings.video_url | split: 'v=' | last | split: '/' | last | split: '&' | first }}"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                        loading="lazy"
+                ></iframe>
+            {% elsif section.settings.video_url contains 'vimeo.com' %}
+                <iframe
+                        src="https://player.vimeo.com/video/{{ section.settings.video_url | split: 'vimeo.com/' | last | split: '/' | first }}"
+                        frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture"
+                        allowfullscreen
+                        loading="lazy"
+                ></iframe>
+            {% endif %}
+        </div>
+    {% else %}
+        <div class="placeholder">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+            <p>Video hochladen oder URL hinzufügen</p>
+        </div>
+    {% endif %}
+
+    {% if section.settings.caption != blank %}
+        <div class="container">
+            <div class="caption">
+                {{ section.settings.caption }}
+            </div>
+        </div>
+    {% endif %}
+
+</div>
+
+{% schema %}
+{
+  "name": "Videoplayer",
+  "tag": "section",
+  "class": "section-video-player-wrapper",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Inhalt"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Überschrift",
+      "default": "Video"
+    },
+    {
+      "type": "richtext",
+      "id": "subheading",
+      "label": "Unterüberschrift"
+    },
+    {
+      "type": "select",
+      "id": "video_type",
+      "label": "Video-Typ",
+      "options": [
+        {
+          "value": "selfhosted",
+          "label": "Selbst gehostet"
+        },
+        {
+          "value": "external",
+          "label": "YouTube/Vimeo"
+        }
+      ],
+      "default": "selfhosted"
+    },
+    {
+      "type": "video",
+      "id": "video",
+      "label": "Video hochladen",
+      "info": "Wird verwendet wenn 'Selbst gehostet' ausgewählt ist"
+    },
+    {
+      "type": "image_picker",
+      "id": "cover_image",
+      "label": "Coverbild",
+      "info": "Nur für selbst gehostete Videos"
+    },
+    {
+      "type": "url",
+      "id": "video_url",
+      "label": "Video-URL (YouTube/Vimeo)",
+      "info": "Wird verwendet wenn 'YouTube/Vimeo' ausgewählt ist"
+    },
+    {
+      "type": "text",
+      "id": "caption",
+      "label": "Bildunterschrift"
+    },
+    {
+      "type": "header",
+      "content": "Video-Einstellungen"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_controls",
+      "label": "Steuerelemente anzeigen",
+      "default": true,
+      "info": "Nur für selbst gehostete Videos"
+    },
+    {
+      "type": "checkbox",
+      "id": "loop",
+      "label": "Video wiederholen",
+      "default": false,
+      "info": "Nur für selbst gehostete Videos"
+    },
+    {
+      "type": "checkbox",
+      "id": "muted",
+      "label": "Stummgeschaltet",
+      "default": false,
+      "info": "Nur für selbst gehostete Videos"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Videoplayer",
+      "category": "Video"
+    }
+  ]
+}
+{% endschema %}
