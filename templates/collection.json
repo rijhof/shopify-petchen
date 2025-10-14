@@ -35,6 +35,17 @@
     },
     "section_all_products_Kdefpd": {
       "type": "section-all-products",
+      "blocks": {
+        "featured_product_8MGkkK": {
+          "type": "featured_product",
+          "settings": {
+            "product": "pfotenbalsam"
+          }
+        }
+      },
+      "block_order": [
+        "featured_product_8MGkkK"
+      ],
       "name": "Alle Produkte",
       "settings": {
         "heading": "Alle Produkte von Petchen",
