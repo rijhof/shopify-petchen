@@ -19,7 +19,7 @@
       "type": "section-all-products",
       "name": "Alle Produkte",
       "settings": {
-        "heading": "Alle Produkte",
+        "heading": "Alle Produkte von Petchen",
         "product_limit": 12,
         "show_quick_add": true,
         "show_view_all": false,
