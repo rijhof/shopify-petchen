@@ -194,8 +194,8 @@
       "name": "Call to Action",
       "settings": {
         "heading": "Weil dein Hund zur Familie gehört ♥️",
-        "content": "<p>Unsere Hunde sind Familienmitglieder. Sie schlafen auf dem Sofa, begleiten uns durchs Leben und verdienen Pflege, die ihnen wirklich guttut. Sanft, minimal<br/>formuliert und gemacht für unsere Vierbeiner.<br/><br/><br/></p>",
-        "button_text": "Produkte entdecken",
+        "content": "<p>Unsere Hunde sind Familienmitglieder. Sie schlafen auf dem Sofa, begleiten uns durchs Leben und verdienen Pflege, die ihnen wirklich guttut. Sanft, minimal formuliert und gemacht für unsere Vierbeiner.<br/></p>",
+        "button_text": "Alle Produkte",
         "button_link": "shopify://collections/all",
         "button_type": "primary",
         "icon_position": "right"
