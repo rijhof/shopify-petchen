@@ -37,7 +37,7 @@
                         playsinline="playsinline"
                         preload="auto"
                         {% if section.settings.video_poster != blank %}
-                            poster="{{ section.settings.video_poster | image_url: width: 1440 }}"
+                            poster="{{ section.settings.video_poster | image_url: width: 1920 }}"
                         {% endif %}
                     >
                         {% for source in section.settings.video_desktop.sources %}
