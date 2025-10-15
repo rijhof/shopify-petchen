@@ -96,6 +96,7 @@
         "content": "<p>Dein Hund hat kurzes Fell, was nicht zum verknoten neigt und mehr Hautschutz und Pflege braucht? </p>",
         "button_text": "Hier entlang",
         "button_link": "shopify://products/pflegeset",
+        "open_in_new_tab": false,
         "button_type": "secondary",
         "icon_position": "right",
         "background_color": "default"
@@ -117,6 +118,7 @@
         "content": "<p>Dein Hund hat Fell, was zum verknoten neigt und schwer durchzukämmen ist?  </p>",
         "button_text": "Hier entlang",
         "button_link": "shopify://products/pflegeset-langhaar",
+        "open_in_new_tab": false,
         "button_type": "secondary",
         "icon_position": "right",
         "background_color": "default"
@@ -170,7 +172,7 @@
           "settings": {
             "question": "Was bedeutet Inhaltsstoffe natürlichen Ursprungs?",
             "answer": "<p>Unser Pfotenbalsam besteht zu 100% aus Inhaltsstoffen natürlichen Ursprungs. <br/></p><p>Das heißt: Jeder einzelne Inhaltsstoff im Pfotenbalsam stammt aus einer natürlichen Quelle - also z. B. aus Pflanzen, Mineralien oder natürlichen Fettsäuren.<br/><br/>Es werden keine synthetischen Zusätze eingesetzt, sondern nur solche, die so naturbelassen wie möglich sind und gleichzeitig wirksam pflegen.<br/><br/>So bekommt dein Hund eine sanfte, verträgliche Pflege - ganz ohne unnötigen Schnickschnack. <br/><br/></p>",
-            "open_by_default": true
+            "open_by_default": false
           }
         }
       },
