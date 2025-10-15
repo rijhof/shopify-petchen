@@ -116,6 +116,47 @@
         "open_in_new_tab": false,
         "button_type": "primary",
         "icon_position": "none",
+        "background_color": "green"
+      }
+    },
+    "section_column_products_ewa7qf": {
+      "type": "section-column-products",
+      "blocks": {
+        "product_Jptpwd": {
+          "type": "product",
+          "settings": {
+            "product": ""
+          }
+        },
+        "product_jhatrw": {
+          "type": "product",
+          "settings": {
+            "product": ""
+          }
+        },
+        "product_CctrAP": {
+          "type": "product",
+          "settings": {
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_Jptpwd",
+        "product_jhatrw",
+        "product_CctrAP"
+      ],
+      "name": "Produkte Spalten",
+      "settings": {
+        "heading": "Kaufe ein Pflegeset und spende 1€ an den Tierschutz",
+        "product_source": "newest",
+        "collection": "",
+        "product_limit": 2,
+        "show_quick_add": true,
+        "show_wishlist": true,
+        "show_view_all": false,
+        "view_all_url": "",
+        "view_all_text": "Alle Produkte anzeigen",
         "background_color": "default"
       }
     },
@@ -261,47 +302,6 @@
         "background_color": "default"
       }
     },
-    "section_column_products_ewa7qf": {
-      "type": "section-column-products",
-      "blocks": {
-        "product_Jptpwd": {
-          "type": "product",
-          "settings": {
-            "product": ""
-          }
-        },
-        "product_jhatrw": {
-          "type": "product",
-          "settings": {
-            "product": ""
-          }
-        },
-        "product_CctrAP": {
-          "type": "product",
-          "settings": {
-            "product": ""
-          }
-        }
-      },
-      "block_order": [
-        "product_Jptpwd",
-        "product_jhatrw",
-        "product_CctrAP"
-      ],
-      "name": "Produkte Spalten",
-      "settings": {
-        "heading": "Kaufe ein Pflegeset und spende 1€ an den Tierschutz",
-        "product_source": "newest",
-        "collection": "",
-        "product_limit": 2,
-        "show_quick_add": true,
-        "show_wishlist": true,
-        "show_view_all": false,
-        "view_all_url": "",
-        "view_all_text": "Alle Produkte anzeigen",
-        "background_color": "green"
-      }
-    },
     "section_video_byxcek": {
       "type": "section-video",
       "name": "Videoplayer",
@@ -324,12 +324,12 @@
     "section_products_with_image_FVfkFB",
     "section_image_text_jBdXTY",
     "section_image_text_ThBWN4",
+    "section_column_products_ewa7qf",
     "section_image_text_BaEHeX",
     "section_image_text_JRDhkL",
     "section_cta_3f3LGn",
     "section_column_image_text_mXhJ8p",
     "section_image_accordion_mkBMK7",
-    "section_column_products_ewa7qf",
     "section_video_byxcek"
   ]
 }
