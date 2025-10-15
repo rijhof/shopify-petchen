@@ -1,6 +1,16 @@
 {{ 'section-video-player.css' | asset_url | stylesheet_tag }}
 
-<div class="section container" aria-labelledby="section-video-{{ section.id }}" is="block-video">
+{% assign background_classes = '' %}
+{% case section.settings.background_color %}
+    {% when 'green' %}
+        {% assign background_classes = ' background-one background-contrast' %}
+    {% when 'dark_green' %}
+        {% assign background_classes = ' background-two background-contrast' %}
+    {% else %}
+        {% assign background_classes = '' %}
+{% endcase %}
+
+<div class="section container{{ background_classes }}" aria-labelledby="section-video-{{ section.id }}" is="block-video">
 
     {% if section.settings.heading != blank %}
         <h2 class="h2" id="section-video-{{ section.id }}">
@@ -164,6 +174,26 @@
       "label": "Stummgeschaltet",
       "default": false,
       "info": "Nur für selbst gehostete Videos"
+    },
+    {
+      "type": "select",
+      "id": "background_color",
+      "label": "Hintergrundfarbe",
+      "options": [
+        {
+          "value": "default",
+          "label": "Standard Hintergrund"
+        },
+        {
+          "value": "green",
+          "label": "Grün"
+        },
+        {
+          "value": "dark_green",
+          "label": "Dunkel Grün"
+        }
+      ],
+      "default": "default"
     }
   ],
   "presets": [
