@@ -14,16 +14,40 @@
       "header": {
         "type": "header",
         "blocks": {
-          "usp_96KTkW": {
+          "usp_dnebpA": {
             "type": "usp",
             "settings": {
               "icon_type": "checkmark",
               "text": "Gratis Versand ab 20€"
             }
+          },
+          "usp_96KTkW": {
+            "type": "usp",
+            "settings": {
+              "icon_type": "checkmark",
+              "text": "ohne Allergene"
+            }
+          },
+          "usp_VKtiQ6": {
+            "type": "usp",
+            "settings": {
+              "icon_type": "checkmark",
+              "text": "ohne Parfüm"
+            }
+          },
+          "usp_d79iew": {
+            "type": "usp",
+            "settings": {
+              "icon_type": "checkmark",
+              "text": "ohne Tierversuche"
+            }
           }
         },
         "block_order": [
-          "usp_96KTkW"
+          "usp_dnebpA",
+          "usp_96KTkW",
+          "usp_VKtiQ6",
+          "usp_d79iew"
         ],
         "settings": {
           "menu": "main-menu",

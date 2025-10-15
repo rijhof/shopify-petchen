@@ -71,6 +71,7 @@
         "image_alt": "",
         "button_text": "",
         "button_link": "",
+        "open_in_new_tab": false,
         "button_type": "primary",
         "icon_position": "right",
         "background_color": "default"
@@ -124,6 +125,7 @@
         "content": "<p>Als Deutschlands bekanntester Hundeexperte weiß Martin<br/>Rütter, was Hunde wirklich brauchen. Mit Petchen hat er eine Pflegeserie mitentwickelt, die auf Haut, Fell und Alltag unserer Vierbeiner abgestimmt ist – sanft, ehrlich und sinnvoll. </p><p>Pflege wie sie sein muss, wenn sie sein muss.</p>",
         "button_text": "Über Uns",
         "button_link": "",
+        "open_in_new_tab": false,
         "button_type": "primary",
         "icon_position": "none",
         "background_color": "default"
@@ -144,6 +146,7 @@
         "content": "<p>Mit dem Kauf jedes Petchen Produkts tust du doppelt Gutes:<br/><br/>Für deinen eigenen Vierbeiner – und für viele, die noch auf ein Zuhause warten.<br/><br/>Pro Kauf spenden wir an den gemeinnützigen Tierschutzverein <strong>‚Adoptieren statt Produzieren‘</strong> – gegründet von Martin Rütter.</p>",
         "button_text": "Mehr erfahren",
         "button_link": "shopify://pages/spendenseite",
+        "open_in_new_tab": false,
         "button_type": "primary",
         "icon_position": "none",
         "background_color": "default"
@@ -164,6 +167,7 @@
         "content": "<p>Unsere Rezepturen sind gemäß EU-Kosmetikverordnung formuliert – mit Einhaltung strengster Grenzwerte (z.B. für Konservierungsmittel), INCI-konforme Deklaration aller Inhaltsstoffe und maximalem Anspruch an Verträglichkeit. Qualität, wie du sie aus deiner eigenen Pflege kennst. Weil für unsere Vierbeiner nur das Beste gut genug ist. </p>",
         "button_text": "Mehr erfahren",
         "button_link": "shopify://pages/uber-uns",
+        "open_in_new_tab": false,
         "button_type": "tertiary",
         "icon_position": "none",
         "background_color": "green"
@@ -184,6 +188,7 @@
         "content": "<p>Viele Hunde reagieren sensibel auf Duftstoffe, Farbstoffe und Co. – sie können Haut reizen und allergische Reaktionen auslösen. Trotzdem stecken viele Produkte noch immer voller Stoffe, die schnell zu Juckreiz oder Irritationen führen können. Deshalb kommt Petchen ganz ohne deklarationspflichtige Allergene aus – damit dein Hund nur das bekommt, was ihm wirklich guttut.</p>",
         "button_text": "Mehr erfahren",
         "button_link": "shopify://pages/uber-uns",
+        "open_in_new_tab": false,
         "button_type": "tertiary",
         "icon_position": "none",
         "background_color": "default"
@@ -197,6 +202,7 @@
         "content": "<p>Unsere Hunde sind Familienmitglieder. Sie schlafen auf dem Sofa, begleiten uns durchs Leben und verdienen Pflege, die ihnen wirklich guttut. Sanft, minimal formuliert und gemacht für unsere Vierbeiner.<br/></p>",
         "button_text": "Alle Produkte",
         "button_link": "shopify://collections/all",
+        "open_in_new_tab": false,
         "button_type": "primary",
         "icon_position": "right"
       }
@@ -346,7 +352,7 @@
         "show_view_all": false,
         "view_all_url": "",
         "view_all_text": "Alle Produkte anzeigen",
-        "background_color": "default"
+        "background_color": "green"
       }
     }
   },
