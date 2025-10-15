@@ -1,6 +1,7 @@
 [is="block-text"] > * {
     max-width: var(--content-max-width);
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 [is="block-text"] h1 {
