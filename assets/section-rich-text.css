@@ -1,0 +1,8 @@
+[is="block-text"] > * {
+    max-width: var(--content-max-width);
+    margin: auto;
+}
+
+[is="block-text"] h1 {
+    margin-bottom: 24px;
+}
