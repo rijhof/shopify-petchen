@@ -21,7 +21,8 @@
             {{ 'icon-payment-mastercard.svg' | asset_url | img_tag: alt: 'Mastercard', class: 'payment-icon' }}
             {{ 'icon-payment-visa.svg' | asset_url | img_tag: alt: 'Visa', class: 'payment-icon' }}
             {{ 'icon-payment-applepay.svg' | asset_url | img_tag: alt: 'Apple Pay', class: 'payment-icon' }}
-            {{ 'icon-payment-giropay.svg' | asset_url | img_tag: alt: 'Giropay', class: 'payment-icon' }}
+            {% comment %}{{ 'icon-payment-giropay.svg' | asset_url | img_tag: alt: 'Giropay', class: 'payment-icon' }}{% endcomment %}
+            {{ 'icon-payment-gpay.svg' | asset_url | img_tag: alt: 'Debitkarte', class: 'payment-icon' }}
             {{ 'icon-payment-lastschrift.svg' | asset_url | img_tag: alt: 'Lastschrift', class: 'payment-icon' }}
             {{ 'icon-payment-kreditkarte.svg' | asset_url | img_tag: alt: 'Kreditkarte', class: 'payment-icon' }}
             {{ 'icon-payment-debitkarte.svg' | asset_url | img_tag: alt: 'Debitkarte', class: 'payment-icon' }}
