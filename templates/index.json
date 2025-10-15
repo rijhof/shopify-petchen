@@ -315,7 +315,8 @@
         "caption": "",
         "show_controls": true,
         "loop": false,
-        "muted": false
+        "muted": false,
+        "background_color": "green"
       }
     }
   },
