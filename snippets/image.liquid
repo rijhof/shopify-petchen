@@ -8,11 +8,13 @@
   - decoration_type: Type of decoration (flower-grass-bottom-left, flower-grass-bottom-right, heart-bottom-right-edge, heart-bottom-right-inside)
   - alt: Alt text for accessibility
   - loading: Loading strategy (lazy, eager)
+  - fetchpriority: Fetch priority (high, low, auto)
   - sizes: Responsive sizes attribute
   - class: Additional CSS classes
 {% endcomment %}
 
-{% assign aspect_class = 'image__aspect--' | append: aspect_ratio | default: 'image__aspect--4-3' %}
+{% assign aspect_ratio = aspect_ratio | default: '4-3' %}
+{% assign aspect_class = 'image__aspect--' | append: aspect_ratio %}
 {% assign decoration_class = '' %}
 
 {% if decoration_type and decoration_type != 'none' %}
@@ -33,25 +35,27 @@
             {% comment %} Main Image {% endcomment %}
             <img
                     class="image__img image__img--main lazyload blur-up"
-                    data-src="{{ image | image_url: width: 1400 }}"
+                    data-src="{{ image | image_url: width: 1920 }}"
                     data-sizes="{{ sizes | default: 'auto' }}"
                     data-srcset="
           {{ image | image_url: width: 375 }} 375w,
           {{ image | image_url: width: 550 }} 550w,
           {{ image | image_url: width: 750 }} 750w,
           {{ image | image_url: width: 1100 }} 1100w,
-          {{ image | image_url: width: 1400 }} 1400w
+          {{ image | image_url: width: 1400 }} 1400w,
+          {{ image | image_url: width: 1920 }} 1920w
         "
                     alt="{{ alt | escape }}"
                     width="{{ image.width }}"
                     height="{{ image.height }}"
                     loading="{{ loading | default: 'lazy' }}"
+                    {% if fetchpriority %}fetchpriority="{{ fetchpriority }}"{% endif %}
             >
 
             <noscript>
                 <img
                         class="image__img"
-                        src="{{ image | image_url: width: 1400 }}"
+                        src="{{ image | image_url: width: 1920 }}"
                         alt="{{ alt | escape }}"
                         width="{{ image.width }}"
                         height="{{ image.height }}"
@@ -71,6 +75,8 @@
                 {% when 'flower-grass-bottom-right' %}
                     <img class="image__decoration-icon" src="{{ 'illustration-flower-grass.svg' | asset_url }}" alt="" width="95" height="83">
                 {% when 'heart-bottom-right-edge' %}
+                    <img class="image__decoration-icon" src="{{ 'illustration-heart.svg' | asset_url }}" alt="" width="60" height="60">
+                {% when 'heart-bottom-right-inside' %}
                     <img class="image__decoration-icon" src="{{ 'illustration-heart.svg' | asset_url }}" alt="" width="60" height="60">
             {% endcase %}
         </div>

@@ -1,22 +1,15 @@
+{{ 'section-rich-text.css' | asset_url | stylesheet_tag }}
 
-<div class="section-richtext section" aria-labelledby="section-richtext-{{ section.id }}">
-  <div class="container">
-    <div class="section-richtext__wrapper">
-      <div class="section-richtext__content">
-        {% if section.settings.heading != blank %}
-          <h1 class="section-richtext__heading h2" id="section-richtext-{{ section.id }}">
-            {{ section.settings.heading }}
-          </h1>
-        {% endif %}
-        
-        {% if section.settings.richtext != blank %}
-          <div class="section-richtext__text rte">
-            {{ section.settings.richtext }}
-          </div>
-        {% endif %}
-      </div>
-    </div>
-  </div>
+<div class="section container" aria-labelledby="text-{{ section.id }}" is="block-text">
+  {% if section.settings.heading != blank %}
+    <h1 class="h2" id="text-{{ section.id }}">
+      {{ section.settings.heading }}
+    </h1>
+  {% endif %}
+
+  {% if section.settings.richtext != blank %}
+      {{ section.settings.richtext }}
+  {% endif %}
 </div>
 
 {% schema %}
