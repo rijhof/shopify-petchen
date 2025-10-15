@@ -18,7 +18,7 @@
                 {% if section.settings.image_desktop != blank or section.settings.image_mobile != blank %}
                     <picture>
                         {% if section.settings.image_desktop != blank %}
-                            <source media="(min-width: 768px)" srcset="{{ section.settings.image_desktop | image_url: width: 1440 }}">
+                            <source media="(min-width: 768px)" srcset="{{ section.settings.image_desktop | image_url: width: 1920 }}">
                         {% endif %}
                         {% if section.settings.image_mobile != blank %}
                             <img src="{{ section.settings.image_mobile | image_url: width: 768 }}" alt="{{ section.settings.image_alt }}" class="hero-background-image" fetchpriority="high">
