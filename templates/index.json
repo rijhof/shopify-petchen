@@ -77,39 +77,6 @@
         "background_color": "default"
       }
     },
-    "section_text_HA8TPE": {
-      "type": "section-text",
-      "blocks": {
-        "text_Jcn9hm": {
-          "type": "text",
-          "settings": {
-            "text": "Was den tierärztlichen Check nicht besteht, kommt nicht in die Flasche. Punkt."
-          }
-        },
-        "icon_QCxHwa": {
-          "type": "icon",
-          "settings": {
-            "icon": "heart_paw"
-          }
-        },
-        "text_XBAXdy": {
-          "type": "text",
-          "settings": {
-            "text": "- Martin Rütter"
-          }
-        }
-      },
-      "block_order": [
-        "text_Jcn9hm",
-        "icon_QCxHwa",
-        "text_XBAXdy"
-      ],
-      "name": "Zitat Martin",
-      "settings": {
-        "background_color": "dark_green",
-        "show_decoration": false
-      }
-    },
     "section_image_text_jBdXTY": {
       "type": "section-image-text",
       "name": "Martin ",
@@ -294,26 +261,6 @@
         "background_color": "default"
       }
     },
-    "section_text_Gh38fy": {
-      "type": "section-text",
-      "blocks": {
-        "text_Rb4EBh": {
-          "type": "text",
-          "settings": {
-            "text": "Kampagnen ASSET"
-          }
-        }
-      },
-      "block_order": [
-        "text_Rb4EBh"
-      ],
-      "disabled": true,
-      "name": "Platzhalter VIDEO",
-      "settings": {
-        "background_color": "default",
-        "show_decoration": false
-      }
-    },
     "section_column_products_ewa7qf": {
       "type": "section-column-products",
       "blocks": {
@@ -354,12 +301,27 @@
         "view_all_text": "Alle Produkte anzeigen",
         "background_color": "green"
       }
+    },
+    "section_video_byxcek": {
+      "type": "section-video",
+      "name": "Videoplayer",
+      "settings": {
+        "heading": "Pflege wie sie sein muss, wenn sie sein muss!",
+        "subheading": "",
+        "video_type": "selfhosted",
+        "video": "shopify://files/videos/Bueb25A01_Hero_16x9_E007G11ON07_Webmix.mp4",
+        "cover_image": "shopify://shop_images/Pachshot_website.png",
+        "video_url": "",
+        "caption": "",
+        "show_controls": true,
+        "loop": false,
+        "muted": false
+      }
     }
   },
   "order": [
     "section_hero_T4EfBa",
     "section_products_with_image_FVfkFB",
-    "section_text_HA8TPE",
     "section_image_text_jBdXTY",
     "section_image_text_ThBWN4",
     "section_image_text_BaEHeX",
@@ -367,7 +329,7 @@
     "section_cta_3f3LGn",
     "section_column_image_text_mXhJ8p",
     "section_image_accordion_mkBMK7",
-    "section_text_Gh38fy",
-    "section_column_products_ewa7qf"
+    "section_column_products_ewa7qf",
+    "section_video_byxcek"
   ]
 }
