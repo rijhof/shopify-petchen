@@ -56,60 +56,13 @@
         "image_position": "left",
         "heading": "Jeder Kauf tut Gutes",
         "heading_level": "h2",
-        "content": "<p><strong>JEDES Produkt spendet beim Kauf 0,25€ an den Tierschutzverein Adoptieren statt Produzieren.</strong></p><p><strong>Beim Kauf einer unserer Pflegesets legen wir noch einen drauf und spenden pro Box 1€ an den Tierschutzverein. ♥️</strong></p>",
+        "content": "<p><strong>JEDES Produkt spendet beim Kauf 0,25€ an den Tierschutzverein Adoptieren statt Produzieren.</strong></p><p><strong>Beim Kauf eines unserer Pflegesets legen wir noch einen drauf und spenden pro Box 1€ an den Tierschutzverein. ♥️</strong></p>",
         "button_text": "Jetzt Pflegeset kaufen - 1€ spenden",
         "button_link": "shopify://products/pflegeset-langhaar",
         "open_in_new_tab": false,
         "button_type": "primary",
         "icon_position": "left",
         "background_color": "green"
-      }
-    },
-    "section_text_TCcdkC": {
-      "type": "section-text",
-      "blocks": {
-        "text_QQTnjH": {
-          "type": "text",
-          "settings": {
-            "text": "Unsere Pflege endet nicht in der Wanne"
-          }
-        },
-        "icon_DFzJAQ": {
-          "type": "icon",
-          "settings": {
-            "icon": "butterfly"
-          }
-        },
-        "text_7bwGxa": {
-          "type": "text",
-          "settings": {
-            "text": "– wir unterstützen aus Überzeugung und Liebe zum Tier den gemeinnützigen Tierschutzverein Adoptieren Statt Produzieren e.V."
-          }
-        },
-        "icon_37N9PA": {
-          "type": "icon",
-          "settings": {
-            "icon": "little_heart"
-          }
-        },
-        "text_3REcTa": {
-          "type": "text",
-          "settings": {
-            "text": "Für jedes verkaufte Produkt spenden wir 25 Cent an den  Verein."
-          }
-        }
-      },
-      "block_order": [
-        "text_QQTnjH",
-        "icon_DFzJAQ",
-        "text_7bwGxa",
-        "icon_37N9PA",
-        "text_3REcTa"
-      ],
-      "name": "Text mit Icons",
-      "settings": {
-        "background_color": "default",
-        "show_decoration": true
       }
     },
     "section_products_with_image_QdkGLK": {
@@ -321,7 +274,6 @@
     "section_hero_small_B8xWCA",
     "section_logo_grid_49B9pc",
     "section_image_text_mQg9wJ",
-    "section_text_TCcdkC",
     "section_products_with_image_QdkGLK",
     "section_image_text_aFrcpz",
     "section_image_symbols_text_HT8CgA",
