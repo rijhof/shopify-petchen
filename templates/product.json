@@ -236,7 +236,7 @@
         "show_view_all": false,
         "view_all_url": "",
         "view_all_text": "Alle Produkte anzeigen",
-        "background_color": "default"
+        "background_color": "green"
       }
     }
   },
