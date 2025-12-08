@@ -16,14 +16,14 @@
         "blocks": {
           "usp_dnebpA": {
             "type": "usp",
-            "disabled": true,
             "settings": {
               "icon_type": "checkmark",
-              "text": "Gratis Versand ab 20€"
+              "text": "zu jedem Set 1x gratis Hundjes dazu🍬"
             }
           },
           "usp_96KTkW": {
             "type": "usp",
+            "disabled": true,
             "settings": {
               "icon_type": "checkmark",
               "text": "ohne Allergene & Parfüm"
@@ -33,7 +33,7 @@
             "type": "usp",
             "settings": {
               "icon_type": "checkmark",
-              "text": "spare 20% mit dem Code XMAS20 auf das gesamte Sortiment"
+              "text": "spare 20% mit dem Code XMAS20 auf das gesamte Sortiment 🎀"
             }
           },
           "usp_kpFG88": {
