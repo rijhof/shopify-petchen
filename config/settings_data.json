@@ -24,23 +24,20 @@
           },
           "usp_96KTkW": {
             "type": "usp",
-            "disabled": true,
             "settings": {
               "icon_type": "checkmark",
-              "text": "ohne Allergene"
+              "text": "ohne Allergene & Parfüm"
             }
           },
-          "usp_VKtiQ6": {
+          "usp_Frqyid": {
             "type": "usp",
-            "disabled": true,
             "settings": {
               "icon_type": "checkmark",
-              "text": "ohne Parfüm"
+              "text": "spare 20% mit dem Code XMAS20 auf das gesamte Sortiment"
             }
           },
           "usp_kpFG88": {
             "type": "usp",
-            "disabled": true,
             "settings": {
               "icon_type": "checkmark",
               "text": "Gratis Versand ab 20€"
@@ -50,7 +47,7 @@
         "block_order": [
           "usp_dnebpA",
           "usp_96KTkW",
-          "usp_VKtiQ6",
+          "usp_Frqyid",
           "usp_kpFG88"
         ],
         "settings": {
