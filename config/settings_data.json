@@ -16,6 +16,7 @@
         "blocks": {
           "usp_dnebpA": {
             "type": "usp",
+            "disabled": true,
             "settings": {
               "icon_type": "checkmark",
               "text": "Gratis Versand ab 20€"
@@ -23,6 +24,7 @@
           },
           "usp_96KTkW": {
             "type": "usp",
+            "disabled": true,
             "settings": {
               "icon_type": "checkmark",
               "text": "ohne Allergene"
@@ -30,16 +32,18 @@
           },
           "usp_VKtiQ6": {
             "type": "usp",
+            "disabled": true,
             "settings": {
               "icon_type": "checkmark",
               "text": "ohne Parfüm"
             }
           },
-          "usp_d79iew": {
+          "usp_kpFG88": {
             "type": "usp",
+            "disabled": true,
             "settings": {
               "icon_type": "checkmark",
-              "text": "ohne Tierversuche"
+              "text": "Gratis Versand ab 20€"
             }
           }
         },
@@ -47,7 +51,7 @@
           "usp_dnebpA",
           "usp_96KTkW",
           "usp_VKtiQ6",
-          "usp_d79iew"
+          "usp_kpFG88"
         ],
         "settings": {
           "menu": "main-menu",
