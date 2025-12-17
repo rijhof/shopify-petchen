@@ -21,23 +21,23 @@
               "text": "zu jedem Set 1x gratis Hundjes dazu🍬"
             }
           },
-          "usp_96KTkW": {
+          "usp_jLwrnH": {
             "type": "usp",
-            "disabled": true,
             "settings": {
               "icon_type": "checkmark",
-              "text": "ohne Allergene & Parfüm"
+              "text": "Gratis Versand ab 20€"
             }
           },
-          "usp_Frqyid": {
+          "usp_96KTkW": {
             "type": "usp",
             "settings": {
               "icon_type": "checkmark",
-              "text": "spare 20% mit dem Code XMAS20 auf das gesamte Sortiment 🎀"
+              "text": "bestelle bis zum 18.12. um Lieferung vor Weihnachten zu garantieren"
             }
           },
           "usp_kpFG88": {
             "type": "usp",
+            "disabled": true,
             "settings": {
               "icon_type": "checkmark",
               "text": "Gratis Versand ab 20€ 🎁"
@@ -46,8 +46,8 @@
         },
         "block_order": [
           "usp_dnebpA",
+          "usp_jLwrnH",
           "usp_96KTkW",
-          "usp_Frqyid",
           "usp_kpFG88"
         ],
         "settings": {
